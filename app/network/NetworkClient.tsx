@@ -278,10 +278,16 @@ export default function NetworkClient() {
         grad.addColorStop(1, withAlpha(cB, baseAlpha))
         ctx.strokeStyle = grad
         ctx.lineWidth = lw
-        ctx.shadowColor = topicColor(l.primary_topic)
-        ctx.shadowBlur = top3Set.has(`${l.source}__${l.target}`)
-          ? 24
-          : 4 + 14 * wStrong * (0.4 + 0.6 * recency)
+        // Only top-3 / high-weight edges get shadowBlur (expensive)
+        if (top3Set.has(`${l.source}__${l.target}`)) {
+          ctx.shadowColor = topicColor(l.primary_topic)
+          ctx.shadowBlur = 24
+        } else if (wNorm > 0.4) {
+          ctx.shadowColor = topicColor(l.primary_topic)
+          ctx.shadowBlur = 8 * wStrong
+        } else {
+          ctx.shadowBlur = 0
+        }
         ctx.beginPath()
         edgePath(ctx, a, b)
         ctx.stroke()
@@ -338,13 +344,17 @@ export default function NetworkClient() {
           ctx.fill()
         }
 
-        // colored ring outline
+        // colored ring outline (no shadow on idle nodes — expensive)
         ctx.beginPath()
         ctx.arc(n.x!, n.y!, r, 0, Math.PI * 2)
         ctx.lineWidth = isSel ? 3 : (isHov ? 2.4 : 1.8)
         ctx.strokeStyle = isSel ? '#fff' : c
-        ctx.shadowColor = c
-        ctx.shadowBlur = isSel || isHov ? 18 : 6
+        if (isSel || isHov) {
+          ctx.shadowColor = c
+          ctx.shadowBlur = 18
+        } else {
+          ctx.shadowBlur = 0
+        }
         ctx.stroke()
         ctx.shadowBlur = 0
 
@@ -371,9 +381,19 @@ export default function NetworkClient() {
       ctx.restore()
     }
 
+    let lastHoverId: string | null = null
+    let lastTransform = ''
     function frame() {
-      step()
-      render()
+      const settled = alphaRef.current < 0.01 && !draggingRef.current?.node && !panRef.current
+      const hoverId = hoverRef.current.node?.id || null
+      const transformKey = `${transformRef.current.k}|${transformRef.current.x}|${transformRef.current.y}`
+      const inputDirty = hoverId !== lastHoverId || transformKey !== lastTransform
+      if (!settled || inputDirty) {
+        step()
+        render()
+        lastHoverId = hoverId
+        lastTransform = transformKey
+      }
       raf = requestAnimationFrame(frame)
     }
     frame()
@@ -562,7 +582,7 @@ export default function NetworkClient() {
               onFocus={() => setSearchFocus(true)}
               onBlur={() => setTimeout(() => setSearchFocus(false), 150)}
               placeholder="Search researcher…"
-              className="w-full bg-white/5 backdrop-blur border border-white/15 rounded-lg px-3 py-2 text-sm placeholder:text-white/40 focus:outline-none focus:border-cyan-400/60"
+              className="w-full bg-[#0d1020]/92 backdrop-blur-md border border-white/20 rounded-lg px-3 py-2 text-sm placeholder:text-white/40 focus:outline-none focus:border-cyan-400/60"
             />
             {searchFocus && search.trim() && (
               <div className="absolute left-0 right-0 top-full mt-1 bg-[#0b0d18]/95 backdrop-blur border border-white/15 rounded-lg shadow-xl max-h-[280px] overflow-y-auto z-20">
@@ -601,7 +621,7 @@ export default function NetworkClient() {
               </div>
             )}
           </div>
-          <div className="bg-white/5 backdrop-blur border border-white/15 rounded-lg p-3 text-xs">
+          <div className="bg-[#0d1020]/92 backdrop-blur-md border border-white/20 rounded-lg p-3 text-xs">
             <div className="flex justify-between text-white/70">
               <span>Active since</span>
               <span className="font-mono">{yearMin}</span>
@@ -615,7 +635,7 @@ export default function NetworkClient() {
               className="w-full mt-1 accent-cyan-400"
             />
           </div>
-          <div className="bg-white/5 backdrop-blur border border-white/15 rounded-lg p-3 text-xs">
+          <div className="bg-[#0d1020]/92 backdrop-blur-md border border-white/20 rounded-lg p-3 text-xs">
             <div className="text-white/70 mb-2">Topics</div>
             <div className="flex flex-wrap gap-1.5">
               {data.topics.filter(t => t.key !== 'Other').map(t => {
@@ -647,7 +667,7 @@ export default function NetworkClient() {
 
         {/* Right panel: detail view if a node is selected, otherwise member list */}
         {selectedNode ? (
-          <div className="hidden md:block absolute right-4 top-4 w-[300px] bg-white/5 backdrop-blur border border-white/15 rounded-lg p-4 text-sm z-10 max-h-[68vh] overflow-y-auto">
+          <div className="hidden md:block absolute right-4 top-4 w-[300px] bg-[#0d1020]/92 backdrop-blur-md border border-white/20 rounded-lg p-4 text-sm z-10 max-h-[68vh] overflow-y-auto">
             <div className="flex items-start justify-between gap-2 mb-3">
               <div className="flex items-center gap-3">
                 {selectedNode.avatar && (
@@ -694,7 +714,7 @@ export default function NetworkClient() {
             </ul>
           </div>
         ) : (
-          <div className="hidden md:block absolute right-4 top-4 w-[300px] bg-white/5 backdrop-blur border border-white/15 rounded-lg p-3 text-sm z-10 max-h-[68vh] overflow-y-auto">
+          <div className="hidden md:block absolute right-4 top-4 w-[300px] bg-[#0d1020]/92 backdrop-blur-md border border-white/20 rounded-lg p-3 text-sm z-10 max-h-[68vh] overflow-y-auto">
             <div className="flex items-center justify-between mb-3 px-1">
               <div className="font-semibold">Members</div>
               <span className="text-[10px] text-white/45 font-mono">{data.nodes.length}</span>
