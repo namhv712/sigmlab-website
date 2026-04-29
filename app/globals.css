@@ -2,12 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f8f9fa;
+@layer base {
+  body {
+    font-family: 'Inter', Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #1a1a2e;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    line-height: 1.2;
+  }
+}
+
+@layer components {
+  .page-container {
+    @apply max-w-7xl mx-auto px-6 py-12;
+  }
+
+  .page-title {
+    @apply text-4xl font-bold text-gray-900 mb-10 text-center;
+  }
+
+  .section-card {
+    @apply bg-white rounded-2xl shadow-sm border border-gray-100 p-8;
+  }
 }
 
 ::-webkit-scrollbar { width: 5px; }
 ::-webkit-scrollbar-track { background: #f1f1f1; }
-::-webkit-scrollbar-thumb { background: #888; }
-::-webkit-scrollbar-thumb:hover { background: #555; }
+::-webkit-scrollbar-thumb { background: #94a3b8; border-radius: 99px; }
+::-webkit-scrollbar-thumb:hover { background: #64748b; }
