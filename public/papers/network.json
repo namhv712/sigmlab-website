@@ -1,0 +1,3190 @@
+{
+  "nodes": [
+    {
+      "id": "thi_lan_le",
+      "name": "Thi-Lan Le",
+      "papers": 186,
+      "first_year": 2004,
+      "last_year": 2026,
+      "topics": [
+        {
+          "key": "Other",
+          "count": 38
+        },
+        {
+          "key": "Plant ID",
+          "count": 25
+        },
+        {
+          "key": "Action Recognition",
+          "count": 20
+        },
+        {
+          "key": "Person Re-ID",
+          "count": 20
+        },
+        {
+          "key": "Document/OCR",
+          "count": 18
+        }
+      ],
+      "primary_topic": "Other"
+    },
+    {
+      "id": "thanh_hai_tran",
+      "name": "Thanh-Hai Tran",
+      "papers": 165,
+      "first_year": 2006,
+      "last_year": 2026,
+      "topics": [
+        {
+          "key": "Other",
+          "count": 45
+        },
+        {
+          "key": "Hand Gesture",
+          "count": 30
+        },
+        {
+          "key": "Medical Imaging",
+          "count": 23
+        },
+        {
+          "key": "Action Recognition",
+          "count": 21
+        },
+        {
+          "key": "Visually Impaired",
+          "count": 13
+        }
+      ],
+      "primary_topic": "Other"
+    },
+    {
+      "id": "hai_vu",
+      "name": "Hai Vu",
+      "papers": 163,
+      "first_year": 2000,
+      "last_year": 2025,
+      "topics": [
+        {
+          "key": "Other",
+          "count": 41
+        },
+        {
+          "key": "Medical Imaging",
+          "count": 39
+        },
+        {
+          "key": "Plant ID",
+          "count": 24
+        },
+        {
+          "key": "Hand Gesture",
+          "count": 17
+        },
+        {
+          "key": "Action Recognition",
+          "count": 15
+        }
+      ],
+      "primary_topic": "Other"
+    },
+    {
+      "id": "khoat_than",
+      "name": "Khoat Than",
+      "papers": 87,
+      "first_year": 2011,
+      "last_year": 2026,
+      "topics": [
+        {
+          "key": "Other",
+          "count": 82
+        },
+        {
+          "key": "Document/OCR",
+          "count": 2
+        },
+        {
+          "key": "Honey Bee",
+          "count": 1
+        },
+        {
+          "key": "Hand Gesture",
+          "count": 1
+        },
+        {
+          "key": "Plant ID",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Other"
+    },
+    {
+      "id": "trung_kien_dao",
+      "name": "Trung-Kien Dao",
+      "papers": 67,
+      "first_year": 2007,
+      "last_year": 2024,
+      "topics": [
+        {
+          "key": "Other",
+          "count": 39
+        },
+        {
+          "key": "Surveillance",
+          "count": 12
+        },
+        {
+          "key": "Plant ID",
+          "count": 5
+        },
+        {
+          "key": "Visually Impaired",
+          "count": 4
+        },
+        {
+          "key": "Person Re-ID",
+          "count": 4
+        }
+      ],
+      "primary_topic": "Other"
+    },
+    {
+      "id": "van_toi_nguyen",
+      "name": "Van-Toi Nguyen",
+      "papers": 53,
+      "first_year": 2003,
+      "last_year": 2025,
+      "topics": [
+        {
+          "key": "Other",
+          "count": 24
+        },
+        {
+          "key": "Hand Gesture",
+          "count": 9
+        },
+        {
+          "key": "Action Recognition",
+          "count": 5
+        },
+        {
+          "key": "Speech/NLP",
+          "count": 4
+        },
+        {
+          "key": "Medical Imaging",
+          "count": 4
+        }
+      ],
+      "primary_topic": "Other"
+    },
+    {
+      "id": "dinh_viet_sang",
+      "name": "Dinh Viet Sang",
+      "papers": 53,
+      "first_year": 2014,
+      "last_year": 2026,
+      "topics": [
+        {
+          "key": "Other",
+          "count": 37
+        },
+        {
+          "key": "Medical Imaging",
+          "count": 12
+        },
+        {
+          "key": "Speech/NLP",
+          "count": 2
+        },
+        {
+          "key": "Document/OCR",
+          "count": 1
+        },
+        {
+          "key": "Action Recognition",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Other"
+    },
+    {
+      "id": "thuy_binh_nguyen",
+      "name": "Thuy-Binh Nguyen",
+      "papers": 48,
+      "first_year": 2007,
+      "last_year": 2026,
+      "topics": [
+        {
+          "key": "Person Re-ID",
+          "count": 23
+        },
+        {
+          "key": "Other",
+          "count": 9
+        },
+        {
+          "key": "Action Recognition",
+          "count": 3
+        },
+        {
+          "key": "Surveillance",
+          "count": 3
+        },
+        {
+          "key": "Hand Gesture",
+          "count": 3
+        }
+      ],
+      "primary_topic": "Person Re-ID"
+    },
+    {
+      "id": "thi_thanh_thuy_pham",
+      "name": "Thi Thanh Thuy Pham",
+      "papers": 46,
+      "first_year": 2006,
+      "last_year": 2025,
+      "topics": [
+        {
+          "key": "Other",
+          "count": 21
+        },
+        {
+          "key": "Person Re-ID",
+          "count": 15
+        },
+        {
+          "key": "Surveillance",
+          "count": 6
+        },
+        {
+          "key": "Hand Gesture",
+          "count": 2
+        },
+        {
+          "key": "Visually Impaired",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Other"
+    },
+    {
+      "id": "hong_quan_nguyen",
+      "name": "Hong-Quan Nguyen",
+      "papers": 42,
+      "first_year": 2016,
+      "last_year": 2025,
+      "topics": [
+        {
+          "key": "Person Re-ID",
+          "count": 14
+        },
+        {
+          "key": "Other",
+          "count": 10
+        },
+        {
+          "key": "Action Recognition",
+          "count": 6
+        },
+        {
+          "key": "Plant ID",
+          "count": 4
+        },
+        {
+          "key": "Hand Gesture",
+          "count": 3
+        }
+      ],
+      "primary_topic": "Person Re-ID"
+    },
+    {
+      "id": "duy_tung_nguyen",
+      "name": "Duy-Tung Nguyen",
+      "papers": 40,
+      "first_year": 2004,
+      "last_year": 2026,
+      "topics": [
+        {
+          "key": "Other",
+          "count": 29
+        },
+        {
+          "key": "Honey Bee",
+          "count": 4
+        },
+        {
+          "key": "Medical Imaging",
+          "count": 2
+        },
+        {
+          "key": "Speech/NLP",
+          "count": 2
+        },
+        {
+          "key": "Action Recognition",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Other"
+    },
+    {
+      "id": "huong_giang_doan",
+      "name": "Huong-Giang Doan",
+      "papers": 39,
+      "first_year": 2014,
+      "last_year": 2026,
+      "topics": [
+        {
+          "key": "Hand Gesture",
+          "count": 19
+        },
+        {
+          "key": "Other",
+          "count": 13
+        },
+        {
+          "key": "Surveillance",
+          "count": 3
+        },
+        {
+          "key": "Person Re-ID",
+          "count": 2
+        },
+        {
+          "key": "Action Recognition",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Hand Gesture"
+    },
+    {
+      "id": "nguyen_thi_oanh",
+      "name": "Nguyen Thi Oanh",
+      "papers": 34,
+      "first_year": 2006,
+      "last_year": 2025,
+      "topics": [
+        {
+          "key": "Other",
+          "count": 13
+        },
+        {
+          "key": "Document/OCR",
+          "count": 10
+        },
+        {
+          "key": "Action Recognition",
+          "count": 6
+        },
+        {
+          "key": "Hand Gesture",
+          "count": 3
+        },
+        {
+          "key": "Medical Imaging",
+          "count": 2
+        }
+      ],
+      "primary_topic": "Other"
+    },
+    {
+      "id": "dinh_tan_pham",
+      "name": "Dinh-Tan Pham",
+      "papers": 29,
+      "first_year": 1986,
+      "last_year": 2025,
+      "topics": [
+        {
+          "key": "Action Recognition",
+          "count": 12
+        },
+        {
+          "key": "Other",
+          "count": 9
+        },
+        {
+          "key": "Hand Gesture",
+          "count": 5
+        },
+        {
+          "key": "Fall Detection",
+          "count": 1
+        },
+        {
+          "key": "Person Re-ID",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Action Recognition"
+    },
+    {
+      "id": "van_nam_hoang",
+      "name": "Van-Nam Hoang",
+      "papers": 27,
+      "first_year": 2014,
+      "last_year": 2026,
+      "topics": [
+        {
+          "key": "Plant ID",
+          "count": 8
+        },
+        {
+          "key": "Other",
+          "count": 5
+        },
+        {
+          "key": "Action Recognition",
+          "count": 4
+        },
+        {
+          "key": "Hand Gesture",
+          "count": 4
+        },
+        {
+          "key": "Visually Impaired",
+          "count": 4
+        }
+      ],
+      "primary_topic": "Plant ID"
+    },
+    {
+      "id": "dang_khoa_mac",
+      "name": "Dang-Khoa Mac",
+      "papers": 21,
+      "first_year": 2009,
+      "last_year": 2025,
+      "topics": [
+        {
+          "key": "Speech/NLP",
+          "count": 19
+        },
+        {
+          "key": "Visually Impaired",
+          "count": 1
+        },
+        {
+          "key": "Other",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Speech/NLP"
+    },
+    {
+      "id": "thi_ngoc_diep_do",
+      "name": "Thi Ngoc Diep Do",
+      "papers": 21,
+      "first_year": 2008,
+      "last_year": 2025,
+      "topics": [
+        {
+          "key": "Person Re-ID",
+          "count": 9
+        },
+        {
+          "key": "Speech/NLP",
+          "count": 8
+        },
+        {
+          "key": "Other",
+          "count": 3
+        },
+        {
+          "key": "Visually Impaired",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Person Re-ID"
+    },
+    {
+      "id": "bui_hai_phong",
+      "name": "Bui Hai Phong",
+      "papers": 19,
+      "first_year": 2017,
+      "last_year": 2026,
+      "topics": [
+        {
+          "key": "Document/OCR",
+          "count": 11
+        },
+        {
+          "key": "Other",
+          "count": 4
+        },
+        {
+          "key": "Plant ID",
+          "count": 4
+        }
+      ],
+      "primary_topic": "Document/OCR"
+    },
+    {
+      "id": "thi_lich_nghiem",
+      "name": "Thi-Lich Nghiem",
+      "papers": 16,
+      "first_year": 2020,
+      "last_year": 2026,
+      "topics": [
+        {
+          "key": "Other",
+          "count": 14
+        },
+        {
+          "key": "Speech/NLP",
+          "count": 1
+        },
+        {
+          "key": "Hand Gesture",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Other"
+    },
+    {
+      "id": "thi_loan_pham",
+      "name": "Thi-Loan Pham",
+      "papers": 15,
+      "first_year": 2021,
+      "last_year": 2025,
+      "topics": [
+        {
+          "key": "Medical Imaging",
+          "count": 12
+        },
+        {
+          "key": "Other",
+          "count": 3
+        }
+      ],
+      "primary_topic": "Medical Imaging"
+    },
+    {
+      "id": "manh_thang_hoang",
+      "name": "Manh-Thang Hoang",
+      "papers": 14,
+      "first_year": 2016,
+      "last_year": 2024,
+      "topics": [
+        {
+          "key": "Document/OCR",
+          "count": 10
+        },
+        {
+          "key": "Other",
+          "count": 4
+        }
+      ],
+      "primary_topic": "Document/OCR"
+    },
+    {
+      "id": "viet_duc_le",
+      "name": "Viet-Duc Le",
+      "papers": 12,
+      "first_year": 2021,
+      "last_year": 2026,
+      "topics": [
+        {
+          "key": "Hand Gesture",
+          "count": 5
+        },
+        {
+          "key": "Action Recognition",
+          "count": 4
+        },
+        {
+          "key": "Other",
+          "count": 3
+        }
+      ],
+      "primary_topic": "Hand Gesture"
+    },
+    {
+      "id": "hoang_son_bui",
+      "name": "Hoang-Son Bui",
+      "papers": 10,
+      "first_year": 2023,
+      "last_year": 2025,
+      "topics": [
+        {
+          "key": "Medical Imaging",
+          "count": 5
+        },
+        {
+          "key": "Person Re-ID",
+          "count": 4
+        },
+        {
+          "key": "Other",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Medical Imaging"
+    },
+    {
+      "id": "phuong_dung_nguyen",
+      "name": "Phuong-Dung Nguyen",
+      "papers": 9,
+      "first_year": 2021,
+      "last_year": 2026,
+      "topics": [
+        {
+          "key": "Action Recognition",
+          "count": 5
+        },
+        {
+          "key": "Other",
+          "count": 2
+        },
+        {
+          "key": "Surveillance",
+          "count": 1
+        },
+        {
+          "key": "Hand Gesture",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Action Recognition"
+    },
+    {
+      "id": "quang_tien_pham",
+      "name": "Quang-Tien Pham",
+      "papers": 8,
+      "first_year": 2021,
+      "last_year": 2025,
+      "topics": [
+        {
+          "key": "Action Recognition",
+          "count": 3
+        },
+        {
+          "key": "Other",
+          "count": 2
+        },
+        {
+          "key": "Medical Imaging",
+          "count": 2
+        },
+        {
+          "key": "Hand Gesture",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Action Recognition"
+    },
+    {
+      "id": "tuan_dung_kieu",
+      "name": "Tuan-Dung Kieu",
+      "papers": 4,
+      "first_year": 2023,
+      "last_year": 2025,
+      "topics": [
+        {
+          "key": "Federated Learning",
+          "count": 3
+        },
+        {
+          "key": "Action Recognition",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Federated Learning"
+    },
+    {
+      "id": "hien_thanh_duong",
+      "name": "Hien-Thanh Duong",
+      "papers": 2,
+      "first_year": 2015,
+      "last_year": 2024,
+      "topics": [
+        {
+          "key": "Person Re-ID",
+          "count": 1
+        },
+        {
+          "key": "Speech/NLP",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Person Re-ID"
+    },
+    {
+      "id": "doan_duc_phan",
+      "name": "Doan-Duc Phan",
+      "papers": 2,
+      "first_year": 2024,
+      "last_year": 2024,
+      "topics": [
+        {
+          "key": "Plant ID",
+          "count": 2
+        }
+      ],
+      "primary_topic": "Plant ID"
+    },
+    {
+      "id": "khanh_huyen_bui",
+      "name": "Khanh-Huyen Bui",
+      "papers": 2,
+      "first_year": 2025,
+      "last_year": 2025,
+      "topics": [
+        {
+          "key": "Action Recognition",
+          "count": 2
+        }
+      ],
+      "primary_topic": "Action Recognition"
+    }
+  ],
+  "links": [
+    {
+      "source": "hai_vu",
+      "target": "thanh_hai_tran",
+      "weight": 71,
+      "first_year": 2013,
+      "last_year": 2025,
+      "topics": [
+        {
+          "key": "Hand Gesture",
+          "count": 14
+        },
+        {
+          "key": "Other",
+          "count": 13
+        },
+        {
+          "key": "Medical Imaging",
+          "count": 13
+        }
+      ],
+      "primary_topic": "Hand Gesture"
+    },
+    {
+      "source": "thanh_hai_tran",
+      "target": "thi_lan_le",
+      "weight": 64,
+      "first_year": 2012,
+      "last_year": 2026,
+      "topics": [
+        {
+          "key": "Other",
+          "count": 15
+        },
+        {
+          "key": "Hand Gesture",
+          "count": 10
+        },
+        {
+          "key": "Action Recognition",
+          "count": 9
+        }
+      ],
+      "primary_topic": "Other"
+    },
+    {
+      "source": "hai_vu",
+      "target": "thi_lan_le",
+      "weight": 63,
+      "first_year": 2013,
+      "last_year": 2025,
+      "topics": [
+        {
+          "key": "Plant ID",
+          "count": 16
+        },
+        {
+          "key": "Action Recognition",
+          "count": 13
+        },
+        {
+          "key": "Other",
+          "count": 10
+        }
+      ],
+      "primary_topic": "Plant ID"
+    },
+    {
+      "source": "thi_lan_le",
+      "target": "thuy_binh_nguyen",
+      "weight": 25,
+      "first_year": 2016,
+      "last_year": 2025,
+      "topics": [
+        {
+          "key": "Person Re-ID",
+          "count": 16
+        },
+        {
+          "key": "Action Recognition",
+          "count": 3
+        },
+        {
+          "key": "Other",
+          "count": 2
+        }
+      ],
+      "primary_topic": "Person Re-ID"
+    },
+    {
+      "source": "hong_quan_nguyen",
+      "target": "thuy_binh_nguyen",
+      "weight": 24,
+      "first_year": 2019,
+      "last_year": 2025,
+      "topics": [
+        {
+          "key": "Person Re-ID",
+          "count": 14
+        },
+        {
+          "key": "Other",
+          "count": 3
+        },
+        {
+          "key": "Action Recognition",
+          "count": 3
+        }
+      ],
+      "primary_topic": "Person Re-ID"
+    },
+    {
+      "source": "hong_quan_nguyen",
+      "target": "thi_lan_le",
+      "weight": 23,
+      "first_year": 2016,
+      "last_year": 2025,
+      "topics": [
+        {
+          "key": "Person Re-ID",
+          "count": 7
+        },
+        {
+          "key": "Action Recognition",
+          "count": 6
+        },
+        {
+          "key": "Other",
+          "count": 3
+        }
+      ],
+      "primary_topic": "Person Re-ID"
+    },
+    {
+      "source": "thi_lan_le",
+      "target": "van_nam_hoang",
+      "weight": 20,
+      "first_year": 2014,
+      "last_year": 2025,
+      "topics": [
+        {
+          "key": "Plant ID",
+          "count": 6
+        },
+        {
+          "key": "Action Recognition",
+          "count": 4
+        },
+        {
+          "key": "Hand Gesture",
+          "count": 4
+        }
+      ],
+      "primary_topic": "Plant ID"
+    },
+    {
+      "source": "thi_thanh_thuy_pham",
+      "target": "thi_lan_le",
+      "weight": 19,
+      "first_year": 2014,
+      "last_year": 2022,
+      "topics": [
+        {
+          "key": "Person Re-ID",
+          "count": 11
+        },
+        {
+          "key": "Other",
+          "count": 4
+        },
+        {
+          "key": "Surveillance",
+          "count": 3
+        }
+      ],
+      "primary_topic": "Person Re-ID"
+    },
+    {
+      "source": "thanh_hai_tran",
+      "target": "van_nam_hoang",
+      "weight": 19,
+      "first_year": 2014,
+      "last_year": 2024,
+      "topics": [
+        {
+          "key": "Action Recognition",
+          "count": 4
+        },
+        {
+          "key": "Plant ID",
+          "count": 4
+        },
+        {
+          "key": "Hand Gesture",
+          "count": 4
+        }
+      ],
+      "primary_topic": "Action Recognition"
+    },
+    {
+      "source": "thi_lan_le",
+      "target": "trung_kien_dao",
+      "weight": 18,
+      "first_year": 2012,
+      "last_year": 2017,
+      "topics": [
+        {
+          "key": "Other",
+          "count": 6
+        },
+        {
+          "key": "Surveillance",
+          "count": 5
+        },
+        {
+          "key": "Person Re-ID",
+          "count": 4
+        }
+      ],
+      "primary_topic": "Other"
+    },
+    {
+      "source": "hong_quan_nguyen",
+      "target": "thanh_hai_tran",
+      "weight": 17,
+      "first_year": 2016,
+      "last_year": 2025,
+      "topics": [
+        {
+          "key": "Person Re-ID",
+          "count": 6
+        },
+        {
+          "key": "Other",
+          "count": 3
+        },
+        {
+          "key": "Action Recognition",
+          "count": 3
+        }
+      ],
+      "primary_topic": "Person Re-ID"
+    },
+    {
+      "source": "thanh_hai_tran",
+      "target": "van_toi_nguyen",
+      "weight": 16,
+      "first_year": 2013,
+      "last_year": 2024,
+      "topics": [
+        {
+          "key": "Hand Gesture",
+          "count": 5
+        },
+        {
+          "key": "Other",
+          "count": 5
+        },
+        {
+          "key": "Medical Imaging",
+          "count": 3
+        }
+      ],
+      "primary_topic": "Hand Gesture"
+    },
+    {
+      "source": "hai_vu",
+      "target": "van_nam_hoang",
+      "weight": 16,
+      "first_year": 2014,
+      "last_year": 2025,
+      "topics": [
+        {
+          "key": "Plant ID",
+          "count": 5
+        },
+        {
+          "key": "Hand Gesture",
+          "count": 4
+        },
+        {
+          "key": "Action Recognition",
+          "count": 3
+        }
+      ],
+      "primary_topic": "Plant ID"
+    },
+    {
+      "source": "huong_giang_doan",
+      "target": "thanh_hai_tran",
+      "weight": 16,
+      "first_year": 2014,
+      "last_year": 2021,
+      "topics": [
+        {
+          "key": "Hand Gesture",
+          "count": 11
+        },
+        {
+          "key": "Other",
+          "count": 2
+        },
+        {
+          "key": "Surveillance",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Hand Gesture"
+    },
+    {
+      "source": "thi_thanh_thuy_pham",
+      "target": "trung_kien_dao",
+      "weight": 15,
+      "first_year": 2013,
+      "last_year": 2017,
+      "topics": [
+        {
+          "key": "Other",
+          "count": 7
+        },
+        {
+          "key": "Person Re-ID",
+          "count": 4
+        },
+        {
+          "key": "Surveillance",
+          "count": 3
+        }
+      ],
+      "primary_topic": "Other"
+    },
+    {
+      "source": "thi_lan_le",
+      "target": "van_toi_nguyen",
+      "weight": 13,
+      "first_year": 2013,
+      "last_year": 2024,
+      "topics": [
+        {
+          "key": "Hand Gesture",
+          "count": 4
+        },
+        {
+          "key": "Action Recognition",
+          "count": 2
+        },
+        {
+          "key": "Person Re-ID",
+          "count": 2
+        }
+      ],
+      "primary_topic": "Hand Gesture"
+    },
+    {
+      "source": "hai_vu",
+      "target": "huong_giang_doan",
+      "weight": 13,
+      "first_year": 2014,
+      "last_year": 2021,
+      "topics": [
+        {
+          "key": "Hand Gesture",
+          "count": 9
+        },
+        {
+          "key": "Surveillance",
+          "count": 1
+        },
+        {
+          "key": "Action Recognition",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Hand Gesture"
+    },
+    {
+      "source": "thanh_hai_tran",
+      "target": "thuy_binh_nguyen",
+      "weight": 13,
+      "first_year": 2021,
+      "last_year": 2025,
+      "topics": [
+        {
+          "key": "Person Re-ID",
+          "count": 6
+        },
+        {
+          "key": "Other",
+          "count": 2
+        },
+        {
+          "key": "Action Recognition",
+          "count": 2
+        }
+      ],
+      "primary_topic": "Person Re-ID"
+    },
+    {
+      "source": "trung_kien_dao",
+      "target": "van_toi_nguyen",
+      "weight": 12,
+      "first_year": 2014,
+      "last_year": 2022,
+      "topics": [
+        {
+          "key": "Other",
+          "count": 8
+        },
+        {
+          "key": "Person Re-ID",
+          "count": 2
+        },
+        {
+          "key": "Visually Impaired",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Other"
+    },
+    {
+      "source": "bui_hai_phong",
+      "target": "manh_thang_hoang",
+      "weight": 11,
+      "first_year": 2017,
+      "last_year": 2022,
+      "topics": [
+        {
+          "key": "Document/OCR",
+          "count": 10
+        },
+        {
+          "key": "Other",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Document/OCR"
+    },
+    {
+      "source": "bui_hai_phong",
+      "target": "thi_lan_le",
+      "weight": 11,
+      "first_year": 2017,
+      "last_year": 2022,
+      "topics": [
+        {
+          "key": "Document/OCR",
+          "count": 10
+        },
+        {
+          "key": "Other",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Document/OCR"
+    },
+    {
+      "source": "manh_thang_hoang",
+      "target": "thi_lan_le",
+      "weight": 11,
+      "first_year": 2017,
+      "last_year": 2022,
+      "topics": [
+        {
+          "key": "Document/OCR",
+          "count": 10
+        },
+        {
+          "key": "Other",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Document/OCR"
+    },
+    {
+      "source": "dinh_tan_pham",
+      "target": "thi_lan_le",
+      "weight": 11,
+      "first_year": 2018,
+      "last_year": 2023,
+      "topics": [
+        {
+          "key": "Action Recognition",
+          "count": 8
+        },
+        {
+          "key": "Fall Detection",
+          "count": 1
+        },
+        {
+          "key": "Hand Gesture",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Action Recognition"
+    },
+    {
+      "source": "thi_thanh_thuy_pham",
+      "target": "thuy_binh_nguyen",
+      "weight": 11,
+      "first_year": 2018,
+      "last_year": 2025,
+      "topics": [
+        {
+          "key": "Person Re-ID",
+          "count": 10
+        },
+        {
+          "key": "Other",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Person Re-ID"
+    },
+    {
+      "source": "dinh_tan_pham",
+      "target": "hai_vu",
+      "weight": 10,
+      "first_year": 2018,
+      "last_year": 2023,
+      "topics": [
+        {
+          "key": "Action Recognition",
+          "count": 8
+        },
+        {
+          "key": "Hand Gesture",
+          "count": 1
+        },
+        {
+          "key": "Honey Bee",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Action Recognition"
+    },
+    {
+      "source": "thi_ngoc_diep_do",
+      "target": "thuy_binh_nguyen",
+      "weight": 10,
+      "first_year": 2020,
+      "last_year": 2025,
+      "topics": [
+        {
+          "key": "Person Re-ID",
+          "count": 9
+        },
+        {
+          "key": "Other",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Person Re-ID"
+    },
+    {
+      "source": "hai_vu",
+      "target": "van_toi_nguyen",
+      "weight": 9,
+      "first_year": 2014,
+      "last_year": 2024,
+      "topics": [
+        {
+          "key": "Hand Gesture",
+          "count": 2
+        },
+        {
+          "key": "Medical Imaging",
+          "count": 2
+        },
+        {
+          "key": "Visually Impaired",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Hand Gesture"
+    },
+    {
+      "source": "thi_lan_le",
+      "target": "viet_duc_le",
+      "weight": 9,
+      "first_year": 2021,
+      "last_year": 2025,
+      "topics": [
+        {
+          "key": "Action Recognition",
+          "count": 3
+        },
+        {
+          "key": "Hand Gesture",
+          "count": 3
+        },
+        {
+          "key": "Other",
+          "count": 3
+        }
+      ],
+      "primary_topic": "Action Recognition"
+    },
+    {
+      "source": "hong_quan_nguyen",
+      "target": "thi_ngoc_diep_do",
+      "weight": 9,
+      "first_year": 2021,
+      "last_year": 2025,
+      "topics": [
+        {
+          "key": "Person Re-ID",
+          "count": 8
+        },
+        {
+          "key": "Other",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Person Re-ID"
+    },
+    {
+      "source": "thanh_hai_tran",
+      "target": "thi_ngoc_diep_do",
+      "weight": 8,
+      "first_year": 2016,
+      "last_year": 2025,
+      "topics": [
+        {
+          "key": "Person Re-ID",
+          "count": 6
+        },
+        {
+          "key": "Visually Impaired",
+          "count": 1
+        },
+        {
+          "key": "Other",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Person Re-ID"
+    },
+    {
+      "source": "hong_quan_nguyen",
+      "target": "thi_thanh_thuy_pham",
+      "weight": 8,
+      "first_year": 2019,
+      "last_year": 2025,
+      "topics": [
+        {
+          "key": "Person Re-ID",
+          "count": 7
+        },
+        {
+          "key": "Other",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Person Re-ID"
+    },
+    {
+      "source": "thanh_hai_tran",
+      "target": "thi_loan_pham",
+      "weight": 8,
+      "first_year": 2023,
+      "last_year": 2025,
+      "topics": [
+        {
+          "key": "Medical Imaging",
+          "count": 8
+        }
+      ],
+      "primary_topic": "Medical Imaging"
+    },
+    {
+      "source": "huong_giang_doan",
+      "target": "thi_thanh_thuy_pham",
+      "weight": 8,
+      "first_year": 2018,
+      "last_year": 2025,
+      "topics": [
+        {
+          "key": "Other",
+          "count": 3
+        },
+        {
+          "key": "Person Re-ID",
+          "count": 2
+        },
+        {
+          "key": "Hand Gesture",
+          "count": 2
+        }
+      ],
+      "primary_topic": "Other"
+    },
+    {
+      "source": "hai_vu",
+      "target": "trung_kien_dao",
+      "weight": 7,
+      "first_year": 2016,
+      "last_year": 2024,
+      "topics": [
+        {
+          "key": "Plant ID",
+          "count": 5
+        },
+        {
+          "key": "Visually Impaired",
+          "count": 1
+        },
+        {
+          "key": "Person Re-ID",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Plant ID"
+    },
+    {
+      "source": "thi_thanh_thuy_pham",
+      "target": "van_toi_nguyen",
+      "weight": 7,
+      "first_year": 2014,
+      "last_year": 2024,
+      "topics": [
+        {
+          "key": "Person Re-ID",
+          "count": 3
+        },
+        {
+          "key": "Other",
+          "count": 3
+        },
+        {
+          "key": "Visually Impaired",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Person Re-ID"
+    },
+    {
+      "source": "thi_ngoc_diep_do",
+      "target": "thi_thanh_thuy_pham",
+      "weight": 7,
+      "first_year": 2016,
+      "last_year": 2025,
+      "topics": [
+        {
+          "key": "Person Re-ID",
+          "count": 5
+        },
+        {
+          "key": "Visually Impaired",
+          "count": 1
+        },
+        {
+          "key": "Other",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Person Re-ID"
+    },
+    {
+      "source": "hai_vu",
+      "target": "hong_quan_nguyen",
+      "weight": 7,
+      "first_year": 2016,
+      "last_year": 2024,
+      "topics": [
+        {
+          "key": "Action Recognition",
+          "count": 3
+        },
+        {
+          "key": "Hand Gesture",
+          "count": 1
+        },
+        {
+          "key": "Surveillance",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Action Recognition"
+    },
+    {
+      "source": "thi_lan_le",
+      "target": "thi_loan_pham",
+      "weight": 7,
+      "first_year": 2023,
+      "last_year": 2025,
+      "topics": [
+        {
+          "key": "Medical Imaging",
+          "count": 7
+        }
+      ],
+      "primary_topic": "Medical Imaging"
+    },
+    {
+      "source": "hai_vu",
+      "target": "thi_loan_pham",
+      "weight": 7,
+      "first_year": 2023,
+      "last_year": 2025,
+      "topics": [
+        {
+          "key": "Medical Imaging",
+          "count": 7
+        }
+      ],
+      "primary_topic": "Medical Imaging"
+    },
+    {
+      "source": "hoang_son_bui",
+      "target": "thanh_hai_tran",
+      "weight": 6,
+      "first_year": 2024,
+      "last_year": 2025,
+      "topics": [
+        {
+          "key": "Person Re-ID",
+          "count": 3
+        },
+        {
+          "key": "Medical Imaging",
+          "count": 3
+        }
+      ],
+      "primary_topic": "Person Re-ID"
+    },
+    {
+      "source": "hong_quan_nguyen",
+      "target": "phuong_dung_nguyen",
+      "weight": 6,
+      "first_year": 2021,
+      "last_year": 2025,
+      "topics": [
+        {
+          "key": "Action Recognition",
+          "count": 3
+        },
+        {
+          "key": "Other",
+          "count": 2
+        },
+        {
+          "key": "Surveillance",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Action Recognition"
+    },
+    {
+      "source": "huong_giang_doan",
+      "target": "thi_lan_le",
+      "weight": 5,
+      "first_year": 2018,
+      "last_year": 2021,
+      "topics": [
+        {
+          "key": "Hand Gesture",
+          "count": 2
+        },
+        {
+          "key": "Surveillance",
+          "count": 1
+        },
+        {
+          "key": "Action Recognition",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Hand Gesture"
+    },
+    {
+      "source": "huong_giang_doan",
+      "target": "van_toi_nguyen",
+      "weight": 5,
+      "first_year": 2016,
+      "last_year": 2021,
+      "topics": [
+        {
+          "key": "Hand Gesture",
+          "count": 4
+        },
+        {
+          "key": "Other",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Hand Gesture"
+    },
+    {
+      "source": "hoang_son_bui",
+      "target": "thuy_binh_nguyen",
+      "weight": 5,
+      "first_year": 2023,
+      "last_year": 2025,
+      "topics": [
+        {
+          "key": "Person Re-ID",
+          "count": 4
+        },
+        {
+          "key": "Medical Imaging",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Person Re-ID"
+    },
+    {
+      "source": "hoang_son_bui",
+      "target": "hong_quan_nguyen",
+      "weight": 5,
+      "first_year": 2023,
+      "last_year": 2025,
+      "topics": [
+        {
+          "key": "Person Re-ID",
+          "count": 4
+        },
+        {
+          "key": "Other",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Person Re-ID"
+    },
+    {
+      "source": "phuong_dung_nguyen",
+      "target": "thi_lan_le",
+      "weight": 5,
+      "first_year": 2021,
+      "last_year": 2025,
+      "topics": [
+        {
+          "key": "Action Recognition",
+          "count": 4
+        },
+        {
+          "key": "Other",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Action Recognition"
+    },
+    {
+      "source": "phuong_dung_nguyen",
+      "target": "thanh_hai_tran",
+      "weight": 5,
+      "first_year": 2021,
+      "last_year": 2023,
+      "topics": [
+        {
+          "key": "Action Recognition",
+          "count": 2
+        },
+        {
+          "key": "Other",
+          "count": 2
+        },
+        {
+          "key": "Surveillance",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Action Recognition"
+    },
+    {
+      "source": "thi_lan_le",
+      "target": "thi_lich_nghiem",
+      "weight": 5,
+      "first_year": 2022,
+      "last_year": 2024,
+      "topics": [
+        {
+          "key": "Other",
+          "count": 3
+        },
+        {
+          "key": "Speech/NLP",
+          "count": 1
+        },
+        {
+          "key": "Hand Gesture",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Other"
+    },
+    {
+      "source": "thanh_hai_tran",
+      "target": "thi_thanh_thuy_pham",
+      "weight": 4,
+      "first_year": 2016,
+      "last_year": 2025,
+      "topics": [
+        {
+          "key": "Person Re-ID",
+          "count": 2
+        },
+        {
+          "key": "Visually Impaired",
+          "count": 1
+        },
+        {
+          "key": "Other",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Person Re-ID"
+    },
+    {
+      "source": "hai_vu",
+      "target": "thi_thanh_thuy_pham",
+      "weight": 4,
+      "first_year": 2015,
+      "last_year": 2017,
+      "topics": [
+        {
+          "key": "Surveillance",
+          "count": 2
+        },
+        {
+          "key": "Visually Impaired",
+          "count": 1
+        },
+        {
+          "key": "Person Re-ID",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Surveillance"
+    },
+    {
+      "source": "dang_khoa_mac",
+      "target": "van_toi_nguyen",
+      "weight": 4,
+      "first_year": 2016,
+      "last_year": 2023,
+      "topics": [
+        {
+          "key": "Speech/NLP",
+          "count": 3
+        },
+        {
+          "key": "Visually Impaired",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Speech/NLP"
+    },
+    {
+      "source": "dinh_tan_pham",
+      "target": "quang_tien_pham",
+      "weight": 4,
+      "first_year": 2021,
+      "last_year": 2023,
+      "topics": [
+        {
+          "key": "Action Recognition",
+          "count": 2
+        },
+        {
+          "key": "Other",
+          "count": 1
+        },
+        {
+          "key": "Hand Gesture",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Action Recognition"
+    },
+    {
+      "source": "hai_vu",
+      "target": "quang_tien_pham",
+      "weight": 4,
+      "first_year": 2021,
+      "last_year": 2025,
+      "topics": [
+        {
+          "key": "Medical Imaging",
+          "count": 2
+        },
+        {
+          "key": "Hand Gesture",
+          "count": 1
+        },
+        {
+          "key": "Action Recognition",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Medical Imaging"
+    },
+    {
+      "source": "thanh_hai_tran",
+      "target": "viet_duc_le",
+      "weight": 4,
+      "first_year": 2021,
+      "last_year": 2023,
+      "topics": [
+        {
+          "key": "Action Recognition",
+          "count": 3
+        },
+        {
+          "key": "Hand Gesture",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Action Recognition"
+    },
+    {
+      "source": "hong_quan_nguyen",
+      "target": "van_toi_nguyen",
+      "weight": 4,
+      "first_year": 2021,
+      "last_year": 2021,
+      "topics": [
+        {
+          "key": "Other",
+          "count": 2
+        },
+        {
+          "key": "Person Re-ID",
+          "count": 1
+        },
+        {
+          "key": "Hand Gesture",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Other"
+    },
+    {
+      "source": "hoang_son_bui",
+      "target": "thi_ngoc_diep_do",
+      "weight": 4,
+      "first_year": 2023,
+      "last_year": 2025,
+      "topics": [
+        {
+          "key": "Person Re-ID",
+          "count": 4
+        }
+      ],
+      "primary_topic": "Person Re-ID"
+    },
+    {
+      "source": "phuong_dung_nguyen",
+      "target": "thuy_binh_nguyen",
+      "weight": 4,
+      "first_year": 2021,
+      "last_year": 2026,
+      "topics": [
+        {
+          "key": "Action Recognition",
+          "count": 1
+        },
+        {
+          "key": "Surveillance",
+          "count": 1
+        },
+        {
+          "key": "Other",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Action Recognition"
+    },
+    {
+      "source": "hai_vu",
+      "target": "thuy_binh_nguyen",
+      "weight": 4,
+      "first_year": 2022,
+      "last_year": 2024,
+      "topics": [
+        {
+          "key": "Action Recognition",
+          "count": 2
+        },
+        {
+          "key": "Surveillance",
+          "count": 1
+        },
+        {
+          "key": "Medical Imaging",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Action Recognition"
+    },
+    {
+      "source": "hoang_son_bui",
+      "target": "thi_lan_le",
+      "weight": 4,
+      "first_year": 2024,
+      "last_year": 2025,
+      "topics": [
+        {
+          "key": "Medical Imaging",
+          "count": 3
+        },
+        {
+          "key": "Other",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Medical Imaging"
+    },
+    {
+      "source": "thanh_hai_tran",
+      "target": "tuan_dung_kieu",
+      "weight": 4,
+      "first_year": 2023,
+      "last_year": 2025,
+      "topics": [
+        {
+          "key": "Federated Learning",
+          "count": 3
+        },
+        {
+          "key": "Action Recognition",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Federated Learning"
+    },
+    {
+      "source": "thi_lich_nghiem",
+      "target": "viet_duc_le",
+      "weight": 4,
+      "first_year": 2022,
+      "last_year": 2024,
+      "topics": [
+        {
+          "key": "Other",
+          "count": 3
+        },
+        {
+          "key": "Hand Gesture",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Other"
+    },
+    {
+      "source": "thi_ngoc_diep_do",
+      "target": "thi_lan_le",
+      "weight": 3,
+      "first_year": 2016,
+      "last_year": 2022,
+      "topics": [
+        {
+          "key": "Person Re-ID",
+          "count": 2
+        },
+        {
+          "key": "Visually Impaired",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Person Re-ID"
+    },
+    {
+      "source": "thi_ngoc_diep_do",
+      "target": "van_toi_nguyen",
+      "weight": 3,
+      "first_year": 2016,
+      "last_year": 2022,
+      "topics": [
+        {
+          "key": "Visually Impaired",
+          "count": 1
+        },
+        {
+          "key": "Speech/NLP",
+          "count": 1
+        },
+        {
+          "key": "Person Re-ID",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Visually Impaired"
+    },
+    {
+      "source": "dang_khoa_mac",
+      "target": "thi_ngoc_diep_do",
+      "weight": 3,
+      "first_year": 2013,
+      "last_year": 2022,
+      "topics": [
+        {
+          "key": "Speech/NLP",
+          "count": 2
+        },
+        {
+          "key": "Visually Impaired",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Speech/NLP"
+    },
+    {
+      "source": "dinh_tan_pham",
+      "target": "thanh_hai_tran",
+      "weight": 3,
+      "first_year": 2018,
+      "last_year": 2022,
+      "topics": [
+        {
+          "key": "Action Recognition",
+          "count": 2
+        },
+        {
+          "key": "Fall Detection",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Action Recognition"
+    },
+    {
+      "source": "van_nam_hoang",
+      "target": "viet_duc_le",
+      "weight": 3,
+      "first_year": 2021,
+      "last_year": 2023,
+      "topics": [
+        {
+          "key": "Action Recognition",
+          "count": 2
+        },
+        {
+          "key": "Hand Gesture",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Action Recognition"
+    },
+    {
+      "source": "hai_vu",
+      "target": "viet_duc_le",
+      "weight": 3,
+      "first_year": 2021,
+      "last_year": 2023,
+      "topics": [
+        {
+          "key": "Action Recognition",
+          "count": 2
+        },
+        {
+          "key": "Hand Gesture",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Action Recognition"
+    },
+    {
+      "source": "duy_tung_nguyen",
+      "target": "khoat_than",
+      "weight": 3,
+      "first_year": 2019,
+      "last_year": 2026,
+      "topics": [
+        {
+          "key": "Other",
+          "count": 2
+        },
+        {
+          "key": "Honey Bee",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Other"
+    },
+    {
+      "source": "hai_vu",
+      "target": "khoat_than",
+      "weight": 3,
+      "first_year": 2020,
+      "last_year": 2023,
+      "topics": [
+        {
+          "key": "Honey Bee",
+          "count": 1
+        },
+        {
+          "key": "Hand Gesture",
+          "count": 1
+        },
+        {
+          "key": "Other",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Honey Bee"
+    },
+    {
+      "source": "van_nam_hoang",
+      "target": "van_toi_nguyen",
+      "weight": 3,
+      "first_year": 2015,
+      "last_year": 2019,
+      "topics": [
+        {
+          "key": "Plant ID",
+          "count": 1
+        },
+        {
+          "key": "Other",
+          "count": 1
+        },
+        {
+          "key": "Action Recognition",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Plant ID"
+    },
+    {
+      "source": "hong_quan_nguyen",
+      "target": "van_nam_hoang",
+      "weight": 3,
+      "first_year": 2022,
+      "last_year": 2024,
+      "topics": [
+        {
+          "key": "Plant ID",
+          "count": 2
+        },
+        {
+          "key": "Action Recognition",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Plant ID"
+    },
+    {
+      "source": "hoang_son_bui",
+      "target": "thi_loan_pham",
+      "weight": 3,
+      "first_year": 2024,
+      "last_year": 2024,
+      "topics": [
+        {
+          "key": "Medical Imaging",
+          "count": 3
+        }
+      ],
+      "primary_topic": "Medical Imaging"
+    },
+    {
+      "source": "quang_tien_pham",
+      "target": "thanh_hai_tran",
+      "weight": 3,
+      "first_year": 2021,
+      "last_year": 2025,
+      "topics": [
+        {
+          "key": "Medical Imaging",
+          "count": 2
+        },
+        {
+          "key": "Other",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Medical Imaging"
+    },
+    {
+      "source": "phuong_dung_nguyen",
+      "target": "viet_duc_le",
+      "weight": 3,
+      "first_year": 2023,
+      "last_year": 2026,
+      "topics": [
+        {
+          "key": "Action Recognition",
+          "count": 2
+        },
+        {
+          "key": "Hand Gesture",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Action Recognition"
+    },
+    {
+      "source": "thanh_hai_tran",
+      "target": "trung_kien_dao",
+      "weight": 2,
+      "first_year": 2012,
+      "last_year": 2016,
+      "topics": [
+        {
+          "key": "Visually Impaired",
+          "count": 1
+        },
+        {
+          "key": "Other",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Visually Impaired"
+    },
+    {
+      "source": "dang_khoa_mac",
+      "target": "thi_lan_le",
+      "weight": 2,
+      "first_year": 2016,
+      "last_year": 2025,
+      "topics": [
+        {
+          "key": "Visually Impaired",
+          "count": 1
+        },
+        {
+          "key": "Speech/NLP",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Visually Impaired"
+    },
+    {
+      "source": "dinh_tan_pham",
+      "target": "van_nam_hoang",
+      "weight": 2,
+      "first_year": 2018,
+      "last_year": 2022,
+      "topics": [
+        {
+          "key": "Fall Detection",
+          "count": 1
+        },
+        {
+          "key": "Action Recognition",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Fall Detection"
+    },
+    {
+      "source": "quang_tien_pham",
+      "target": "thi_lan_le",
+      "weight": 2,
+      "first_year": 2021,
+      "last_year": 2023,
+      "topics": [
+        {
+          "key": "Hand Gesture",
+          "count": 1
+        },
+        {
+          "key": "Action Recognition",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Hand Gesture"
+    },
+    {
+      "source": "dinh_tan_pham",
+      "target": "duy_tung_nguyen",
+      "weight": 2,
+      "first_year": 2022,
+      "last_year": 2023,
+      "topics": [
+        {
+          "key": "Action Recognition",
+          "count": 1
+        },
+        {
+          "key": "Honey Bee",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Action Recognition"
+    },
+    {
+      "source": "dinh_viet_sang",
+      "target": "nguyen_thi_oanh",
+      "weight": 2,
+      "first_year": 2022,
+      "last_year": 2022,
+      "topics": [
+        {
+          "key": "Other",
+          "count": 2
+        }
+      ],
+      "primary_topic": "Other"
+    },
+    {
+      "source": "nguyen_thi_oanh",
+      "target": "thanh_hai_tran",
+      "weight": 2,
+      "first_year": 2017,
+      "last_year": 2019,
+      "topics": [
+        {
+          "key": "Hand Gesture",
+          "count": 1
+        },
+        {
+          "key": "Action Recognition",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Hand Gesture"
+    },
+    {
+      "source": "nguyen_thi_oanh",
+      "target": "van_toi_nguyen",
+      "weight": 2,
+      "first_year": 2019,
+      "last_year": 2024,
+      "topics": [
+        {
+          "key": "Hand Gesture",
+          "count": 2
+        }
+      ],
+      "primary_topic": "Hand Gesture"
+    },
+    {
+      "source": "thuy_binh_nguyen",
+      "target": "van_toi_nguyen",
+      "weight": 2,
+      "first_year": 2007,
+      "last_year": 2021,
+      "topics": [
+        {
+          "key": "Person Re-ID",
+          "count": 1
+        },
+        {
+          "key": "Plant ID",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Person Re-ID"
+    },
+    {
+      "source": "duy_tung_nguyen",
+      "target": "thi_lan_le",
+      "weight": 2,
+      "first_year": 2023,
+      "last_year": 2025,
+      "topics": [
+        {
+          "key": "Other",
+          "count": 1
+        },
+        {
+          "key": "Honey Bee",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Other"
+    },
+    {
+      "source": "hai_vu",
+      "target": "phuong_dung_nguyen",
+      "weight": 2,
+      "first_year": 2022,
+      "last_year": 2023,
+      "topics": [
+        {
+          "key": "Action Recognition",
+          "count": 1
+        },
+        {
+          "key": "Surveillance",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Action Recognition"
+    },
+    {
+      "source": "hong_quan_nguyen",
+      "target": "huong_giang_doan",
+      "weight": 2,
+      "first_year": 2021,
+      "last_year": 2021,
+      "topics": [
+        {
+          "key": "Action Recognition",
+          "count": 1
+        },
+        {
+          "key": "Other",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Action Recognition"
+    },
+    {
+      "source": "hai_vu",
+      "target": "hoang_son_bui",
+      "weight": 2,
+      "first_year": 2024,
+      "last_year": 2024,
+      "topics": [
+        {
+          "key": "Medical Imaging",
+          "count": 2
+        }
+      ],
+      "primary_topic": "Medical Imaging"
+    },
+    {
+      "source": "hoang_son_bui",
+      "target": "van_toi_nguyen",
+      "weight": 2,
+      "first_year": 2024,
+      "last_year": 2024,
+      "topics": [
+        {
+          "key": "Medical Imaging",
+          "count": 2
+        }
+      ],
+      "primary_topic": "Medical Imaging"
+    },
+    {
+      "source": "thi_loan_pham",
+      "target": "van_toi_nguyen",
+      "weight": 2,
+      "first_year": 2024,
+      "last_year": 2024,
+      "topics": [
+        {
+          "key": "Medical Imaging",
+          "count": 2
+        }
+      ],
+      "primary_topic": "Medical Imaging"
+    },
+    {
+      "source": "doan_duc_phan",
+      "target": "hong_quan_nguyen",
+      "weight": 2,
+      "first_year": 2024,
+      "last_year": 2024,
+      "topics": [
+        {
+          "key": "Plant ID",
+          "count": 2
+        }
+      ],
+      "primary_topic": "Plant ID"
+    },
+    {
+      "source": "khanh_huyen_bui",
+      "target": "phuong_dung_nguyen",
+      "weight": 2,
+      "first_year": 2025,
+      "last_year": 2025,
+      "topics": [
+        {
+          "key": "Action Recognition",
+          "count": 2
+        }
+      ],
+      "primary_topic": "Action Recognition"
+    },
+    {
+      "source": "khanh_huyen_bui",
+      "target": "thi_lan_le",
+      "weight": 2,
+      "first_year": 2025,
+      "last_year": 2025,
+      "topics": [
+        {
+          "key": "Action Recognition",
+          "count": 2
+        }
+      ],
+      "primary_topic": "Action Recognition"
+    },
+    {
+      "source": "thi_lan_le",
+      "target": "tuan_dung_kieu",
+      "weight": 2,
+      "first_year": 2024,
+      "last_year": 2025,
+      "topics": [
+        {
+          "key": "Federated Learning",
+          "count": 2
+        }
+      ],
+      "primary_topic": "Federated Learning"
+    },
+    {
+      "source": "thuy_binh_nguyen",
+      "target": "viet_duc_le",
+      "weight": 2,
+      "first_year": 2024,
+      "last_year": 2026,
+      "topics": [
+        {
+          "key": "Hand Gesture",
+          "count": 2
+        }
+      ],
+      "primary_topic": "Hand Gesture"
+    },
+    {
+      "source": "dang_khoa_mac",
+      "target": "trung_kien_dao",
+      "weight": 1,
+      "first_year": 2016,
+      "last_year": 2016,
+      "topics": [
+        {
+          "key": "Visually Impaired",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Visually Impaired"
+    },
+    {
+      "source": "thi_ngoc_diep_do",
+      "target": "trung_kien_dao",
+      "weight": 1,
+      "first_year": 2016,
+      "last_year": 2016,
+      "topics": [
+        {
+          "key": "Visually Impaired",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Visually Impaired"
+    },
+    {
+      "source": "dang_khoa_mac",
+      "target": "thanh_hai_tran",
+      "weight": 1,
+      "first_year": 2016,
+      "last_year": 2016,
+      "topics": [
+        {
+          "key": "Visually Impaired",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Visually Impaired"
+    },
+    {
+      "source": "dang_khoa_mac",
+      "target": "hai_vu",
+      "weight": 1,
+      "first_year": 2016,
+      "last_year": 2016,
+      "topics": [
+        {
+          "key": "Visually Impaired",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Visually Impaired"
+    },
+    {
+      "source": "hai_vu",
+      "target": "thi_ngoc_diep_do",
+      "weight": 1,
+      "first_year": 2016,
+      "last_year": 2016,
+      "topics": [
+        {
+          "key": "Visually Impaired",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Visually Impaired"
+    },
+    {
+      "source": "dang_khoa_mac",
+      "target": "thi_thanh_thuy_pham",
+      "weight": 1,
+      "first_year": 2016,
+      "last_year": 2016,
+      "topics": [
+        {
+          "key": "Visually Impaired",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Visually Impaired"
+    },
+    {
+      "source": "duy_tung_nguyen",
+      "target": "quang_tien_pham",
+      "weight": 1,
+      "first_year": 2022,
+      "last_year": 2022,
+      "topics": [
+        {
+          "key": "Action Recognition",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Action Recognition"
+    },
+    {
+      "source": "dinh_tan_pham",
+      "target": "van_toi_nguyen",
+      "weight": 1,
+      "first_year": 2021,
+      "last_year": 2021,
+      "topics": [
+        {
+          "key": "Action Recognition",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Action Recognition"
+    },
+    {
+      "source": "dinh_tan_pham",
+      "target": "thuy_binh_nguyen",
+      "weight": 1,
+      "first_year": 2018,
+      "last_year": 2018,
+      "topics": [
+        {
+          "key": "Person Re-ID",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Person Re-ID"
+    },
+    {
+      "source": "dinh_tan_pham",
+      "target": "viet_duc_le",
+      "weight": 1,
+      "first_year": 2022,
+      "last_year": 2022,
+      "topics": [
+        {
+          "key": "Action Recognition",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Action Recognition"
+    },
+    {
+      "source": "duy_tung_nguyen",
+      "target": "hai_vu",
+      "weight": 1,
+      "first_year": 2023,
+      "last_year": 2023,
+      "topics": [
+        {
+          "key": "Honey Bee",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Honey Bee"
+    },
+    {
+      "source": "dinh_tan_pham",
+      "target": "khoat_than",
+      "weight": 1,
+      "first_year": 2023,
+      "last_year": 2023,
+      "topics": [
+        {
+          "key": "Honey Bee",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Honey Bee"
+    },
+    {
+      "source": "huong_giang_doan",
+      "target": "nguyen_thi_oanh",
+      "weight": 1,
+      "first_year": 2019,
+      "last_year": 2019,
+      "topics": [
+        {
+          "key": "Hand Gesture",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Hand Gesture"
+    },
+    {
+      "source": "hai_vu",
+      "target": "nguyen_thi_oanh",
+      "weight": 1,
+      "first_year": 2019,
+      "last_year": 2019,
+      "topics": [
+        {
+          "key": "Hand Gesture",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Hand Gesture"
+    },
+    {
+      "source": "nguyen_thi_oanh",
+      "target": "thi_lan_le",
+      "weight": 1,
+      "first_year": 2019,
+      "last_year": 2019,
+      "topics": [
+        {
+          "key": "Hand Gesture",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Hand Gesture"
+    },
+    {
+      "source": "hien_thanh_duong",
+      "target": "thuy_binh_nguyen",
+      "weight": 1,
+      "first_year": 2024,
+      "last_year": 2024,
+      "topics": [
+        {
+          "key": "Person Re-ID",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Person Re-ID"
+    },
+    {
+      "source": "hien_thanh_duong",
+      "target": "thi_ngoc_diep_do",
+      "weight": 1,
+      "first_year": 2024,
+      "last_year": 2024,
+      "topics": [
+        {
+          "key": "Person Re-ID",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Person Re-ID"
+    },
+    {
+      "source": "hien_thanh_duong",
+      "target": "hong_quan_nguyen",
+      "weight": 1,
+      "first_year": 2024,
+      "last_year": 2024,
+      "topics": [
+        {
+          "key": "Person Re-ID",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Person Re-ID"
+    },
+    {
+      "source": "hien_thanh_duong",
+      "target": "thanh_hai_tran",
+      "weight": 1,
+      "first_year": 2024,
+      "last_year": 2024,
+      "topics": [
+        {
+          "key": "Person Re-ID",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Person Re-ID"
+    },
+    {
+      "source": "hoang_son_bui",
+      "target": "thi_thanh_thuy_pham",
+      "weight": 1,
+      "first_year": 2023,
+      "last_year": 2023,
+      "topics": [
+        {
+          "key": "Person Re-ID",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Person Re-ID"
+    },
+    {
+      "source": "duy_tung_nguyen",
+      "target": "hong_quan_nguyen",
+      "weight": 1,
+      "first_year": 2024,
+      "last_year": 2024,
+      "topics": [
+        {
+          "key": "Plant ID",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Plant ID"
+    },
+    {
+      "source": "thuy_binh_nguyen",
+      "target": "van_nam_hoang",
+      "weight": 1,
+      "first_year": 2022,
+      "last_year": 2022,
+      "topics": [
+        {
+          "key": "Action Recognition",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Action Recognition"
+    },
+    {
+      "source": "huong_giang_doan",
+      "target": "phuong_dung_nguyen",
+      "weight": 1,
+      "first_year": 2021,
+      "last_year": 2021,
+      "topics": [
+        {
+          "key": "Other",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Other"
+    },
+    {
+      "source": "phuong_dung_nguyen",
+      "target": "van_toi_nguyen",
+      "weight": 1,
+      "first_year": 2021,
+      "last_year": 2021,
+      "topics": [
+        {
+          "key": "Other",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Other"
+    },
+    {
+      "source": "hai_vu",
+      "target": "tuan_dung_kieu",
+      "weight": 1,
+      "first_year": 2025,
+      "last_year": 2025,
+      "topics": [
+        {
+          "key": "Federated Learning",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Federated Learning"
+    },
+    {
+      "source": "doan_duc_phan",
+      "target": "van_nam_hoang",
+      "weight": 1,
+      "first_year": 2024,
+      "last_year": 2024,
+      "topics": [
+        {
+          "key": "Plant ID",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Plant ID"
+    },
+    {
+      "source": "doan_duc_phan",
+      "target": "thanh_hai_tran",
+      "weight": 1,
+      "first_year": 2024,
+      "last_year": 2024,
+      "topics": [
+        {
+          "key": "Plant ID",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Plant ID"
+    },
+    {
+      "source": "doan_duc_phan",
+      "target": "hai_vu",
+      "weight": 1,
+      "first_year": 2024,
+      "last_year": 2024,
+      "topics": [
+        {
+          "key": "Plant ID",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Plant ID"
+    },
+    {
+      "source": "khoat_than",
+      "target": "van_nam_hoang",
+      "weight": 1,
+      "first_year": 2022,
+      "last_year": 2022,
+      "topics": [
+        {
+          "key": "Hand Gesture",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Hand Gesture"
+    },
+    {
+      "source": "khoat_than",
+      "target": "thanh_hai_tran",
+      "weight": 1,
+      "first_year": 2022,
+      "last_year": 2022,
+      "topics": [
+        {
+          "key": "Hand Gesture",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Hand Gesture"
+    },
+    {
+      "source": "khoat_than",
+      "target": "thi_lan_le",
+      "weight": 1,
+      "first_year": 2022,
+      "last_year": 2022,
+      "topics": [
+        {
+          "key": "Hand Gesture",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Hand Gesture"
+    },
+    {
+      "source": "doan_duc_phan",
+      "target": "thi_lan_le",
+      "weight": 1,
+      "first_year": 2024,
+      "last_year": 2024,
+      "topics": [
+        {
+          "key": "Plant ID",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Plant ID"
+    },
+    {
+      "source": "hong_quan_nguyen",
+      "target": "khanh_huyen_bui",
+      "weight": 1,
+      "first_year": 2025,
+      "last_year": 2025,
+      "topics": [
+        {
+          "key": "Action Recognition",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Action Recognition"
+    },
+    {
+      "source": "huong_giang_doan",
+      "target": "thuy_binh_nguyen",
+      "weight": 1,
+      "first_year": 2018,
+      "last_year": 2018,
+      "topics": [
+        {
+          "key": "Person Re-ID",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Person Re-ID"
+    },
+    {
+      "source": "khoat_than",
+      "target": "van_toi_nguyen",
+      "weight": 1,
+      "first_year": 2021,
+      "last_year": 2021,
+      "topics": [
+        {
+          "key": "Other",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Other"
+    },
+    {
+      "source": "khoat_than",
+      "target": "thuy_binh_nguyen",
+      "weight": 1,
+      "first_year": 2020,
+      "last_year": 2020,
+      "topics": [
+        {
+          "key": "Other",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Other"
+    },
+    {
+      "source": "thi_thanh_thuy_pham",
+      "target": "van_nam_hoang",
+      "weight": 1,
+      "first_year": 2018,
+      "last_year": 2018,
+      "topics": [
+        {
+          "key": "Other",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Other"
+    },
+    {
+      "source": "phuong_dung_nguyen",
+      "target": "tuan_dung_kieu",
+      "weight": 1,
+      "first_year": 2023,
+      "last_year": 2023,
+      "topics": [
+        {
+          "key": "Action Recognition",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Action Recognition"
+    },
+    {
+      "source": "tuan_dung_kieu",
+      "target": "viet_duc_le",
+      "weight": 1,
+      "first_year": 2023,
+      "last_year": 2023,
+      "topics": [
+        {
+          "key": "Action Recognition",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Action Recognition"
+    },
+    {
+      "source": "hong_quan_nguyen",
+      "target": "viet_duc_le",
+      "weight": 1,
+      "first_year": 2024,
+      "last_year": 2024,
+      "topics": [
+        {
+          "key": "Action Recognition",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Action Recognition"
+    },
+    {
+      "source": "duy_tung_nguyen",
+      "target": "thanh_hai_tran",
+      "weight": 1,
+      "first_year": 2021,
+      "last_year": 2021,
+      "topics": [
+        {
+          "key": "Hand Gesture",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Hand Gesture"
+    },
+    {
+      "source": "quang_tien_pham",
+      "target": "van_toi_nguyen",
+      "weight": 1,
+      "first_year": 2024,
+      "last_year": 2024,
+      "topics": [
+        {
+          "key": "Action Recognition",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Action Recognition"
+    }
+  ],
+  "topics": [
+    {
+      "key": "Plant ID",
+      "color": "#7CFFB2"
+    },
+    {
+      "key": "Hand Gesture",
+      "color": "#7CD2FF"
+    },
+    {
+      "key": "Action Recognition",
+      "color": "#FF7CCB"
+    },
+    {
+      "key": "Person Re-ID",
+      "color": "#FFB87C"
+    },
+    {
+      "key": "Medical Imaging",
+      "color": "#FF7C7C"
+    },
+    {
+      "key": "Honey Bee",
+      "color": "#FFD27C"
+    },
+    {
+      "key": "Visually Impaired",
+      "color": "#A87CFF"
+    },
+    {
+      "key": "Federated Learning",
+      "color": "#7CE3FF"
+    },
+    {
+      "key": "Document/OCR",
+      "color": "#E07CFF"
+    },
+    {
+      "key": "Speech/NLP",
+      "color": "#7CFFD2"
+    },
+    {
+      "key": "Fall Detection",
+      "color": "#FF7CFF"
+    },
+    {
+      "key": "Surveillance",
+      "color": "#7CADFF"
+    },
+    {
+      "key": "Other",
+      "color": "#888888"
+    }
+  ]
+}

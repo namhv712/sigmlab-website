@@ -8,6 +8,7 @@ const navLinks = [
   { href: '/research', label: 'Research' },
   { href: '/projects', label: 'Projects' },
   { href: '/papers', label: 'Papers' },
+  { href: '/network', label: 'Network' },
   { href: '/venues', label: 'Venues' },
   { href: '/datasets', label: 'Datasets' },
   { href: '/team', label: 'Team' },
