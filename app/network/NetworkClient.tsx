@@ -383,10 +383,18 @@ export default function NetworkClient() {
         y: (e.clientY - rect.top - cy) / transformRef.current.k,
       }
     }
+    const isVisibleOnCanvas = (n: Node) => {
+      if (n.no_data) return false
+      if (n.last_year && n.last_year < yearMin) return false
+      if (activeTopics.size > 0 && !n.topics.some(t => activeTopics.has(t.key))) return false
+      if (search && !n.name.toLowerCase().includes(search.toLowerCase())) return false
+      return true
+    }
     const findNode = (lx: number, ly: number): Node | null => {
       let best: Node | null = null
       let bestD = Infinity
       for (const n of data.nodes) {
+        if (!isVisibleOnCanvas(n)) continue
         const r = 12 + Math.sqrt(n.papers) * 1.8
         const dx = (n.x ?? 0) - lx
         const dy = (n.y ?? 0) - ly
@@ -458,7 +466,7 @@ export default function NetworkClient() {
       window.removeEventListener('pointerup', onUp)
       canvas.removeEventListener('wheel', onWheel)
     }
-  }, [data])
+  }, [data, yearMin, activeTopics, search])
 
   const selectedNode = useMemo(() => {
     if (!data || !selectedId) return null
