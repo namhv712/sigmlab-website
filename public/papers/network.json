@@ -127,13 +127,13 @@
     {
       "id": "trung_kien_dao",
       "name": "Trung-Kien Dao",
-      "papers": 67,
+      "papers": 68,
       "first_year": 2007,
       "last_year": 2024,
       "topics": [
         {
           "key": "Other",
-          "count": 52
+          "count": 53
         },
         {
           "key": "Plant ID",
@@ -186,13 +186,13 @@
     {
       "id": "van_toi_nguyen",
       "name": "Van-Toi Nguyen",
-      "papers": 56,
+      "papers": 57,
       "first_year": 2003,
       "last_year": 2025,
       "topics": [
         {
           "key": "Other",
-          "count": 26
+          "count": 27
         },
         {
           "key": "Hand Gesture",
@@ -844,6 +844,26 @@
       "avatar": ""
     },
     {
+      "id": "thanh_nhan_nguyen",
+      "name": "Thanh-Nhan Nguyen",
+      "papers": 6,
+      "first_year": 2016,
+      "last_year": 2023,
+      "topics": [
+        {
+          "key": "Plant ID",
+          "count": 5
+        },
+        {
+          "key": "Other",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Plant ID",
+      "avatar": "/assets/images/team/Allumi Member/NguyenThanhNhan.png",
+      "affiliation": "Thai Nguyen University"
+    },
+    {
       "id": "tuan_dung_kieu",
       "name": "Tuan-Dung Kieu",
       "papers": 4,
@@ -955,18 +975,6 @@
       "primary_topic": "Other",
       "avatar": "",
       "affiliation": "",
-      "no_data": true
-    },
-    {
-      "id": "thanh_nhan_nguyuen",
-      "name": "Thanh-Nhan Nguyuen",
-      "papers": 0,
-      "first_year": null,
-      "last_year": null,
-      "topics": [],
-      "primary_topic": "Other",
-      "avatar": "/assets/images/team/Allumi Member/NguyenThanhNhan.png",
-      "affiliation": "Thai Nguyen University",
       "no_data": true
     },
     {
@@ -2368,6 +2376,20 @@
       "primary_topic": "Person Re-ID"
     },
     {
+      "source": "thanh_nhan_nguyen",
+      "target": "thi_lan_le",
+      "weight": 5,
+      "first_year": 2016,
+      "last_year": 2023,
+      "topics": [
+        {
+          "key": "Plant ID",
+          "count": 5
+        }
+      ],
+      "primary_topic": "Plant ID"
+    },
+    {
       "source": "hong_quan_nguyen",
       "target": "trung_hieu_le",
       "weight": 5,
@@ -2612,6 +2634,20 @@
         }
       ],
       "primary_topic": "Person Re-ID"
+    },
+    {
+      "source": "hai_vu",
+      "target": "thanh_nhan_nguyen",
+      "weight": 4,
+      "first_year": 2016,
+      "last_year": 2019,
+      "topics": [
+        {
+          "key": "Plant ID",
+          "count": 4
+        }
+      ],
+      "primary_topic": "Plant ID"
     },
     {
       "source": "phuong_dung_nguyen",
@@ -3714,6 +3750,20 @@
       "primary_topic": "Person Re-ID"
     },
     {
+      "source": "thanh_hai_tran",
+      "target": "thanh_nhan_nguyen",
+      "weight": 1,
+      "first_year": 2018,
+      "last_year": 2018,
+      "topics": [
+        {
+          "key": "Plant ID",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Plant ID"
+    },
+    {
       "source": "huong_giang_doan",
       "target": "trung_hieu_le",
       "weight": 1,
@@ -3971,6 +4021,34 @@
       "weight": 1,
       "first_year": 2024,
       "last_year": 2024,
+      "topics": [
+        {
+          "key": "Plant ID",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Plant ID"
+    },
+    {
+      "source": "thanh_nhan_nguyen",
+      "target": "van_nam_hoang",
+      "weight": 1,
+      "first_year": 2023,
+      "last_year": 2023,
+      "topics": [
+        {
+          "key": "Plant ID",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Plant ID"
+    },
+    {
+      "source": "hong_quan_nguyen",
+      "target": "thanh_nhan_nguyen",
+      "weight": 1,
+      "first_year": 2023,
+      "last_year": 2023,
       "topics": [
         {
           "key": "Plant ID",
@@ -6063,6 +6141,36 @@
       ]
     },
     {
+      "title": "Inverted frequency-coded chipless RFID tag design methodology based on parameter optimization",
+      "authors": "CC Le, TK Dao, NY Pham, TH Nguyen",
+      "year": 2024,
+      "venue": "IEEE Microwave and Wireless Technology Letters 34 (12), 1399-1402, 2024",
+      "topic": "Other",
+      "lab_authors": [
+        "trung_kien_dao"
+      ]
+    },
+    {
+      "title": "Efficiency Improvement for Chipless RFID Tag Design Using Frequency Placement and Taguchi-Based Initialized PSO",
+      "authors": "CC Le, TK Dao, NY Pham, TH Nguyen",
+      "year": 2024,
+      "venue": "Sensors 24 (14), 4435, 2024",
+      "topic": "Other",
+      "lab_authors": [
+        "trung_kien_dao"
+      ]
+    },
+    {
+      "title": "An Inverted Approach for Chipless RFID Tag Design Through Parameter Optimization",
+      "authors": "CC Le, TK Dao, NY Pham, TH Nguyen",
+      "year": 2024,
+      "venue": "2024 Tenth International Conference on Communications and Electronics (ICCE …, 2024",
+      "topic": "Other",
+      "lab_authors": [
+        "trung_kien_dao"
+      ]
+    },
+    {
       "title": "FedNTProto: A prototype-based approach for personalized federated learning",
       "authors": "TK Tran, HP Tran, TL Le, TH Tran",
       "year": 2024,
@@ -6212,38 +6320,8 @@
       ]
     },
     {
-      "title": "Inverted Frequency-Coded Chipless RFID Tag Design Methodology Based on Parameter Optimization",
-      "authors": "CC Le, TK Dao, NY Pham, TH Nguyen",
-      "year": 2024,
-      "venue": "IEEE Microwave and Wireless Technology Letters, 2024",
-      "topic": "Other",
-      "lab_authors": [
-        "trung_kien_dao"
-      ]
-    },
-    {
       "title": "Sino-Vietnamese Text Transcription using Word Embedding Approach",
       "authors": "TK Dao, DV Nguyen, MV Pham, NN Duong",
-      "year": 2024,
-      "venue": "2024 Tenth International Conference on Communications and Electronics (ICCE …, 2024",
-      "topic": "Other",
-      "lab_authors": [
-        "trung_kien_dao"
-      ]
-    },
-    {
-      "title": "Efficiency Improvement for Chipless RFID Tag Design Using Frequency Placement and Taguchi-Based Initialized PSO",
-      "authors": "CC Le, TK Dao, NY Pham, TH Nguyen",
-      "year": 2024,
-      "venue": "Sensors 24 (14), 4435, 2024",
-      "topic": "Other",
-      "lab_authors": [
-        "trung_kien_dao"
-      ]
-    },
-    {
-      "title": "An Inverted Approach for Chipless RFID Tag Design Through Parameter Optimization",
-      "authors": "CC Le, TK Dao, NY Pham, TH Nguyen",
       "year": 2024,
       "venue": "2024 Tenth International Conference on Communications and Electronics (ICCE …, 2024",
       "topic": "Other",
@@ -6545,7 +6623,8 @@
       "lab_authors": [
         "van_nam_hoang",
         "thi_lan_le",
-        "hong_quan_nguyen"
+        "hong_quan_nguyen",
+        "thanh_nhan_nguyen"
       ]
     },
     {
@@ -6660,6 +6739,16 @@
       "topic": "Other",
       "lab_authors": [
         "hong_quan_nguyen"
+      ]
+    },
+    {
+      "title": "Comparison of rbcL and trnH-psbA DNA barcodes in diverse Camellia species collection in Vietnam",
+      "authors": "VT Ho, TH Nguyen, LBN Nguyen, TTN Nguyen, MP Nguyen",
+      "year": 2023,
+      "venue": "SABRAO J. Breed. Genet 55 (3), 877-885, 2023",
+      "topic": "Other",
+      "lab_authors": [
+        "thanh_nhan_nguyen"
       ]
     },
     {
@@ -6930,6 +7019,16 @@
       ]
     },
     {
+      "title": "Encoding capacity enhancement for chipless RFID tag using resonant frequency placement",
+      "authors": "CC Le, TK Dao, NY Pham, TH Nguyen",
+      "year": 2023,
+      "venue": "IEEE access 11, 117907-117919, 2023",
+      "topic": "Other",
+      "lab_authors": [
+        "trung_kien_dao"
+      ]
+    },
+    {
       "title": "Accurate continuous action and gesture recognition method based on skeleton and sliding windows techniques",
       "authors": "VD Le, TL Nghiem, TL Le",
       "year": 2023,
@@ -7030,16 +7129,6 @@
       "topic": "Surveillance",
       "lab_authors": [
         "thanh_hai_tran"
-      ]
-    },
-    {
-      "title": "Encoding Capacity Enhancement for Chipless RFID Tag Using Resonant Frequency Placement",
-      "authors": "CC Le, TK Dao, NY Pham, TH Nguyen",
-      "year": 2023,
-      "venue": "IEEE Access, 2023",
-      "topic": "Other",
-      "lab_authors": [
-        "trung_kien_dao"
       ]
     },
     {
@@ -8994,6 +9083,27 @@
       ]
     },
     {
+      "title": "Design and implementation of an energy simulation platform for wireless sensor networks",
+      "authors": "VP Ha, TK Dao, MH Le, TH Nguyen, VT Nguyen",
+      "year": 2020,
+      "venue": "2020 International Conference on Multimedia Analysis and Pattern Recognition …, 2020",
+      "topic": "Other",
+      "lab_authors": [
+        "trung_kien_dao",
+        "van_toi_nguyen"
+      ]
+    },
+    {
+      "title": "Encrypt Data with Electromagnetic Waves Using Printable Structures and Materials",
+      "authors": "CC Le, TK Dao, TH Nguyen, TNY Pham",
+      "year": 2020,
+      "venue": "Old Journal, 1-6, 2020",
+      "topic": "Other",
+      "lab_authors": [
+        "trung_kien_dao"
+      ]
+    },
+    {
       "title": "Hand detection and segmentation using multimodal information from Kinect",
       "authors": "VT Pham, TL Le, TH Tran, TP Nguyen",
       "year": 2020,
@@ -9085,17 +9195,6 @@
       "topic": "Other",
       "lab_authors": [
         "trung_kien_dao"
-      ]
-    },
-    {
-      "title": "Design and Implementation of an Energy Simulation Platform for Wireless Sensor Networks",
-      "authors": "VP Ha, TK Dao, MH Le, TH Nguyen, VT Nguyen",
-      "year": 2020,
-      "venue": "2020 International Conference on Multimedia Analysis and Pattern Recognition …, 2020",
-      "topic": "Other",
-      "lab_authors": [
-        "trung_kien_dao",
-        "van_toi_nguyen"
       ]
     },
     {
@@ -9208,6 +9307,7 @@
       "venue": "International Journal of Machine Learning and Computing 9 (1), 26-34, 2019",
       "topic": "Plant ID",
       "lab_authors": [
+        "thanh_nhan_nguyen",
         "thi_lan_le",
         "hai_vu"
       ]
@@ -9540,6 +9640,16 @@
       ]
     },
     {
+      "title": "High data density encoding resonator for ultra wideband chipless rfid tag",
+      "authors": "TH Nguyen, VT Nguyen",
+      "year": 2019,
+      "venue": "2019 6th NAFOSTED Conference on Information and Computer Science (NICS), 320-324, 2019",
+      "topic": "Other",
+      "lab_authors": [
+        "van_toi_nguyen"
+      ]
+    },
+    {
       "title": "Effective multi-shot person re-identification through representative frames selection and temporal feature pooling",
       "authors": "TB Nguyen, TL Le, L Devillaine, TTT Pham, NP Ngoc",
       "year": 2019,
@@ -9779,6 +9889,7 @@
       "venue": "Computers and Electronics in Agriculture 155, 412-425, 2018",
       "topic": "Plant ID",
       "lab_authors": [
+        "thanh_nhan_nguyen",
         "thi_lan_le",
         "hai_vu",
         "thanh_hai_tran"
@@ -10188,6 +10299,7 @@
       "venue": "Asian Conference on Intelligent Information and Database Systems, 223-233, 2017",
       "topic": "Plant ID",
       "lab_authors": [
+        "thanh_nhan_nguyen",
         "thi_lan_le",
         "hai_vu"
       ]
@@ -10487,6 +10599,7 @@
       "venue": "AUN/SEED-Net Regional Conference for Computer and Information Engineering, 1-6, 2016",
       "topic": "Plant ID",
       "lab_authors": [
+        "thanh_nhan_nguyen",
         "thi_lan_le",
         "hai_vu"
       ]
@@ -11853,36 +11966,6 @@
       ]
     },
     {
-      "title": "Human posture recognition using human skeleton provided by Kinect",
-      "authors": "TL Le, MQ Nguyen",
-      "year": 2013,
-      "venue": "2013 international conference on computing, management and …, 2013",
-      "topic": "Hand Gesture",
-      "lab_authors": [
-        "thi_lan_le"
-      ]
-    },
-    {
-      "title": "Leaf based plant identification system for android using surf features in combination with bag of words model and supervised learning",
-      "authors": "QK Nguyen, TL Le, NH Pham",
-      "year": 2013,
-      "venue": "2013 International Conference on Advanced Technologies for Communications …, 2013",
-      "topic": "Plant ID",
-      "lab_authors": [
-        "thi_lan_le"
-      ]
-    },
-    {
-      "title": "Computer aided plant identification system",
-      "authors": "NH Pham, TL Le, P Grard, VN Nguyen",
-      "year": 2013,
-      "venue": "2013 International conference on computing, management and …, 2013",
-      "topic": "Plant ID",
-      "lab_authors": [
-        "thi_lan_le"
-      ]
-    },
-    {
       "title": "A wearable assistive device for the blind using tongue-placed electrotactile display: Design and verification",
       "authors": "TH Nguyen, TH Nguyen, TL Le, TTH Tran, N Vuillerme, TP Vuong",
       "year": 2013,
@@ -11913,6 +11996,36 @@
       "lab_authors": [
         "thi_lan_le",
         "thanh_hai_tran"
+      ]
+    },
+    {
+      "title": "Human posture recognition using human skeleton provided by Kinect",
+      "authors": "TL Le, MQ Nguyen",
+      "year": 2013,
+      "venue": "2013 international conference on computing, management and …, 2013",
+      "topic": "Hand Gesture",
+      "lab_authors": [
+        "thi_lan_le"
+      ]
+    },
+    {
+      "title": "Leaf based plant identification system for android using surf features in combination with bag of words model and supervised learning",
+      "authors": "QK Nguyen, TL Le, NH Pham",
+      "year": 2013,
+      "venue": "2013 International Conference on Advanced Technologies for Communications …, 2013",
+      "topic": "Plant ID",
+      "lab_authors": [
+        "thi_lan_le"
+      ]
+    },
+    {
+      "title": "Computer aided plant identification system",
+      "authors": "NH Pham, TL Le, P Grard, VN Nguyen",
+      "year": 2013,
+      "venue": "2013 International conference on computing, management and …, 2013",
+      "topic": "Plant ID",
+      "lab_authors": [
+        "thi_lan_le"
       ]
     },
     {
