@@ -60,6 +60,7 @@ export default function NetworkClient() {
   const [yearMin, setYearMin] = useState(2005)
   const [activeTopics, setActiveTopics] = useState<Set<string>>(new Set())
   const [search, setSearch] = useState('')
+  const [searchFocus, setSearchFocus] = useState(false)
 
   // Load data
   useEffect(() => {
@@ -528,12 +529,52 @@ export default function NetworkClient() {
         <canvas ref={canvasRef} className="block w-full h-full" />
 
         <div className="absolute left-4 top-4 flex flex-col gap-3 max-w-[260px] z-10">
-          <input
-            value={search}
-            onChange={e => setSearch(e.target.value)}
-            placeholder="Search researcher…"
-            className="bg-white/5 backdrop-blur border border-white/15 rounded-lg px-3 py-2 text-sm placeholder:text-white/40 focus:outline-none focus:border-cyan-400/60"
-          />
+          <div className="relative">
+            <input
+              value={search}
+              onChange={e => { setSearch(e.target.value); setSearchFocus(true) }}
+              onFocus={() => setSearchFocus(true)}
+              onBlur={() => setTimeout(() => setSearchFocus(false), 150)}
+              placeholder="Search researcher…"
+              className="w-full bg-white/5 backdrop-blur border border-white/15 rounded-lg px-3 py-2 text-sm placeholder:text-white/40 focus:outline-none focus:border-cyan-400/60"
+            />
+            {searchFocus && search.trim() && (
+              <div className="absolute left-0 right-0 top-full mt-1 bg-[#0b0d18]/95 backdrop-blur border border-white/15 rounded-lg shadow-xl max-h-[280px] overflow-y-auto z-20">
+                {data.nodes
+                  .filter(n => n.name.toLowerCase().includes(search.toLowerCase()))
+                  .slice(0, 12)
+                  .map(n => (
+                    <button
+                      key={n.id}
+                      onMouseDown={e => e.preventDefault()} // don't blur input
+                      onClick={() => { setSelectedId(n.id); setSearch(''); setSearchFocus(false) }}
+                      className="w-full flex items-center gap-2.5 px-2 py-1.5 hover:bg-white/10 text-left"
+                    >
+                      {n.avatar ? (
+                        // eslint-disable-next-line @next/next/no-img-element
+                        <img src={n.avatar} alt=""
+                             className="w-7 h-7 rounded-full object-cover flex-shrink-0 ring-1"
+                             style={{ borderColor: topicColor(n.primary_topic) }} />
+                      ) : (
+                        <span className="w-7 h-7 rounded-full flex-shrink-0 grid place-items-center text-[9px] text-white/50 border"
+                              style={{ borderColor: topicColor(n.primary_topic), background: 'rgba(255,255,255,0.05)' }}>
+                          {n.name.split(' ').map(w => w[0]).slice(0,2).join('')}
+                        </span>
+                      )}
+                      <div className="min-w-0 flex-1">
+                        <div className="truncate text-[12.5px]">{n.name}</div>
+                        <div className="text-[10px] text-white/45 truncate">
+                          {n.no_data ? (n.affiliation || 'no data') : `${n.papers} papers`}
+                        </div>
+                      </div>
+                    </button>
+                  ))}
+                {data.nodes.filter(n => n.name.toLowerCase().includes(search.toLowerCase())).length === 0 && (
+                  <div className="px-3 py-3 text-xs text-white/40">No match.</div>
+                )}
+              </div>
+            )}
+          </div>
           <div className="bg-white/5 backdrop-blur border border-white/15 rounded-lg p-3 text-xs">
             <div className="flex justify-between text-white/70">
               <span>Active since</span>
