@@ -690,6 +690,34 @@
       "affiliation": "Hai Duong University"
     },
     {
+      "id": "thi_nhung_le",
+      "name": "Thi-Nhung Le",
+      "papers": 13,
+      "first_year": 2012,
+      "last_year": 2025,
+      "topics": [
+        {
+          "key": "Other",
+          "count": 5
+        },
+        {
+          "key": "Plant ID",
+          "count": 4
+        },
+        {
+          "key": "Honey Bee",
+          "count": 2
+        },
+        {
+          "key": "Action Recognition",
+          "count": 2
+        }
+      ],
+      "primary_topic": "Plant ID",
+      "avatar": "/assets/images/team/PhD Students/PhD - Chị Nhung.jpg",
+      "affiliation": "Vietnam National University of Agriculture"
+    },
+    {
       "id": "viet_duc_le",
       "name": "Viet-Duc Le",
       "papers": 12,
@@ -943,18 +971,6 @@
       "primary_topic": "Other",
       "avatar": "/assets/images/team/Permanent Members/Main - Thầy Dũng.png",
       "affiliation": "",
-      "no_data": true
-    },
-    {
-      "id": "thi_nhung_le",
-      "name": "Thi-Nhung Le",
-      "papers": 0,
-      "first_year": null,
-      "last_year": null,
-      "topics": [],
-      "primary_topic": "Other",
-      "avatar": "/assets/images/team/PhD Students/PhD - Chị Nhung.jpg",
-      "affiliation": "Vietnam National University of Agriculture",
       "no_data": true
     },
     {
@@ -2092,6 +2108,28 @@
       "primary_topic": "Person Re-ID"
     },
     {
+      "source": "thi_lan_le",
+      "target": "thi_nhung_le",
+      "weight": 6,
+      "first_year": 2012,
+      "last_year": 2025,
+      "topics": [
+        {
+          "key": "Honey Bee",
+          "count": 2
+        },
+        {
+          "key": "Plant ID",
+          "count": 2
+        },
+        {
+          "key": "Action Recognition",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Honey Bee"
+    },
+    {
       "source": "hong_quan_nguyen",
       "target": "phuong_dung_nguyen",
       "weight": 6,
@@ -2772,6 +2810,24 @@
       "primary_topic": "Medical Imaging"
     },
     {
+      "source": "hai_vu",
+      "target": "thi_nhung_le",
+      "weight": 3,
+      "first_year": 2023,
+      "last_year": 2025,
+      "topics": [
+        {
+          "key": "Plant ID",
+          "count": 2
+        },
+        {
+          "key": "Honey Bee",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Plant ID"
+    },
+    {
       "source": "quang_tien_pham",
       "target": "thanh_hai_tran",
       "weight": 3,
@@ -2976,6 +3032,42 @@
       "primary_topic": "Honey Bee"
     },
     {
+      "source": "duy_tung_nguyen",
+      "target": "thi_nhung_le",
+      "weight": 2,
+      "first_year": 2024,
+      "last_year": 2025,
+      "topics": [
+        {
+          "key": "Honey Bee",
+          "count": 1
+        },
+        {
+          "key": "Plant ID",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Honey Bee"
+    },
+    {
+      "source": "hong_quan_nguyen",
+      "target": "thi_nhung_le",
+      "weight": 2,
+      "first_year": 2024,
+      "last_year": 2025,
+      "topics": [
+        {
+          "key": "Plant ID",
+          "count": 1
+        },
+        {
+          "key": "Action Recognition",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Plant ID"
+    },
+    {
       "source": "hai_vu",
       "target": "phuong_dung_nguyen",
       "weight": 2,
@@ -3078,6 +3170,20 @@
       "primary_topic": "Plant ID"
     },
     {
+      "source": "phuong_dung_nguyen",
+      "target": "thi_nhung_le",
+      "weight": 2,
+      "first_year": 2023,
+      "last_year": 2025,
+      "topics": [
+        {
+          "key": "Action Recognition",
+          "count": 2
+        }
+      ],
+      "primary_topic": "Action Recognition"
+    },
+    {
       "source": "khanh_huyen_bui",
       "target": "phuong_dung_nguyen",
       "weight": 2,
@@ -3101,6 +3207,24 @@
         {
           "key": "Action Recognition",
           "count": 2
+        }
+      ],
+      "primary_topic": "Action Recognition"
+    },
+    {
+      "source": "thanh_hai_tran",
+      "target": "thi_nhung_le",
+      "weight": 2,
+      "first_year": 2012,
+      "last_year": 2023,
+      "topics": [
+        {
+          "key": "Action Recognition",
+          "count": 1
+        },
+        {
+          "key": "Other",
+          "count": 1
         }
       ],
       "primary_topic": "Action Recognition"
@@ -3646,6 +3770,20 @@
       "primary_topic": "Plant ID"
     },
     {
+      "source": "khanh_huyen_bui",
+      "target": "thi_nhung_le",
+      "weight": 1,
+      "first_year": 2025,
+      "last_year": 2025,
+      "topics": [
+        {
+          "key": "Action Recognition",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Action Recognition"
+    },
+    {
       "source": "hong_quan_nguyen",
       "target": "khanh_huyen_bui",
       "weight": 1,
@@ -3730,8 +3868,36 @@
       "primary_topic": "Action Recognition"
     },
     {
+      "source": "thi_nhung_le",
+      "target": "viet_duc_le",
+      "weight": 1,
+      "first_year": 2023,
+      "last_year": 2023,
+      "topics": [
+        {
+          "key": "Action Recognition",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Action Recognition"
+    },
+    {
       "source": "tuan_dung_kieu",
       "target": "viet_duc_le",
+      "weight": 1,
+      "first_year": 2023,
+      "last_year": 2023,
+      "topics": [
+        {
+          "key": "Action Recognition",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Action Recognition"
+    },
+    {
+      "source": "thi_nhung_le",
+      "target": "tuan_dung_kieu",
       "weight": 1,
       "first_year": 2023,
       "last_year": 2023,
@@ -3826,6 +3992,20 @@
         }
       ],
       "primary_topic": "Visually Impaired"
+    },
+    {
+      "source": "thi_nhung_le",
+      "target": "trung_kien_dao",
+      "weight": 1,
+      "first_year": 2012,
+      "last_year": 2012,
+      "topics": [
+        {
+          "key": "Other",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Other"
     },
     {
       "source": "quang_tien_pham",
@@ -4319,6 +4499,7 @@
       "venue": "2025 International Conference on Multimedia Analysis and Pattern Recognition …, 2025",
       "topic": "Honey Bee",
       "lab_authors": [
+        "thi_nhung_le",
         "duy_tung_nguyen",
         "thi_lan_le"
       ]
@@ -4364,6 +4545,7 @@
       "venue": "AgriEngineering 7 (9), 282, 2025",
       "topic": "Plant ID",
       "lab_authors": [
+        "thi_nhung_le",
         "thi_lan_le",
         "hai_vu"
       ]
@@ -4386,6 +4568,7 @@
       "venue": "2025 International Conference on Multimedia Analysis and Pattern Recognition …, 2025",
       "topic": "Plant ID",
       "lab_authors": [
+        "thi_nhung_le",
         "thi_lan_le",
         "hai_vu"
       ]
@@ -4533,6 +4716,7 @@
       "topic": "Action Recognition",
       "lab_authors": [
         "phuong_dung_nguyen",
+        "thi_nhung_le",
         "khanh_huyen_bui",
         "hong_quan_nguyen",
         "thi_lan_le"
@@ -5219,6 +5403,7 @@
       "topic": "Plant ID",
       "lab_authors": [
         "duy_tung_nguyen",
+        "thi_nhung_le",
         "hong_quan_nguyen"
       ]
     },
@@ -6119,6 +6304,7 @@
       "venue": "2023 International Conference on Multimedia Analysis and Pattern Recognition …, 2023",
       "topic": "Honey Bee",
       "lab_authors": [
+        "thi_nhung_le",
         "thi_lan_le",
         "hai_vu"
       ]
@@ -6320,6 +6506,7 @@
       "lab_authors": [
         "phuong_dung_nguyen",
         "viet_duc_le",
+        "thi_nhung_le",
         "tuan_dung_kieu",
         "thanh_hai_tran"
       ]
@@ -6535,6 +6722,16 @@
         "viet_duc_le",
         "thi_lich_nghiem",
         "thi_lan_le"
+      ]
+    },
+    {
+      "title": "A novel convolutional neural network architecture for pollen-bearing honeybee recognition",
+      "authors": "TN Le, P Thi-Thu-Hong, HD Nguyen, L Thi-Lan",
+      "year": 2023,
+      "venue": "International Journal of Advanced Computer Science and Applications 14 (8), 2023",
+      "topic": "Plant ID",
+      "lab_authors": [
+        "thi_nhung_le"
       ]
     },
     {
@@ -7923,6 +8120,16 @@
       ]
     },
     {
+      "title": "Metabolic dysregulation induces impaired lymphocyte memory formation during severe SARS-CoV-2 infection",
+      "authors": "S Gurshaney, AM Alvarez, K Ezhakunnel, A Manalo, TH Huynh, NT Le, …",
+      "year": 2021,
+      "venue": "bioRxiv, 2021.12. 06.471421, 2021",
+      "topic": "Other",
+      "lab_authors": [
+        "thi_nhung_le"
+      ]
+    },
+    {
       "title": "Ultrasensitive strain sensor enhanced by Bonded Light Emitting Diodes",
       "authors": "T Nguyen, T Dinh, ARM Foisal, H Nguyen, H Vu, TA Pham, …",
       "year": 2021,
@@ -9015,6 +9222,16 @@
       ]
     },
     {
+      "title": "A new multi-criteria decision making algorithm for medical diagnosis and classification problems using divergence measure of picture fuzzy sets",
+      "authors": "NX Thao, M Ali, LT Nhung, HK Gianey, F Smarandache",
+      "year": 2019,
+      "venue": "Journal of Intelligent & Fuzzy Systems 37 (6), 7785-7796, 2019",
+      "topic": "Other",
+      "lab_authors": [
+        "thi_nhung_le"
+      ]
+    },
+    {
       "title": "3D skeleton-based action recognition with convolutional neural networks",
       "authors": "VN Hoang, TL Le, TH Tran, VT Nguyen",
       "year": 2019,
@@ -9448,6 +9665,16 @@
       "topic": "Other",
       "lab_authors": [
         "khoat_than"
+      ]
+    },
+    {
+      "title": "New dissimilarity measures on picture fuzzy sets and applications",
+      "authors": "NT Le, D Van Nguyen, CM Ngoc, TX Nguyen",
+      "year": 2018,
+      "venue": "Journal of Computer Science and Cybernetics 34 (3), 219-231, 2018",
+      "topic": "Other",
+      "lab_authors": [
+        "thi_nhung_le"
       ]
     },
     {
@@ -11631,7 +11858,8 @@
       "lab_authors": [
         "trung_kien_dao",
         "thi_lan_le",
-        "thanh_hai_tran"
+        "thanh_hai_tran",
+        "thi_nhung_le"
       ]
     },
     {
@@ -12680,6 +12908,16 @@
       "topic": "Other",
       "lab_authors": [
         "khoat_than"
+      ]
+    },
+    {
+      "title": "KSE 2011",
+      "authors": "H Nguyen, HP Le, HT Vo, M Rossignol, TH Nguyen, NT Le, …",
+      "year": null,
+      "venue": "",
+      "topic": "Other",
+      "lab_authors": [
+        "thi_nhung_le"
       ]
     },
     {
