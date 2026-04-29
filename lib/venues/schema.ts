@@ -52,6 +52,7 @@ export const VenueSchema = z.object({
   acceptanceRate: z.number().min(0).max(1).optional(),
   location: z.string().optional(),
   notes: z.string().optional(),
+  parent: z.string().regex(/^[a-z0-9-]+$/).optional(),
   lastVerified: z.string().regex(/^\d{4}-\d{2}-\d{2}$/).optional(),
 }).strict()
 

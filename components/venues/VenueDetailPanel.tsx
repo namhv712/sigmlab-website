@@ -31,6 +31,7 @@ export function VenueDetailPanel({ venue }: Props) {
           {venue.aliases && venue.aliases.length > 0 && (
             <p className="text-xs text-gray-500 mt-1">Also: {venue.aliases.join(' · ')}</p>
           )}
+          {venue.parent && <p className="text-sm text-gray-700 mt-2">Workshop at: <span className="font-medium uppercase">{venue.parent}</span></p>}
           {venue.publisher && <p className="text-sm text-gray-700 mt-2">Publisher: <span className="font-medium">{venue.publisher}</span></p>}
           {venue.location && <p className="text-sm text-gray-700">Location: <span className="font-medium">{venue.location}</span></p>}
           {venue.frequency && <p className="text-sm text-gray-700 capitalize">Frequency: <span className="font-medium">{venue.frequency}</span></p>}

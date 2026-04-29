@@ -57,6 +57,7 @@ export interface Venue {
   acceptanceRate?: number
   location?: string
   notes?: string
+  parent?: string
   lastVerified?: string
 }
 

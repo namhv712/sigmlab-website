@@ -7,7 +7,7 @@ import { UpcomingDeadlines } from '@/components/venues/UpcomingDeadlines'
 import { VenuesFilters, type FilterState } from '@/components/venues/VenuesFilters'
 import { VenuesTable, type SortColumn, type SortDir } from '@/components/venues/VenuesTable'
 
-type Tab = 'all' | 'conferences' | 'journals' | 'workshops'
+export type Tab = 'all' | 'conferences' | 'journals' | 'workshops'
 
 const TAB_TO_TYPE: Record<Tab, string | null> = {
   all: null,
@@ -66,17 +66,15 @@ export default function VenuesClient({ venues, generatedAt }: { venues: VenueWit
 
   return (
     <div className="page-container">
-      <h1 className="page-title">Computer Vision Venues</h1>
-      <p className="text-gray-600 max-w-3xl mb-2">
-        A curated reference of CV/ML publication venues with rankings, indexing, and submission deadlines.
-      </p>
-      <p className="text-xs text-gray-500 mb-6">
-        {venues.length} venues{generatedAt && ` · last updated ${generatedAt}`}
-      </p>
+      <div className="flex items-baseline gap-3 mb-4 flex-wrap">
+        <h1 className="page-title !mb-0">Venues</h1>
+        <span className="text-sm text-gray-500">
+          {venues.length} CV/ML journals, conferences & workshops
+          {generatedAt && ` · updated ${generatedAt}`}
+        </span>
+      </div>
 
-      <UpcomingDeadlines venues={venues} onSelect={onJumpTo} />
-
-      <nav aria-label="Venue type" className="flex gap-1 mb-4 border-b border-gray-200">
+      <nav aria-label="Venue type" className="flex gap-1 mb-3 border-b border-gray-200">
         {(['all', 'conferences', 'journals', 'workshops'] as Tab[]).map(t => (
           <button
             key={t}
@@ -91,7 +89,9 @@ export default function VenuesClient({ venues, generatedAt }: { venues: VenueWit
         ))}
       </nav>
 
-      <VenuesFilters state={filters} onChange={setFilters} venues={venues} />
+      {tab !== 'journals' && <UpcomingDeadlines venues={venues} tab={tab} onSelect={onJumpTo} />}
+
+      <VenuesFilters state={filters} onChange={setFilters} venues={venues} tab={tab} />
 
       <VenuesTable
         venues={filtered}
@@ -99,6 +99,7 @@ export default function VenuesClient({ venues, generatedAt }: { venues: VenueWit
         onSort={handleSort}
         expanded={expanded}
         onToggle={toggleExpanded}
+        tab={tab}
       />
     </div>
   )
@@ -149,6 +150,7 @@ function filterAndSort(
 
 const QUARTILE_RANK: Record<string, number> = { Q1: 1, Q2: 2, Q3: 3, Q4: 4 }
 const CORE_RANK: Record<string, number> = { 'A*': 1, A: 2, B: 3, C: 4, unranked: 5 }
+const CCF_RANK: Record<string, number> = { A: 1, B: 2, C: 3, unranked: 4 }
 
 function compare(a: VenueWithDerived, b: VenueWithDerived, col: SortColumn, dir: SortDir): number {
   const sign = dir === 'asc' ? 1 : -1
@@ -158,10 +160,13 @@ function compare(a: VenueWithDerived, b: VenueWithDerived, col: SortColumn, dir:
     case 'type': return sign * a.type.localeCompare(b.type)
     case 'core':
       return sign * ((CORE_RANK[a.rankings.core ?? 'unranked'] ?? 5) - (CORE_RANK[b.rankings.core ?? 'unranked'] ?? 5))
+    case 'ccf':
+      return sign * ((CCF_RANK[a.rankings.ccf ?? 'unranked'] ?? 4) - (CCF_RANK[b.rankings.ccf ?? 'unranked'] ?? 4))
     case 'quartile':
       return sign * ((QUARTILE_RANK[a.rankings.scimagoQuartile ?? ''] ?? 5) - (QUARTILE_RANK[b.rankings.scimagoQuartile ?? ''] ?? 5))
-    case 'jcrIf': return sign * (num(b.rankings.jcrImpactFactor) - num(a.rankings.jcrImpactFactor)) * -1 // higher first when asc=desc effectively
+    case 'jcrIf': return sign * (num(a.rankings.jcrImpactFactor) - num(b.rankings.jcrImpactFactor))
     case 'sjr': return sign * (num(a.rankings.sjr) - num(b.rankings.sjr))
+    case 'citeScore': return sign * (num(a.rankings.citeScore) - num(b.rankings.citeScore))
     case 'hIndex': return sign * (num(a.rankings.hIndex) - num(b.rankings.hIndex))
     case 'nextDeadline':
     case 'daysUntil':
