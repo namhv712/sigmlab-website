@@ -3,29 +3,29 @@
     {
       "id": "thi_lan_le",
       "name": "Thi-Lan Le",
-      "papers": 186,
+      "papers": 211,
       "first_year": 2004,
       "last_year": 2026,
       "topics": [
         {
           "key": "Other",
-          "count": 42
+          "count": 54
         },
         {
           "key": "Plant ID",
-          "count": 26
+          "count": 27
         },
         {
           "key": "Action Recognition",
-          "count": 22
+          "count": 24
         },
         {
           "key": "Person Re-ID",
-          "count": 22
+          "count": 24
         },
         {
           "key": "Hand Gesture",
-          "count": 15
+          "count": 17
         }
       ],
       "primary_topic": "Plant ID",
@@ -34,21 +34,21 @@
     {
       "id": "thanh_hai_tran",
       "name": "Thanh-Hai Tran",
-      "papers": 165,
+      "papers": 170,
       "first_year": 2006,
       "last_year": 2026,
       "topics": [
         {
           "key": "Other",
-          "count": 47
+          "count": 49
         },
         {
           "key": "Hand Gesture",
-          "count": 30
+          "count": 32
         },
         {
           "key": "Medical Imaging",
-          "count": 24
+          "count": 25
         },
         {
           "key": "Action Recognition",
@@ -65,7 +65,7 @@
     {
       "id": "hai_vu",
       "name": "Hai Vu",
-      "papers": 163,
+      "papers": 164,
       "first_year": 2000,
       "last_year": 2025,
       "topics": [
@@ -75,7 +75,7 @@
         },
         {
           "key": "Medical Imaging",
-          "count": 39
+          "count": 40
         },
         {
           "key": "Plant ID",
@@ -96,13 +96,13 @@
     {
       "id": "khoat_than",
       "name": "Khoat Than",
-      "papers": 87,
+      "papers": 88,
       "first_year": 2011,
       "last_year": 2026,
       "topics": [
         {
           "key": "Other",
-          "count": 68
+          "count": 69
         },
         {
           "key": "Speech/NLP",
@@ -158,7 +158,7 @@
     {
       "id": "van_toi_nguyen",
       "name": "Van-Toi Nguyen",
-      "papers": 53,
+      "papers": 56,
       "first_year": 2003,
       "last_year": 2025,
       "topics": [
@@ -168,19 +168,19 @@
         },
         {
           "key": "Hand Gesture",
-          "count": 8
+          "count": 10
         },
         {
           "key": "Action Recognition",
           "count": 5
         },
         {
-          "key": "Medical Imaging",
+          "key": "Speech/NLP",
           "count": 4
         },
         {
-          "key": "Speech/NLP",
-          "count": 3
+          "key": "Medical Imaging",
+          "count": 4
         }
       ],
       "primary_topic": "Hand Gesture",
@@ -220,13 +220,13 @@
     {
       "id": "thuy_binh_nguyen",
       "name": "Thuy-Binh Nguyen",
-      "papers": 48,
+      "papers": 49,
       "first_year": 2007,
       "last_year": 2026,
       "topics": [
         {
           "key": "Person Re-ID",
-          "count": 23
+          "count": 24
         },
         {
           "key": "Other",
@@ -251,13 +251,13 @@
     {
       "id": "thi_thanh_thuy_pham",
       "name": "Thi Thanh Thuy Pham",
-      "papers": 46,
-      "first_year": 2006,
+      "papers": 47,
+      "first_year": 1999,
       "last_year": 2025,
       "topics": [
         {
           "key": "Other",
-          "count": 23
+          "count": 24
         },
         {
           "key": "Person Re-ID",
@@ -282,7 +282,7 @@
     {
       "id": "hong_quan_nguyen",
       "name": "Hong-Quan Nguyen",
-      "papers": 42,
+      "papers": 44,
       "first_year": 2016,
       "last_year": 2025,
       "topics": [
@@ -292,7 +292,7 @@
         },
         {
           "key": "Other",
-          "count": 11
+          "count": 13
         },
         {
           "key": "Action Recognition",
@@ -309,6 +309,37 @@
       ],
       "primary_topic": "Person Re-ID",
       "avatar": "/assets/images/team/Invited Researchers/IR Anh Quân.png"
+    },
+    {
+      "id": "huong_giang_doan",
+      "name": "Huong-Giang Doan",
+      "papers": 41,
+      "first_year": 2014,
+      "last_year": 2026,
+      "topics": [
+        {
+          "key": "Hand Gesture",
+          "count": 20
+        },
+        {
+          "key": "Other",
+          "count": 14
+        },
+        {
+          "key": "Action Recognition",
+          "count": 2
+        },
+        {
+          "key": "Person Re-ID",
+          "count": 2
+        },
+        {
+          "key": "Surveillance",
+          "count": 2
+        }
+      ],
+      "primary_topic": "Hand Gesture",
+      "avatar": "/assets/images/team/Allumi Member/DoanThiHuongGiang.png"
     },
     {
       "id": "duy_tung_nguyen",
@@ -340,37 +371,6 @@
       ],
       "primary_topic": "Honey Bee",
       "avatar": "/assets/images/team/Invited Researchers/Master - TungND.jpg"
-    },
-    {
-      "id": "huong_giang_doan",
-      "name": "Huong-Giang Doan",
-      "papers": 39,
-      "first_year": 2014,
-      "last_year": 2026,
-      "topics": [
-        {
-          "key": "Hand Gesture",
-          "count": 19
-        },
-        {
-          "key": "Other",
-          "count": 14
-        },
-        {
-          "key": "Person Re-ID",
-          "count": 2
-        },
-        {
-          "key": "Surveillance",
-          "count": 2
-        },
-        {
-          "key": "Action Recognition",
-          "count": 1
-        }
-      ],
-      "primary_topic": "Hand Gesture",
-      "avatar": "/assets/images/team/Allumi Member/DoanThiHuongGiang.png"
     },
     {
       "id": "nguyen_thi_oanh",
@@ -433,7 +433,7 @@
     {
       "id": "van_nam_hoang",
       "name": "Van-Nam Hoang",
-      "papers": 27,
+      "papers": 28,
       "first_year": 2014,
       "last_year": 2026,
       "topics": [
@@ -446,12 +446,12 @@
           "count": 5
         },
         {
-          "key": "Hand Gesture",
+          "key": "Visually Impaired",
           "count": 5
         },
         {
-          "key": "Visually Impaired",
-          "count": 4
+          "key": "Hand Gesture",
+          "count": 5
         },
         {
           "key": "Action Recognition",
@@ -464,7 +464,7 @@
     {
       "id": "dang_khoa_mac",
       "name": "Dang-Khoa Mac",
-      "papers": 21,
+      "papers": 22,
       "first_year": 2009,
       "last_year": 2025,
       "topics": [
@@ -474,7 +474,7 @@
         },
         {
           "key": "Speech/NLP",
-          "count": 8
+          "count": 9
         },
         {
           "key": "Visually Impaired",
@@ -487,7 +487,7 @@
     {
       "id": "thi_ngoc_diep_do",
       "name": "Thi Ngoc Diep Do",
-      "papers": 21,
+      "papers": 22,
       "first_year": 2008,
       "last_year": 2025,
       "topics": [
@@ -496,12 +496,12 @@
           "count": 9
         },
         {
-          "key": "Other",
+          "key": "Speech/NLP",
           "count": 6
         },
         {
-          "key": "Speech/NLP",
-          "count": 5
+          "key": "Other",
+          "count": 6
         },
         {
           "key": "Visually Impaired",
@@ -1164,7 +1164,7 @@
     {
       "source": "hai_vu",
       "target": "thanh_hai_tran",
-      "weight": 71,
+      "weight": 72,
       "first_year": 2013,
       "last_year": 2025,
       "topics": [
@@ -1178,7 +1178,7 @@
         },
         {
           "key": "Medical Imaging",
-          "count": 13
+          "count": 14
         }
       ],
       "primary_topic": "Hand Gesture"
@@ -1186,13 +1186,13 @@
     {
       "source": "thanh_hai_tran",
       "target": "thi_lan_le",
-      "weight": 64,
+      "weight": 67,
       "first_year": 2012,
       "last_year": 2026,
       "topics": [
         {
           "key": "Hand Gesture",
-          "count": 11
+          "count": 13
         },
         {
           "key": "Other",
@@ -1208,7 +1208,7 @@
     {
       "source": "hai_vu",
       "target": "thi_lan_le",
-      "weight": 63,
+      "weight": 64,
       "first_year": 2013,
       "last_year": 2025,
       "topics": [
@@ -1221,8 +1221,8 @@
           "count": 13
         },
         {
-          "key": "Hand Gesture",
-          "count": 8
+          "key": "Medical Imaging",
+          "count": 9
         }
       ],
       "primary_topic": "Plant ID"
@@ -1382,6 +1382,50 @@
       "primary_topic": "Person Re-ID"
     },
     {
+      "source": "thanh_hai_tran",
+      "target": "van_toi_nguyen",
+      "weight": 18,
+      "first_year": 2013,
+      "last_year": 2024,
+      "topics": [
+        {
+          "key": "Hand Gesture",
+          "count": 7
+        },
+        {
+          "key": "Other",
+          "count": 5
+        },
+        {
+          "key": "Medical Imaging",
+          "count": 3
+        }
+      ],
+      "primary_topic": "Hand Gesture"
+    },
+    {
+      "source": "hai_vu",
+      "target": "van_nam_hoang",
+      "weight": 17,
+      "first_year": 2014,
+      "last_year": 2025,
+      "topics": [
+        {
+          "key": "Plant ID",
+          "count": 5
+        },
+        {
+          "key": "Hand Gesture",
+          "count": 5
+        },
+        {
+          "key": "Visually Impaired",
+          "count": 3
+        }
+      ],
+      "primary_topic": "Plant ID"
+    },
+    {
       "source": "hong_quan_nguyen",
       "target": "thanh_hai_tran",
       "weight": 17,
@@ -1402,50 +1446,6 @@
         }
       ],
       "primary_topic": "Person Re-ID"
-    },
-    {
-      "source": "thanh_hai_tran",
-      "target": "van_toi_nguyen",
-      "weight": 16,
-      "first_year": 2013,
-      "last_year": 2024,
-      "topics": [
-        {
-          "key": "Hand Gesture",
-          "count": 5
-        },
-        {
-          "key": "Other",
-          "count": 5
-        },
-        {
-          "key": "Medical Imaging",
-          "count": 3
-        }
-      ],
-      "primary_topic": "Hand Gesture"
-    },
-    {
-      "source": "hai_vu",
-      "target": "van_nam_hoang",
-      "weight": 16,
-      "first_year": 2014,
-      "last_year": 2025,
-      "topics": [
-        {
-          "key": "Plant ID",
-          "count": 5
-        },
-        {
-          "key": "Hand Gesture",
-          "count": 5
-        },
-        {
-          "key": "Action Recognition",
-          "count": 2
-        }
-      ],
-      "primary_topic": "Plant ID"
     },
     {
       "source": "huong_giang_doan",
@@ -1494,13 +1494,13 @@
     {
       "source": "thi_lan_le",
       "target": "van_toi_nguyen",
-      "weight": 13,
+      "weight": 15,
       "first_year": 2013,
       "last_year": 2024,
       "topics": [
         {
           "key": "Hand Gesture",
-          "count": 3
+          "count": 5
         },
         {
           "key": "Other",
@@ -2192,6 +2192,28 @@
       "primary_topic": "Speech/NLP"
     },
     {
+      "source": "thi_ngoc_diep_do",
+      "target": "van_toi_nguyen",
+      "weight": 4,
+      "first_year": 2016,
+      "last_year": 2022,
+      "topics": [
+        {
+          "key": "Speech/NLP",
+          "count": 2
+        },
+        {
+          "key": "Visually Impaired",
+          "count": 1
+        },
+        {
+          "key": "Person Re-ID",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Speech/NLP"
+    },
+    {
       "source": "dinh_tan_pham",
       "target": "quang_tien_pham",
       "weight": 4,
@@ -2388,28 +2410,6 @@
         }
       ],
       "primary_topic": "Person Re-ID"
-    },
-    {
-      "source": "thi_ngoc_diep_do",
-      "target": "van_toi_nguyen",
-      "weight": 3,
-      "first_year": 2016,
-      "last_year": 2022,
-      "topics": [
-        {
-          "key": "Visually Impaired",
-          "count": 1
-        },
-        {
-          "key": "Speech/NLP",
-          "count": 1
-        },
-        {
-          "key": "Person Re-ID",
-          "count": 1
-        }
-      ],
-      "primary_topic": "Visually Impaired"
     },
     {
       "source": "dang_khoa_mac",
@@ -4147,6 +4147,18 @@
       ]
     },
     {
+      "title": "VITBI-BERT: A VIETNAMESE LANGUAGE MODEL FOR PREDICTION OF TRAUMATIC BRAIN INJURY",
+      "authors": "N DOAN, TH TRAN, TK TRAN, TL LE, H VU, H NGUYEN, …",
+      "year": 2025,
+      "venue": "RESEARCH AND DEVELOPMENT, 7, 2025",
+      "topic": "Medical Imaging",
+      "lab_authors": [
+        "thanh_hai_tran",
+        "thi_lan_le",
+        "hai_vu"
+      ]
+    },
+    {
       "title": "High-performance Magnetoimpedance Sensors in Micropatterned Multi-meander Line Designs",
       "authors": "TT Ngo, VT Nguyen, HH Dang, MV Pham, SH Hoang, P Do Duy, …",
       "year": 2025,
@@ -4288,6 +4300,16 @@
       ]
     },
     {
+      "title": "QUANTITATION OF NEW ARBITRARY VIEW DYNAMIC HUMAN ACTION RECOGNITION FRAMEWORK",
+      "authors": "AD HO, HG DOAN",
+      "year": 2025,
+      "venue": "INDONESIAN JOURNAL OF ELECTRICAL ENGINEERING AND COMPUTER SCIENCE 37 (3), 1797, 2025",
+      "topic": "Action Recognition",
+      "lab_authors": [
+        "huong_giang_doan"
+      ]
+    },
+    {
       "title": "Enhancing Continuous Student Activity Recognition through Virtual Trajectory and Appearance Matching",
       "authors": "KH Bui, PD Nguyen, HH Bui, QT Nguyen, TL Le",
       "year": 2025,
@@ -4324,6 +4346,16 @@
       "authors": "K Than, D Phan, G Vu",
       "year": 2025,
       "venue": "Machine Learning 114 (6), 142, 2025",
+      "topic": "Other",
+      "lab_authors": [
+        "khoat_than"
+      ]
+    },
+    {
+      "title": "DPaI: Differentiable Pruning at Initialization with Node-Path Balance Principle",
+      "authors": "HW Lichuan Xiang, Quan Nguyen-Tri, Lan-Cuong Nguyen, Hoang Pham, Khoat Than ...",
+      "year": 2025,
+      "venue": "The Thirteenth International Conference on Learning Representations, 2025",
       "topic": "Other",
       "lab_authors": [
         "khoat_than"
@@ -7414,6 +7446,16 @@
       ]
     },
     {
+      "title": "A UNIFIED FRAMEWORK FOR AUTOMATED PERSON RE-IDENTIFICATION",
+      "authors": "DLTTLL Hong Quan Nguyen, Thuy Binh Nguyen",
+      "year": 2020,
+      "venue": "The Transport and Communications Science Journal, 868-880, 2020",
+      "topic": "Person Re-ID",
+      "lab_authors": [
+        "thuy_binh_nguyen"
+      ]
+    },
+    {
       "title": "How feature fusion can help to improve multi-shot person re-identification performance?",
       "authors": "TB Nguyen, TN Nguyen, HQ Nguyen, TL Le, TTT Pham",
       "year": 2020,
@@ -7424,6 +7466,26 @@
         "hong_quan_nguyen",
         "thi_lan_le",
         "thi_thanh_thuy_pham"
+      ]
+    },
+    {
+      "title": "ĐặC đIểM PHảN Xạ THÍNH GIÁC VậN độNG đơN GIảN CủA Bộ độI RA đA",
+      "authors": "TH BUI, VH HOANG, TN TRAN, HQ NGUYEN, TT TRAN, TT VU",
+      "year": 2020,
+      "venue": "JOURNAL OF TROPICAL SCIENCE AND TECHNOLOGY, 2020",
+      "topic": "Other",
+      "lab_authors": [
+        "hong_quan_nguyen"
+      ]
+    },
+    {
+      "title": "MộT Số YếU Tố MÔI TRườNG LAO độNG TRONG HầM CÔNG Sự TạI đảO X",
+      "authors": "VH HOANG, V NGUYEN, HT NGUYEN, HQ NGUYEN",
+      "year": 2020,
+      "venue": "JOURNAL OF TROPICAL SCIENCE AND TECHNOLOGY, 2020",
+      "topic": "Other",
+      "lab_authors": [
+        "hong_quan_nguyen"
       ]
     },
     {
@@ -8926,6 +8988,7 @@
       "venue": "2016 IEEE Southwest symposium on image analysis and interpretation (SSIAI …, 2016",
       "topic": "Visually Impaired",
       "lab_authors": [
+        "van_nam_hoang",
         "hai_vu"
       ]
     },
@@ -9571,6 +9634,18 @@
       ]
     },
     {
+      "title": "A New Hand Representation Based on Kernels for Hand Posture Recognition",
+      "authors": "VT NGUYEN, Thi-Lan LE, Thanh-Hai TRAN, R MULLOT, ...",
+      "year": 2015,
+      "venue": "The Eleventh IEEE International Conference on Automatic Face and Gesture …, 2015",
+      "topic": "Hand Gesture",
+      "lab_authors": [
+        "van_toi_nguyen",
+        "thi_lan_le",
+        "thanh_hai_tran"
+      ]
+    },
+    {
       "title": "A robust model for person re-identification in multimodal person localization",
       "authors": "TTT Pham, TL Le, TK Dao, DH Le",
       "year": 2015,
@@ -9693,6 +9768,28 @@
         "thi_lan_le",
         "trung_kien_dao",
         "van_toi_nguyen"
+      ]
+    },
+    {
+      "title": "Visual interpretation of hand gesture for human-machine interaction",
+      "authors": "VT NGUYEN, TL LE, TH TRAN, R MULLOT, V COURBOULAY, ...",
+      "year": 2015,
+      "venue": "",
+      "topic": "Hand Gesture",
+      "lab_authors": [
+        "van_toi_nguyen",
+        "thi_lan_le",
+        "thanh_hai_tran"
+      ]
+    },
+    {
+      "title": "Query-based 3D Object Finding Using Geometrical Constraints on Depth Images for Assisting the Visually Impaired",
+      "authors": "Thi Lan Le",
+      "year": 2015,
+      "venue": "",
+      "topic": "Visually Impaired",
+      "lab_authors": [
+        "thi_lan_le"
       ]
     },
     {
@@ -10688,6 +10785,16 @@
       ]
     },
     {
+      "title": "MUST 2010: Welcome message from workshop organizers: FutureTech 2010",
+      "authors": "Thi Lan Le",
+      "year": 2010,
+      "venue": "",
+      "topic": "Other",
+      "lab_authors": [
+        "thi_lan_le"
+      ]
+    },
+    {
       "title": "Audio-visual prosody of social attitudes in vietnamese: building and evaluating a tones balanced corpus.",
       "authors": "DK Mac, V Aubergé, A Rilliard, E Castelli",
       "year": 2009,
@@ -11209,6 +11316,16 @@
       ]
     },
     {
+      "title": "Imagerie de la fasciolose hépato-biliaire",
+      "authors": "QK Nguyen, TH Nguyen, TTT PHAM, CC Hoeffel",
+      "year": 1999,
+      "venue": "Radiologie (Berlin) 19 (3), 119-124, 1999",
+      "topic": "Other",
+      "lab_authors": [
+        "thi_thanh_thuy_pham"
+      ]
+    },
+    {
       "title": "A robust noise canceller",
       "authors": "P Comon, DT Pham",
       "year": 1986,
@@ -11226,6 +11343,27 @@
       "topic": "Document/OCR",
       "lab_authors": [
         "bui_hai_phong"
+      ]
+    },
+    {
+      "title": "Indexing syllable dictionary for non-uniform unit selection speech synthesis: Application on Text-to-speech system on Android devices",
+      "authors": "TT NGUYEN, DK MAC, DD TRAN, MH NGUYEN, E CASTELLI, ...",
+      "year": null,
+      "venue": "Reg. Conf. Opt. Character Recognit. Nat. Lang. Process. Technol. ASEAN Lang …, 0",
+      "topic": "Speech/NLP",
+      "lab_authors": [
+        "dang_khoa_mac"
+      ]
+    },
+    {
+      "title": "Optimizing data transmission on mobile platform for speech translation system",
+      "authors": "VT NGUYEN, DO Thi-Ngoc-Diep, MAC Dang-Khoa, E CASTELLI",
+      "year": null,
+      "venue": "",
+      "topic": "Speech/NLP",
+      "lab_authors": [
+        "van_toi_nguyen",
+        "thi_ngoc_diep_do"
       ]
     },
     {
@@ -11286,6 +11424,16 @@
     {
       "title": "MANIFOLD SPACE ON MULTIVIEWS FOR DYNAMIC HAND GESTURE RECOGNITION KHÔNG GIAN ĐA TẠP CỦA CỬ CHỈ ĐỘNG BÀN TAY TRÊN CÁC GÓC NHÌN KHÁC NHAU",
       "authors": "HG Doan",
+      "year": null,
+      "venue": "",
+      "topic": "Hand Gesture",
+      "lab_authors": [
+        "huong_giang_doan"
+      ]
+    },
+    {
+      "title": "New Cyclical Pattern and Temporal-Spatial Representation for Robust Dynamic Hand Gesture Recognition",
+      "authors": "HG DOAN, HVUTH TRAN",
       "year": null,
       "venue": "",
       "topic": "Hand Gesture",
@@ -11455,6 +11603,226 @@
       "lab_authors": [
         "thanh_hai_tran",
         "hai_vu"
+      ]
+    },
+    {
+      "title": "Toward a ridge based symbolic representation for object recognition",
+      "authors": "TTH TRAN, LUX Augustin, HL NGUYEN",
+      "year": null,
+      "venue": "",
+      "topic": "Other",
+      "lab_authors": [
+        "thanh_hai_tran"
+      ]
+    },
+    {
+      "title": "Méthodes symboliques de reconnaissance d’objets en vision par ordinateur",
+      "authors": "TTH TRAN",
+      "year": null,
+      "venue": "",
+      "topic": "Other",
+      "lab_authors": [
+        "thanh_hai_tran"
+      ]
+    },
+    {
+      "title": "Student activity recognition from classroom video: a survey",
+      "authors": "Thi Lan Le",
+      "year": null,
+      "venue": "",
+      "topic": "Action Recognition",
+      "lab_authors": [
+        "thi_lan_le"
+      ]
+    },
+    {
+      "title": "Improving online text-based person search by incorporating gender and age information",
+      "authors": "Thi Lan Le",
+      "year": null,
+      "venue": "",
+      "topic": "Person Re-ID",
+      "lab_authors": [
+        "thi_lan_le"
+      ]
+    },
+    {
+      "title": "Risk Factors for Hepatocellular Carcinoma: Findings from a Case-Control Study in Vietnam",
+      "authors": "Thi Lan Le",
+      "year": null,
+      "venue": "",
+      "topic": "Other",
+      "lab_authors": [
+        "thi_lan_le"
+      ]
+    },
+    {
+      "title": "Draft Text_line_segmentation.pdf",
+      "authors": "Thi Lan Le",
+      "year": null,
+      "venue": "",
+      "topic": "Other",
+      "lab_authors": [
+        "thi_lan_le"
+      ]
+    },
+    {
+      "title": "Enhancing Multi-stream Graph Convolutional Network for Skeleton-based Human Activity Recognition by Adaptive Model",
+      "authors": "Thi Lan Le",
+      "year": null,
+      "venue": "",
+      "topic": "Action Recognition",
+      "lab_authors": [
+        "thi_lan_le"
+      ]
+    },
+    {
+      "title": "Ước lượng tự động số học sinh trên ảnh sử dụng kỹ thuật học sâu ứng dụng trong quản lý lớp học thông minh",
+      "authors": "Thi Lan Le",
+      "year": null,
+      "venue": "",
+      "topic": "Other",
+      "lab_authors": [
+        "thi_lan_le"
+      ]
+    },
+    {
+      "title": "A unified framework for automated person re-indentification",
+      "authors": "Thi Lan Le",
+      "year": null,
+      "venue": "",
+      "topic": "Person Re-ID",
+      "lab_authors": [
+        "thi_lan_le"
+      ]
+    },
+    {
+      "title": "761-ML0028",
+      "authors": "Thi Lan Le",
+      "year": null,
+      "venue": "",
+      "topic": "Other",
+      "lab_authors": [
+        "thi_lan_le"
+      ]
+    },
+    {
+      "title": "Fitting Cylindrical Objects in 3-D Point Cloud Using the Context and Geometrical Constraints",
+      "authors": "Thi Lan Le",
+      "year": null,
+      "venue": "",
+      "topic": "Other",
+      "lab_authors": [
+        "thi_lan_le"
+      ]
+    },
+    {
+      "title": "Plant Identiﬁcation using score-based fusion of multi-organ images",
+      "authors": "Thi Lan Le",
+      "year": null,
+      "venue": "",
+      "topic": "Plant ID",
+      "lab_authors": [
+        "thi_lan_le"
+      ]
+    },
+    {
+      "title": "civr2009 submission 55",
+      "authors": "Thi Lan Le",
+      "year": null,
+      "venue": "",
+      "topic": "Other",
+      "lab_authors": [
+        "thi_lan_le"
+      ]
+    },
+    {
+      "title": "Geometry-based 3D Object Fitting and Localizing in Grasping Aid Service for Visually Impaired",
+      "authors": "Thi Lan Le",
+      "year": null,
+      "venue": "",
+      "topic": "Visually Impaired",
+      "lab_authors": [
+        "thi_lan_le"
+      ]
+    },
+    {
+      "title": "Semantic regions recognition in UAV images",
+      "authors": "Thi Lan Le",
+      "year": null,
+      "venue": "",
+      "topic": "UAV",
+      "lab_authors": [
+        "thi_lan_le"
+      ]
+    },
+    {
+      "title": "paper 26",
+      "authors": "Thi Lan Le",
+      "year": null,
+      "venue": "",
+      "topic": "Other",
+      "lab_authors": [
+        "thi_lan_le"
+      ]
+    },
+    {
+      "title": "An analysis on human activities recognition using Kinect sensor",
+      "authors": "Thi Lan Le",
+      "year": null,
+      "venue": "",
+      "topic": "Other",
+      "lab_authors": [
+        "thi_lan_le"
+      ]
+    },
+    {
+      "title": "Object detection and classification for advertising service based on image content",
+      "authors": "Thi Lan Le",
+      "year": null,
+      "venue": "",
+      "topic": "Other",
+      "lab_authors": [
+        "thi_lan_le"
+      ]
+    },
+    {
+      "title": "Scene classification for advertising service based on image content",
+      "authors": "Thi Lan Le",
+      "year": null,
+      "venue": "",
+      "topic": "Other",
+      "lab_authors": [
+        "thi_lan_le"
+      ]
+    },
+    {
+      "title": "Automatic detection of textil defaut",
+      "authors": "Thi Lan Le",
+      "year": null,
+      "venue": "",
+      "topic": "Other",
+      "lab_authors": [
+        "thi_lan_le"
+      ]
+    },
+    {
+      "title": "Surveillance video indexing and retrieval",
+      "authors": "Thi Lan Le",
+      "year": null,
+      "venue": "",
+      "topic": "Surveillance",
+      "lab_authors": [
+        "thi_lan_le"
+      ]
+    },
+    {
+      "title": "INDEXATION ET RECHERCHE DE VIDÉO POUR LA VIDÉOSURVEILLANCE",
+      "authors": "Thi Lan Le",
+      "year": null,
+      "venue": "",
+      "topic": "Surveillance",
+      "lab_authors": [
+        "thi_lan_le"
       ]
     }
   ]
