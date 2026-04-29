@@ -184,7 +184,8 @@
         }
       ],
       "primary_topic": "Hand Gesture",
-      "avatar": "/assets/images/team/Invited Researchers/IR Anh Tới.jpg"
+      "avatar": "/assets/images/team/Invited Researchers/IR Anh Tới.jpg",
+      "affiliation": "Phenikaa University"
     },
     {
       "id": "dinh_viet_sang",
@@ -246,7 +247,8 @@
         }
       ],
       "primary_topic": "Person Re-ID",
-      "avatar": "/assets/images/team/Invited Researchers/IR Chị Bình.jpg"
+      "avatar": "/assets/images/team/Invited Researchers/IR Chị Bình.jpg",
+      "affiliation": "University of Transport and Communications"
     },
     {
       "id": "thi_thanh_thuy_pham",
@@ -277,7 +279,8 @@
         }
       ],
       "primary_topic": "Person Re-ID",
-      "avatar": "/assets/images/team/Allumi Member/PhamThanhThuy.png"
+      "avatar": "/assets/images/team/Allumi Member/PhamThanhThuy.png",
+      "affiliation": "People"
     },
     {
       "id": "hong_quan_nguyen",
@@ -308,7 +311,8 @@
         }
       ],
       "primary_topic": "Person Re-ID",
-      "avatar": "/assets/images/team/Invited Researchers/IR Anh Quân.png"
+      "avatar": "/assets/images/team/Invited Researchers/IR Anh Quân.png",
+      "affiliation": "Viet–Hung Industrial University"
     },
     {
       "id": "huong_giang_doan",
@@ -339,7 +343,8 @@
         }
       ],
       "primary_topic": "Hand Gesture",
-      "avatar": "/assets/images/team/Allumi Member/DoanThiHuongGiang.png"
+      "avatar": "/assets/images/team/Allumi Member/DoanThiHuongGiang.png",
+      "affiliation": "Electrical Power University"
     },
     {
       "id": "duy_tung_nguyen",
@@ -370,7 +375,8 @@
         }
       ],
       "primary_topic": "Honey Bee",
-      "avatar": "/assets/images/team/Invited Researchers/Master - TungND.jpg"
+      "avatar": "/assets/images/team/Invited Researchers/Master - TungND.jpg",
+      "affiliation": "School of Information Communication Technology"
     },
     {
       "id": "nguyen_thi_oanh",
@@ -428,7 +434,8 @@
         }
       ],
       "primary_topic": "Action Recognition",
-      "avatar": "/assets/images/team/Allumi Member/PhamDinhTan.png"
+      "avatar": "/assets/images/team/Allumi Member/PhamDinhTan.png",
+      "affiliation": "International School, Vietnam National University"
     },
     {
       "id": "van_nam_hoang",
@@ -459,7 +466,8 @@
         }
       ],
       "primary_topic": "Plant ID",
-      "avatar": "/assets/images/team/Invited Researchers/IR Anh Nam.jpg"
+      "avatar": "/assets/images/team/Invited Researchers/IR Anh Nam.jpg",
+      "affiliation": "Computer Vision Company"
     },
     {
       "id": "dang_khoa_mac",
@@ -532,7 +540,8 @@
         }
       ],
       "primary_topic": "Document/OCR",
-      "avatar": "/assets/images/team/Allumi Member/BuiHaiPhong.jpg"
+      "avatar": "/assets/images/team/Allumi Member/BuiHaiPhong.jpg",
+      "affiliation": "Hanoi Architectural University"
     },
     {
       "id": "thi_lich_nghiem",
@@ -555,7 +564,8 @@
         }
       ],
       "primary_topic": "Action Recognition",
-      "avatar": "/assets/images/team/Invited Researchers/PhD - Chị Lịch.jpg"
+      "avatar": "/assets/images/team/Invited Researchers/PhD - Chị Lịch.jpg",
+      "affiliation": "Thuong Mai University"
     },
     {
       "id": "thi_loan_pham",
@@ -578,7 +588,8 @@
         }
       ],
       "primary_topic": "Medical Imaging",
-      "avatar": "/assets/images/team/PhD Students/PhD - Chị Loan.jpg"
+      "avatar": "/assets/images/team/PhD Students/PhD - Chị Loan.jpg",
+      "affiliation": "Hai Duong University"
     },
     {
       "id": "manh_thang_hoang",
@@ -643,7 +654,8 @@
         }
       ],
       "primary_topic": "Medical Imaging",
-      "avatar": "/assets/images/team/Invited Researchers/Master - SonBH.jpg"
+      "avatar": "/assets/images/team/Invited Researchers/Master - SonBH.jpg",
+      "affiliation": "Hanoi Irradiation Center"
     },
     {
       "id": "phuong_dung_nguyen",
@@ -666,7 +678,8 @@
         }
       ],
       "primary_topic": "Action Recognition",
-      "avatar": "/assets/images/team/PhD Students/phd_DungNguyen.jpg"
+      "avatar": "/assets/images/team/PhD Students/phd_DungNguyen.jpg",
+      "affiliation": "Thuy Loi University"
     },
     {
       "id": "quang_tien_pham",
@@ -712,7 +725,8 @@
         }
       ],
       "primary_topic": "Federated Learning",
-      "avatar": "/assets/images/team/PhD Students/PhD - Anh Dũng.jpg"
+      "avatar": "/assets/images/team/PhD Students/PhD - Anh Dũng.jpg",
+      "affiliation": "Thuy Loi University"
     },
     {
       "id": "hien_thanh_duong",
@@ -731,7 +745,8 @@
         }
       ],
       "primary_topic": "Person Re-ID",
-      "avatar": "/assets/images/team/Invited Researchers/IR Chị Hiền Thanh.jpg"
+      "avatar": "/assets/images/team/Invited Researchers/IR Chị Hiền Thanh.jpg",
+      "affiliation": "Hanoi University of Industry"
     },
     {
       "id": "doan_duc_phan",
@@ -746,7 +761,8 @@
         }
       ],
       "primary_topic": "Plant ID",
-      "avatar": "/assets/images/team/Master Students/Master - DucPD.jpg"
+      "avatar": "/assets/images/team/Master Students/Master - DucPD.jpg",
+      "affiliation": "Samsung SDS Vietnam"
     },
     {
       "id": "khanh_huyen_bui",
@@ -788,18 +804,6 @@
       "no_data": true
     },
     {
-      "id": "thanh_thuy_pham",
-      "name": "Thanh-Thuy Pham",
-      "papers": 0,
-      "first_year": null,
-      "last_year": null,
-      "topics": [],
-      "primary_topic": "Other",
-      "avatar": "/assets/images/team/Allumi Member/PhamThanhThuy.png",
-      "affiliation": "People",
-      "no_data": true
-    },
-    {
       "id": "thanh_nhan_nguyuen",
       "name": "Thanh-Nhan Nguyuen",
       "papers": 0,
@@ -833,18 +837,6 @@
       "primary_topic": "Other",
       "avatar": "/assets/images/team/Allumi Member/NguyenQuocHUng.png",
       "affiliation": "University Of Economics Ho Chi Minh City",
-      "no_data": true
-    },
-    {
-      "id": "hai_phong_bui",
-      "name": "Hai-Phong Bui",
-      "papers": 0,
-      "first_year": null,
-      "last_year": null,
-      "topics": [],
-      "primary_topic": "Other",
-      "avatar": "/assets/images/team/Allumi Member/BuiHaiPhong.jpg",
-      "affiliation": "Hanoi Architectural University",
       "no_data": true
     },
     {
@@ -929,18 +921,6 @@
       "primary_topic": "Other",
       "avatar": "/assets/images/team/PhD Students/PhD - Chị Hương.jpg",
       "affiliation": "Thuy Loi University",
-      "no_data": true
-    },
-    {
-      "id": "thi_thuy_pham",
-      "name": "Thi-Thuy Pham",
-      "papers": 0,
-      "first_year": null,
-      "last_year": null,
-      "topics": [],
-      "primary_topic": "Other",
-      "avatar": "/assets/images/team/PhD Students/PhD - Chị Thủy.jpg",
-      "affiliation": "Viet Tri University Of Industry",
       "no_data": true
     },
     {
