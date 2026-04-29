@@ -575,7 +575,8 @@ export default function NetworkClient() {
           </div>
         </div>
 
-        {selectedNode && (
+        {/* Right panel: detail view if a node is selected, otherwise member list */}
+        {selectedNode ? (
           <div className="absolute right-4 top-4 w-[300px] bg-white/5 backdrop-blur border border-white/15 rounded-lg p-4 text-sm z-10 max-h-[68vh] overflow-y-auto">
             <div className="flex items-start justify-between gap-2 mb-3">
               <div className="flex items-center gap-3">
@@ -617,6 +618,41 @@ export default function NetworkClient() {
                     <span className="text-[10px] text-white/50 ml-2">
                       {link.weight}× · {link.first_year}–{link.last_year}
                     </span>
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ) : (
+          <div className="absolute right-4 top-4 w-[300px] bg-white/5 backdrop-blur border border-white/15 rounded-lg p-3 text-sm z-10 max-h-[68vh] overflow-y-auto">
+            <div className="flex items-center justify-between mb-3 px-1">
+              <div className="font-semibold">Members</div>
+              <span className="text-[10px] text-white/45 font-mono">{data.nodes.length}</span>
+            </div>
+            <ul className="space-y-1">
+              {data.nodes.map(n => (
+                <li key={n.id}>
+                  <button
+                    onClick={() => setSelectedId(n.id)}
+                    onMouseEnter={() => { hoverRef.current.node = n }}
+                    onMouseLeave={() => { hoverRef.current.node = null }}
+                    className="w-full flex items-center gap-2.5 px-1.5 py-1.5 rounded hover:bg-white/5 text-left"
+                  >
+                    {n.avatar ? (
+                      // eslint-disable-next-line @next/next/no-img-element
+                      <img src={n.avatar} alt=""
+                           className="w-7 h-7 rounded-full object-cover flex-shrink-0 ring-1"
+                           style={{ borderColor: topicColor(n.primary_topic) }} />
+                    ) : (
+                      <span className="w-7 h-7 rounded-full flex-shrink-0"
+                            style={{ background: topicColor(n.primary_topic), opacity: 0.5 }} />
+                    )}
+                    <div className="min-w-0 flex-1">
+                      <div className="truncate text-[12.5px]">{n.name}</div>
+                      <div className="text-[10px] text-white/45 truncate">
+                        {n.papers} · {n.primary_topic}
+                      </div>
+                    </div>
                   </button>
                 </li>
               ))}
