@@ -3,13 +3,13 @@
     {
       "id": "thi_lan_le",
       "name": "Thi-Lan Le",
-      "papers": 210,
+      "papers": 209,
       "first_year": 2004,
       "last_year": 2026,
       "topics": [
         {
           "key": "Other",
-          "count": 53
+          "count": 52
         },
         {
           "key": "Plant ID",
@@ -34,13 +34,13 @@
     {
       "id": "thanh_hai_tran",
       "name": "Thanh-Hai Tran",
-      "papers": 168,
+      "papers": 167,
       "first_year": 2006,
       "last_year": 2026,
       "topics": [
         {
           "key": "Other",
-          "count": 48
+          "count": 47
         },
         {
           "key": "Hand Gesture",
@@ -65,13 +65,13 @@
     {
       "id": "hai_vu",
       "name": "Hai Vu",
-      "papers": 163,
+      "papers": 167,
       "first_year": 2000,
       "last_year": 2025,
       "topics": [
         {
           "key": "Other",
-          "count": 41
+          "count": 44
         },
         {
           "key": "Medical Imaging",
@@ -186,13 +186,13 @@
     {
       "id": "van_toi_nguyen",
       "name": "Van-Toi Nguyen",
-      "papers": 57,
+      "papers": 56,
       "first_year": 2003,
       "last_year": 2025,
       "topics": [
         {
           "key": "Other",
-          "count": 27
+          "count": 26
         },
         {
           "key": "Hand Gesture",
@@ -517,6 +517,38 @@
       "affiliation": "Computer Vision Company"
     },
     {
+      "id": "van_hung_le",
+      "name": "Van-Hung Le",
+      "papers": 26,
+      "first_year": 2015,
+      "last_year": 2024,
+      "topics": [
+        {
+          "key": "Other",
+          "count": 7
+        },
+        {
+          "key": "Medical Imaging",
+          "count": 6
+        },
+        {
+          "key": "Hand Gesture",
+          "count": 5
+        },
+        {
+          "key": "Pose Estimation",
+          "count": 5
+        },
+        {
+          "key": "Visually Impaired",
+          "count": 2
+        }
+      ],
+      "primary_topic": "Medical Imaging",
+      "avatar": "/assets/images/team/Allumi Member/LeVanHung.jpg",
+      "affiliation": "Tan Trao University"
+    },
+    {
       "id": "dang_khoa_mac",
       "name": "Dang-Khoa Mac",
       "papers": 22,
@@ -668,7 +700,7 @@
     {
       "id": "thi_loan_pham",
       "name": "Thi-Loan Pham",
-      "papers": 15,
+      "papers": 14,
       "first_year": 2021,
       "last_year": 2025,
       "topics": [
@@ -678,7 +710,7 @@
         },
         {
           "key": "Other",
-          "count": 2
+          "count": 1
         },
         {
           "key": "Pose Estimation",
@@ -935,18 +967,6 @@
       "primary_topic": "Other",
       "avatar": "/assets/images/team/Allumi Member/NguyenThanhNhan.png",
       "affiliation": "Thai Nguyen University",
-      "no_data": true
-    },
-    {
-      "id": "van_hung_le",
-      "name": "Van-Hung Le",
-      "papers": 0,
-      "first_year": null,
-      "last_year": null,
-      "topics": [],
-      "primary_topic": "Other",
-      "avatar": "/assets/images/team/Allumi Member/LeVanHung.jpg",
-      "affiliation": "Tan Trao University",
       "no_data": true
     },
     {
@@ -1438,8 +1458,8 @@
     {
       "source": "thanh_hai_tran",
       "target": "van_toi_nguyen",
-      "weight": 18,
-      "first_year": 2013,
+      "weight": 17,
+      "first_year": 2014,
       "last_year": 2024,
       "topics": [
         {
@@ -1448,7 +1468,7 @@
         },
         {
           "key": "Other",
-          "count": 5
+          "count": 4
         },
         {
           "key": "Medical Imaging",
@@ -1500,6 +1520,28 @@
         }
       ],
       "primary_topic": "Person Re-ID"
+    },
+    {
+      "source": "hai_vu",
+      "target": "van_hung_le",
+      "weight": 16,
+      "first_year": 2015,
+      "last_year": 2024,
+      "topics": [
+        {
+          "key": "Other",
+          "count": 6
+        },
+        {
+          "key": "Hand Gesture",
+          "count": 5
+        },
+        {
+          "key": "Visually Impaired",
+          "count": 2
+        }
+      ],
+      "primary_topic": "Hand Gesture"
     },
     {
       "source": "huong_giang_doan",
@@ -1562,6 +1604,50 @@
         },
         {
           "key": "Action Recognition",
+          "count": 2
+        }
+      ],
+      "primary_topic": "Hand Gesture"
+    },
+    {
+      "source": "thi_lan_le",
+      "target": "van_hung_le",
+      "weight": 14,
+      "first_year": 2015,
+      "last_year": 2024,
+      "topics": [
+        {
+          "key": "Hand Gesture",
+          "count": 5
+        },
+        {
+          "key": "Other",
+          "count": 4
+        },
+        {
+          "key": "Medical Imaging",
+          "count": 3
+        }
+      ],
+      "primary_topic": "Hand Gesture"
+    },
+    {
+      "source": "thanh_hai_tran",
+      "target": "van_hung_le",
+      "weight": 13,
+      "first_year": 2015,
+      "last_year": 2024,
+      "topics": [
+        {
+          "key": "Hand Gesture",
+          "count": 5
+        },
+        {
+          "key": "Other",
+          "count": 4
+        },
+        {
+          "key": "Medical Imaging",
           "count": 2
         }
       ],
@@ -2088,6 +2174,42 @@
         }
       ],
       "primary_topic": "Medical Imaging"
+    },
+    {
+      "source": "thi_loan_pham",
+      "target": "van_hung_le",
+      "weight": 7,
+      "first_year": 2022,
+      "last_year": 2024,
+      "topics": [
+        {
+          "key": "Medical Imaging",
+          "count": 6
+        },
+        {
+          "key": "Pose Estimation",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Medical Imaging"
+    },
+    {
+      "source": "van_hung_le",
+      "target": "van_nam_hoang",
+      "weight": 6,
+      "first_year": 2020,
+      "last_year": 2023,
+      "topics": [
+        {
+          "key": "Hand Gesture",
+          "count": 5
+        },
+        {
+          "key": "Action Recognition",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Hand Gesture"
     },
     {
       "source": "hoang_son_bui",
@@ -2659,6 +2781,24 @@
     },
     {
       "source": "hai_vu",
+      "target": "viet_duc_le",
+      "weight": 3,
+      "first_year": 2021,
+      "last_year": 2023,
+      "topics": [
+        {
+          "key": "Hand Gesture",
+          "count": 2
+        },
+        {
+          "key": "Action Recognition",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Hand Gesture"
+    },
+    {
+      "source": "van_hung_le",
       "target": "viet_duc_le",
       "weight": 3,
       "first_year": 2021,
@@ -3420,6 +3560,20 @@
       "primary_topic": "Action Recognition"
     },
     {
+      "source": "dinh_tan_pham",
+      "target": "van_hung_le",
+      "weight": 1,
+      "first_year": 2022,
+      "last_year": 2022,
+      "topics": [
+        {
+          "key": "Action Recognition",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Action Recognition"
+    },
+    {
       "source": "duy_tung_nguyen",
       "target": "hai_vu",
       "weight": 1,
@@ -3644,6 +3798,20 @@
       "primary_topic": "Other"
     },
     {
+      "source": "hong_quan_nguyen",
+      "target": "van_hung_le",
+      "weight": 1,
+      "first_year": 2016,
+      "last_year": 2016,
+      "topics": [
+        {
+          "key": "Visually Impaired",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Visually Impaired"
+    },
+    {
       "source": "hai_vu",
       "target": "tuan_dung_kieu",
       "weight": 1,
@@ -3656,6 +3824,34 @@
         }
       ],
       "primary_topic": "Federated Learning"
+    },
+    {
+      "source": "hoang_son_bui",
+      "target": "van_hung_le",
+      "weight": 1,
+      "first_year": 2024,
+      "last_year": 2024,
+      "topics": [
+        {
+          "key": "Medical Imaging",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Medical Imaging"
+    },
+    {
+      "source": "van_hung_le",
+      "target": "van_toi_nguyen",
+      "weight": 1,
+      "first_year": 2024,
+      "last_year": 2024,
+      "topics": [
+        {
+          "key": "Medical Imaging",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Medical Imaging"
     },
     {
       "source": "doan_duc_phan",
@@ -3698,6 +3894,20 @@
         }
       ],
       "primary_topic": "Plant ID"
+    },
+    {
+      "source": "khoat_than",
+      "target": "van_hung_le",
+      "weight": 1,
+      "first_year": 2022,
+      "last_year": 2022,
+      "topics": [
+        {
+          "key": "Hand Gesture",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Hand Gesture"
     },
     {
       "source": "khoat_than",
@@ -5499,6 +5709,7 @@
       "lab_authors": [
         "thi_loan_pham",
         "hoang_son_bui",
+        "van_hung_le",
         "thi_lan_le",
         "van_toi_nguyen"
       ]
@@ -5511,6 +5722,7 @@
       "topic": "Medical Imaging",
       "lab_authors": [
         "thi_loan_pham",
+        "van_hung_le",
         "thi_lan_le",
         "hai_vu",
         "thanh_hai_tran"
@@ -5696,7 +5908,8 @@
       "venue": "J. Adv. Inf. Technol 15 (2), 1, 2024",
       "topic": "Medical Imaging",
       "lab_authors": [
-        "thi_loan_pham"
+        "thi_loan_pham",
+        "van_hung_le"
       ]
     },
     {
@@ -5706,6 +5919,7 @@
       "venue": "Journal of Robotics and Control (JRC) 5 (2), 561-581, 2024",
       "topic": "Medical Imaging",
       "lab_authors": [
+        "van_hung_le",
         "thi_loan_pham"
       ]
     },
@@ -5717,6 +5931,7 @@
       "topic": "Medical Imaging",
       "lab_authors": [
         "thi_loan_pham",
+        "van_hung_le",
         "thi_lan_le",
         "hai_vu"
       ]
@@ -6264,6 +6479,7 @@
       "lab_authors": [
         "viet_duc_le",
         "van_nam_hoang",
+        "van_hung_le",
         "thanh_hai_tran",
         "hai_vu",
         "thi_lan_le"
@@ -6494,6 +6710,7 @@
       "topic": "Medical Imaging",
       "lab_authors": [
         "thi_loan_pham",
+        "van_hung_le",
         "thanh_hai_tran"
       ]
     },
@@ -6931,6 +7148,7 @@
         "viet_duc_le",
         "thanh_hai_tran",
         "hai_vu",
+        "van_hung_le",
         "thi_lan_le"
       ]
     },
@@ -7143,6 +7361,7 @@
       "venue": "2022 IEEE Ninth International Conference on Communications and Electronics …, 2022",
       "topic": "Hand Gesture",
       "lab_authors": [
+        "van_hung_le",
         "van_nam_hoang",
         "khoat_than",
         "thanh_hai_tran",
@@ -7381,17 +7600,8 @@
       "venue": "Journal of Engineering Research and Sciences 1 (3), 59-67, 2022",
       "topic": "Pose Estimation",
       "lab_authors": [
-        "thi_loan_pham"
-      ]
-    },
-    {
-      "title": "Applied YOLOv5 and Context Constraint for Real-time and High Accuracy Human Detection",
-      "authors": "VH Le, TL Pham, HY Tran, TT Nguyen",
-      "year": 2022,
-      "venue": "2022 7th International Conference on Information and Network Technologies …, 2022",
-      "topic": "Other",
-      "lab_authors": [
-        "thi_loan_pham"
+        "thi_loan_pham",
+        "van_hung_le"
       ]
     },
     {
@@ -7828,6 +8038,7 @@
       "lab_authors": [
         "viet_duc_le",
         "van_nam_hoang",
+        "van_hung_le",
         "thanh_hai_tran",
         "hai_vu",
         "thi_lan_le"
@@ -7842,6 +8053,7 @@
       "lab_authors": [
         "thanh_hai_tran",
         "van_nam_hoang",
+        "van_hung_le",
         "thi_lan_le",
         "hai_vu"
       ]
@@ -7996,6 +8208,16 @@
         "hong_quan_nguyen",
         "thuy_binh_nguyen",
         "thi_lan_le"
+      ]
+    },
+    {
+      "title": "Relationship between grasping actions and object attributes: A survey",
+      "authors": "VH Le",
+      "year": 2021,
+      "venue": "Journal of Advances in Information Technology 11 (1), 2021",
+      "topic": "Other",
+      "lab_authors": [
+        "van_hung_le"
       ]
     },
     {
@@ -8517,6 +8739,7 @@
       "venue": "2020 International Conference on Advanced Technologies for Communications …, 2020",
       "topic": "Hand Gesture",
       "lab_authors": [
+        "van_hung_le",
         "van_nam_hoang",
         "hai_vu",
         "thi_lan_le",
@@ -8604,6 +8827,16 @@
       "topic": "Other",
       "lab_authors": [
         "hong_quan_nguyen"
+      ]
+    },
+    {
+      "title": "3-D Human Pose Estimation in Traditional Martial Art Videos",
+      "authors": "VH Le",
+      "year": 2020,
+      "venue": "International Journal of Machine Learning and Computing (IJMLC), 10 (2), pp …, 2020",
+      "topic": "Pose Estimation",
+      "lab_authors": [
+        "van_hung_le"
       ]
     },
     {
@@ -9033,6 +9266,7 @@
       "topic": "Other",
       "lab_authors": [
         "hai_vu",
+        "van_hung_le",
         "thi_lan_le",
         "thanh_hai_tran"
       ]
@@ -9056,6 +9290,7 @@
       "venue": "International Journal of Computational Vision and Robotics 9 (4), 387-411, 2019",
       "topic": "Other",
       "lab_authors": [
+        "van_hung_le",
         "hai_vu",
         "thi_lan_le",
         "thanh_hai_tran"
@@ -9115,6 +9350,36 @@
         "hong_quan_nguyen",
         "thi_lan_le",
         "thi_thanh_thuy_pham"
+      ]
+    },
+    {
+      "title": "An Evaluation of Pose Estimation in The Video Traditional Martial Arts Presentation",
+      "authors": "TCP Tuong-Thanh Nguyen, Van-Hung Le",
+      "year": 2019,
+      "venue": "Research And Development On Information And Communication Technology 2019 (2), 2019",
+      "topic": "Pose Estimation",
+      "lab_authors": [
+        "van_hung_le"
+      ]
+    },
+    {
+      "title": "3D Human pose estimation in Vietnamese martial art video",
+      "authors": "DLE Tuong Thanh NGUYEN, Van-Hung LE, Duy-Long DUONG, Thanh-Cong PHAM",
+      "year": 2019,
+      "venue": "Journal of Advanced Engineering and Computation (JAEC) 3 (N3), pp471-491, 2019",
+      "topic": "Pose Estimation",
+      "lab_authors": [
+        "van_hung_le"
+      ]
+    },
+    {
+      "title": "3-D Human Pose Estimation by Convolutional Neural Network in The Video Traditional Martial Arts Presentation",
+      "authors": "TCP Tuong-Thanh Nguyen, Van-Hung Le",
+      "year": 2019,
+      "venue": "Journal of Science and Technology 139 (4), 2019",
+      "topic": "Pose Estimation",
+      "lab_authors": [
+        "van_hung_le"
       ]
     },
     {
@@ -9501,6 +9766,7 @@
       "venue": "Pattern Recognition Letters 102, 58-66, 2018",
       "topic": "Other",
       "lab_authors": [
+        "van_hung_le",
         "hai_vu",
         "thi_lan_le",
         "thanh_hai_tran"
@@ -9539,6 +9805,7 @@
       "venue": "2018 5th NAFOSTED conference on information and computer science (NICS), 216-221, 2018",
       "topic": "Visually Impaired",
       "lab_authors": [
+        "van_hung_le",
         "hai_vu"
       ]
     },
@@ -9580,6 +9847,7 @@
       "venue": "2018 10th International Conference on Knowledge and Systems Engineering (KSE …, 2018",
       "topic": "Other",
       "lab_authors": [
+        "van_hung_le",
         "hai_vu"
       ]
     },
@@ -9980,6 +10248,16 @@
       ]
     },
     {
+      "title": "Fitting Spherical Objects in 3-D Point Cloud Using the Geometrical constraints",
+      "authors": "L Van-Hung, V Hai, N Thuy Thi, L Thi-Lan, T Thanh-Hai",
+      "year": 2017,
+      "venue": "Journal of Science and Technology, Section in Information Technology and …, 2017",
+      "topic": "Other",
+      "lab_authors": [
+        "hai_vu"
+      ]
+    },
+    {
       "title": "An effective and interpretable method for document classification",
       "authors": "N Van Linh, NK Anh, K Than, CN Dang",
       "year": 2017,
@@ -10291,6 +10569,7 @@
       "venue": "Proceedings of the IEEE Interntional Conference on Consumer Electronics …, 2016",
       "topic": "Visually Impaired",
       "lab_authors": [
+        "van_hung_le",
         "thi_lan_le",
         "hai_vu",
         "thanh_hai_tran",
@@ -10325,6 +10604,26 @@
       "year": 2016,
       "venue": "PROCEEDING of Publishing House for Science and Technology, 2016",
       "topic": "Hand Gesture",
+      "lab_authors": [
+        "hai_vu"
+      ]
+    },
+    {
+      "title": "Real-time table plane detection using accelerometer and organized point cloud data from Kinect sensor",
+      "authors": "L Van-Hung, V Michiel, V Hai, N Thuy Thi, L Thi-Lan, T ThanhHai, …",
+      "year": 2016,
+      "venue": "Journal of Computer Science and Cybernetics 32 (ISSN: 1813-9663), 243-258, 2016",
+      "topic": "Other",
+      "lab_authors": [
+        "hai_vu"
+      ]
+    },
+    {
+      "title": "Geometry-based 3-D Object Fitting and Localization in Grasping Aid for Visually Impaired People",
+      "authors": "L Van-Hung, L Thi-Lan, V Hai, N Thuy Thi, T Thanh-Hai, D TranChung, …",
+      "year": 2016,
+      "venue": "The 6th International Conference on Communications and Electronics (IEEE …, 2016",
+      "topic": "Visually Impaired",
       "lab_authors": [
         "hai_vu"
       ]
@@ -10728,6 +11027,7 @@
       "venue": "2015 Seventh International Conference on Knowledge and Systems Engineering …, 2015",
       "topic": "Other",
       "lab_authors": [
+        "van_hung_le",
         "hai_vu",
         "thi_lan_le",
         "thanh_hai_tran"
@@ -10785,6 +11085,17 @@
       "topic": "Other",
       "lab_authors": [
         "thanh_hai_tran"
+      ]
+    },
+    {
+      "title": "Table plane detection using geometrical constraints on depth image",
+      "authors": "LV Hung, V Hai, LT Thuy, N. T., Lan, TTT Hai",
+      "year": 2015,
+      "venue": "",
+      "topic": "Other",
+      "lab_authors": [
+        "van_hung_le",
+        "hai_vu"
       ]
     },
     {
@@ -11643,17 +11954,6 @@
       "venue": "2013 International Conference on Computing, Management and …, 2013",
       "topic": "Hand Gesture",
       "lab_authors": [
-        "thanh_hai_tran"
-      ]
-    },
-    {
-      "title": "A method for hand detection using internal features and active boosting-based learning",
-      "authors": "VT Nguyen, TT Nguyen, R Mullot, TTH Tran, H Le",
-      "year": 2013,
-      "venue": "Proceedings of the 4th Symposium on Information and Communication Technology …, 2013",
-      "topic": "Other",
-      "lab_authors": [
-        "van_toi_nguyen",
         "thanh_hai_tran"
       ]
     },
@@ -13155,16 +13455,6 @@
     },
     {
       "title": "761-ML0028",
-      "authors": "Thi Lan Le",
-      "year": null,
-      "venue": "",
-      "topic": "Other",
-      "lab_authors": [
-        "thi_lan_le"
-      ]
-    },
-    {
-      "title": "Fitting Cylindrical Objects in 3-D Point Cloud Using the Context and Geometrical Constraints",
       "authors": "Thi Lan Le",
       "year": null,
       "venue": "",
