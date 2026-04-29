@@ -24,10 +24,19 @@ type Link = {
   topics: Topic[]
   primary_topic: string
 }
+type Paper = {
+  title: string
+  authors: string
+  year: number | null
+  venue: string
+  topic: string
+  lab_authors: string[]   // node ids
+}
 type NetworkData = {
   nodes: Node[]
   links: Link[]
   topics: { key: string; color: string }[]
+  papers: Paper[]
 }
 
 const TOPIC_FALLBACK = '#7CD2FF'
@@ -304,11 +313,19 @@ export default function NetworkClient() {
         ctx.stroke()
         ctx.shadowBlur = 0
 
-        if (n.papers >= 30 || isSel || isHov) {
-          ctx.font = '600 12px Inter, system-ui, sans-serif'
+        // Label: always for selected/hovered; otherwise gated by zoom × paper count.
+        // At k=1, show only big nodes; at k=1.6+, show all.
+        const k = transformRef.current.k
+        const labelThreshold = Math.max(0, 60 - (k - 1) * 80)  // papers needed at this zoom
+        const showLabel = isSel || isHov || n.papers >= labelThreshold
+        if (showLabel) {
+          const fontSize = Math.max(10, Math.min(15, 11 + (k - 1) * 4))
+          ctx.font = `600 ${fontSize}px Inter, system-ui, sans-serif`
           ctx.textAlign = 'center'
           ctx.textBaseline = 'top'
-          ctx.fillStyle = 'rgba(255,255,255,0.92)'
+          // Fade in/out near the threshold
+          const fade = isSel || isHov ? 1 : Math.min(1, (n.papers - labelThreshold) / 8 + 1)
+          ctx.fillStyle = `rgba(255,255,255,${0.92 * Math.max(0, Math.min(1, fade))})`
           ctx.shadowColor = '#000'
           ctx.shadowBlur = 6
           ctx.fillText(n.name, n.x!, n.y! + r + 6)
@@ -444,6 +461,36 @@ export default function NetworkClient() {
     list.sort((a, b) => b.link.weight - a.link.weight)
     return list
   }, [data, selectedNode])
+
+  // Papers list: filter by selected node first; then by active topics
+  const filteredPapers = useMemo<Paper[]>(() => {
+    if (!data) return []
+    let papers = data.papers
+    if (selectedId) {
+      papers = papers.filter(p => p.lab_authors.includes(selectedId))
+    }
+    if (activeTopics.size > 0) {
+      papers = papers.filter(p => activeTopics.has(p.topic))
+    }
+    if (search) {
+      const q = search.toLowerCase()
+      papers = papers.filter(p =>
+        p.title.toLowerCase().includes(q) ||
+        p.authors.toLowerCase().includes(q) ||
+        p.venue.toLowerCase().includes(q)
+      )
+    }
+    return papers
+  }, [data, selectedId, activeTopics, search])
+  const papersHeading = useMemo(() => {
+    const parts: string[] = []
+    if (selectedNode) parts.push(`by ${selectedNode.name}`)
+    if (activeTopics.size > 0) parts.push(`in ${Array.from(activeTopics).join(' / ')}`)
+    if (search) parts.push(`matching “${search}”`)
+    return parts.length ? `Papers ${parts.join(' ')}` : 'Recent papers'
+  }, [selectedNode, activeTopics, search])
+  const [papersExpanded, setPapersExpanded] = useState(false)
+  const visiblePapers = papersExpanded ? filteredPapers : filteredPapers.slice(0, 30)
 
   if (!data) return (
     <div className="min-h-screen bg-[#04060c] text-white grid place-items-center">
@@ -589,6 +636,80 @@ export default function NetworkClient() {
             )
           })}
         </div>
+      </div>
+
+      {/* Papers list panel */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-6 border-t border-white/10">
+        <div className="flex items-center justify-between mb-4">
+          <div>
+            <h2 className="text-lg font-semibold">{papersHeading}</h2>
+            <div className="text-xs text-white/50 mt-1">{filteredPapers.length} papers</div>
+          </div>
+          {(selectedId || activeTopics.size > 0 || search) && (
+            <button
+              onClick={() => { setSelectedId(null); setActiveTopics(new Set()); setSearch('') }}
+              className="text-xs text-white/60 hover:text-white border border-white/15 hover:border-white/40 rounded-md px-3 py-1.5 transition-colors"
+            >
+              Clear filters
+            </button>
+          )}
+        </div>
+
+        {filteredPapers.length === 0 ? (
+          <div className="text-white/40 text-sm py-8 text-center">
+            No papers match the current filter.
+          </div>
+        ) : (
+          <ul className="space-y-2">
+            {visiblePapers.map((p, i) => (
+              <li key={`${p.title}-${i}`}
+                  className="bg-white/5 hover:bg-white/[0.07] border border-white/10 rounded-lg px-4 py-3 transition-colors">
+                <div className="flex items-start justify-between gap-3">
+                  <div className="min-w-0 flex-1">
+                    <div className="font-medium text-[13.5px] leading-snug">{p.title}</div>
+                    <div className="text-xs text-white/55 mt-1 truncate">{p.authors}</div>
+                    {p.venue && <div className="text-xs text-white/40 mt-0.5 truncate italic">{p.venue}</div>}
+                  </div>
+                  <div className="flex flex-col items-end gap-1 flex-shrink-0">
+                    <span className="text-[10px] font-mono text-white/50">{p.year ?? '—'}</span>
+                    <span className="text-[10px] px-2 py-0.5 rounded-full border border-white/10 whitespace-nowrap"
+                          style={{ color: topicColor(p.topic) }}>{p.topic}</span>
+                  </div>
+                </div>
+                {/* lab co-authors as chips */}
+                {p.lab_authors.length > 0 && (
+                  <div className="flex flex-wrap gap-1 mt-2">
+                    {p.lab_authors.slice(0, 6).map(aid => {
+                      const n = data.nodes.find(x => x.id === aid)
+                      if (!n) return null
+                      return (
+                        <button
+                          key={aid}
+                          onClick={() => setSelectedId(aid)}
+                          className="px-1.5 py-0.5 text-[10px] rounded border border-white/10 hover:border-white/30 transition-colors"
+                          style={{ color: topicColor(n.primary_topic) }}
+                        >
+                          {n.name}
+                        </button>
+                      )
+                    })}
+                  </div>
+                )}
+              </li>
+            ))}
+          </ul>
+        )}
+
+        {filteredPapers.length > 30 && (
+          <div className="mt-4 text-center">
+            <button
+              onClick={() => setPapersExpanded(!papersExpanded)}
+              className="text-sm text-white/70 hover:text-white border border-white/15 hover:border-white/40 rounded-md px-4 py-2 transition-colors"
+            >
+              {papersExpanded ? `Show first 30` : `Show all ${filteredPapers.length} papers`}
+            </button>
+          </div>
+        )}
       </div>
     </div>
   )
