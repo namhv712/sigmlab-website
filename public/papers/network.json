@@ -28,7 +28,7 @@
           "count": 15
         }
       ],
-      "primary_topic": "Other",
+      "primary_topic": "Plant ID",
       "avatar": "/assets/images/team/Permanent Members/Main - Cô Lan.png"
     },
     {
@@ -59,7 +59,7 @@
           "count": 14
         }
       ],
-      "primary_topic": "Other",
+      "primary_topic": "Hand Gesture",
       "avatar": "/assets/images/team/Permanent Members/Main - Cô Hải.png"
     },
     {
@@ -90,7 +90,7 @@
           "count": 15
         }
       ],
-      "primary_topic": "Other",
+      "primary_topic": "Medical Imaging",
       "avatar": "/assets/images/team/Permanent Members/Main - Thầy Hải.png"
     },
     {
@@ -121,7 +121,7 @@
           "count": 1
         }
       ],
-      "primary_topic": "Other",
+      "primary_topic": "Speech/NLP",
       "avatar": ""
     },
     {
@@ -152,7 +152,7 @@
           "count": 1
         }
       ],
-      "primary_topic": "Other",
+      "primary_topic": "Plant ID",
       "avatar": ""
     },
     {
@@ -183,7 +183,7 @@
           "count": 3
         }
       ],
-      "primary_topic": "Other",
+      "primary_topic": "Hand Gesture",
       "avatar": "/assets/images/team/Invited Researchers/IR Anh Tới.jpg"
     },
     {
@@ -214,7 +214,7 @@
           "count": 1
         }
       ],
-      "primary_topic": "Other",
+      "primary_topic": "Medical Imaging",
       "avatar": ""
     },
     {
@@ -276,7 +276,7 @@
           "count": 1
         }
       ],
-      "primary_topic": "Other",
+      "primary_topic": "Person Re-ID",
       "avatar": "/assets/images/team/Allumi Member/PhamThanhThuy.png"
     },
     {
@@ -338,7 +338,7 @@
           "count": 1
         }
       ],
-      "primary_topic": "Other",
+      "primary_topic": "Honey Bee",
       "avatar": "/assets/images/team/Invited Researchers/Master - TungND.jpg"
     },
     {
@@ -396,7 +396,7 @@
           "count": 2
         }
       ],
-      "primary_topic": "Other",
+      "primary_topic": "Action Recognition",
       "avatar": ""
     },
     {
@@ -481,7 +481,7 @@
           "count": 1
         }
       ],
-      "primary_topic": "Other",
+      "primary_topic": "Speech/NLP",
       "avatar": ""
     },
     {
@@ -554,7 +554,7 @@
           "count": 1
         }
       ],
-      "primary_topic": "Other",
+      "primary_topic": "Action Recognition",
       "avatar": "/assets/images/team/Invited Researchers/PhD - Chị Lịch.jpg"
     },
     {
@@ -785,7 +785,7 @@
           "count": 13
         }
       ],
-      "primary_topic": "Other"
+      "primary_topic": "Hand Gesture"
     },
     {
       "source": "thanh_hai_tran",
@@ -983,7 +983,7 @@
           "count": 2
         }
       ],
-      "primary_topic": "Other"
+      "primary_topic": "Person Re-ID"
     },
     {
       "source": "hong_quan_nguyen",
@@ -1093,7 +1093,7 @@
           "count": 1
         }
       ],
-      "primary_topic": "Other"
+      "primary_topic": "Person Re-ID"
     },
     {
       "source": "thi_lan_le",
@@ -1181,7 +1181,7 @@
           "count": 1
         }
       ],
-      "primary_topic": "Other"
+      "primary_topic": "Person Re-ID"
     },
     {
       "source": "bui_hai_phong",
@@ -1449,7 +1449,7 @@
           "count": 2
         }
       ],
-      "primary_topic": "Other"
+      "primary_topic": "Person Re-ID"
     },
     {
       "source": "hai_vu",
@@ -1731,7 +1731,7 @@
           "count": 1
         }
       ],
-      "primary_topic": "Other"
+      "primary_topic": "Action Recognition"
     },
     {
       "source": "thanh_hai_tran",
@@ -1865,7 +1865,7 @@
           "count": 1
         }
       ],
-      "primary_topic": "Other"
+      "primary_topic": "Person Re-ID"
     },
     {
       "source": "hoang_son_bui",
@@ -1973,7 +1973,7 @@
           "count": 1
         }
       ],
-      "primary_topic": "Other"
+      "primary_topic": "Hand Gesture"
     },
     {
       "source": "thi_ngoc_diep_do",
@@ -2103,7 +2103,7 @@
           "count": 1
         }
       ],
-      "primary_topic": "Other"
+      "primary_topic": "Honey Bee"
     },
     {
       "source": "hai_vu",
@@ -2383,7 +2383,7 @@
           "count": 1
         }
       ],
-      "primary_topic": "Other"
+      "primary_topic": "Honey Bee"
     },
     {
       "source": "hai_vu",
