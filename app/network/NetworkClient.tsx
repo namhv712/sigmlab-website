@@ -265,23 +265,26 @@ export default function NetworkClient() {
         ctx.fillStyle = '#0b0d18'
         ctx.fill()
 
-        // avatar (clipped) or color disc
+        // avatar (cover-fit, clipped to circle)
         const img = imagesRef.current.get(n.id)
         if (img && img.complete && img.naturalWidth > 0) {
           ctx.save()
           ctx.beginPath()
           ctx.arc(n.x!, n.y!, r - 1.5, 0, Math.PI * 2)
           ctx.clip()
-          // cover-fit
+          // Cover-fit: scale image to fully cover the (2r × 2r) box while
+          // preserving its aspect ratio. The clip mask crops the overflow.
           const ar = img.naturalWidth / img.naturalHeight
-          const dw = ar >= 1 ? 2 * r : 2 * r * ar
-          const dh = ar >= 1 ? 2 * r / ar : 2 * r
-          // make square cover
-          const size = 2 * r * (ar >= 1 ? 1 / Math.min(ar, 1) : ar)
-          const dim = Math.max(dw, dh)
-          ctx.drawImage(img, n.x! - dim / 2, n.y! - dim / 2, dim, dim)
+          let dw: number, dh: number
+          if (ar >= 1) {
+            // landscape: fit height, overflow horizontally
+            dh = 2 * r; dw = dh * ar
+          } else {
+            // portrait: fit width, overflow vertically
+            dw = 2 * r; dh = dw / ar
+          }
+          ctx.drawImage(img, n.x! - dw / 2, n.y! - dh / 2, dw, dh)
           ctx.restore()
-          void size
         } else {
           ctx.fillStyle = c
           ctx.beginPath()
