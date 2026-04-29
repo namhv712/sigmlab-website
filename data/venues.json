@@ -1,0 +1,108 @@
+{
+  "$schema": "../lib/venues/schema.ts",
+  "generatedAt": "2026-04-29",
+  "venues": [
+    {
+      "id": "cvpr",
+      "name": "CVPR",
+      "fullName": "IEEE/CVF Conference on Computer Vision and Pattern Recognition",
+      "aliases": ["IEEE CVPR"],
+      "type": "conference",
+      "topics": ["computer-vision", "deep-learning", "pattern-recognition"],
+      "website": "https://cvpr.thecvf.com/",
+      "publisher": "IEEE",
+      "rankings": {
+        "scopus": true, "isi": true, "dblp": true,
+        "core": "A*", "ccf": "A", "era": "A*", "hIndex": 422
+      },
+      "deadlines": [
+        { "year": 2026, "kind": "abstract", "date": "2025-11-07", "timezone": "AoE" },
+        { "year": 2026, "kind": "full-paper", "date": "2025-11-14", "timezone": "AoE" },
+        { "year": 2026, "kind": "notification", "date": "2026-02-26" },
+        { "year": 2026, "kind": "camera-ready", "date": "2026-04-04" }
+      ],
+      "frequency": "annual",
+      "acceptanceRate": 0.236,
+      "location": "Seattle, USA",
+      "notes": "Double-blind. 8 pages + unlimited references.",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "ieee-tpami",
+      "name": "TPAMI",
+      "fullName": "IEEE Transactions on Pattern Analysis and Machine Intelligence",
+      "aliases": ["T-PAMI", "IEEE T-PAMI"],
+      "type": "journal",
+      "topics": ["computer-vision", "machine-learning", "pattern-recognition"],
+      "website": "https://www.computer.org/csdl/journal/tp",
+      "publisher": "IEEE",
+      "issn": "0162-8828",
+      "eIssn": "1939-3539",
+      "rankings": {
+        "scopus": true, "isi": true, "dblp": true,
+        "scimagoQuartile": "Q1", "sjr": 6.13, "jcrImpactFactor": 24.3,
+        "jcrQuartile": "Q1", "citeScore": 47.5, "hIndex": 384, "ccf": "A"
+      },
+      "frequency": "rolling",
+      "notes": "Top journal in CV/PR. Rolling submission, ~9 month review cycle.",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "iccv",
+      "name": "ICCV",
+      "fullName": "IEEE/CVF International Conference on Computer Vision",
+      "type": "conference",
+      "topics": ["computer-vision", "deep-learning"],
+      "website": "https://iccv.thecvf.com/",
+      "publisher": "IEEE",
+      "rankings": {
+        "scopus": true, "isi": true, "dblp": true,
+        "core": "A*", "ccf": "A", "era": "A*", "hIndex": 297
+      },
+      "deadlines": [
+        { "year": 2027, "kind": "full-paper", "date": "2026-03-08", "timezone": "AoE" }
+      ],
+      "frequency": "biannual",
+      "notes": "Held in odd years; alternates with ECCV.",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "neurips",
+      "name": "NeurIPS",
+      "fullName": "Conference on Neural Information Processing Systems",
+      "aliases": ["NIPS"],
+      "type": "conference",
+      "topics": ["machine-learning", "deep-learning", "computer-vision"],
+      "website": "https://neurips.cc/",
+      "publisher": "Neural Information Processing Systems Foundation",
+      "rankings": {
+        "scopus": true, "isi": false, "dblp": true,
+        "core": "A*", "ccf": "A", "era": "A*", "hIndex": 358
+      },
+      "deadlines": [
+        { "year": 2026, "kind": "abstract", "date": "2026-05-15", "timezone": "AoE" },
+        { "year": 2026, "kind": "full-paper", "date": "2026-05-22", "timezone": "AoE" }
+      ],
+      "frequency": "annual",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "miccai",
+      "name": "MICCAI",
+      "fullName": "International Conference on Medical Image Computing and Computer-Assisted Intervention",
+      "type": "conference",
+      "topics": ["medical-imaging", "computer-vision", "deep-learning"],
+      "website": "https://www.miccai.org/",
+      "publisher": "Springer",
+      "rankings": {
+        "scopus": true, "isi": true, "dblp": true,
+        "core": "A", "ccf": "B", "era": "A", "hIndex": 167
+      },
+      "deadlines": [
+        { "year": 2026, "kind": "full-paper", "date": "2026-03-06" }
+      ],
+      "frequency": "annual",
+      "lastVerified": "2026-04-29"
+    }
+  ]
+}
