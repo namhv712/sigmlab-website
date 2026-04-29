@@ -4384,26 +4384,6 @@
       ]
     },
     {
-      "title": "Beyond Coherence: Improving Temporal Consistency and Interpretability in Dynamic Topic Models",
-      "authors": "TV Nguyen, N Van Dong, MC Xuan, T Nguyen, LN Van, DV Sang, …",
-      "year": 2026,
-      "venue": "Findings of the Association for Computational Linguistics: EACL 2026, 3609-3629, 2026",
-      "topic": "Speech/NLP",
-      "lab_authors": [
-        "dinh_viet_sang"
-      ]
-    },
-    {
-      "title": "DWA-KD: Dual-Space Weighting and Time-Warped Alignment for Cross-Tokenizer Knowledge Distillation",
-      "authors": "DT Vu, PK Chi, DP Van, LN Van, DV Sang, T Le",
-      "year": 2026,
-      "venue": "Findings of the Association for Computational Linguistics: EACL 2026, 3513-3527, 2026",
-      "topic": "Other",
-      "lab_authors": [
-        "dinh_viet_sang"
-      ]
-    },
-    {
       "title": "Using Synthetic Data to estimate the True Error is theoretically and practically doable",
       "authors": "HH Thanh, DT Nguyen, HT Tran, K Than",
       "year": 2026,
@@ -4442,26 +4422,6 @@
       "topic": "Surveillance",
       "lab_authors": [
         "huong_giang_doan"
-      ]
-    },
-    {
-      "title": "LCA: Local Classifier Alignment for Continual Learning",
-      "authors": "T Tran, DV Vargas, K Than",
-      "year": 2026,
-      "venue": "ICLR, 2026",
-      "topic": "Other",
-      "lab_authors": [
-        "khoat_than"
-      ]
-    },
-    {
-      "title": "Generalized ordered Wasserstein distance for sequential data",
-      "authors": "T Doan, H To, H Vuong, M Visani, A Takasu, K Than",
-      "year": 2026,
-      "venue": "Pattern Recognition 169, 111952, 2026",
-      "topic": "Other",
-      "lab_authors": [
-        "khoat_than"
       ]
     },
     {
@@ -4568,26 +4528,6 @@
       ]
     },
     {
-      "title": "Unified Acoustic Representation Learning for Vietnamese Speech Classification Tasks",
-      "authors": "XT Ha, VH Nguyen, TN Do, TK Phan, DK Mac",
-      "year": 2025,
-      "venue": "2025 International Conference on Multimedia Analysis and Pattern Recognition …, 2025",
-      "topic": "Other",
-      "lab_authors": [
-        "dang_khoa_mac"
-      ]
-    },
-    {
-      "title": "Adapting WavLM for Vietnamese Speaker Diarization in Real-world Conversations",
-      "authors": "TD Thang, VH Nguyen, TN Do, QK Nguyen, TK Phan, DK Mac",
-      "year": 2025,
-      "venue": "2025 International Conference on Multimedia Analysis and Pattern Recognition …, 2025",
-      "topic": "Other",
-      "lab_authors": [
-        "dang_khoa_mac"
-      ]
-    },
-    {
       "title": "Analyzing the Correlation and Impact of Speech Evaluation Metrics on Real-World Speaker Verification and Speech Recognition",
       "authors": "TL Le, VH Nguyen, TN Do, TK Phan, DK Mac",
       "year": 2025,
@@ -4649,16 +4589,6 @@
       ]
     },
     {
-      "title": "Glocom: A short text neural topic model via global clustering context",
-      "authors": "QD Nguyen, T Nguyen, DA Nguyen, LN Van, DV Sang, TH Nguyen",
-      "year": 2025,
-      "venue": "Proceedings of the 2025 Conference of the Nations of the Americas Chapter of …, 2025",
-      "topic": "Speech/NLP",
-      "lab_authors": [
-        "dinh_viet_sang"
-      ]
-    },
-    {
       "title": "Topicot: Neural topic model aligning with pre-trained clustering and optimal transport",
       "authors": "T Nguyen, DT Pham, QD Nguyen, LN Van, AN Duc, SD Viet",
       "year": 2025,
@@ -4669,26 +4599,6 @@
       ]
     },
     {
-      "title": "Enhancing discriminative representation in similar relation clusters for few-shot continual relation extraction",
-      "authors": "AD Le, N Le Hai, TX Nguyen, LN Van, NTN Diep, DV Sang, …",
-      "year": 2025,
-      "venue": "Proceedings of the 2025 Conference of the Nations of the Americas Chapter of …, 2025",
-      "topic": "Other",
-      "lab_authors": [
-        "dinh_viet_sang"
-      ]
-    },
-    {
-      "title": "Sharpness-aware minimization for topic models with high-quality document representations",
-      "authors": "T Nguyen, T Le, HT Vuong, QD Nguyen, DA Nguyen, LN Van, …",
-      "year": 2025,
-      "venue": "Proceedings of the 2025 Conference of the Nations of the Americas Chapter of …, 2025",
-      "topic": "Speech/NLP",
-      "lab_authors": [
-        "dinh_viet_sang"
-      ]
-    },
-    {
       "title": "ThyroidXL: Advancing Thyroid Nodule Diagnosis with an Expert-Labeled, Pathology-Validated Dataset",
       "authors": "VH Duong, H Vu, HD Phan, DQ Nguyen, DH Pham, QT Le, …",
       "year": 2025,
@@ -4696,26 +4606,6 @@
       "topic": "Other",
       "lab_authors": [
         "hai_vu"
-      ]
-    },
-    {
-      "title": "Zenid: Facefusionnet-Guided Diffusion for Parent-to-Child Facial Prediction",
-      "authors": "NH Lam, VD Minh, NT Tuan, NQ Tri, NVN Khue, DV Sang",
-      "year": 2025,
-      "venue": "2025 17th International Conference on Knowledge and System Engineering (KSE …, 2025",
-      "topic": "Other",
-      "lab_authors": [
-        "dinh_viet_sang"
-      ]
-    },
-    {
-      "title": "Sketch2comic: A Diffusion-Based Framework for Consistent Multi-Character Comic Synthesis",
-      "authors": "NH Lam, NT Tuan, VD Minh, NVN Khue, NQ Tri, DV Sang",
-      "year": 2025,
-      "venue": "2025 17th International Conference on Knowledge and System Engineering (KSE …, 2025",
-      "topic": "Other",
-      "lab_authors": [
-        "dinh_viet_sang"
       ]
     },
     {
@@ -5128,136 +5018,6 @@
       ]
     },
     {
-      "title": "Out-of-vocabulary handling and topic quality control strategies in streaming topic models",
-      "authors": "T Nguyen, T Pham, LN Van, HB Ban, K Than",
-      "year": 2025,
-      "venue": "Neurocomputing 614, 128757, 2025",
-      "topic": "Speech/NLP",
-      "lab_authors": [
-        "khoat_than"
-      ]
-    },
-    {
-      "title": "Boosting multiple views for pretrained-based continual learning",
-      "authors": "Q Tran, TL Tran, K Doan, T Tran, D Phung, K Than, …",
-      "year": 2025,
-      "venue": "The Thirteenth International Conference on Learning Representations, 2025",
-      "topic": "Other",
-      "lab_authors": [
-        "khoat_than"
-      ]
-    },
-    {
-      "title": "Gentle local robustness implies generalization",
-      "authors": "K Than, D Phan, G Vu",
-      "year": 2025,
-      "venue": "Machine Learning 114 (6), 142, 2025",
-      "topic": "Other",
-      "lab_authors": [
-        "khoat_than"
-      ]
-    },
-    {
-      "title": "DPaI: Differentiable Pruning at Initialization with Node-Path Balance Principle",
-      "authors": "HW Lichuan Xiang, Quan Nguyen-Tri, Lan-Cuong Nguyen, Hoang Pham, Khoat Than ...",
-      "year": 2025,
-      "venue": "The Thirteenth International Conference on Learning Representations, 2025",
-      "topic": "Other",
-      "lab_authors": [
-        "khoat_than"
-      ]
-    },
-    {
-      "title": "Provably Improving Generalization of Few-Shot Models with Synthetic Data",
-      "authors": "LC Nguyen, Q Nguyen-Tri, BT Khanh, DD Le, L Tran-Thanh, K Than",
-      "year": 2025,
-      "venue": "International Conference on Machine Learning, 2025",
-      "topic": "Other",
-      "lab_authors": [
-        "khoat_than"
-      ]
-    },
-    {
-      "title": "Weighted Integrated Gradients for Feature Attribution",
-      "authors": "KTD Tuan, TN Trong, SN Hoang, K Than, AN Duc",
-      "year": 2025,
-      "venue": "CoRR, 2025",
-      "topic": "Other",
-      "lab_authors": [
-        "khoat_than"
-      ]
-    },
-    {
-      "title": "Non-vacuous Generalization Bounds for Deep Neural Networks without any modification to the trained models",
-      "authors": "K Than, D Phan",
-      "year": 2025,
-      "venue": "arXiv preprint arXiv:2503.07325, 2025",
-      "topic": "Other",
-      "lab_authors": [
-        "khoat_than"
-      ]
-    },
-    {
-      "title": "The Hidden Power of Normalization: Exponential Capacity Control in Deep Neural Networks",
-      "authors": "K Than",
-      "year": 2025,
-      "venue": "arXiv preprint arXiv:2511.00958, 2025",
-      "topic": "Other",
-      "lab_authors": [
-        "khoat_than"
-      ]
-    },
-    {
-      "title": "Non-vacuous Bounds for the test error of Deep Learning without any change to the trained models",
-      "authors": "K Than, D Phan",
-      "year": 2025,
-      "venue": "",
-      "topic": "Other",
-      "lab_authors": [
-        "khoat_than"
-      ]
-    },
-    {
-      "title": "Enhancing Visual Feature Attribution via Weighted Integrated Gradients",
-      "authors": "KTD Tuan, TN Trong, SN Hoang, K Than, AN Duc",
-      "year": 2025,
-      "venue": "arXiv preprint arXiv:2505.03201, 2025",
-      "topic": "Other",
-      "lab_authors": [
-        "khoat_than"
-      ]
-    },
-    {
-      "title": "Weighted Average Gradients for Feature Attribution",
-      "authors": "KTD Tuan, T Nguyen Trong, S Nguyen Hoang, K Than, A Nguyen Duc",
-      "year": 2025,
-      "venue": "arXiv e-prints, arXiv: 2505.03201, 2025",
-      "topic": "Other",
-      "lab_authors": [
-        "khoat_than"
-      ]
-    },
-    {
-      "title": "Enhancing Unsupervised Domain Adaptation in Semantic Segmentation Through Selective Consensus and Gaussian Mixture Model-Based Pseudo-Labeling",
-      "authors": "PD Tran, H Nguyen, TO Nguyen",
-      "year": 2025,
-      "venue": "2025 IEEE International Conference on Image Processing (ICIP), 2832-2837, 2025",
-      "topic": "Other",
-      "lab_authors": [
-        "nguyen_thi_oanh"
-      ]
-    },
-    {
-      "title": "Efficient Sign Language Recognition with Skeleton Data: A Study of Keypoint Selection, Pose Estimators, and GCN Models",
-      "authors": "VHT Anh, Q Le Duc, TO Nguyen",
-      "year": 2025,
-      "venue": "2025 International Conference on Multimedia Analysis and Pattern Recognition …, 2025",
-      "topic": "Hand Gesture",
-      "lab_authors": [
-        "nguyen_thi_oanh"
-      ]
-    },
-    {
       "title": "Sign language recognition: A large-scale multi-view dataset and comprehensive evaluation",
       "authors": "NS Dinh, TD Nguyen, DT Tran, NDH Pham, TH Tran, NA Tong, …",
       "year": 2025,
@@ -5626,26 +5386,6 @@
       ]
     },
     {
-      "title": "Towards comprehensive vietnamese retrieval-augmented generation and large language models",
-      "authors": "NQ Duc, LH Son, ND Nhan, NDN Minh, LT Huong, DV Sang",
-      "year": 2024,
-      "venue": "arXiv preprint arXiv:2403.01616, 2024",
-      "topic": "Speech/NLP",
-      "lab_authors": [
-        "dinh_viet_sang"
-      ]
-    },
-    {
-      "title": "A Diffusion Model for Personalized Text-to-Image Generation",
-      "authors": "NM Chau, DV Sang",
-      "year": 2024,
-      "venue": "International Symposium on Information and Communication Technology, 418-431, 2024",
-      "topic": "Other",
-      "lab_authors": [
-        "dinh_viet_sang"
-      ]
-    },
-    {
       "title": "M-irra: A multilingual model for text-based person search",
       "authors": "HP Tran, TH Phan, TB Nguyen, TND Do, HQ Nguyen, TH Tran, …",
       "year": 2024,
@@ -5900,46 +5640,6 @@
       ]
     },
     {
-      "title": "Continual variational dropout: a view of auxiliary local variables in continual learning",
-      "authors": "NL Hai, T Nguyen, LN Van, TH Nguyen, K Than",
-      "year": 2024,
-      "venue": "Machine Learning 113 (1), 281-323, 2024",
-      "topic": "Other",
-      "lab_authors": [
-        "khoat_than"
-      ]
-    },
-    {
-      "title": "Partial ordered Wasserstein distance for sequential data",
-      "authors": "T Doan, T Phan, P Nguyen, K Than, M Visani, A Takasu",
-      "year": 2024,
-      "venue": "Neurocomputing 595, 127908, 2024",
-      "topic": "Other",
-      "lab_authors": [
-        "khoat_than"
-      ]
-    },
-    {
-      "title": "On inference stability for diffusion models",
-      "authors": "V Nguyen, G Vu, TN Thanh, K Than, T Tran",
-      "year": 2024,
-      "venue": "Proceedings of the AAAI Conference on Artificial Intelligence 38 (13), 14449 …, 2024",
-      "topic": "Other",
-      "lab_authors": [
-        "khoat_than"
-      ]
-    },
-    {
-      "title": "Robust Visual Reinforcement Learning by Prompt Tuning",
-      "authors": "T Tran, K Than, D Vargas",
-      "year": 2024,
-      "venue": "Proceedings of the Asian Conference on Computer Vision, 1133-1147, 2024",
-      "topic": "Other",
-      "lab_authors": [
-        "khoat_than"
-      ]
-    },
-    {
       "title": "A study on rocker arm defect inspection based on vision system",
       "authors": "TH Nguyen, DT Nguyen, VH Tran, TT Mac",
       "year": 2024,
@@ -5947,36 +5647,6 @@
       "topic": "Other",
       "lab_authors": [
         "duy_tung_nguyen"
-      ]
-    },
-    {
-      "title": "SCA-DS: Face Anti-spoofing Leveraging Enhanced Spatial and Channel-Wise Attention and Depth Supervision",
-      "authors": "QV Nguyen, TO Nguyen",
-      "year": 2024,
-      "venue": "International Symposium on Information and Communication Technology, 257-272, 2024",
-      "topic": "Other",
-      "lab_authors": [
-        "nguyen_thi_oanh"
-      ]
-    },
-    {
-      "title": "Determination of Anti-Diabetic Drugs in Health Supplements by Liquid Chromatography Tandem Mass Spectrometry (LC-MS/MS) Method",
-      "authors": "TO Nguyen, QA Hoang, TT Vu, CK Cao, THN Nguyen, TH Mac Thi, …",
-      "year": 2024,
-      "venue": "VNU Journal of Science: Natural Sciences and Technology 41 (1), 2024",
-      "topic": "Other",
-      "lab_authors": [
-        "nguyen_thi_oanh"
-      ]
-    },
-    {
-      "title": "Enhanced topology representation learning for skeleton-based human action recognition",
-      "authors": "VHT Anh, TO Nguyen",
-      "year": 2024,
-      "venue": "Procedia Computer Science 246, 3093-3102, 2024",
-      "topic": "Action Recognition",
-      "lab_authors": [
-        "nguyen_thi_oanh"
       ]
     },
     {
@@ -6141,36 +5811,6 @@
       ]
     },
     {
-      "title": "Inverted frequency-coded chipless RFID tag design methodology based on parameter optimization",
-      "authors": "CC Le, TK Dao, NY Pham, TH Nguyen",
-      "year": 2024,
-      "venue": "IEEE Microwave and Wireless Technology Letters 34 (12), 1399-1402, 2024",
-      "topic": "Other",
-      "lab_authors": [
-        "trung_kien_dao"
-      ]
-    },
-    {
-      "title": "Efficiency Improvement for Chipless RFID Tag Design Using Frequency Placement and Taguchi-Based Initialized PSO",
-      "authors": "CC Le, TK Dao, NY Pham, TH Nguyen",
-      "year": 2024,
-      "venue": "Sensors 24 (14), 4435, 2024",
-      "topic": "Other",
-      "lab_authors": [
-        "trung_kien_dao"
-      ]
-    },
-    {
-      "title": "An Inverted Approach for Chipless RFID Tag Design Through Parameter Optimization",
-      "authors": "CC Le, TK Dao, NY Pham, TH Nguyen",
-      "year": 2024,
-      "venue": "2024 Tenth International Conference on Communications and Electronics (ICCE …, 2024",
-      "topic": "Other",
-      "lab_authors": [
-        "trung_kien_dao"
-      ]
-    },
-    {
       "title": "FedNTProto: A prototype-based approach for personalized federated learning",
       "authors": "TK Tran, HP Tran, TL Le, TH Tran",
       "year": 2024,
@@ -6320,16 +5960,6 @@
       ]
     },
     {
-      "title": "Sino-Vietnamese Text Transcription using Word Embedding Approach",
-      "authors": "TK Dao, DV Nguyen, MV Pham, NN Duong",
-      "year": 2024,
-      "venue": "2024 Tenth International Conference on Communications and Electronics (ICCE …, 2024",
-      "topic": "Other",
-      "lab_authors": [
-        "trung_kien_dao"
-      ]
-    },
-    {
       "title": "Smart health monitoring wearable with integrated sensors, machine learning, and IoT",
       "authors": "VH Bui, DN Tran, TH Dao, QT Hoang, HD Vu, VT Nguyen, …",
       "year": 2024,
@@ -6406,76 +6036,6 @@
         "dinh_tan_pham",
         "khoat_than",
         "hai_vu"
-      ]
-    },
-    {
-      "title": "UGCANet: A unified global context-aware transformer-based network with feature alignment for endoscopic image analysis",
-      "authors": "PV Hung, ND Manh, NT Oanh, NT Thuy, DV Sang",
-      "year": 2023,
-      "venue": "arXiv preprint arXiv:2307.06260, 2023",
-      "topic": "Medical Imaging",
-      "lab_authors": [
-        "dinh_viet_sang"
-      ]
-    },
-    {
-      "title": "RABIT: An efficient transformer using bidirectional feature pyramid network with reverse attention for colon polyp segmentation",
-      "authors": "NH Thuan, NT Oanh, NT Thuy, S Perry, DV Sang",
-      "year": 2023,
-      "venue": "arXiv preprint arXiv:2307.06420, 2023",
-      "topic": "Medical Imaging",
-      "lab_authors": [
-        "dinh_viet_sang"
-      ]
-    },
-    {
-      "title": "Explainable AI for CPS-based manufacturing workcell",
-      "authors": "RJ Soon, DV Sang, CB Chng, CK Chui",
-      "year": 2023,
-      "venue": "2023 International Conference on System Science and Engineering (ICSSE), 332-337, 2023",
-      "topic": "Other",
-      "lab_authors": [
-        "dinh_viet_sang"
-      ]
-    },
-    {
-      "title": "Mclda: Multi-level contrastive learning for domain adaptive semantic segmentation",
-      "authors": "NK Duong, TO Nguyen, VS Dinh",
-      "year": 2023,
-      "venue": "Proceedings of the 12th International Symposium on Information and …, 2023",
-      "topic": "Other",
-      "lab_authors": [
-        "nguyen_thi_oanh"
-      ]
-    },
-    {
-      "title": "Semi-supervised learning with dense target producer for end-to-end lightweight polyp detection",
-      "authors": "NH Son, NT Huyen, DV Sang",
-      "year": 2023,
-      "venue": "2023 15th International Conference on Knowledge and Systems Engineering (KSE …, 2023",
-      "topic": "Medical Imaging",
-      "lab_authors": [
-        "dinh_viet_sang"
-      ]
-    },
-    {
-      "title": "Memory-Driven Region Contrast for Enhanced Polyp Semantic Segmentation",
-      "authors": "NV Hoai, PV Hung, DV Sang",
-      "year": 2023,
-      "venue": "2023 International Conference on Multimedia Analysis and Pattern Recognition …, 2023",
-      "topic": "Medical Imaging",
-      "lab_authors": [
-        "dinh_viet_sang"
-      ]
-    },
-    {
-      "title": "M3C-Polyp: Mixed Momentum Model Committee for Improved Semi-Supervised Learning in Polyp Segmentation",
-      "authors": "PV Toan, DV Sang",
-      "year": 2023,
-      "venue": "Proceedings of the 2023 5th World Symposium on Software Engineering, 274-279, 2023",
-      "topic": "Medical Imaging",
-      "lab_authors": [
-        "dinh_viet_sang"
       ]
     },
     {
@@ -6662,56 +6222,6 @@
       ]
     },
     {
-      "title": "Sharpness and gradient aware minimization for memory-based continual learning",
-      "authors": "L Tran Tung, V Nguyen Van, P Nguyen Hoang, K Than",
-      "year": 2023,
-      "venue": "Proceedings of the 12th International Symposium on Information and …, 2023",
-      "topic": "Other",
-      "lab_authors": [
-        "khoat_than"
-      ]
-    },
-    {
-      "title": "Unsupervised image segmentation with robust virtual class contrast",
-      "authors": "K Nguyen, K Do, T Vu, K Than",
-      "year": 2023,
-      "venue": "Pattern Recognition Letters 173, 10-16, 2023",
-      "topic": "Other",
-      "lab_authors": [
-        "khoat_than"
-      ]
-    },
-    {
-      "title": "Koppa: Improving prompt-based continual learning with key-query orthogonal projection and prototype-based one-versus-all",
-      "authors": "Q Tran, H Phan, L Tran, K Than, T Tran, D Phung, …",
-      "year": 2023,
-      "venue": "arXiv preprint arXiv:2311.15414, 2023",
-      "topic": "Other",
-      "lab_authors": [
-        "khoat_than"
-      ]
-    },
-    {
-      "title": "Improving prompt-based continual learning with key-query orthogonal projection and prototype-based one-versus-all",
-      "authors": "Q Tran, TL Tran, K Than, T Tran, D Phung, T Le",
-      "year": 2023,
-      "venue": "",
-      "topic": "Other",
-      "lab_authors": [
-        "khoat_than"
-      ]
-    },
-    {
-      "title": "Generalization and stability of gans: a theory and promise from data augmentation",
-      "authors": "K Than, N Vu",
-      "year": 2023,
-      "venue": "",
-      "topic": "Other",
-      "lab_authors": [
-        "khoat_than"
-      ]
-    },
-    {
       "title": "Enhancing fire detection technology: A UV-based system utilizing fourier spectrum analysis for reliable and accurate fire detection",
       "authors": "CT Truong, TH Nguyen, VQ Vu, VH Do, DT Nguyen",
       "year": 2023,
@@ -6759,36 +6269,6 @@
       "topic": "Other",
       "lab_authors": [
         "thi_thanh_thuy_pham"
-      ]
-    },
-    {
-      "title": "Language knowledge-assisted in topology construction for skeleton-based action recognition",
-      "authors": "T Nguyen Quang, TO Nguyen",
-      "year": 2023,
-      "venue": "Proceedings of the 12th International Symposium on Information and …, 2023",
-      "topic": "Action Recognition",
-      "lab_authors": [
-        "nguyen_thi_oanh"
-      ]
-    },
-    {
-      "title": "HRSeg: Leveraging High-Resolution Images to Enhance Polyp Segmentation Quality",
-      "authors": "HH Nguyen, TO Nguyen",
-      "year": 2023,
-      "venue": "2023 15th International Conference on Knowledge and Systems Engineering (KSE …, 2023",
-      "topic": "Medical Imaging",
-      "lab_authors": [
-        "nguyen_thi_oanh"
-      ]
-    },
-    {
-      "title": "Predicting land use effects on flood susceptibility using machine learning and remote sensing in coastal Vietnam",
-      "authors": "VT Vu, HD Nguyen, PL Vu, MC Ha, VD Bui, TO Nguyen, …",
-      "year": 2023,
-      "venue": "Water Practice & Technology 18 (6), 1543-1555, 2023",
-      "topic": "Other",
-      "lab_authors": [
-        "nguyen_thi_oanh"
       ]
     },
     {
@@ -7019,16 +6499,6 @@
       ]
     },
     {
-      "title": "Encoding capacity enhancement for chipless RFID tag using resonant frequency placement",
-      "authors": "CC Le, TK Dao, NY Pham, TH Nguyen",
-      "year": 2023,
-      "venue": "IEEE access 11, 117907-117919, 2023",
-      "topic": "Other",
-      "lab_authors": [
-        "trung_kien_dao"
-      ]
-    },
-    {
       "title": "Accurate continuous action and gesture recognition method based on skeleton and sliding windows techniques",
       "authors": "VD Le, TL Nghiem, TL Le",
       "year": 2023,
@@ -7242,48 +6712,6 @@
       ]
     },
     {
-      "title": "Blazeneo: Blazing fast polyp segmentation and neoplasm detection",
-      "authors": "NS An, PN Lan, DV Hang, DV Long, TQ Trung, NT Thuy, …",
-      "year": 2022,
-      "venue": "IEEE Access 10, 43669-43684, 2022",
-      "topic": "Medical Imaging",
-      "lab_authors": [
-        "dinh_viet_sang"
-      ]
-    },
-    {
-      "title": "A novel unsupervised domain adaption method for depth-guided semantic segmentation using coarse-to-fine alignment",
-      "authors": "KD Nam, TM Nguyen, TV Dieu, M Visani, TO Nguyen, DV Sang",
-      "year": 2022,
-      "venue": "IEEE Access 10, 101248-101262, 2022",
-      "topic": "Other",
-      "lab_authors": [
-        "nguyen_thi_oanh",
-        "dinh_viet_sang"
-      ]
-    },
-    {
-      "title": "Online pseudo labeling for polyp segmentation with momentum networks",
-      "authors": "TP Van, LB Doan, TT Nguyen, DT Tran, Q Van Nguyen, DV Sang",
-      "year": 2022,
-      "venue": "arXiv preprint arXiv:2209.14599, 2022",
-      "topic": "Medical Imaging",
-      "lab_authors": [
-        "dinh_viet_sang"
-      ]
-    },
-    {
-      "title": "G2l: a global to local alignment method for unsupervised domain adaptive semantic segmentation",
-      "authors": "NV Manh, KD Nam, DV Sang, TO Nguyen",
-      "year": 2022,
-      "venue": "Procedia Computer Science 207, 2698-2707, 2022",
-      "topic": "Other",
-      "lab_authors": [
-        "dinh_viet_sang",
-        "nguyen_thi_oanh"
-      ]
-    },
-    {
       "title": "Improve polyp semi-supervised segmentation with prioritizing the reliability of unlabeled images",
       "authors": "TV Pham, SV Dinh, LB Doan, TT Nguyen, QH Nguyen, DT Tran",
       "year": 2022,
@@ -7291,36 +6719,6 @@
       "topic": "Medical Imaging",
       "lab_authors": [
         "quoc_hung_nguyen"
-      ]
-    },
-    {
-      "title": "A Coarse-to-fine Unsupervised Domain Adaptation Method for Cross-Mode Polyp Segmentation.",
-      "authors": "KD Nam, TO Nguyen, NT Thuy, DV Hang, D Van Long, TQ Trung, …",
-      "year": 2022,
-      "venue": "KSE, 1-6, 2022",
-      "topic": "Medical Imaging",
-      "lab_authors": [
-        "nguyen_thi_oanh"
-      ]
-    },
-    {
-      "title": "PolypDEQ: Towards Effective Transformer-Based Deep Equilibrium Models for Colon Polyp Segmentation",
-      "authors": "NM Chau, LT Giang, DV Sang",
-      "year": 2022,
-      "venue": "International Symposium on Visual Computing, 456-467, 2022",
-      "topic": "Medical Imaging",
-      "lab_authors": [
-        "dinh_viet_sang"
-      ]
-    },
-    {
-      "title": "GCEENet: A Global Context Enhancement and Exploitation for Medical Image Segmentation",
-      "authors": "NT Hung, PN Lan, NT Oanh, NT Thuy, DV Sang",
-      "year": 2022,
-      "venue": "International Symposium on Visual Computing, 141-152, 2022",
-      "topic": "Other",
-      "lab_authors": [
-        "dinh_viet_sang"
       ]
     },
     {
@@ -7510,126 +6908,6 @@
       "topic": "Hand Gesture",
       "lab_authors": [
         "huong_giang_doan"
-      ]
-    },
-    {
-      "title": "An interpretable deep learning model for classifying adaptor protein complexes from sequence information",
-      "authors": "QH Kha, TO Tran, VN Nguyen, K Than, NQK Le",
-      "year": 2022,
-      "venue": "Methods 207, 90-96, 2022",
-      "topic": "Other",
-      "lab_authors": [
-        "khoat_than"
-      ]
-    },
-    {
-      "title": "A graph convolutional topic model for short and noisy text streams",
-      "authors": "N Van Linh, TX Bach, K Than",
-      "year": 2022,
-      "venue": "Neurocomputing 468, 345-359, 2022",
-      "topic": "Speech/NLP",
-      "lab_authors": [
-        "khoat_than"
-      ]
-    },
-    {
-      "title": "From implicit to explicit feedback: A deep neural network for modeling sequential behaviours and long-short term preferences of online users",
-      "authors": "Q Tran, L Tran, LC Hai, N Van Linh, K Than",
-      "year": 2022,
-      "venue": "Neurocomputing 479, 89-105, 2022",
-      "topic": "Other",
-      "lab_authors": [
-        "khoat_than"
-      ]
-    },
-    {
-      "title": "Auxiliary local variables for improving regularization/prior approach in continual learning",
-      "authors": "LN Van, NL Hai, H Pham, K Than",
-      "year": 2022,
-      "venue": "Pacific-Asia conference on knowledge discovery and data mining, 16-28, 2022",
-      "topic": "Other",
-      "lab_authors": [
-        "khoat_than"
-      ]
-    },
-    {
-      "title": "Reducing catastrophic forgetting in neural networks via gaussian mixture approximation",
-      "authors": "H Phan, AP Tuan, S Nguyen, NV Linh, K Than",
-      "year": 2022,
-      "venue": "Pacific-Asia Conference on Knowledge Discovery and Data Mining, 106-117, 2022",
-      "topic": "Other",
-      "lab_authors": [
-        "khoat_than"
-      ]
-    },
-    {
-      "title": "Balancing stability and plasticity when learning topic models from short and noisy text streams",
-      "authors": "T Nguyen, T Mai, N Nguyen, LN Van, K Than",
-      "year": 2022,
-      "venue": "Neurocomputing 505, 30-43, 2022",
-      "topic": "Speech/NLP",
-      "lab_authors": [
-        "khoat_than"
-      ]
-    },
-    {
-      "title": "Adaptive infinite dropout for noisy and sparse data streams",
-      "authors": "H Nguyen, H Pham, S Nguyen, N Van Linh, K Than",
-      "year": 2022,
-      "venue": "Machine Learning 111 (8), 3025-3060, 2022",
-      "topic": "Other",
-      "lab_authors": [
-        "khoat_than"
-      ]
-    },
-    {
-      "title": "Face swapping as a simple arithmetic operation",
-      "authors": "T Vu, K Do, K Nguyen, K Than",
-      "year": 2022,
-      "venue": "arXiv preprint arXiv:2211.10812, 2022",
-      "topic": "Other",
-      "lab_authors": [
-        "khoat_than"
-      ]
-    },
-    {
-      "title": "Graph convolutional topic model for data streams",
-      "authors": "LN Van, B Tran, K Than",
-      "year": 2022,
-      "venue": "Neurocomputing 468, 345-359, 2022",
-      "topic": "Speech/NLP",
-      "lab_authors": [
-        "khoat_than"
-      ]
-    },
-    {
-      "title": "Random Generative Adversarial Networks",
-      "authors": "K Nguyen, N Vu, D Nguyen, K Than",
-      "year": 2022,
-      "venue": "Proceedings of the 11th International Symposium on Information and …, 2022",
-      "topic": "Other",
-      "lab_authors": [
-        "khoat_than"
-      ]
-    },
-    {
-      "title": "Revisiting Supervised Word Embeddings.",
-      "authors": "D Vu, K Truong, K Nguyen, N Van Linh, K Than",
-      "year": 2022,
-      "venue": "J. Inf. Sci. Eng. 38 (2), 413-427, 2022",
-      "topic": "Other",
-      "lab_authors": [
-        "khoat_than"
-      ]
-    },
-    {
-      "title": "Continual learning with optimal transport based mixture model",
-      "authors": "Q Tran, H Phan, K Than, D Phung, T Le",
-      "year": 2022,
-      "venue": "arXiv preprint arXiv:2211.16780, 2022",
-      "topic": "Other",
-      "lab_authors": [
-        "khoat_than"
       ]
     },
     {
@@ -7931,16 +7209,6 @@
       ]
     },
     {
-      "title": "Sensor network scheduling for energy efficiency using a simulation-based genetic algorithm with variable-length chromosome",
-      "authors": "VP Ha, TK Dao, NY Pham, MH Le",
-      "year": 2022,
-      "venue": "GMSARN Int J 16, 247-255, 2022",
-      "topic": "Other",
-      "lab_authors": [
-        "trung_kien_dao"
-      ]
-    },
-    {
       "title": "Static Scheduling Optimization for Outdoor Monitoring Sensor Networks based on Customizable Nodes",
       "authors": "VP Ha, TK Dao, MH Le, NY Pham, VT Nguyen, DV Nguyen",
       "year": 2022,
@@ -8024,46 +7292,6 @@
       ]
     },
     {
-      "title": "Neounet: Towards accurate colon polyp segmentation and neoplasm detection",
-      "authors": "P Ngoc Lan, NS An, DV Hang, DV Long, TQ Trung, NT Thuy, …",
-      "year": 2021,
-      "venue": "International Symposium on Visual Computing, 15-28, 2021",
-      "topic": "Medical Imaging",
-      "lab_authors": [
-        "dinh_viet_sang"
-      ]
-    },
-    {
-      "title": "Ag-curesnest: A novel method for colon polyp segmentation",
-      "authors": "DV Sang, TQ Chung, PN Lan, DV Hang, D Van Long, NT Thuy",
-      "year": 2021,
-      "venue": "arXiv preprint arXiv:2105.00402, 2021",
-      "topic": "Medical Imaging",
-      "lab_authors": [
-        "dinh_viet_sang"
-      ]
-    },
-    {
-      "title": "AG-ResUNet++: an improved encoder-decoder based method for polyp segmentation in colonoscopy images",
-      "authors": "NB Hung, NT Duc, T Van Chien, DV Sang",
-      "year": 2021,
-      "venue": "2021 RIVF international conference on computing and communication …, 2021",
-      "topic": "Medical Imaging",
-      "lab_authors": [
-        "dinh_viet_sang"
-      ]
-    },
-    {
-      "title": "FastTacotron: A Fast, Robust and Controllable Method for Speech Synthesis.",
-      "authors": "DV Sang, LX Thu",
-      "year": 2021,
-      "venue": "MAPR, 1-5, 2021",
-      "topic": "Speech/NLP",
-      "lab_authors": [
-        "dinh_viet_sang"
-      ]
-    },
-    {
       "title": "Significant trajectories and locality constrained linear coding for hand gesture representation",
       "authors": "TH Tran, TH Nguyen, VS Dinh",
       "year": 2021,
@@ -8071,16 +7299,6 @@
       "topic": "Hand Gesture",
       "lab_authors": [
         "thanh_hai_tran"
-      ]
-    },
-    {
-      "title": "An Improved Deep Neural Network Based on a Novel Visual Attention Mechanism for Text Recognition",
-      "authors": "NT Thai, NH Thuan, DV Sang",
-      "year": 2021,
-      "venue": "2021 RIVF International Conference on Computing and Communication …, 2021",
-      "topic": "Other",
-      "lab_authors": [
-        "dinh_viet_sang"
       ]
     },
     {
@@ -8331,26 +7549,6 @@
       ]
     },
     {
-      "title": "Boosting prior knowledge in streaming variational bayes",
-      "authors": "DA Nguyen, KA Nguyen, CH Nguyen, K Than",
-      "year": 2021,
-      "venue": "Neurocomputing 424, 143-159, 2021",
-      "topic": "Other",
-      "lab_authors": [
-        "khoat_than"
-      ]
-    },
-    {
-      "title": "Structured Dropout Variational Inference for Bayesian Neural Networks",
-      "authors": "HB Son Nguyen, Duong Nguyen, Khai Nguyen, Nhat Ho, Khoat Than",
-      "year": 2021,
-      "venue": "Advances in Neural Information Processing Systems (NeurIPS), 2021",
-      "topic": "Other",
-      "lab_authors": [
-        "khoat_than"
-      ]
-    },
-    {
       "title": "Learning hidden chemistry with deep neural networks",
       "authors": "TC Nguyen, VQ Nguyen, VL Ngo, QK Than, TL Pham",
       "year": 2021,
@@ -8358,36 +7556,6 @@
       "topic": "Other",
       "lab_authors": [
         "thi_loan_pham"
-      ]
-    },
-    {
-      "title": "Generalization of GANs and overparameterized models under Lipschitz continuity",
-      "authors": "K Than, N Vu",
-      "year": 2021,
-      "venue": "arXiv preprint arXiv:2104.02388, 2021",
-      "topic": "Other",
-      "lab_authors": [
-        "khoat_than"
-      ]
-    },
-    {
-      "title": "Generalization of GANs under Lipschitz continuity and data augmentation",
-      "authors": "K Than, N Vu",
-      "year": 2021,
-      "venue": "arXiv preprint arXiv 2104, 2021",
-      "topic": "Other",
-      "lab_authors": [
-        "khoat_than"
-      ]
-    },
-    {
-      "title": "Improving bayesian inference in deep neural networks with variational structured dropout",
-      "authors": "S Nguyen, D Nguyen, K Nguyen, N Ho, K Than, H Bui",
-      "year": 2021,
-      "venue": "arXiv, vol. abs/2102.07927, 2021",
-      "topic": "Other",
-      "lab_authors": [
-        "khoat_than"
       ]
     },
     {
@@ -8458,16 +7626,6 @@
       "topic": "Other",
       "lab_authors": [
         "manh_thang_hoang"
-      ]
-    },
-    {
-      "title": "Attention-based network for effective action recognition from multi-view video",
-      "authors": "HT Nguyen, TO Nguyen",
-      "year": 2021,
-      "venue": "Procedia Computer Science 192, 971-980, 2021",
-      "topic": "Action Recognition",
-      "lab_authors": [
-        "nguyen_thi_oanh"
       ]
     },
     {
@@ -8626,16 +7784,6 @@
       ]
     },
     {
-      "title": "A Variable-Length Chromosome Genetic Algorithm for Time-Based Sensor Network Schedule Optimization",
-      "authors": "VP Ha, TK Dao, NY Pham, MH Le",
-      "year": 2021,
-      "venue": "Sensors 21 (12), 3990, 2021",
-      "topic": "Other",
-      "lab_authors": [
-        "trung_kien_dao"
-      ]
-    },
-    {
       "title": "Combining skeleton and accelerometer data for human fine-grained activity recognition and abnormal behaviour detection with deep temporal convolutional networks",
       "authors": "C Pham, L Nguyen, A Nguyen, N Nguyen, VT Nguyen",
       "year": 2021,
@@ -8680,16 +7828,6 @@
       ]
     },
     {
-      "title": "A language score based output selection method for multilingual speech recognition",
-      "authors": "VH Nguyen, TQK Dinh, TT Nguyen, DK Mac",
-      "year": 2020,
-      "venue": "arXiv preprint arXiv:2005.00851, 2020",
-      "topic": "Speech/NLP",
-      "lab_authors": [
-        "dang_khoa_mac"
-      ]
-    },
-    {
       "title": "Spatio-temporal representation for skeleton-based human action recognition",
       "authors": "DT Pham, TN Nguyen, TL Le, H Vu",
       "year": 2020,
@@ -8699,56 +7837,6 @@
         "dinh_tan_pham",
         "thi_lan_le",
         "hai_vu"
-      ]
-    },
-    {
-      "title": "Efficient brain tumor segmentation with dilated multi-fiber network and weighted bi-directional feature pyramid network",
-      "authors": "TH Nguyen, CH Le, DV Sang, T Yao, W Li, Z Wang",
-      "year": 2020,
-      "venue": "2020 Digital Image Computing: Techniques and Applications (DICTA), 1-7, 2020",
-      "topic": "Medical Imaging",
-      "lab_authors": [
-        "dinh_viet_sang"
-      ]
-    },
-    {
-      "title": "An efficientnet-like feature extractor and focal ctc loss for image-base sequence recognition",
-      "authors": "DV Sang, NH Thuan",
-      "year": 2020,
-      "venue": "2020 7th NAFOSTED Conference on Information and Computer Science (NICS), 326-331, 2020",
-      "topic": "Other",
-      "lab_authors": [
-        "dinh_viet_sang"
-      ]
-    },
-    {
-      "title": "A novel generative model to synthesize face images for pose-invariant face recognition",
-      "authors": "TQ Chung, HC Huyen, DV Sang",
-      "year": 2020,
-      "venue": "2020 International Conference on Multimedia Analysis and Pattern Recognition …, 2020",
-      "topic": "Other",
-      "lab_authors": [
-        "dinh_viet_sang"
-      ]
-    },
-    {
-      "title": "A Pose Estimation Method for Multiple Identity Cards based on Corner Heatmaps and Part Affinity Fields",
-      "authors": "TP Nam, DV Sang",
-      "year": 2020,
-      "venue": "2020 7th NAFOSTED Conference on Information and Computer Science (NICS), 338-343, 2020",
-      "topic": "Pose Estimation",
-      "lab_authors": [
-        "dinh_viet_sang"
-      ]
-    },
-    {
-      "title": "PCA-based 3D Facial Reenactment From Single Image",
-      "authors": "NT Dat, NDT Anh, DV Sang",
-      "year": 2020,
-      "venue": "2020 International Conference on Multimedia Analysis and Pattern Recognition …, 2020",
-      "topic": "Other",
-      "lab_authors": [
-        "dinh_viet_sang"
       ]
     },
     {
@@ -8939,36 +8027,6 @@
       ]
     },
     {
-      "title": "Predictive coding for locally-linear control",
-      "authors": "R Shu, T Nguyen, Y Chow, T Pham, K Than, M Ghavamzadeh, …",
-      "year": 2020,
-      "venue": "International Conference on Machine Learning, 8862-8871, 2020",
-      "topic": "Other",
-      "lab_authors": [
-        "khoat_than"
-      ]
-    },
-    {
-      "title": "Bag of biterms modeling for short texts",
-      "authors": "AP Tuan, B Tran, TH Nguyen, LN Van, K Than",
-      "year": 2020,
-      "venue": "Knowledge and Information Systems 62 (10), 4055-4090, 2020",
-      "topic": "Other",
-      "lab_authors": [
-        "khoat_than"
-      ]
-    },
-    {
-      "title": "Dynamic transformation of prior knowledge into Bayesian models for data streams",
-      "authors": "TX Bach, ND Anh, LN Van, K Than",
-      "year": 2020,
-      "venue": "arXiv:2003.06123, 2020",
-      "topic": "Other",
-      "lab_authors": [
-        "khoat_than"
-      ]
-    },
-    {
       "title": "Neural poisson factorization",
       "authors": "N Van Linh, DA Nguyen, TB Nguyen, K Than",
       "year": 2020,
@@ -8976,16 +8034,6 @@
       "topic": "Other",
       "lab_authors": [
         "thuy_binh_nguyen",
-        "khoat_than"
-      ]
-    },
-    {
-      "title": "Modeling the sequential behaviors of online users in recommender systems",
-      "authors": "T Nguyen, LN Van, K Than",
-      "year": 2020,
-      "venue": "Artificial Intelligence and Machine Learning for Multi-Domain Operations …, 2020",
-      "topic": "Other",
-      "lab_authors": [
         "khoat_than"
       ]
     },
@@ -9042,26 +8090,6 @@
       ]
     },
     {
-      "title": "A camera-based solution for customer behavior identification",
-      "authors": "VS Tran, TO Nguyen, QT Ha",
-      "year": 2020,
-      "venue": "2020 International Conference on Multimedia Analysis and Pattern Recognition …, 2020",
-      "topic": "Other",
-      "lab_authors": [
-        "nguyen_thi_oanh"
-      ]
-    },
-    {
-      "title": "Multi-view human action recognition based on tsn architecture integrated with gru",
-      "authors": "AV Bui, TO Nguyen",
-      "year": 2020,
-      "venue": "Procedia Computer Science 176, 948-955, 2020",
-      "topic": "Action Recognition",
-      "lab_authors": [
-        "nguyen_thi_oanh"
-      ]
-    },
-    {
       "title": "Multiscale Gradient Maps Augmented Fisher Information Based Image Edge Detection",
       "authors": "VBS Prasath, DNH Thanh, NQ Hung, LM Hieu",
       "year": 2020,
@@ -9091,16 +8119,6 @@
       "lab_authors": [
         "trung_kien_dao",
         "van_toi_nguyen"
-      ]
-    },
-    {
-      "title": "Encrypt Data with Electromagnetic Waves Using Printable Structures and Materials",
-      "authors": "CC Le, TK Dao, TH Nguyen, TNY Pham",
-      "year": 2020,
-      "venue": "Old Journal, 1-6, 2020",
-      "topic": "Other",
-      "lab_authors": [
-        "trung_kien_dao"
       ]
     },
     {
@@ -9178,26 +8196,6 @@
       ]
     },
     {
-      "title": "Collaborative Smartphone-Based User Positioning in a Multiple-User Context Using Wireless Technologies",
-      "authors": "VC Ta, TK Dao, D Vaufreydaz, E Castelli",
-      "year": 2020,
-      "venue": "Sensors 20 (2), 405, 2020",
-      "topic": "Other",
-      "lab_authors": [
-        "trung_kien_dao"
-      ]
-    },
-    {
-      "title": "A Fusion Method for Localization of Intelligent Vehicles in Carparks",
-      "authors": "DV Nguyen, TK Dao, E Castelli, F Nashashibi",
-      "year": 2020,
-      "venue": "IEEE Access 8, 99729-99739, 2020",
-      "topic": "Other",
-      "lab_authors": [
-        "trung_kien_dao"
-      ]
-    },
-    {
       "title": "Mathematical variable detection based on convolutional neural network and support vector machine",
       "authors": "BH Phong, TM Hoang, TL Le",
       "year": 2019,
@@ -9246,26 +8244,6 @@
       ]
     },
     {
-      "title": "Improving CRNN with EfficientNet-like feature extractor and multi-head attention for text recognition",
-      "authors": "DV Sang, LTB Cuong",
-      "year": 2019,
-      "venue": "Proceedings of the 10th international symposium on information and …, 2019",
-      "topic": "Other",
-      "lab_authors": [
-        "dinh_viet_sang"
-      ]
-    },
-    {
-      "title": "An adaptive algorithm for restoring image corrupted by mixed noise",
-      "authors": "PC Thang, TTT Thao, PTD Khoa, DV Sang, PM Tuan, NM Hieu",
-      "year": 2019,
-      "venue": "Cybernetics and Physics 8 (2), 73-82, 2019",
-      "topic": "Other",
-      "lab_authors": [
-        "dinh_viet_sang"
-      ]
-    },
-    {
       "title": "Multi-view discriminant analysis for dynamic hand gesture recognition",
       "authors": "HG Doan, TH Tran, H Vu, TL Le, VT Nguyen, SV Dinh, …",
       "year": 2019,
@@ -9278,26 +8256,6 @@
         "thi_lan_le",
         "van_toi_nguyen",
         "nguyen_thi_oanh"
-      ]
-    },
-    {
-      "title": "YOLOv3-VD: A sparse network for vehicle detection using variational dropout",
-      "authors": "DV Sang, DV Hung",
-      "year": 2019,
-      "venue": "Proceedings of the 10th International Symposium on Information and …, 2019",
-      "topic": "Other",
-      "lab_authors": [
-        "dinh_viet_sang"
-      ]
-    },
-    {
-      "title": "BK. Synapse: A scalable distributed training framework for deep learning",
-      "authors": "DV Sang, PN Lan",
-      "year": 2019,
-      "venue": "Proceedings of the 10th International Symposium on Information and …, 2019",
-      "topic": "Other",
-      "lab_authors": [
-        "dinh_viet_sang"
       ]
     },
     {
@@ -9516,26 +8474,6 @@
       ]
     },
     {
-      "title": "Eliminating overfitting of probabilistic topic models on short and noisy text: The role of dropout",
-      "authors": "C Ha, VD Tran, LN Van, K Than",
-      "year": 2019,
-      "venue": "International Journal of Approximate Reasoning 112, 85-104, 2019",
-      "topic": "Speech/NLP",
-      "lab_authors": [
-        "khoat_than"
-      ]
-    },
-    {
-      "title": "Employing the Correspondence of Relations and Connectives to Identify Implicit Discourse Relations via Label Embeddings",
-      "authors": "LT Nguyen, LV Ngo, K Than, TH Nguyen",
-      "year": 2019,
-      "venue": "The 57th Annual Meeting of the Association for Computational Linguistics 57 …, 2019",
-      "topic": "Other",
-      "lab_authors": [
-        "khoat_than"
-      ]
-    },
-    {
       "title": "Infinite dropout for training bayesian models from data streams",
       "authors": "VS Nguyen, DT Nguyen, LN Van, K Than",
       "year": 2019,
@@ -9543,46 +8481,6 @@
       "topic": "Other",
       "lab_authors": [
         "duy_tung_nguyen",
-        "khoat_than"
-      ]
-    },
-    {
-      "title": "From implicit to explicit feedback: A deep neural network for modeling the sequential behavior of online users",
-      "authors": "AP Tuan, NN Trong, DB Trong, LN Van, K Than",
-      "year": 2019,
-      "venue": "Asian Conference on Machine Learning, 1188-1203, 2019",
-      "topic": "Other",
-      "lab_authors": [
-        "khoat_than"
-      ]
-    },
-    {
-      "title": "Marking mechanism in sequence-to-sequence model for mapping language to logical form",
-      "authors": "PM Nguyen, K Than, M Le Nguyen",
-      "year": 2019,
-      "venue": "2019 11th International Conference on Knowledge and Systems Engineering (KSE …, 2019",
-      "topic": "Other",
-      "lab_authors": [
-        "khoat_than"
-      ]
-    },
-    {
-      "title": "Enriching user representation in neural matrix factorization",
-      "authors": "TH Hoang, AP Tuan, LN Van, K Than",
-      "year": 2019,
-      "venue": "2019 IEEE-RIVF International Conference on Computing and Communication …, 2019",
-      "topic": "Other",
-      "lab_authors": [
-        "khoat_than"
-      ]
-    },
-    {
-      "title": "How to make a machine learn continuously: a tutorial of the bayesian approach",
-      "authors": "K Than, X Bui, T Nguyen-Trong, K Truong, S Nguyen, B Tran, …",
-      "year": 2019,
-      "venue": "Artificial Intelligence and Machine Learning for Multi-Domain Operations …, 2019",
-      "topic": "Other",
-      "lab_authors": [
         "khoat_than"
       ]
     },
@@ -9607,26 +8505,6 @@
         "thi_lan_le",
         "thanh_hai_tran",
         "van_toi_nguyen"
-      ]
-    },
-    {
-      "title": "Spatio-temporal multi-level fusion for human action recognition",
-      "authors": "MH Lu, TO Nguyen",
-      "year": 2019,
-      "venue": "Proceedings of the 10th International Symposium on Information and …, 2019",
-      "topic": "Action Recognition",
-      "lab_authors": [
-        "nguyen_thi_oanh"
-      ]
-    },
-    {
-      "title": "Object Counting Based on Density Using Perspective Transformation",
-      "authors": "VL Nguyen, TO Nguyen",
-      "year": 2019,
-      "venue": "2019 IEEE-RIVF International Conference on Computing and Communication …, 2019",
-      "topic": "Other",
-      "lab_authors": [
-        "nguyen_thi_oanh"
       ]
     },
     {
@@ -9817,46 +8695,6 @@
       ]
     },
     {
-      "title": "Discriminative deep feature learning for facial emotion recognition",
-      "authors": "DV Sang, LTB Cuong, PT Ha",
-      "year": 2018,
-      "venue": "2018 1st International Conference on Multimedia Analysis and Pattern …, 2018",
-      "topic": "Other",
-      "lab_authors": [
-        "dinh_viet_sang"
-      ]
-    },
-    {
-      "title": "Fully residual convolutional neural networks for aerial image segmentation",
-      "authors": "DV Sang, ND Minh",
-      "year": 2018,
-      "venue": "Proceedings of the 9th International Symposium on Information and …, 2018",
-      "topic": "UAV",
-      "lab_authors": [
-        "dinh_viet_sang"
-      ]
-    },
-    {
-      "title": "An effective ensemble deep learning framework for malware detection",
-      "authors": "DV Sang, DM Cuong, LTB Cuong",
-      "year": 2018,
-      "venue": "Proceedings of the 9th International Symposium on Information and …, 2018",
-      "topic": "Other",
-      "lab_authors": [
-        "dinh_viet_sang"
-      ]
-    },
-    {
-      "title": "Two-stream deep residual learning with fisher criterion for human action recognition",
-      "authors": "DV Sang, HT Dung",
-      "year": 2018,
-      "venue": "Proceedings of the 9th International Symposium on Information and …, 2018",
-      "topic": "Action Recognition",
-      "lab_authors": [
-        "dinh_viet_sang"
-      ]
-    },
-    {
       "title": "A vision based method for automatic evaluation of germination rate of rice seeds",
       "authors": "TT Nguyen, VN Hoang, TL Le, TH Tran, H Vu",
       "year": 2018,
@@ -9987,66 +8825,6 @@
       ]
     },
     {
-      "title": "Evaluating named-entity recognition approaches in plant molecular biology",
-      "authors": "H Do, K Than, P Larmande",
-      "year": 2018,
-      "venue": "International Conference on Multi-disciplinary Trends in Artificial …, 2018",
-      "topic": "Plant ID",
-      "lab_authors": [
-        "khoat_than"
-      ]
-    },
-    {
-      "title": "Collaborative topic model for poisson distributed ratings",
-      "authors": "HM Le, ST Cong, QP The, N Van Linh, K Than",
-      "year": 2018,
-      "venue": "International Journal of Approximate Reasoning 95, 62-76, 2018",
-      "topic": "Speech/NLP",
-      "lab_authors": [
-        "khoat_than"
-      ]
-    },
-    {
-      "title": "Reducing class overlapping in supervised dimension reduction",
-      "authors": "NT Tung, VH Dieu, K Than, N Van Linh",
-      "year": 2018,
-      "venue": "Proceedings of the 9th international symposium on information and …, 2018",
-      "topic": "Other",
-      "lab_authors": [
-        "khoat_than"
-      ]
-    },
-    {
-      "title": "A Flexible Stochastic Method for Solving the MAP Problem in Topic Models",
-      "authors": "T Vu, X Bui, K Than, R Ichise",
-      "year": 2018,
-      "venue": "Computación y Sistemas 22 (4), 1317-1327, 2018",
-      "topic": "Speech/NLP",
-      "lab_authors": [
-        "khoat_than"
-      ]
-    },
-    {
-      "title": "Some Methods for Posterior Inference in Topic Models",
-      "authors": "X Bui, T Vu, K Than",
-      "year": 2018,
-      "venue": "Journal of Research and Development on Information and Communication Technology, 2018",
-      "topic": "Speech/NLP",
-      "lab_authors": [
-        "khoat_than"
-      ]
-    },
-    {
-      "title": "A Fast Algorithm for Posterior Inference with Latent Dirichlet Allocation",
-      "authors": "B Thi-Thanh-Xuan, V Van-Tu, A Takasu, K Than",
-      "year": 2018,
-      "venue": "Asian Conference on Intelligent Information and Database Systems, 137-146, 2018",
-      "topic": "Other",
-      "lab_authors": [
-        "khoat_than"
-      ]
-    },
-    {
       "title": "New dissimilarity measures on picture fuzzy sets and applications",
       "authors": "NT Le, D Van Nguyen, CM Ngoc, TX Nguyen",
       "year": 2018,
@@ -10160,36 +8938,6 @@
       ]
     },
     {
-      "title": "Smartphone-based user positioning in a multiple-user context with Wi-Fi and Bluetooth",
-      "authors": "VC Ta, TK Dao, D Vaufreydaz, E Castelli",
-      "year": 2018,
-      "venue": "2018 International Conference on Indoor Positioning and Indoor Navigation …, 2018",
-      "topic": "Visually Impaired",
-      "lab_authors": [
-        "trung_kien_dao"
-      ]
-    },
-    {
-      "title": "Wifi fingerprinting localization for intelligent vehicles in car park",
-      "authors": "DV Nguyen, R De Charette, F Nashashibi, TK Dao, E Castelli",
-      "year": 2018,
-      "venue": "2018 International Conference on Indoor Positioning and Indoor Navigation …, 2018",
-      "topic": "Visually Impaired",
-      "lab_authors": [
-        "trung_kien_dao"
-      ]
-    },
-    {
-      "title": "TOOL PATH OPTIMIZATION FOR HOLE PATTERN MAKING ON PRINTED CIRCUIT BOARDS BY COMBINATION OF TSP AND ACO",
-      "authors": "TK Dao",
-      "year": 2018,
-      "venue": "Journal of Science and Technique 13 (03), 2018",
-      "topic": "Other",
-      "lab_authors": [
-        "trung_kien_dao"
-      ]
-    },
-    {
       "title": "A new method for displayed mathematical expression detection based on FFT and SVM",
       "authors": "BH Phong, TM Hoang, TL Le",
       "year": 2017,
@@ -10199,46 +8947,6 @@
         "bui_hai_phong",
         "manh_thang_hoang",
         "thi_lan_le"
-      ]
-    },
-    {
-      "title": "Facial expression recognition using deep convolutional neural networks",
-      "authors": "DV Sang, N Van Dat, DP Thuan",
-      "year": 2017,
-      "venue": "2017 9th International Conference on Knowledge and Systems Engineering (KSE …, 2017",
-      "topic": "Other",
-      "lab_authors": [
-        "dinh_viet_sang"
-      ]
-    },
-    {
-      "title": "Learning from Data Stream Based on Random Projection and Hoeffding Tree Classifier",
-      "authors": "AWCL Xuan Cuong Pham, Manh Truong Dang, Dinh Viet Sang, Son Hoang, Tien ...",
-      "year": 2017,
-      "venue": "International Conference on Digital Image Computing: Techniques and …, 2017",
-      "topic": "Other",
-      "lab_authors": [
-        "dinh_viet_sang"
-      ]
-    },
-    {
-      "title": "Multi-task learning for smile detection, emotion recognition and gender classification",
-      "authors": "DV Sang, LTB Cuong, V Van Thieu",
-      "year": 2017,
-      "venue": "Proceedings of the 8th International Symposium on Information and …, 2017",
-      "topic": "Other",
-      "lab_authors": [
-        "dinh_viet_sang"
-      ]
-    },
-    {
-      "title": "Facial smile detection using convolutional neural networks",
-      "authors": "DV Sang, LTD Cuong, DP Thuan",
-      "year": 2017,
-      "venue": "2017 9th International Conference on Knowledge and Systems Engineering (KSE …, 2017",
-      "topic": "Other",
-      "lab_authors": [
-        "dinh_viet_sang"
       ]
     },
     {
@@ -10367,46 +9075,6 @@
       "topic": "Other",
       "lab_authors": [
         "hai_vu"
-      ]
-    },
-    {
-      "title": "An effective and interpretable method for document classification",
-      "authors": "N Van Linh, NK Anh, K Than, CN Dang",
-      "year": 2017,
-      "venue": "Knowledge and Information Systems 50 (3), 763-793, 2017",
-      "topic": "Other",
-      "lab_authors": [
-        "khoat_than"
-      ]
-    },
-    {
-      "title": "Keeping priors in streaming Bayesian learning",
-      "authors": "AN Duc, N Van Linh, AN Kim, K Than",
-      "year": 2017,
-      "venue": "Pacific-Asia conference on knowledge discovery and data mining, 247-258, 2017",
-      "topic": "Other",
-      "lab_authors": [
-        "khoat_than"
-      ]
-    },
-    {
-      "title": "Sparse Stochastic Inference with Regularization",
-      "authors": "T Doan, K Than",
-      "year": 2017,
-      "venue": "Pacific-Asia Conference on Knowledge Discovery and Data Mining, 447-459, 2017",
-      "topic": "Other",
-      "lab_authors": [
-        "khoat_than"
-      ]
-    },
-    {
-      "title": "Machine Learning and Data Mining",
-      "authors": "K Than",
-      "year": 2017,
-      "venue": "",
-      "topic": "Other",
-      "lab_authors": [
-        "khoat_than"
       ]
     },
     {
@@ -10546,16 +9214,6 @@
       ]
     },
     {
-      "title": "Improving poor GPS area localization for intelligent vehicles",
-      "authors": "DV Nguyen, F Nashashibi, TK Dao, E Castelli",
-      "year": 2017,
-      "venue": "2017 IEEE International Conference on Multisensor Fusion and Integration for …, 2017",
-      "topic": "Other",
-      "lab_authors": [
-        "trung_kien_dao"
-      ]
-    },
-    {
       "title": "Indoor navigation assistance system for visually impaired people using multimodal technologies",
       "authors": "TK Dao, TH Tran, TL Le, H Vu, VT Nguyen, DK Mac, …",
       "year": 2016,
@@ -10570,26 +9228,6 @@
         "dang_khoa_mac",
         "thi_ngoc_diep_do",
         "thi_thanh_thuy_pham"
-      ]
-    },
-    {
-      "title": "Colour image denoising based on a combined model",
-      "authors": "DNH Thanh, DV Sang, D Sergey",
-      "year": 2016,
-      "venue": "Proceedings of the 7th Symposium on Information and Communication Technology …, 2016",
-      "topic": "Other",
-      "lab_authors": [
-        "dinh_viet_sang"
-      ]
-    },
-    {
-      "title": "Label associated dictionary pair learning for face recognition",
-      "authors": "DD Son, DV Sang, HTT Binh, NT Thuy",
-      "year": 2016,
-      "venue": "Proceedings of the 7th Symposium on Information and Communication Technology …, 2016",
-      "topic": "Other",
-      "lab_authors": [
-        "dinh_viet_sang"
       ]
     },
     {
@@ -10742,36 +9380,6 @@
       ]
     },
     {
-      "title": "Enabling hierarchical dirichlet processes to work better for short texts at large scale",
-      "authors": "K Mai, S Mai, A Nguyen, N Van Linh, K Than",
-      "year": 2016,
-      "venue": "Pacific-Asia Conference on Knowledge Discovery and Data Mining, 431-442, 2016",
-      "topic": "Other",
-      "lab_authors": [
-        "khoat_than"
-      ]
-    },
-    {
-      "title": "Stochastic bounds for inference in topic models",
-      "authors": "X Bui, T Vu, K Than",
-      "year": 2016,
-      "venue": "International Conference on Advances in Information and Communication …, 2016",
-      "topic": "Speech/NLP",
-      "lab_authors": [
-        "khoat_than"
-      ]
-    },
-    {
-      "title": "Streaming aspect-sentiment analysis",
-      "authors": "V Le Anh, CP Van, CV Cao, LN Van, K Than",
-      "year": 2016,
-      "venue": "2016 IEEE RIVF International Conference on Computing & Communication …, 2016",
-      "topic": "Other",
-      "lab_authors": [
-        "khoat_than"
-      ]
-    },
-    {
       "title": "NII-HITACHI-UIT at TRECVID 2016.",
       "authors": "DD Le, S Phan, VT Nguyen, B Renoust, TA Nguyen, VN Hoang, …",
       "year": 2016,
@@ -10790,26 +9398,6 @@
       "topic": "Other",
       "lab_authors": [
         "manh_thang_hoang"
-      ]
-    },
-    {
-      "title": "Fully automated multi-label image annotation by convolutional neural network and adaptive thresholding",
-      "authors": "HM Le, TO Nguyen, D Ngo-Tien",
-      "year": 2016,
-      "venue": "Proceedings of the 7th Symposium on Information and Communication Technology …, 2016",
-      "topic": "Other",
-      "lab_authors": [
-        "nguyen_thi_oanh"
-      ]
-    },
-    {
-      "title": "Factors influencing the performance of image captioning model: an evaluation",
-      "authors": "DC Dao, TO Nguyen, S Bressan",
-      "year": 2016,
-      "venue": "Proceedings of the 14th international conference on advances in mobile …, 2016",
-      "topic": "Other",
-      "lab_authors": [
-        "nguyen_thi_oanh"
       ]
     },
     {
@@ -10996,86 +9584,6 @@
       ]
     },
     {
-      "title": "Smartphone-based user location tracking in indoor environment",
-      "authors": "VC Ta, D Vaufreydaz, TK Dao, E Castelli",
-      "year": 2016,
-      "venue": "2016 International Conference on Indoor Positioning and Indoor Navigation …, 2016",
-      "topic": "Visually Impaired",
-      "lab_authors": [
-        "trung_kien_dao"
-      ]
-    },
-    {
-      "title": "Influences of speaker attitudes on glottalized tones: a study of two Vietnamese sentence-final particles",
-      "authors": "DK Mac, TL Nguyen, A Michaud, DD Tran",
-      "year": 2015,
-      "venue": "ICPhS XVIII (18th International Congress of Phonetic Sciences), 2015",
-      "topic": "Other",
-      "lab_authors": [
-        "dang_khoa_mac"
-      ]
-    },
-    {
-      "title": "Modeling Vietnamese speech prosody: a step-by-step approach towards an expressive speech synthesis system",
-      "authors": "DK Mac, DD Tran",
-      "year": 2015,
-      "venue": "Trends and Applications in Knowledge Discovery and Data Mining: PAKDD 2015 …, 2015",
-      "topic": "Speech/NLP",
-      "lab_authors": [
-        "dang_khoa_mac"
-      ]
-    },
-    {
-      "title": "An efficient framework for pixel-wise building segmentation from aerial images",
-      "authors": "NT Quang, NT Thuy, DV Sang, HTT Binh",
-      "year": 2015,
-      "venue": "Proceedings of the 6th International Symposium on Information and …, 2015",
-      "topic": "UAV",
-      "lab_authors": [
-        "dinh_viet_sang"
-      ]
-    },
-    {
-      "title": "A denoising method based on total variation",
-      "authors": "TNH Dang, DV Sang",
-      "year": 2015,
-      "venue": "Proceedings of the 6th International Symposium on Information and …, 2015",
-      "topic": "Other",
-      "lab_authors": [
-        "dinh_viet_sang"
-      ]
-    },
-    {
-      "title": "Uniform detection in social image streams",
-      "authors": "NQ Manh, ND Tuan, DV Sang, HTT Binh, NT Thuy",
-      "year": 2015,
-      "venue": "2015 Seventh International Conference on Knowledge and Systems Engineering …, 2015",
-      "topic": "Other",
-      "lab_authors": [
-        "dinh_viet_sang"
-      ]
-    },
-    {
-      "title": "Semantic segmentation for aerial images using RF and a full-CRF",
-      "authors": "NT Quang, NT Thuy, DV Sang, HTT Binh",
-      "year": 2015,
-      "venue": "",
-      "topic": "UAV",
-      "lab_authors": [
-        "dinh_viet_sang"
-      ]
-    },
-    {
-      "title": "A study on non-sparse dictionary learning for pattern classification",
-      "authors": "ND Tuan, NQ Manh, DV Sang, HTT Binh, NT Thuy",
-      "year": 2015,
-      "venue": "2015 Seventh International Conference on Knowledge and Systems Engineering …, 2015",
-      "topic": "Other",
-      "lab_authors": [
-        "dinh_viet_sang"
-      ]
-    },
-    {
       "title": "Comparative study on vision based rice seed varieties identification",
       "authors": "PTT Hong, TTT Hai, VT Hoang, V Hai, TT Nguyen",
       "year": 2015,
@@ -11209,56 +9717,6 @@
       "lab_authors": [
         "van_hung_le",
         "hai_vu"
-      ]
-    },
-    {
-      "title": "Guaranteed inference in topic models",
-      "authors": "K Than, T Doan",
-      "year": 2015,
-      "venue": "arXiv preprint arXiv:1512.03308, 2015",
-      "topic": "Speech/NLP",
-      "lab_authors": [
-        "khoat_than"
-      ]
-    },
-    {
-      "title": "Dual online inference for latent Dirichlet allocation",
-      "authors": "K Than, T Doan",
-      "year": 2015,
-      "venue": "Asian Conference on Machine Learning, 80-95, 2015",
-      "topic": "Other",
-      "lab_authors": [
-        "khoat_than"
-      ]
-    },
-    {
-      "title": "Inference in topic models: sparsity and trade-off",
-      "authors": "K Than, TB Ho",
-      "year": 2015,
-      "venue": "arXiv preprint arXiv:1512.03300, 2015",
-      "topic": "Speech/NLP",
-      "lab_authors": [
-        "khoat_than"
-      ]
-    },
-    {
-      "title": "Effective and interpretable document classification using distinctly labeled Dirichlet process mixture models of von Mises-Fisher distributions",
-      "authors": "N Van Linh, NK Anh, K Than, NN Tat",
-      "year": 2015,
-      "venue": "International Conference on Database Systems for Advanced Applications, 139-153, 2015",
-      "topic": "Other",
-      "lab_authors": [
-        "khoat_than"
-      ]
-    },
-    {
-      "title": "An effective NMF-based method for supervised dimension reduction",
-      "authors": "N Van Linh, N Kim Anh, K Than",
-      "year": 2015,
-      "venue": "Knowledge and Systems Engineering: Proceedings of the Sixth International …, 2015",
-      "topic": "Other",
-      "lab_authors": [
-        "khoat_than"
       ]
     },
     {
@@ -11486,36 +9944,6 @@
       ]
     },
     {
-      "title": "Improving semantic texton forests with a Markov random field for image segmentation",
-      "authors": "DV Sang, MD Loi, NT Quang, HTT Binh, NT Thuy",
-      "year": 2014,
-      "venue": "Proceedings of the 5th Symposium on Information and Communication Technology …, 2014",
-      "topic": "Other",
-      "lab_authors": [
-        "dinh_viet_sang"
-      ]
-    },
-    {
-      "title": "Evaluation of parametric acyclic Markov models for dependent objects",
-      "authors": "SD Dvoenko, DV Sang",
-      "year": 2014,
-      "venue": "Machine Learning 1, 8, 2014",
-      "topic": "Other",
-      "lab_authors": [
-        "dinh_viet_sang"
-      ]
-    },
-    {
-      "title": "Algorithms for selecting parameters of combination of acyclic adjacency graphs in the problem of texture image processing",
-      "authors": "DV Sang",
-      "year": 2014,
-      "venue": "ELCVIA: electronic letters on computer vision and image analysis 13 (2), 35-37, 2014",
-      "topic": "Other",
-      "lab_authors": [
-        "dinh_viet_sang"
-      ]
-    },
-    {
       "title": "A visual SLAM system on mobile robot supporting localization services to visually impaired people",
       "authors": "QH Nguyen, H Vu, TH Tran, D Van Hamme, P Veelaert, W Philips, …",
       "year": 2014,
@@ -11592,26 +10020,6 @@
         "huong_giang_doan",
         "hai_vu",
         "thanh_hai_tran"
-      ]
-    },
-    {
-      "title": "An effective framework for supervised dimension reduction",
-      "authors": "K Than, TB Ho, DK Nguyen",
-      "year": 2014,
-      "venue": "Neurocomputing 139, 397-407, 2014",
-      "topic": "Other",
-      "lab_authors": [
-        "khoat_than"
-      ]
-    },
-    {
-      "title": "Modeling the diversity and log-normality of data",
-      "authors": "K Than, TB Ho",
-      "year": 2014,
-      "venue": "Intelligent Data Analysis 18 (6), 1067-1088, 2014",
-      "topic": "Other",
-      "lab_authors": [
-        "khoat_than"
       ]
     },
     {
@@ -11851,16 +10259,6 @@
       ]
     },
     {
-      "title": "The interplay of intonation and complex lexical tones: How speaker attitudes affect the realization of glottalization on Vietnamese sentence-final particles",
-      "authors": "TL Nguyen, A Michaud, DD Tran, DK Mac",
-      "year": 2013,
-      "venue": "Interspeech 2013, (the Proceedings do not have page numbers), 2013",
-      "topic": "Other",
-      "lab_authors": [
-        "dang_khoa_mac"
-      ]
-    },
-    {
       "title": "Machine Translation Approach for Vietnamese Diacritic Restoration",
       "authors": "TND Do, DB Nguyen, DK Mac, DD Tran",
       "year": 2013,
@@ -11881,26 +10279,6 @@
         "hai_vu",
         "thi_lan_le",
         "thanh_hai_tran"
-      ]
-    },
-    {
-      "title": "Simplicial nonnegative matrix factorization",
-      "authors": "DK Nguyen, K Than, TB Ho",
-      "year": 2013,
-      "venue": "The 2013 RIVF International Conference on Computing & Communication …, 2013",
-      "topic": "Other",
-      "lab_authors": [
-        "khoat_than"
-      ]
-    },
-    {
-      "title": "Probable convexity and its application to Correlated Topic Models",
-      "authors": "K Than, TB Ho",
-      "year": 2013,
-      "venue": "arXiv preprint arXiv:1312.4527, 2013",
-      "topic": "Speech/NLP",
-      "lab_authors": [
-        "khoat_than"
       ]
     },
     {
@@ -12071,56 +10449,6 @@
       ]
     },
     {
-      "title": "Path‐tracking control of a riderless bicycle via road preview and speed adaptation",
-      "authors": "TK Dao, CK Chen",
-      "year": 2013,
-      "venue": "Asian Journal of Control 15 (4), 1036-1050, 2013",
-      "topic": "Other",
-      "lab_authors": [
-        "trung_kien_dao"
-      ]
-    },
-    {
-      "title": "Home appliance control system based on robust indoor user localization using wifi signals",
-      "authors": "TK Dao, E Castelli, HL Nguyen",
-      "year": 2013,
-      "venue": "International Conference on Human Machine Interaction, Chennai, India, 147-152, 2013",
-      "topic": "Other",
-      "lab_authors": [
-        "trung_kien_dao"
-      ]
-    },
-    {
-      "title": "Application of environment constraints in improving localization accuracy",
-      "authors": "DV Nguyen, E Castelli, TK Dao, DT Le, LH Nguyen, S Attig",
-      "year": 2013,
-      "venue": "The 8th International Conference on Ubiquitous Information Technologies and …, 2013",
-      "topic": "Other",
-      "lab_authors": [
-        "trung_kien_dao"
-      ]
-    },
-    {
-      "title": "A platform for pervasive application development",
-      "authors": "TK Dao, E Castelli",
-      "year": 2013,
-      "venue": "International Workshop on Personal Assistance for Mobility and Manipulation …, 2013",
-      "topic": "Other",
-      "lab_authors": [
-        "trung_kien_dao"
-      ]
-    },
-    {
-      "title": "A human gait model using graph-theoretic method",
-      "authors": "TK Dao, VH Dao",
-      "year": 2013,
-      "venue": "3rd IFToMM International Symposium on Robotics and Mechatronics, 2013",
-      "topic": "Action Recognition",
-      "lab_authors": [
-        "trung_kien_dao"
-      ]
-    },
-    {
       "title": "A Method For Hand Detection Using Internal Features And Active Boosting-Based Learning Categoriesand Subject Descriptors",
       "authors": "VT Nguyen, R Mullot, TL Le",
       "year": 2013,
@@ -12132,36 +10460,6 @@
       ]
     },
     {
-      "title": "Modeling the prosody of Vietnamese attitudes for expressive speech synthesis.",
-      "authors": "DK Mac, E Castelli, V Aubergé",
-      "year": 2012,
-      "venue": "International workshop on Spoken Language Technologies for Under-resourced …, 2012",
-      "topic": "Speech/NLP",
-      "lab_authors": [
-        "dang_khoa_mac"
-      ]
-    },
-    {
-      "title": "Local vs. global prosodic cues: effect of tones on attitudinal prosody in cross-perception of Vietnamese by French",
-      "authors": "DK Mac, V Aubergé, E Castelli, A Rilliard",
-      "year": 2012,
-      "venue": "Speech Prosody, xx, 2012",
-      "topic": "Other",
-      "lab_authors": [
-        "dang_khoa_mac"
-      ]
-    },
-    {
-      "title": "Génération de parole expressive dans le cas des langues à tons",
-      "authors": "DK Mac",
-      "year": 2012,
-      "venue": "Université de Grenoble; Institut Polytechnique (Hanoï), 2012",
-      "topic": "Other",
-      "lab_authors": [
-        "dang_khoa_mac"
-      ]
-    },
-    {
       "title": "Tracking abnormalities in video capsule endoscopy using surrounding features with a triangular constraint",
       "authors": "Y Yanagawa, T Echigo, H Vu, H Okazaki, Y Fujiwara, T Arakawa, …",
       "year": 2012,
@@ -12169,36 +10467,6 @@
       "topic": "Medical Imaging",
       "lab_authors": [
         "hai_vu"
-      ]
-    },
-    {
-      "title": "Fully Sparse Topic Models",
-      "authors": "K Than, TB Ho",
-      "year": 2012,
-      "venue": "European Conference on Machine Learning and Principles and Practice of …, 2012",
-      "topic": "Speech/NLP",
-      "lab_authors": [
-        "khoat_than"
-      ]
-    },
-    {
-      "title": "Supervised dimension reduction with topic models",
-      "authors": "K Than, TB Ho, DK Nguyen, NK Pham",
-      "year": 2012,
-      "venue": "Asian Conference on Machine Learning, 395-410, 2012",
-      "topic": "Speech/NLP",
-      "lab_authors": [
-        "khoat_than"
-      ]
-    },
-    {
-      "title": "Managing sparsity, time, and quality of inference in topic models",
-      "authors": "K Than, TB Ho",
-      "year": 2012,
-      "venue": "arXiv preprint arXiv:1210.7053, 2012",
-      "topic": "Speech/NLP",
-      "lab_authors": [
-        "khoat_than"
       ]
     },
     {
@@ -12233,36 +10501,6 @@
       ]
     },
     {
-      "title": "Tuning fuzzy-logic controllers",
-      "authors": "TK Dao, CK Chen",
-      "year": 2012,
-      "venue": "",
-      "topic": "Other",
-      "lab_authors": [
-        "trung_kien_dao"
-      ]
-    },
-    {
-      "title": "A study of bicycle dynamics via system identification approaches",
-      "authors": "TK Dao, CK Chen",
-      "year": 2012,
-      "venue": "Journal of the Chinese Institute of Engineers 35 (7), 853-868, 2012",
-      "topic": "Other",
-      "lab_authors": [
-        "trung_kien_dao"
-      ]
-    },
-    {
-      "title": "Modeling and path-tracking control for a riderless-bicycle system",
-      "authors": "TK Dao",
-      "year": 2012,
-      "venue": "Dayeh University, 2012",
-      "topic": "Other",
-      "lab_authors": [
-        "trung_kien_dao"
-      ]
-    },
-    {
       "title": "A literature review on license plate recognition and vehicle classification",
       "authors": "TK Dao, TL Le, TH Tran, NT Le",
       "year": 2012,
@@ -12273,16 +10511,6 @@
         "thi_lan_le",
         "thanh_hai_tran",
         "thi_nhung_le"
-      ]
-    },
-    {
-      "title": "How Vietnamese attitudes can be recognized and confused: Cross-cultural perception and speech prosody analysis",
-      "authors": "DK Mac, E Castelli, V Aubergé, A Rilliard",
-      "year": 2011,
-      "venue": "2011 International Conference on Asian Language Processing, 220-223, 2011",
-      "topic": "Other",
-      "lab_authors": [
-        "dang_khoa_mac"
       ]
     },
     {
@@ -12326,16 +10554,6 @@
       ]
     },
     {
-      "title": "A geometric interpretation of Bayesian classification methods",
-      "authors": "K Than, TB Ho",
-      "year": 2011,
-      "venue": "",
-      "topic": "Other",
-      "lab_authors": [
-        "khoat_than"
-      ]
-    },
-    {
       "title": "Toward a Vietnamese facial expression recognition system for human-robot interaction",
       "authors": "TL Le, VT Dong",
       "year": 2011,
@@ -12373,66 +10591,6 @@
       "topic": "Hand Gesture",
       "lab_authors": [
         "thanh_hai_tran"
-      ]
-    },
-    {
-      "title": "Sliding-mode control for the roll-angle tracking of an unmanned bicycle",
-      "authors": "TK Dao, CK Chen",
-      "year": 2011,
-      "venue": "Vehicle System Dynamics 49 (6), 915-930, 2011",
-      "topic": "Other",
-      "lab_authors": [
-        "trung_kien_dao"
-      ]
-    },
-    {
-      "title": "Path tracking control of a motorcycle based on system identification",
-      "authors": "TK Dao, CK Chen",
-      "year": 2011,
-      "venue": "IEEE Transactions on Vehicular Technology 60 (7), 2927-2935, 2011",
-      "topic": "Other",
-      "lab_authors": [
-        "trung_kien_dao"
-      ]
-    },
-    {
-      "title": "Cross-cultural perception of Vietnamese Audio-Visual prosodic attitudes",
-      "authors": "DK Mac, V Aubergé, A Rilliard, E Castelli",
-      "year": 2010,
-      "venue": "Speech Prosody, 356, 2010",
-      "topic": "Other",
-      "lab_authors": [
-        "dang_khoa_mac"
-      ]
-    },
-    {
-      "title": "How prosodic attitudes can be recognized and confused: Vietnamese multimodal social affects",
-      "authors": "DK Mac, V Aubergé, A Rilliard, E Castelli",
-      "year": 2010,
-      "venue": "SLTU, Penang, Malaysia, 2010",
-      "topic": "Other",
-      "lab_authors": [
-        "dang_khoa_mac"
-      ]
-    },
-    {
-      "title": "Vietnamese multimodal social affects: how prosodic attitudes can be recognized and confused.",
-      "authors": "DK Mac, V Aubergé, A Rilliard, E Castelli",
-      "year": 2010,
-      "venue": "SLTU, 24-28, 2010",
-      "topic": "Other",
-      "lab_authors": [
-        "dang_khoa_mac"
-      ]
-    },
-    {
-      "title": "Perception interculturelle des attitudes audio-visuelles vietnamiennes",
-      "authors": "DK Mac, V Aubergé, A Rilliard, E Castelli",
-      "year": 2010,
-      "venue": "Mons, Belgique, 25, 2010",
-      "topic": "Other",
-      "lab_authors": [
-        "dang_khoa_mac"
       ]
     },
     {
@@ -12486,16 +10644,6 @@
       ]
     },
     {
-      "title": "Un état de l'art des méthodes de localisation de symboles dans les documents graphiques",
-      "authors": "TO Nguyen, S Tabbone",
-      "year": 2010,
-      "venue": "Colloque International Francophone sur l'Écrit et le Document-CIFED 2010 …, 2010",
-      "topic": "Other",
-      "lab_authors": [
-        "nguyen_thi_oanh"
-      ]
-    },
-    {
       "title": "Surveillance video retrieval: what we have already done?",
       "authors": "TL Le, A Boucher, M Thonnat, F Bremond",
       "year": 2010,
@@ -12516,56 +10664,6 @@
       ]
     },
     {
-      "title": "Speed-adaptive roll-angle-tracking control of an unmanned bicycle using fuzzy logic",
-      "authors": "CK Chen, TK Dao",
-      "year": 2010,
-      "venue": "Vehicle System Dynamics 48 (1), 133-147, 2010",
-      "topic": "Other",
-      "lab_authors": [
-        "trung_kien_dao"
-      ]
-    },
-    {
-      "title": "A compensated-yaw-moment-based vehicle stability controller",
-      "authors": "CK Chen, TK Dao, HP Lin",
-      "year": 2010,
-      "venue": "International Journal of Vehicle Design 53 (3), 220-238, 2010",
-      "topic": "Other",
-      "lab_authors": [
-        "trung_kien_dao"
-      ]
-    },
-    {
-      "title": "A study of bicycle dynamics via system identification",
-      "authors": "CK Chen, TK Dao",
-      "year": 2010,
-      "venue": "2010 International Symposium on Computer, Communication, Control and …, 2010",
-      "topic": "Other",
-      "lab_authors": [
-        "trung_kien_dao"
-      ]
-    },
-    {
-      "title": "Speed-adaptive path-following control of a riderless bicycle via road preview",
-      "authors": "CK Chen, TK Dao",
-      "year": 2010,
-      "venue": "Bicycle and Motorcycle Dynamics 2010, Symposium on the Dynamics and Control …, 2010",
-      "topic": "Other",
-      "lab_authors": [
-        "trung_kien_dao"
-      ]
-    },
-    {
-      "title": "Roll-angle-tracking control of a motorcycle",
-      "authors": "CK Chen, TK Dao",
-      "year": 2010,
-      "venue": "The 10th International Symposium on Advanced Vehicle Control, 115-120, 2010",
-      "topic": "Other",
-      "lab_authors": [
-        "trung_kien_dao"
-      ]
-    },
-    {
       "title": "MUST 2010: Welcome message from workshop organizers: FutureTech 2010",
       "authors": "Thi Lan Le",
       "year": 2010,
@@ -12573,16 +10671,6 @@
       "topic": "Other",
       "lab_authors": [
         "thi_lan_le"
-      ]
-    },
-    {
-      "title": "Audio-visual prosody of social attitudes in vietnamese: building and evaluating a tones balanced corpus.",
-      "authors": "DK Mac, V Aubergé, A Rilliard, E Castelli",
-      "year": 2009,
-      "venue": "INTERSPEECH, 2263-2266, 2009",
-      "topic": "Other",
-      "lab_authors": [
-        "dang_khoa_mac"
       ]
     },
     {
@@ -12656,56 +10744,6 @@
       ]
     },
     {
-      "title": "Localisation de symboles dans les documents graphiques",
-      "authors": "TO Nguyen",
-      "year": 2009,
-      "venue": "Université Nancy II, 2009",
-      "topic": "Other",
-      "lab_authors": [
-        "nguyen_thi_oanh"
-      ]
-    },
-    {
-      "title": "Localisation de symboles dans les documents graphiques. Université Nancy 2",
-      "authors": "TO Nguyen",
-      "year": 2009,
-      "venue": "Thèse de Doctorat, 2009",
-      "topic": "Other",
-      "lab_authors": [
-        "nguyen_thi_oanh"
-      ]
-    },
-    {
-      "title": "A symbol spotting approach based on the vector model and a visual vocabulary",
-      "authors": "TO Nguyen, S Tabbone, A Boucher",
-      "year": 2009,
-      "venue": "2009 10th International Conference on Document Analysis and Recognition, 708-712, 2009",
-      "topic": "Other",
-      "lab_authors": [
-        "nguyen_thi_oanh"
-      ]
-    },
-    {
-      "title": "Une approche de localisation de symboles non-segmentés dans des documents graphiques",
-      "authors": "TO Nguyen, S Tabbone, A Boucher",
-      "year": 2009,
-      "venue": "Traitement du Signal 26 (5), 419-431, 2009",
-      "topic": "Other",
-      "lab_authors": [
-        "nguyen_thi_oanh"
-      ]
-    },
-    {
-      "title": "A symbol spotting approach in graphic documents",
-      "authors": "TO Nguyen, S Tabbone, A Boucher",
-      "year": 2009,
-      "venue": "TRAITEMENT DU SIGNAL 26 (5), 419-431, 2009",
-      "topic": "Other",
-      "lab_authors": [
-        "nguyen_thi_oanh"
-      ]
-    },
-    {
       "title": "Surveillance video indexing and retrieval using object features and semantic events",
       "authors": "TL Le, M Thonnat, A Boucher, F Bremond",
       "year": 2009,
@@ -12746,46 +10784,6 @@
       ]
     },
     {
-      "title": "Performance Optimization by Taguchi Method for the Iterative Learning Control of a Pneumatic XY Table",
-      "authors": "CK Chen, TK Dao",
-      "year": 2009,
-      "venue": "Control Engineering, Practic-e, 2009",
-      "topic": "Other",
-      "lab_authors": [
-        "trung_kien_dao"
-      ]
-    },
-    {
-      "title": "Hardware-in-the-Loop Experiments of Vehicle Stability Control system via a hydraulic model",
-      "authors": "CK Chen, TK Dao, SH Hsieh",
-      "year": 2009,
-      "venue": "The 7th International Conference on Fluid Power Transmission and Control …, 2009",
-      "topic": "Other",
-      "lab_authors": [
-        "trung_kien_dao"
-      ]
-    },
-    {
-      "title": "Hardware-in-the-loop experiments of vehicle stability control via a hydraulic model",
-      "authors": "CK Chen, TK Dao, SH Hsieh",
-      "year": 2009,
-      "venue": "The 10th International Conference on Automation Technology, Tainan, Taiwan, 2009",
-      "topic": "Other",
-      "lab_authors": [
-        "trung_kien_dao"
-      ]
-    },
-    {
-      "title": "Speed-adaptive path-following control of a riderless bicycle by road preview",
-      "authors": "TK Dao, CK Chen",
-      "year": 2009,
-      "venue": "International Conference on Service and Interactive Robotics, Taipei, Taiwan, 2009",
-      "topic": "Other",
-      "lab_authors": [
-        "trung_kien_dao"
-      ]
-    },
-    {
       "title": "An Approach to CBIR using K-Means clustering and Polygon Based Shape Features",
       "authors": "D Mai, VT Nguyen",
       "year": 2009,
@@ -12806,26 +10804,6 @@
       ]
     },
     {
-      "title": "Proposition d'un descripteur de formes et du modèle vectoriel pour la recherche de symboles",
-      "authors": "TO Nguyen, S Tabbone, OR Terrades",
-      "year": 2008,
-      "venue": "Colloque International Francophone sur l'Ecrit et le Document-CIFED 08, 79-84, 2008",
-      "topic": "Other",
-      "lab_authors": [
-        "nguyen_thi_oanh"
-      ]
-    },
-    {
-      "title": "Symbol descriptor based on shape context and vector model of information retrieval",
-      "authors": "TO Nguyen, S Tabbone, OR Terrades",
-      "year": 2008,
-      "venue": "2008 The Eighth IAPR International Workshop on Document Analysis Systems …, 2008",
-      "topic": "Other",
-      "lab_authors": [
-        "nguyen_thi_oanh"
-      ]
-    },
-    {
       "title": "A query language combining object features and semantic events for surveillance video retrieval",
       "authors": "TL Le, M Thonnat, A Boucher, F Brémond",
       "year": 2008,
@@ -12843,26 +10821,6 @@
       "topic": "Surveillance",
       "lab_authors": [
         "thi_lan_le"
-      ]
-    },
-    {
-      "title": "Roll-tracking control of an unmanned bicycle using fuzzy-logic controller",
-      "authors": "CK Chen, TK Dao",
-      "year": 2008,
-      "venue": "22nd International Congress of Theoretical and Applied Mechanics, Adelaide …, 2008",
-      "topic": "Other",
-      "lab_authors": [
-        "trung_kien_dao"
-      ]
-    },
-    {
-      "title": "Hardware-in-the-loop experiments of vehicle stability control for a brake-by-wire system",
-      "authors": "CK Chen, TK Dao, SH Hsieh",
-      "year": 2008,
-      "venue": "The 9th International Symposium on Advanced Vehicle Control, Kobe, Japan, 2008",
-      "topic": "Other",
-      "lab_authors": [
-        "trung_kien_dao"
       ]
     },
     {
@@ -12927,16 +10885,6 @@
       ]
     },
     {
-      "title": "Iterative learning control of pneumatic X-Y table and performance optimization using Taguchi method",
-      "authors": "CK Chen, J Hwang, TK Dao, MF Lo",
-      "year": 2007,
-      "venue": "2nd International Forum on Systems and Mechatronics, Tainan, Taiwan, 2007",
-      "topic": "Other",
-      "lab_authors": [
-        "trung_kien_dao"
-      ]
-    },
-    {
       "title": "Nguyen",
       "authors": "VV Hoang, DTT Pham, T Do, TT Pham",
       "year": 2006,
@@ -12974,16 +10922,6 @@
       "topic": "Other",
       "lab_authors": [
         "hai_vu"
-      ]
-    },
-    {
-      "title": "Une méthode de binarisation hiérarchique floue",
-      "authors": "S Tabbone, TO Nguyen, G Masini",
-      "year": 2006,
-      "venue": "Colloque International Francophone sur l'Écrit et le Document-CIFED 2006, 43-48, 2006",
-      "topic": "Other",
-      "lab_authors": [
-        "nguyen_thi_oanh"
       ]
     },
     {
@@ -13187,16 +11125,6 @@
       ]
     },
     {
-      "title": "Indexing syllable dictionary for non-uniform unit selection speech synthesis: Application on Text-to-speech system on Android devices",
-      "authors": "TT NGUYEN, DK MAC, DD TRAN, MH NGUYEN, E CASTELLI, ...",
-      "year": null,
-      "venue": "Reg. Conf. Opt. Character Recognit. Nat. Lang. Process. Technol. ASEAN Lang …, 0",
-      "topic": "Speech/NLP",
-      "lab_authors": [
-        "dang_khoa_mac"
-      ]
-    },
-    {
       "title": "Optimizing data transmission on mobile platform for speech translation system",
       "authors": "VT NGUYEN, DO Thi-Ngoc-Diep, MAC Dang-Khoa, E CASTELLI",
       "year": null,
@@ -13294,36 +11222,6 @@
       ]
     },
     {
-      "title": "A Tight Error Bound for Deep Learning via Distribution and Loss Complexity",
-      "authors": "K Than, V Doan, P Le, P Phung",
-      "year": null,
-      "venue": "",
-      "topic": "Other",
-      "lab_authors": [
-        "khoat_than"
-      ]
-    },
-    {
-      "title": "A Non-vacuous Test Error Guarantee for Deep Learning without Altering the Model",
-      "authors": "K Than, D Phan",
-      "year": null,
-      "venue": "",
-      "topic": "Other",
-      "lab_authors": [
-        "khoat_than"
-      ]
-    },
-    {
-      "title": "SUSI: Semi-Structured Pruning for LLMs via Differentiable Subset Sampling",
-      "authors": "H Dinh, XD Ta, K Than, KHN Bui",
-      "year": null,
-      "venue": "",
-      "topic": "Other",
-      "lab_authors": [
-        "khoat_than"
-      ]
-    },
-    {
       "title": "KSE 2011",
       "authors": "H Nguyen, HP Le, HT Vo, M Rossignol, TH Nguyen, NT Le, …",
       "year": null,
@@ -13331,66 +11229,6 @@
       "topic": "Other",
       "lab_authors": [
         "thi_nhung_le"
-      ]
-    },
-    {
-      "title": "Modeling the diversity and log-normality of",
-      "authors": "K Than, TB Ho",
-      "year": null,
-      "venue": "",
-      "topic": "Other",
-      "lab_authors": [
-        "khoat_than"
-      ]
-    },
-    {
-      "title": "Bag-of-biterms representation for short texts$",
-      "authors": "K Mai, S Mai, A Nguyen, N Van Linh, K Than",
-      "year": null,
-      "venue": "",
-      "topic": "Other",
-      "lab_authors": [
-        "khoat_than"
-      ]
-    },
-    {
-      "title": "A supervised topic model with class-specific priors",
-      "authors": "N Van Linh, HP Thanh, NK Anh, K Than",
-      "year": null,
-      "venue": "",
-      "topic": "Speech/NLP",
-      "lab_authors": [
-        "khoat_than"
-      ]
-    },
-    {
-      "title": "HAL Id: hal-00118323 https://hal. archives-ouvertes. fr/hal-00118323",
-      "authors": "S Tabbone, TO Nguyen, G Masini",
-      "year": null,
-      "venue": "",
-      "topic": "Other",
-      "lab_authors": [
-        "nguyen_thi_oanh"
-      ]
-    },
-    {
-      "title": "A Symbol Spotting Approach in Graphic Documents. Une Approche de Localisation de Symboles Non-Segmentés dans des Documents Graphiques A Symbol Spotting Approach in Graphic …",
-      "authors": "TO Nguyen, S Tabbone, A Boucher",
-      "year": null,
-      "venue": "",
-      "topic": "Other",
-      "lab_authors": [
-        "nguyen_thi_oanh"
-      ]
-    },
-    {
-      "title": "HAL Id: hal-00118323",
-      "authors": "S Tabbone, TO Nguyen, G Masini",
-      "year": null,
-      "venue": "",
-      "topic": "Other",
-      "lab_authors": [
-        "nguyen_thi_oanh"
       ]
     },
     {
