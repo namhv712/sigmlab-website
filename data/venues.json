@@ -6,20 +6,49 @@
       "id": "cvpr",
       "name": "CVPR",
       "fullName": "IEEE/CVF Conference on Computer Vision and Pattern Recognition",
-      "aliases": ["IEEE CVPR"],
+      "aliases": [
+        "IEEE CVPR"
+      ],
       "type": "conference",
-      "topics": ["computer-vision", "deep-learning", "pattern-recognition"],
+      "topics": [
+        "computer-vision",
+        "deep-learning",
+        "pattern-recognition"
+      ],
       "website": "https://cvpr.thecvf.com/",
       "publisher": "IEEE",
       "rankings": {
-        "scopus": true, "isi": true, "dblp": true,
-        "core": "A*", "ccf": "A", "era": "A*", "hIndex": 422
+        "scopus": true,
+        "isi": true,
+        "dblp": true,
+        "core": "A*",
+        "ccf": "A",
+        "era": "A*",
+        "hIndex": 422
       },
       "deadlines": [
-        { "year": 2026, "kind": "abstract", "date": "2025-11-07", "timezone": "AoE" },
-        { "year": 2026, "kind": "full-paper", "date": "2025-11-14", "timezone": "AoE" },
-        { "year": 2026, "kind": "notification", "date": "2026-02-26" },
-        { "year": 2026, "kind": "camera-ready", "date": "2026-04-04" }
+        {
+          "year": 2026,
+          "kind": "abstract",
+          "date": "2025-11-07",
+          "timezone": "AoE"
+        },
+        {
+          "year": 2026,
+          "kind": "full-paper",
+          "date": "2025-11-14",
+          "timezone": "AoE"
+        },
+        {
+          "year": 2026,
+          "kind": "notification",
+          "date": "2026-02-26"
+        },
+        {
+          "year": 2026,
+          "kind": "camera-ready",
+          "date": "2026-04-04"
+        }
       ],
       "frequency": "annual",
       "acceptanceRate": 0.236,
@@ -31,17 +60,31 @@
       "id": "ieee-tpami",
       "name": "TPAMI",
       "fullName": "IEEE Transactions on Pattern Analysis and Machine Intelligence",
-      "aliases": ["T-PAMI", "IEEE T-PAMI"],
+      "aliases": [
+        "T-PAMI",
+        "IEEE T-PAMI"
+      ],
       "type": "journal",
-      "topics": ["computer-vision", "machine-learning", "pattern-recognition"],
+      "topics": [
+        "computer-vision",
+        "machine-learning",
+        "pattern-recognition"
+      ],
       "website": "https://www.computer.org/csdl/journal/tp",
       "publisher": "IEEE",
       "issn": "0162-8828",
       "eIssn": "1939-3539",
       "rankings": {
-        "scopus": true, "isi": true, "dblp": true,
-        "scimagoQuartile": "Q1", "sjr": 6.13, "jcrImpactFactor": 24.3,
-        "jcrQuartile": "Q1", "citeScore": 47.5, "hIndex": 384, "ccf": "A"
+        "scopus": true,
+        "isi": true,
+        "dblp": true,
+        "scimagoQuartile": "Q1",
+        "sjr": 6.13,
+        "jcrImpactFactor": 24.3,
+        "jcrQuartile": "Q1",
+        "citeScore": 47.5,
+        "hIndex": 384,
+        "ccf": "A"
       },
       "frequency": "rolling",
       "notes": "Top journal in CV/PR. Rolling submission, ~9 month review cycle.",
@@ -52,15 +95,28 @@
       "name": "ICCV",
       "fullName": "IEEE/CVF International Conference on Computer Vision",
       "type": "conference",
-      "topics": ["computer-vision", "deep-learning"],
+      "topics": [
+        "computer-vision",
+        "deep-learning"
+      ],
       "website": "https://iccv.thecvf.com/",
       "publisher": "IEEE",
       "rankings": {
-        "scopus": true, "isi": true, "dblp": true,
-        "core": "A*", "ccf": "A", "era": "A*", "hIndex": 297
+        "scopus": true,
+        "isi": true,
+        "dblp": true,
+        "core": "A*",
+        "ccf": "A",
+        "era": "A*",
+        "hIndex": 297
       },
       "deadlines": [
-        { "year": 2027, "kind": "full-paper", "date": "2026-03-08", "timezone": "AoE" }
+        {
+          "year": 2027,
+          "kind": "full-paper",
+          "date": "2026-03-08",
+          "timezone": "AoE"
+        }
       ],
       "frequency": "biannual",
       "notes": "Held in odd years; alternates with ECCV.",
@@ -70,18 +126,39 @@
       "id": "neurips",
       "name": "NeurIPS",
       "fullName": "Conference on Neural Information Processing Systems",
-      "aliases": ["NIPS"],
+      "aliases": [
+        "NIPS"
+      ],
       "type": "conference",
-      "topics": ["machine-learning", "deep-learning", "computer-vision"],
+      "topics": [
+        "machine-learning",
+        "deep-learning",
+        "computer-vision"
+      ],
       "website": "https://neurips.cc/",
       "publisher": "Neural Information Processing Systems Foundation",
       "rankings": {
-        "scopus": true, "isi": false, "dblp": true,
-        "core": "A*", "ccf": "A", "era": "A*", "hIndex": 358
+        "scopus": true,
+        "isi": false,
+        "dblp": true,
+        "core": "A*",
+        "ccf": "A",
+        "era": "A*",
+        "hIndex": 358
       },
       "deadlines": [
-        { "year": 2026, "kind": "abstract", "date": "2026-05-15", "timezone": "AoE" },
-        { "year": 2026, "kind": "full-paper", "date": "2026-05-22", "timezone": "AoE" }
+        {
+          "year": 2026,
+          "kind": "abstract",
+          "date": "2026-05-15",
+          "timezone": "AoE"
+        },
+        {
+          "year": 2026,
+          "kind": "full-paper",
+          "date": "2026-05-22",
+          "timezone": "AoE"
+        }
       ],
       "frequency": "annual",
       "lastVerified": "2026-04-29"
@@ -91,17 +168,2635 @@
       "name": "MICCAI",
       "fullName": "International Conference on Medical Image Computing and Computer-Assisted Intervention",
       "type": "conference",
-      "topics": ["medical-imaging", "computer-vision", "deep-learning"],
+      "topics": [
+        "medical-imaging",
+        "computer-vision",
+        "deep-learning"
+      ],
       "website": "https://www.miccai.org/",
       "publisher": "Springer",
       "rankings": {
-        "scopus": true, "isi": true, "dblp": true,
-        "core": "A", "ccf": "B", "era": "A", "hIndex": 167
+        "scopus": true,
+        "isi": true,
+        "dblp": true,
+        "core": "A",
+        "ccf": "B",
+        "era": "A",
+        "hIndex": 167
       },
       "deadlines": [
-        { "year": 2026, "kind": "full-paper", "date": "2026-03-06" }
+        {
+          "year": 2026,
+          "kind": "full-paper",
+          "date": "2026-03-06"
+        }
       ],
       "frequency": "annual",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "eccv",
+      "name": "ECCV",
+      "fullName": "European Conference on Computer Vision",
+      "type": "conference",
+      "topics": [
+        "computer-vision",
+        "deep-learning",
+        "pattern-recognition",
+        "3d-vision",
+        "scene-understanding"
+      ],
+      "website": "https://eccv.ecva.net/",
+      "publisher": "Springer",
+      "rankings": {
+        "scopus": true,
+        "isi": true,
+        "dblp": true,
+        "core": "A*",
+        "ccf": "B",
+        "era": "A"
+      },
+      "deadlines": [
+        {
+          "year": 2026,
+          "kind": "abstract",
+          "date": "2026-02-26",
+          "timezone": "AoE",
+          "note": "Paper registration"
+        },
+        {
+          "year": 2026,
+          "kind": "full-paper",
+          "date": "2026-03-05",
+          "timezone": "AoE"
+        },
+        {
+          "year": 2026,
+          "kind": "rebuttal",
+          "date": "2026-05-11",
+          "timezone": "AoE"
+        },
+        {
+          "year": 2026,
+          "kind": "notification",
+          "date": "2026-06-17"
+        },
+        {
+          "year": 2026,
+          "kind": "camera-ready",
+          "date": "2026-06-27"
+        }
+      ],
+      "frequency": "biannual",
+      "acceptanceRate": 0.279,
+      "location": "Malmö, Sweden",
+      "notes": "Held in even years; alternates with ICCV. 14 pages LNCS format. ECCV 2024 acceptance rate cited.",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "icml",
+      "name": "ICML",
+      "fullName": "International Conference on Machine Learning",
+      "type": "conference",
+      "topics": [
+        "machine-learning",
+        "deep-learning"
+      ],
+      "website": "https://icml.cc/",
+      "publisher": "PMLR",
+      "rankings": {
+        "scopus": true,
+        "isi": true,
+        "dblp": true,
+        "core": "A*",
+        "ccf": "A",
+        "era": "A*"
+      },
+      "deadlines": [
+        {
+          "year": 2026,
+          "kind": "abstract",
+          "date": "2026-01-23",
+          "timezone": "AoE"
+        },
+        {
+          "year": 2026,
+          "kind": "full-paper",
+          "date": "2026-01-28",
+          "timezone": "AoE"
+        },
+        {
+          "year": 2026,
+          "kind": "notification",
+          "date": "2026-04-30",
+          "timezone": "AoE"
+        }
+      ],
+      "frequency": "annual",
+      "location": "Seoul, South Korea",
+      "notes": "ICML 2026 at COEX, July 6-11, 2026. Record 24,371 submissions.",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "iclr",
+      "name": "ICLR",
+      "fullName": "International Conference on Learning Representations",
+      "type": "conference",
+      "topics": [
+        "machine-learning",
+        "deep-learning"
+      ],
+      "website": "https://iclr.cc/",
+      "publisher": "OpenReview",
+      "rankings": {
+        "scopus": true,
+        "isi": false,
+        "dblp": true,
+        "core": "A*"
+      },
+      "deadlines": [
+        {
+          "year": 2026,
+          "kind": "notification",
+          "date": "2026-01-25",
+          "timezone": "AoE"
+        }
+      ],
+      "frequency": "annual",
+      "acceptanceRate": 0.2818,
+      "location": "Rio de Janeiro, Brazil",
+      "notes": "ICLR 2026 at Riocentro, April 23-27, 2026. Open peer review on OpenReview. ICLR 2027 deadlines TBD.",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "aaai",
+      "name": "AAAI",
+      "fullName": "AAAI Conference on Artificial Intelligence",
+      "type": "conference",
+      "topics": [
+        "machine-learning",
+        "deep-learning",
+        "knowledge-engineering",
+        "computer-vision"
+      ],
+      "website": "https://aaai.org/conference/aaai/",
+      "publisher": "AAAI Press",
+      "rankings": {
+        "scopus": true,
+        "isi": true,
+        "dblp": true,
+        "core": "A*",
+        "ccf": "A",
+        "era": "A*"
+      },
+      "frequency": "annual",
+      "acceptanceRate": 0.176,
+      "location": "Montréal, Canada",
+      "notes": "AAAI-27 in Montréal Feb 16-23, 2027. Submission deadlines TBD. AAAI-26 had 17.6% acceptance from 23,680 submissions.",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "ijcai",
+      "name": "IJCAI",
+      "fullName": "International Joint Conference on Artificial Intelligence",
+      "aliases": [
+        "IJCAI-ECAI"
+      ],
+      "type": "conference",
+      "topics": [
+        "machine-learning",
+        "deep-learning",
+        "knowledge-engineering",
+        "computer-vision"
+      ],
+      "website": "https://www.ijcai.org/",
+      "publisher": "IJCAI Organization",
+      "rankings": {
+        "scopus": true,
+        "isi": true,
+        "dblp": true,
+        "core": "A*",
+        "ccf": "A",
+        "era": "A*"
+      },
+      "deadlines": [
+        {
+          "year": 2026,
+          "kind": "abstract",
+          "date": "2026-01-12",
+          "timezone": "AoE"
+        },
+        {
+          "year": 2026,
+          "kind": "full-paper",
+          "date": "2026-01-19",
+          "timezone": "AoE"
+        },
+        {
+          "year": 2026,
+          "kind": "notification",
+          "date": "2026-04-29"
+        },
+        {
+          "year": 2026,
+          "kind": "camera-ready",
+          "date": "2026-05-15"
+        }
+      ],
+      "frequency": "annual",
+      "acceptanceRate": 0.176,
+      "location": "Bremen, Germany",
+      "notes": "IJCAI-ECAI 2026, August 15-21, 2026. 7+2 pages. IJCAI 2025 acceptance rate cited.",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "acm-mm",
+      "name": "ACM MM",
+      "fullName": "ACM International Conference on Multimedia",
+      "aliases": [
+        "ACM Multimedia",
+        "ACMMM"
+      ],
+      "type": "conference",
+      "topics": [
+        "multimedia",
+        "computer-vision",
+        "deep-learning",
+        "video-analysis",
+        "vision-language"
+      ],
+      "website": "https://acmmm.org/",
+      "publisher": "ACM",
+      "rankings": {
+        "scopus": true,
+        "isi": true,
+        "dblp": true,
+        "core": "A*",
+        "ccf": "A",
+        "era": "A"
+      },
+      "deadlines": [
+        {
+          "year": 2026,
+          "kind": "abstract",
+          "date": "2026-03-25",
+          "timezone": "AoE",
+          "note": "Contribution registration"
+        },
+        {
+          "year": 2026,
+          "kind": "full-paper",
+          "date": "2026-04-01",
+          "timezone": "AoE"
+        },
+        {
+          "year": 2026,
+          "kind": "rebuttal",
+          "date": "2026-06-04"
+        },
+        {
+          "year": 2026,
+          "kind": "notification",
+          "date": "2026-07-09"
+        },
+        {
+          "year": 2026,
+          "kind": "camera-ready",
+          "date": "2026-08-06"
+        }
+      ],
+      "frequency": "annual",
+      "location": "Rio de Janeiro, Brazil",
+      "notes": "ACM MM 2026, November 10-14, 2026. 6-8 pages plus 2 references.",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "bmvc",
+      "name": "BMVC",
+      "fullName": "British Machine Vision Conference",
+      "type": "conference",
+      "topics": [
+        "computer-vision",
+        "deep-learning",
+        "pattern-recognition"
+      ],
+      "website": "https://bmvc2026.bmva.org/",
+      "publisher": "BMVA",
+      "rankings": {
+        "scopus": true,
+        "isi": false,
+        "dblp": true,
+        "core": "A",
+        "ccf": "C"
+      },
+      "deadlines": [
+        {
+          "year": 2026,
+          "kind": "abstract",
+          "date": "2026-05-22",
+          "timezone": "AoE"
+        },
+        {
+          "year": 2026,
+          "kind": "full-paper",
+          "date": "2026-05-29",
+          "timezone": "AoE"
+        },
+        {
+          "year": 2026,
+          "kind": "rebuttal",
+          "date": "2026-07-10"
+        },
+        {
+          "year": 2026,
+          "kind": "notification",
+          "date": "2026-08-07"
+        },
+        {
+          "year": 2026,
+          "kind": "camera-ready",
+          "date": "2026-08-28"
+        }
+      ],
+      "frequency": "annual",
+      "location": "Lancaster, UK",
+      "notes": "BMVC 2026, November 23-26, 2026. 37th edition.",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "wacv",
+      "name": "WACV",
+      "fullName": "IEEE/CVF Winter Conference on Applications of Computer Vision",
+      "type": "conference",
+      "topics": [
+        "computer-vision",
+        "deep-learning",
+        "pattern-recognition"
+      ],
+      "website": "https://wacv.thecvf.com/",
+      "publisher": "IEEE",
+      "rankings": {
+        "scopus": true,
+        "isi": true,
+        "dblp": true,
+        "core": "A",
+        "era": "A"
+      },
+      "frequency": "annual",
+      "location": "Buena Vista, FL, USA",
+      "notes": "WACV 2027 at Disney Springs, January 5-9, 2027. Submission deadlines TBD. Typical acceptance ~35-45%.",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "accv",
+      "name": "ACCV",
+      "fullName": "Asian Conference on Computer Vision",
+      "type": "conference",
+      "topics": [
+        "computer-vision",
+        "deep-learning",
+        "pattern-recognition"
+      ],
+      "website": "https://accv2026.org/",
+      "publisher": "Springer",
+      "rankings": {
+        "scopus": true,
+        "isi": false,
+        "dblp": true,
+        "core": "B",
+        "ccf": "C"
+      },
+      "deadlines": [
+        {
+          "year": 2026,
+          "kind": "abstract",
+          "date": "2026-07-03",
+          "timezone": "GMT",
+          "note": "Paper registration"
+        },
+        {
+          "year": 2026,
+          "kind": "full-paper",
+          "date": "2026-07-05",
+          "timezone": "GMT"
+        }
+      ],
+      "frequency": "biannual",
+      "location": "Osaka, Japan",
+      "notes": "ACCV 2026, December 16-18, 2026. 18th edition. Held biennially in even years.",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "3dv",
+      "name": "3DV",
+      "fullName": "International Conference on 3D Vision",
+      "type": "conference",
+      "topics": [
+        "3d-vision",
+        "computer-vision",
+        "deep-learning",
+        "graphics"
+      ],
+      "website": "https://3dvconf.github.io/",
+      "rankings": {
+        "scopus": true,
+        "dblp": true
+      },
+      "frequency": "annual",
+      "location": "Vancouver, Canada",
+      "notes": "3DV 2026 was held March 20-23, 2026 in Vancouver. 3DV 2027 planned in Thessaloniki, Greece. Annual since 2013.",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "siggraph",
+      "name": "SIGGRAPH",
+      "fullName": "ACM SIGGRAPH Conference on Computer Graphics and Interactive Techniques",
+      "type": "conference",
+      "topics": [
+        "graphics",
+        "computer-vision",
+        "ar-vr",
+        "generative-models"
+      ],
+      "website": "https://www.siggraph.org/",
+      "publisher": "ACM",
+      "rankings": {
+        "scopus": true,
+        "isi": true,
+        "dblp": true,
+        "core": "A*",
+        "ccf": "A",
+        "era": "A*"
+      },
+      "deadlines": [
+        {
+          "year": 2026,
+          "kind": "full-paper",
+          "date": "2026-01-15",
+          "timezone": "UTC",
+          "note": "Submissions closed"
+        }
+      ],
+      "frequency": "annual",
+      "location": "Los Angeles, USA",
+      "notes": "SIGGRAPH 2026, July 19-23, 2026. Technical papers also published in ACM TOG.",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "siggraph-asia",
+      "name": "SIGGRAPH Asia",
+      "fullName": "ACM SIGGRAPH Conference and Exhibition on Computer Graphics and Interactive Techniques in Asia",
+      "type": "conference",
+      "topics": [
+        "graphics",
+        "computer-vision",
+        "ar-vr",
+        "generative-models"
+      ],
+      "website": "https://asia.siggraph.org/",
+      "publisher": "ACM",
+      "rankings": {
+        "scopus": true,
+        "isi": true,
+        "dblp": true,
+        "core": "A",
+        "ccf": "A"
+      },
+      "deadlines": [
+        {
+          "year": 2026,
+          "kind": "abstract",
+          "date": "2026-05-05",
+          "timezone": "AoE"
+        },
+        {
+          "year": 2026,
+          "kind": "full-paper",
+          "date": "2026-05-12",
+          "timezone": "AoE"
+        }
+      ],
+      "frequency": "annual",
+      "location": "Kuala Lumpur, Malaysia",
+      "notes": "SIGGRAPH Asia 2026, December 1-4, 2026. 19th edition; first held in Malaysia. Technical papers also published in ACM TOG.",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "kdd",
+      "name": "KDD",
+      "fullName": "ACM SIGKDD Conference on Knowledge Discovery and Data Mining",
+      "type": "conference",
+      "topics": [
+        "data-mining",
+        "machine-learning",
+        "knowledge-engineering",
+        "information-retrieval"
+      ],
+      "website": "https://www.kdd.org/",
+      "publisher": "ACM",
+      "rankings": {
+        "scopus": true,
+        "isi": true,
+        "dblp": true,
+        "core": "A*",
+        "ccf": "A",
+        "era": "A*"
+      },
+      "deadlines": [
+        {
+          "year": 2026,
+          "kind": "abstract",
+          "date": "2026-02-01",
+          "timezone": "AoE",
+          "note": "Cycle 2"
+        },
+        {
+          "year": 2026,
+          "kind": "full-paper",
+          "date": "2026-02-08",
+          "timezone": "AoE",
+          "note": "Cycle 2"
+        },
+        {
+          "year": 2026,
+          "kind": "rebuttal",
+          "date": "2026-04-17"
+        },
+        {
+          "year": 2026,
+          "kind": "notification",
+          "date": "2026-05-16"
+        }
+      ],
+      "frequency": "annual",
+      "location": "Jeju, South Korea",
+      "notes": "KDD 2026, August 9-13, 2026. Two submission cycles per year.",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "aistats",
+      "name": "AISTATS",
+      "fullName": "International Conference on Artificial Intelligence and Statistics",
+      "type": "conference",
+      "topics": [
+        "machine-learning",
+        "deep-learning"
+      ],
+      "website": "https://aistats.org/",
+      "publisher": "PMLR",
+      "rankings": {
+        "scopus": true,
+        "isi": false,
+        "dblp": true,
+        "core": "A",
+        "ccf": "C"
+      },
+      "frequency": "annual",
+      "acceptanceRate": 0.25,
+      "location": "Tangier, Morocco",
+      "notes": "AISTATS 2026, May 2-5, 2026 in Tangier. AISTATS 2027 planned for Toronto, May 16-21, 2027 (deadlines TBD).",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "uai",
+      "name": "UAI",
+      "fullName": "Conference on Uncertainty in Artificial Intelligence",
+      "type": "conference",
+      "topics": [
+        "machine-learning",
+        "deep-learning"
+      ],
+      "website": "https://www.auai.org/",
+      "publisher": "AUAI",
+      "rankings": {
+        "scopus": true,
+        "isi": false,
+        "dblp": true,
+        "core": "A",
+        "ccf": "B"
+      },
+      "deadlines": [
+        {
+          "year": 2026,
+          "kind": "full-paper",
+          "date": "2026-02-25",
+          "timezone": "AoE"
+        }
+      ],
+      "frequency": "annual",
+      "acceptanceRate": 0.307,
+      "location": "Amsterdam, Netherlands",
+      "notes": "UAI 2026, August 17-21, 2026 in Amsterdam. 42nd edition. UAI 2025 acceptance rate cited.",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "icassp",
+      "name": "ICASSP",
+      "fullName": "IEEE International Conference on Acoustics, Speech and Signal Processing",
+      "type": "conference",
+      "topics": [
+        "signal-processing",
+        "image-processing",
+        "machine-learning",
+        "deep-learning",
+        "multimedia"
+      ],
+      "website": "https://2027.ieeeicassp.org/",
+      "publisher": "IEEE",
+      "rankings": {
+        "scopus": true,
+        "isi": true,
+        "dblp": true,
+        "core": "B"
+      },
+      "frequency": "annual",
+      "acceptanceRate": 0.49,
+      "location": "Toronto, Canada (2027)",
+      "notes": "Flagship signal processing conference; ICASSP 2027 dates 16-21 May 2027, deadlines TBA",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "icip",
+      "name": "ICIP",
+      "fullName": "IEEE International Conference on Image Processing",
+      "type": "conference",
+      "topics": [
+        "image-processing",
+        "computer-vision",
+        "signal-processing",
+        "deep-learning",
+        "low-level-vision"
+      ],
+      "website": "https://2026.ieeeicip.org/",
+      "publisher": "IEEE",
+      "rankings": {
+        "scopus": true,
+        "isi": true,
+        "dblp": true,
+        "core": "B"
+      },
+      "deadlines": [
+        {
+          "year": 2026,
+          "kind": "full-paper",
+          "date": "2026-02-04",
+          "timezone": "AoE",
+          "note": "Grace period for completing started submissions until Feb 11, 2026"
+        }
+      ],
+      "frequency": "annual",
+      "location": "Tampere, Finland (2026)",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "icpr",
+      "name": "ICPR",
+      "fullName": "International Conference on Pattern Recognition",
+      "type": "conference",
+      "topics": [
+        "pattern-recognition",
+        "computer-vision",
+        "machine-learning",
+        "deep-learning",
+        "classification"
+      ],
+      "website": "https://icpr2026.org/",
+      "publisher": "Springer",
+      "rankings": {
+        "scopus": true,
+        "dblp": true,
+        "core": "B"
+      },
+      "deadlines": [
+        {
+          "year": 2026,
+          "kind": "notification",
+          "date": "2026-03-31",
+          "timezone": "AoE"
+        }
+      ],
+      "frequency": "biannual",
+      "location": "(2026 edition, 17-22 August 2026)",
+      "notes": "IAPR flagship; held biannually (even years). Main submission deadline already passed (Jan 2026)",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "icra",
+      "name": "ICRA",
+      "fullName": "IEEE International Conference on Robotics and Automation",
+      "type": "conference",
+      "topics": [
+        "robotics",
+        "autonomous-driving",
+        "computer-vision",
+        "machine-learning",
+        "3d-vision"
+      ],
+      "website": "https://www.ieee-ras.org/conferences-workshops/fully-sponsored/icra/",
+      "publisher": "IEEE",
+      "rankings": {
+        "scopus": true,
+        "isi": true,
+        "dblp": true,
+        "core": "A*"
+      },
+      "frequency": "annual",
+      "acceptanceRate": 0.45,
+      "location": "(ICRA 2027 May 24-28, 2027)",
+      "notes": "Top robotics conference; ICRA 2026 submissions closed; 2027 deadlines not yet announced",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "iros",
+      "name": "IROS",
+      "fullName": "IEEE/RSJ International Conference on Intelligent Robots and Systems",
+      "type": "conference",
+      "topics": [
+        "robotics",
+        "computer-vision",
+        "machine-learning",
+        "3d-vision",
+        "autonomous-driving"
+      ],
+      "website": "https://2026.ieee-iros.org/",
+      "publisher": "IEEE",
+      "rankings": {
+        "scopus": true,
+        "isi": true,
+        "dblp": true,
+        "core": "A"
+      },
+      "deadlines": [
+        {
+          "year": 2026,
+          "kind": "notification",
+          "date": "2026-06-16"
+        },
+        {
+          "year": 2026,
+          "kind": "camera-ready",
+          "date": "2026-07-10"
+        }
+      ],
+      "frequency": "annual",
+      "location": "Pittsburgh, USA (2026)",
+      "notes": "Submission deadline March 2, 2026 already passed; key remaining 2026 dates listed",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "rss",
+      "name": "RSS",
+      "fullName": "Robotics: Science and Systems",
+      "type": "conference",
+      "topics": [
+        "robotics",
+        "computer-vision",
+        "machine-learning",
+        "3d-vision"
+      ],
+      "website": "https://roboticsconference.org/",
+      "publisher": "RSS Foundation",
+      "rankings": {
+        "dblp": true,
+        "core": "unranked"
+      },
+      "frequency": "annual",
+      "acceptanceRate": 0.295,
+      "location": "Sydney, Australia (2026)",
+      "notes": "Highly selective robotics venue; 2026 submission deadlines already passed (late January 2026)",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "corl",
+      "name": "CoRL",
+      "fullName": "Conference on Robot Learning",
+      "type": "conference",
+      "topics": [
+        "robotics",
+        "machine-learning",
+        "deep-learning",
+        "computer-vision",
+        "vision-language"
+      ],
+      "website": "https://www.corl.org/",
+      "publisher": "PMLR",
+      "rankings": {
+        "dblp": true,
+        "core": "unranked"
+      },
+      "deadlines": [
+        {
+          "year": 2026,
+          "kind": "abstract",
+          "date": "2026-05-26",
+          "timezone": "UTC"
+        },
+        {
+          "year": 2026,
+          "kind": "full-paper",
+          "date": "2026-05-29",
+          "timezone": "UTC"
+        }
+      ],
+      "frequency": "annual",
+      "location": "Austin, Texas, USA (2026)",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "isbi",
+      "name": "ISBI",
+      "fullName": "IEEE International Symposium on Biomedical Imaging",
+      "type": "conference",
+      "topics": [
+        "medical-imaging",
+        "image-processing",
+        "deep-learning",
+        "segmentation",
+        "machine-learning"
+      ],
+      "website": "https://biomedicalimaging.org/2026/",
+      "publisher": "IEEE",
+      "rankings": {
+        "scopus": true,
+        "isi": true,
+        "dblp": true
+      },
+      "frequency": "annual",
+      "location": "London, UK (2026, 8-11 April)",
+      "notes": "ISBI 2026 deadlines already passed (Nov 2025); ISBI 2027 deadlines not yet announced",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "ipmi",
+      "name": "IPMI",
+      "fullName": "Information Processing in Medical Imaging",
+      "type": "conference",
+      "topics": [
+        "medical-imaging",
+        "image-processing",
+        "deep-learning",
+        "machine-learning",
+        "segmentation"
+      ],
+      "website": "https://2027.ipmi-conf.org",
+      "publisher": "Springer",
+      "rankings": {
+        "scopus": true,
+        "dblp": true
+      },
+      "frequency": "biannual",
+      "location": "Quebec, Canada (2027, June 27 - July 02, estimated)",
+      "notes": "Highly selective biennial conference (odd years); IPMI 2027 deadlines not yet announced",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "midl",
+      "name": "MIDL",
+      "fullName": "Medical Imaging with Deep Learning",
+      "type": "conference",
+      "topics": [
+        "medical-imaging",
+        "deep-learning",
+        "machine-learning",
+        "image-processing",
+        "segmentation"
+      ],
+      "website": "https://2026.midl.io/",
+      "publisher": "PMLR",
+      "rankings": {
+        "dblp": true
+      },
+      "deadlines": [
+        {
+          "year": 2026,
+          "kind": "full-paper",
+          "date": "2026-04-15",
+          "timezone": "AoE",
+          "note": "Short papers track"
+        },
+        {
+          "year": 2026,
+          "kind": "notification",
+          "date": "2026-05-09",
+          "note": "Short papers"
+        },
+        {
+          "year": 2026,
+          "kind": "camera-ready",
+          "date": "2026-05-15",
+          "note": "Short papers"
+        }
+      ],
+      "frequency": "annual",
+      "location": "Taipei, Taiwan (2026)",
+      "notes": "Full paper deadline (Dec 2025) already passed; short papers track still upcoming",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "igarss",
+      "name": "IGARSS",
+      "fullName": "IEEE International Geoscience and Remote Sensing Symposium",
+      "type": "conference",
+      "topics": [
+        "remote-sensing",
+        "image-processing",
+        "signal-processing",
+        "machine-learning",
+        "deep-learning"
+      ],
+      "website": "https://2026.ieeeigarss.org/",
+      "publisher": "IEEE",
+      "rankings": {
+        "scopus": true,
+        "isi": true,
+        "dblp": true,
+        "core": "C"
+      },
+      "frequency": "annual",
+      "location": "Washington, D.C., USA (2026, 9-14 August)",
+      "notes": "IGARSS 2026 paper deadline (Jan 10, 2026) already passed",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "avss",
+      "name": "AVSS",
+      "fullName": "IEEE International Conference on Advanced Video and Signal-Based Surveillance",
+      "type": "conference",
+      "topics": [
+        "surveillance",
+        "video-analysis",
+        "computer-vision",
+        "tracking",
+        "signal-processing"
+      ],
+      "website": "https://www.avss2026.org/",
+      "publisher": "IEEE",
+      "rankings": {
+        "scopus": true,
+        "dblp": true,
+        "core": "B"
+      },
+      "deadlines": [
+        {
+          "year": 2026,
+          "kind": "full-paper",
+          "date": "2026-05-04",
+          "note": "Round 2 paper submission"
+        },
+        {
+          "year": 2026,
+          "kind": "notification",
+          "date": "2026-05-11",
+          "note": "Round 2"
+        },
+        {
+          "year": 2026,
+          "kind": "camera-ready",
+          "date": "2026-07-01"
+        }
+      ],
+      "frequency": "annual",
+      "location": "Lecce, Italy (2026, Aug 31 - Sep 3)",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "icme",
+      "name": "ICME",
+      "fullName": "IEEE International Conference on Multimedia and Expo",
+      "type": "conference",
+      "topics": [
+        "multimedia",
+        "computer-vision",
+        "video-analysis",
+        "signal-processing",
+        "deep-learning"
+      ],
+      "website": "https://2026.ieeeicme.org/",
+      "publisher": "IEEE",
+      "rankings": {
+        "scopus": true,
+        "isi": true,
+        "dblp": true,
+        "core": "A"
+      },
+      "frequency": "annual",
+      "location": "Bangkok, Thailand (2026, July 5-9)",
+      "notes": "ICME 2026 deadline (Dec 31, 2025) already passed",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "icmr",
+      "name": "ICMR",
+      "fullName": "ACM International Conference on Multimedia Retrieval",
+      "type": "conference",
+      "topics": [
+        "multimedia",
+        "information-retrieval",
+        "computer-vision",
+        "deep-learning",
+        "vision-language"
+      ],
+      "website": "https://icmr2026.org/",
+      "publisher": "ACM",
+      "rankings": {
+        "scopus": true,
+        "dblp": true,
+        "core": "B"
+      },
+      "frequency": "annual",
+      "location": "Amsterdam, Netherlands (2026, June 16-19)",
+      "notes": "ICMR 2026 deadlines (Feb 2026) already passed",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "fg",
+      "name": "FG",
+      "fullName": "IEEE International Conference on Automatic Face and Gesture Recognition",
+      "type": "conference",
+      "aliases": [
+        "FGR"
+      ],
+      "topics": [
+        "face-recognition",
+        "biometrics",
+        "human-pose",
+        "computer-vision",
+        "deep-learning"
+      ],
+      "website": "https://fg2026.ieee-biometrics.org/",
+      "publisher": "IEEE",
+      "rankings": {
+        "scopus": true,
+        "dblp": true,
+        "core": "B"
+      },
+      "frequency": "annual",
+      "location": "Kyoto, Japan (2026, May 25-29)",
+      "notes": "FG 2026 paper deadlines (Jan 2026) already passed",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "icdar",
+      "name": "ICDAR",
+      "fullName": "International Conference on Document Analysis and Recognition",
+      "type": "conference",
+      "topics": [
+        "document-analysis",
+        "pattern-recognition",
+        "computer-vision",
+        "deep-learning",
+        "nlp-multimodal"
+      ],
+      "website": "https://icdar2026.org/",
+      "publisher": "Springer",
+      "rankings": {
+        "scopus": true,
+        "dblp": true,
+        "core": "A"
+      },
+      "deadlines": [
+        {
+          "year": 2026,
+          "kind": "abstract",
+          "date": "2026-02-13",
+          "timezone": "AoE",
+          "note": "Abstract + title deadline (already passed for main track; check journal track)"
+        },
+        {
+          "year": 2026,
+          "kind": "rebuttal",
+          "date": "2026-04-24",
+          "timezone": "AoE"
+        },
+        {
+          "year": 2026,
+          "kind": "notification",
+          "date": "2026-05-15",
+          "timezone": "AoE"
+        },
+        {
+          "year": 2026,
+          "kind": "camera-ready",
+          "date": "2026-06-15",
+          "timezone": "AoE"
+        }
+      ],
+      "frequency": "biannual",
+      "location": "Vienna, Austria (2026, Aug 30 - Sep 4)",
+      "notes": "Held biennially (even years)",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "acpr",
+      "name": "ACPR",
+      "fullName": "Asian Conference on Pattern Recognition",
+      "type": "conference",
+      "topics": [
+        "pattern-recognition",
+        "computer-vision",
+        "machine-learning",
+        "deep-learning",
+        "image-processing"
+      ],
+      "website": "https://link.springer.com/conference/acpr",
+      "publisher": "Springer",
+      "rankings": {
+        "scopus": true,
+        "dblp": true
+      },
+      "frequency": "biannual",
+      "acceptanceRate": 0.508,
+      "notes": "IAPR-sponsored; biennial (odd years). ACPR 2025 was held in Gold Coast, Australia (60/118 papers accepted). ACPR 2027 not yet announced",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "mva",
+      "name": "MVA",
+      "fullName": "IAPR International Conference on Machine Vision Applications",
+      "type": "conference",
+      "topics": [
+        "computer-vision",
+        "machine-learning",
+        "image-processing",
+        "pattern-recognition",
+        "deep-learning"
+      ],
+      "website": "https://www.mva-org.jp/",
+      "publisher": "IEEE",
+      "rankings": {
+        "dblp": true,
+        "core": "unranked"
+      },
+      "frequency": "biannual",
+      "location": "Japan",
+      "notes": "Japan-based biennial conference (odd years); MVA 2027 deadlines not yet announced",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "mapr",
+      "name": "MAPR",
+      "fullName": "International Conference on Multimedia Analysis and Pattern Recognition",
+      "type": "conference",
+      "topics": [
+        "multimedia",
+        "pattern-recognition",
+        "computer-vision",
+        "deep-learning",
+        "machine-learning"
+      ],
+      "website": "https://mapr.uit.edu.vn/",
+      "publisher": "IEEE",
+      "rankings": {
+        "dblp": true,
+        "core": "unranked"
+      },
+      "deadlines": [
+        {
+          "year": 2026,
+          "kind": "full-paper",
+          "date": "2026-04-30"
+        },
+        {
+          "year": 2026,
+          "kind": "notification",
+          "date": "2026-06-30"
+        },
+        {
+          "year": 2026,
+          "kind": "camera-ready",
+          "date": "2026-07-06"
+        }
+      ],
+      "frequency": "annual",
+      "location": "Hue City, Vietnam (2026, August 13-14)",
+      "notes": "Vietnam-based regional conference; sponsored by Vietnam Association on Pattern Recognition (VAPR)",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "kse",
+      "name": "KSE",
+      "fullName": "International Conference on Knowledge and Systems Engineering",
+      "type": "conference",
+      "topics": [
+        "knowledge-engineering",
+        "machine-learning",
+        "data-mining",
+        "nlp-multimodal",
+        "pattern-recognition"
+      ],
+      "website": "https://kse2026.kse-conferences.org/",
+      "publisher": "IEEE",
+      "rankings": {
+        "scopus": true,
+        "dblp": true,
+        "core": "unranked"
+      },
+      "deadlines": [
+        {
+          "year": 2026,
+          "kind": "full-paper",
+          "date": "2026-07-15"
+        },
+        {
+          "year": 2026,
+          "kind": "notification",
+          "date": "2026-08-31"
+        },
+        {
+          "year": 2026,
+          "kind": "camera-ready",
+          "date": "2026-09-10"
+        }
+      ],
+      "frequency": "annual",
+      "location": "Kanazawa, Japan (2026, November 11-14)",
+      "notes": "Vietnam-originated regional conference (founded by Vietnamese institutions); 2026 edition hosted in Japan",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "rivf",
+      "name": "RIVF",
+      "fullName": "RIVF International Conference on Computing and Communication Technologies",
+      "type": "conference",
+      "aliases": [
+        "Rencontres en Informatique Vietnam-France"
+      ],
+      "topics": [
+        "machine-learning",
+        "computer-vision",
+        "signal-processing",
+        "data-mining",
+        "pattern-recognition"
+      ],
+      "website": "https://rivf2026.org/",
+      "publisher": "IEEE",
+      "rankings": {
+        "scopus": true,
+        "dblp": true,
+        "core": "unranked"
+      },
+      "deadlines": [
+        {
+          "year": 2026,
+          "kind": "full-paper",
+          "date": "2026-07-15"
+        },
+        {
+          "year": 2026,
+          "kind": "full-paper",
+          "date": "2026-07-30",
+          "note": "Extended deadline"
+        },
+        {
+          "year": 2026,
+          "kind": "notification",
+          "date": "2026-09-30"
+        },
+        {
+          "year": 2026,
+          "kind": "camera-ready",
+          "date": "2026-10-30"
+        }
+      ],
+      "frequency": "annual",
+      "location": "VinUniversity, Hanoi, Vietnam (2026, December 18-20)",
+      "notes": "Vietnam-based regional conference",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "tencon",
+      "name": "TENCON",
+      "fullName": "IEEE Region 10 Conference",
+      "type": "conference",
+      "topics": [
+        "signal-processing",
+        "machine-learning",
+        "computer-vision",
+        "pattern-recognition",
+        "image-processing"
+      ],
+      "website": "https://tencon2026.ieee.id/",
+      "publisher": "IEEE",
+      "rankings": {
+        "scopus": true,
+        "dblp": true,
+        "core": "C"
+      },
+      "frequency": "annual",
+      "location": "Bali, Indonesia (2026, October 10-13)",
+      "notes": "Asia-Pacific regional flagship conference of IEEE Region 10",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "ijcv",
+      "name": "IJCV",
+      "fullName": "International Journal of Computer Vision",
+      "aliases": [
+        "Int. J. Comput. Vision"
+      ],
+      "type": "journal",
+      "topics": [
+        "computer-vision",
+        "deep-learning",
+        "pattern-recognition",
+        "image-processing",
+        "segmentation",
+        "object-detection",
+        "3d-vision",
+        "scene-understanding"
+      ],
+      "website": "https://www.springer.com/journal/11263",
+      "publisher": "Springer",
+      "issn": "0920-5691",
+      "eIssn": "1573-1405",
+      "rankings": {
+        "scopus": true,
+        "isi": true,
+        "dblp": true,
+        "scimagoQuartile": "Q1",
+        "sjr": 4.247,
+        "jcrImpactFactor": 11.6,
+        "jcrQuartile": "Q1",
+        "citeScore": 29.0,
+        "hIndex": 232,
+        "ccf": "A"
+      },
+      "frequency": "rolling",
+      "notes": "Premier computer vision journal alongside TPAMI; CCF A.",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "ieee-tip",
+      "name": "TIP",
+      "fullName": "IEEE Transactions on Image Processing",
+      "aliases": [
+        "IEEE Trans. Image Process."
+      ],
+      "type": "journal",
+      "topics": [
+        "image-processing",
+        "computer-vision",
+        "low-level-vision",
+        "signal-processing",
+        "deep-learning",
+        "segmentation",
+        "pattern-recognition"
+      ],
+      "website": "https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=83",
+      "publisher": "IEEE",
+      "issn": "1057-7149",
+      "eIssn": "1941-0042",
+      "rankings": {
+        "scopus": true,
+        "isi": true,
+        "dblp": true,
+        "scimagoQuartile": "Q1",
+        "sjr": 2.683,
+        "jcrImpactFactor": 10.8,
+        "jcrQuartile": "Q1",
+        "citeScore": 21.8,
+        "hIndex": 309,
+        "ccf": "A"
+      },
+      "frequency": "rolling",
+      "notes": "Top IEEE journal for image processing; CCF A.",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "cviu",
+      "name": "CVIU",
+      "fullName": "Computer Vision and Image Understanding",
+      "aliases": [
+        "Comput. Vis. Image Underst."
+      ],
+      "type": "journal",
+      "topics": [
+        "computer-vision",
+        "image-processing",
+        "pattern-recognition",
+        "scene-understanding",
+        "deep-learning",
+        "segmentation"
+      ],
+      "website": "https://www.sciencedirect.com/journal/computer-vision-and-image-understanding",
+      "publisher": "Elsevier",
+      "issn": "1077-3142",
+      "eIssn": "1090-235X",
+      "rankings": {
+        "scopus": true,
+        "isi": true,
+        "dblp": true,
+        "scimagoQuartile": "Q1",
+        "sjr": 1.215,
+        "jcrImpactFactor": 4.3,
+        "jcrQuartile": "Q1",
+        "citeScore": 11.5,
+        "hIndex": 161,
+        "ccf": "B"
+      },
+      "frequency": "rolling",
+      "notes": "Established CV journal; CCF B.",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "pattern-recognition",
+      "name": "PR",
+      "fullName": "Pattern Recognition",
+      "aliases": [
+        "Pattern Recognit."
+      ],
+      "type": "journal",
+      "topics": [
+        "pattern-recognition",
+        "computer-vision",
+        "machine-learning",
+        "deep-learning",
+        "image-processing",
+        "classification",
+        "segmentation"
+      ],
+      "website": "https://www.sciencedirect.com/journal/pattern-recognition",
+      "publisher": "Elsevier",
+      "issn": "0031-3203",
+      "eIssn": "1873-5142",
+      "rankings": {
+        "scopus": true,
+        "isi": true,
+        "dblp": true,
+        "scimagoQuartile": "Q1",
+        "sjr": 1.756,
+        "jcrImpactFactor": 7.5,
+        "jcrQuartile": "Q1",
+        "citeScore": 16.4,
+        "hIndex": 256,
+        "ccf": "B"
+      },
+      "frequency": "rolling",
+      "notes": "Flagship pattern recognition journal; CCF B.",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "ieee-tmm",
+      "name": "TMM",
+      "fullName": "IEEE Transactions on Multimedia",
+      "aliases": [
+        "IEEE Trans. Multimedia"
+      ],
+      "type": "journal",
+      "topics": [
+        "multimedia",
+        "video-analysis",
+        "image-processing",
+        "computer-vision",
+        "signal-processing",
+        "deep-learning",
+        "information-retrieval"
+      ],
+      "website": "https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=6046",
+      "publisher": "IEEE",
+      "issn": "1520-9210",
+      "eIssn": "1941-0077",
+      "rankings": {
+        "scopus": true,
+        "isi": true,
+        "dblp": true,
+        "scimagoQuartile": "Q1",
+        "sjr": 1.574,
+        "jcrImpactFactor": 8.4,
+        "jcrQuartile": "Q1",
+        "citeScore": 16.6,
+        "hIndex": 184,
+        "ccf": "B"
+      },
+      "frequency": "rolling",
+      "notes": "Top multimedia journal; CCF B.",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "ieee-tcsvt",
+      "name": "TCSVT",
+      "fullName": "IEEE Transactions on Circuits and Systems for Video Technology",
+      "aliases": [
+        "IEEE Trans. Circuits Syst. Video Technol."
+      ],
+      "type": "journal",
+      "topics": [
+        "video-analysis",
+        "image-processing",
+        "multimedia",
+        "signal-processing",
+        "computer-vision",
+        "deep-learning",
+        "tracking"
+      ],
+      "website": "https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=76",
+      "publisher": "IEEE",
+      "issn": "1051-8215",
+      "eIssn": "1558-2205",
+      "rankings": {
+        "scopus": true,
+        "isi": true,
+        "dblp": true,
+        "scimagoQuartile": "Q1",
+        "sjr": 1.547,
+        "jcrImpactFactor": 8.3,
+        "jcrQuartile": "Q1",
+        "citeScore": 16.6,
+        "hIndex": 218,
+        "ccf": "B"
+      },
+      "frequency": "rolling",
+      "notes": "Major video technology journal; CCF B.",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "ieee-tnnls",
+      "name": "TNNLS",
+      "fullName": "IEEE Transactions on Neural Networks and Learning Systems",
+      "aliases": [
+        "IEEE Trans. Neural Netw. Learn. Syst."
+      ],
+      "type": "journal",
+      "topics": [
+        "machine-learning",
+        "deep-learning",
+        "pattern-recognition",
+        "classification",
+        "data-mining"
+      ],
+      "website": "https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=5962385",
+      "publisher": "IEEE",
+      "issn": "2162-237X",
+      "eIssn": "2162-2388",
+      "rankings": {
+        "scopus": true,
+        "isi": true,
+        "dblp": true,
+        "scimagoQuartile": "Q1",
+        "sjr": 3.465,
+        "jcrImpactFactor": 10.2,
+        "jcrQuartile": "Q1",
+        "citeScore": 24.3,
+        "hIndex": 250,
+        "ccf": "B"
+      },
+      "frequency": "rolling",
+      "notes": "Premier neural networks / learning systems journal; CCF B.",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "ieee-tmi",
+      "name": "TMI",
+      "fullName": "IEEE Transactions on Medical Imaging",
+      "aliases": [
+        "IEEE Trans. Med. Imag."
+      ],
+      "type": "journal",
+      "topics": [
+        "medical-imaging",
+        "image-processing",
+        "deep-learning",
+        "segmentation",
+        "computer-vision",
+        "pattern-recognition"
+      ],
+      "website": "https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=42",
+      "publisher": "IEEE",
+      "issn": "0278-0062",
+      "eIssn": "1558-254X",
+      "rankings": {
+        "scopus": true,
+        "isi": true,
+        "dblp": true,
+        "scimagoQuartile": "Q1",
+        "sjr": 2.487,
+        "jcrImpactFactor": 10.6,
+        "jcrQuartile": "Q1",
+        "citeScore": 17.9,
+        "hIndex": 273,
+        "ccf": "B"
+      },
+      "frequency": "rolling",
+      "notes": "Top medical imaging journal; CCF B.",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "media",
+      "name": "MIA",
+      "fullName": "Medical Image Analysis",
+      "aliases": [
+        "Med. Image Anal.",
+        "MedIA"
+      ],
+      "type": "journal",
+      "topics": [
+        "medical-imaging",
+        "image-processing",
+        "segmentation",
+        "deep-learning",
+        "computer-vision",
+        "pattern-recognition"
+      ],
+      "website": "https://www.sciencedirect.com/journal/medical-image-analysis",
+      "publisher": "Elsevier",
+      "issn": "1361-8415",
+      "eIssn": "1361-8423",
+      "rankings": {
+        "scopus": true,
+        "isi": true,
+        "dblp": true,
+        "scimagoQuartile": "Q1",
+        "sjr": 3.244,
+        "jcrImpactFactor": 10.7,
+        "jcrQuartile": "Q1",
+        "citeScore": 22.1,
+        "hIndex": 184,
+        "ccf": "B"
+      },
+      "frequency": "rolling",
+      "notes": "Flagship medical image analysis journal; CCF B.",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "jmlr",
+      "name": "JMLR",
+      "fullName": "Journal of Machine Learning Research",
+      "aliases": [
+        "J. Mach. Learn. Res."
+      ],
+      "type": "journal",
+      "topics": [
+        "machine-learning",
+        "deep-learning",
+        "pattern-recognition",
+        "data-mining",
+        "classification"
+      ],
+      "website": "https://www.jmlr.org/",
+      "publisher": "JMLR / MIT Press",
+      "issn": "1532-4435",
+      "eIssn": "1533-7928",
+      "rankings": {
+        "scopus": true,
+        "isi": true,
+        "dblp": true,
+        "scimagoQuartile": "Q1",
+        "sjr": 1.992,
+        "jcrImpactFactor": 6.0,
+        "jcrQuartile": "Q1",
+        "citeScore": 12.5,
+        "hIndex": 232,
+        "ccf": "A"
+      },
+      "frequency": "rolling",
+      "notes": "Premier open-access ML journal; CCF A.",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "ieee-tai",
+      "name": "T-AI",
+      "fullName": "IEEE Transactions on Artificial Intelligence",
+      "aliases": [
+        "IEEE Trans. Artif. Intell.",
+        "TAI"
+      ],
+      "type": "journal",
+      "topics": [
+        "machine-learning",
+        "deep-learning",
+        "pattern-recognition",
+        "knowledge-engineering",
+        "data-mining"
+      ],
+      "website": "https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=9078688",
+      "publisher": "IEEE",
+      "issn": "2691-4581",
+      "eIssn": "2691-4581",
+      "rankings": {
+        "scopus": true,
+        "isi": true,
+        "dblp": true,
+        "scimagoQuartile": "Q1",
+        "sjr": 1.102,
+        "citeScore": 7.2,
+        "hIndex": 28
+      },
+      "frequency": "rolling",
+      "notes": "Newer IEEE AI flagship (launched 2020); JCR coverage growing.",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "neurocomputing",
+      "name": "Neurocomputing",
+      "fullName": "Neurocomputing",
+      "aliases": [
+        "Neurocomputing (Elsevier)"
+      ],
+      "type": "journal",
+      "topics": [
+        "machine-learning",
+        "deep-learning",
+        "pattern-recognition",
+        "computer-vision",
+        "classification",
+        "data-mining"
+      ],
+      "website": "https://www.sciencedirect.com/journal/neurocomputing",
+      "publisher": "Elsevier",
+      "issn": "0925-2312",
+      "eIssn": "1872-8286",
+      "rankings": {
+        "scopus": true,
+        "isi": true,
+        "dblp": true,
+        "scimagoQuartile": "Q1",
+        "sjr": 1.444,
+        "jcrImpactFactor": 5.5,
+        "jcrQuartile": "Q1",
+        "citeScore": 13.1,
+        "hIndex": 166,
+        "ccf": "C"
+      },
+      "frequency": "rolling",
+      "notes": "Broad neural-computing journal; CCF C.",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "prl",
+      "name": "PRL",
+      "fullName": "Pattern Recognition Letters",
+      "aliases": [
+        "Pattern Recognit. Lett."
+      ],
+      "type": "journal",
+      "topics": [
+        "pattern-recognition",
+        "computer-vision",
+        "machine-learning",
+        "image-processing",
+        "classification",
+        "deep-learning"
+      ],
+      "website": "https://www.sciencedirect.com/journal/pattern-recognition-letters",
+      "publisher": "Elsevier",
+      "issn": "0167-8655",
+      "eIssn": "1872-7344",
+      "rankings": {
+        "scopus": true,
+        "isi": true,
+        "dblp": true,
+        "scimagoQuartile": "Q1",
+        "sjr": 1.013,
+        "jcrImpactFactor": 5.1,
+        "jcrQuartile": "Q1",
+        "citeScore": 12.6,
+        "hIndex": 178,
+        "ccf": "C"
+      },
+      "frequency": "rolling",
+      "notes": "Short-format pattern recognition journal; CCF C.",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "ivc",
+      "name": "IVC",
+      "fullName": "Image and Vision Computing",
+      "aliases": [
+        "Image Vis. Comput."
+      ],
+      "type": "journal",
+      "topics": [
+        "computer-vision",
+        "image-processing",
+        "pattern-recognition",
+        "deep-learning",
+        "scene-understanding",
+        "segmentation"
+      ],
+      "website": "https://www.sciencedirect.com/journal/image-and-vision-computing",
+      "publisher": "Elsevier",
+      "issn": "0262-8856",
+      "eIssn": "1872-8138",
+      "rankings": {
+        "scopus": true,
+        "isi": true,
+        "dblp": true,
+        "scimagoQuartile": "Q1",
+        "sjr": 1.027,
+        "jcrImpactFactor": 4.7,
+        "jcrQuartile": "Q1",
+        "citeScore": 14.0,
+        "hIndex": 122,
+        "ccf": "C"
+      },
+      "frequency": "rolling",
+      "notes": "Established CV journal; CCF C.",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "mva-journal",
+      "name": "MVA",
+      "fullName": "Machine Vision and Applications",
+      "aliases": [
+        "Mach. Vis. Appl."
+      ],
+      "type": "journal",
+      "topics": [
+        "computer-vision",
+        "image-processing",
+        "pattern-recognition",
+        "robotics",
+        "deep-learning",
+        "scene-understanding"
+      ],
+      "website": "https://www.springer.com/journal/138",
+      "publisher": "Springer",
+      "issn": "0932-8092",
+      "eIssn": "1432-1769",
+      "rankings": {
+        "scopus": true,
+        "isi": true,
+        "dblp": true,
+        "scimagoQuartile": "Q2",
+        "sjr": 0.687,
+        "jcrImpactFactor": 2.4,
+        "jcrQuartile": "Q3",
+        "citeScore": 7.3,
+        "hIndex": 79,
+        "ccf": "C"
+      },
+      "frequency": "rolling",
+      "notes": "Applied machine vision journal; CCF C.",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "jvcir",
+      "name": "JVCIR",
+      "fullName": "Journal of Visual Communication and Image Representation",
+      "aliases": [
+        "J. Vis. Commun. Image Represent."
+      ],
+      "type": "journal",
+      "topics": [
+        "image-processing",
+        "multimedia",
+        "video-analysis",
+        "computer-vision",
+        "signal-processing",
+        "low-level-vision"
+      ],
+      "website": "https://www.sciencedirect.com/journal/journal-of-visual-communication-and-image-representation",
+      "publisher": "Elsevier",
+      "issn": "1047-3203",
+      "eIssn": "1095-9076",
+      "rankings": {
+        "scopus": true,
+        "isi": true,
+        "dblp": true,
+        "scimagoQuartile": "Q2",
+        "sjr": 0.673,
+        "jcrImpactFactor": 2.6,
+        "jcrQuartile": "Q2",
+        "citeScore": 5.9,
+        "hIndex": 98,
+        "ccf": "C"
+      },
+      "frequency": "rolling",
+      "notes": "Visual communication / image representation; CCF C.",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "spic",
+      "name": "SP:IC",
+      "fullName": "Signal Processing: Image Communication",
+      "aliases": [
+        "Signal Process. Image Commun."
+      ],
+      "type": "journal",
+      "topics": [
+        "signal-processing",
+        "image-processing",
+        "video-analysis",
+        "multimedia",
+        "low-level-vision"
+      ],
+      "website": "https://www.sciencedirect.com/journal/signal-processing-image-communication",
+      "publisher": "Elsevier",
+      "issn": "0923-5965",
+      "eIssn": "1879-2677",
+      "rankings": {
+        "scopus": true,
+        "isi": true,
+        "dblp": true,
+        "scimagoQuartile": "Q2",
+        "sjr": 0.741,
+        "jcrImpactFactor": 3.4,
+        "jcrQuartile": "Q2",
+        "citeScore": 8.5,
+        "hIndex": 91,
+        "ccf": "C"
+      },
+      "frequency": "rolling",
+      "notes": "Image communication / signal processing; CCF C.",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "ieee-spl",
+      "name": "SPL",
+      "fullName": "IEEE Signal Processing Letters",
+      "aliases": [
+        "IEEE Signal Process. Lett."
+      ],
+      "type": "journal",
+      "topics": [
+        "signal-processing",
+        "image-processing",
+        "machine-learning",
+        "pattern-recognition"
+      ],
+      "website": "https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=97",
+      "publisher": "IEEE",
+      "issn": "1070-9908",
+      "eIssn": "1558-2361",
+      "rankings": {
+        "scopus": true,
+        "isi": true,
+        "dblp": true,
+        "scimagoQuartile": "Q1",
+        "sjr": 1.071,
+        "jcrImpactFactor": 3.2,
+        "jcrQuartile": "Q2",
+        "citeScore": 7.4,
+        "hIndex": 159,
+        "ccf": "C"
+      },
+      "frequency": "rolling",
+      "notes": "Short-format signal processing letters; CCF C.",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "ieee-access",
+      "name": "IEEE Access",
+      "fullName": "IEEE Access",
+      "aliases": [
+        "Access"
+      ],
+      "type": "journal",
+      "topics": [
+        "computer-vision",
+        "deep-learning",
+        "machine-learning",
+        "signal-processing",
+        "image-processing"
+      ],
+      "website": "https://ieeeaccess.ieee.org/",
+      "publisher": "IEEE",
+      "eIssn": "2169-3536",
+      "rankings": {
+        "scopus": true,
+        "isi": true,
+        "dblp": true,
+        "scimagoQuartile": "Q1",
+        "sjr": 0.96,
+        "jcrImpactFactor": 3.4,
+        "jcrQuartile": "Q2",
+        "citeScore": 9.8,
+        "hIndex": 258
+      },
+      "frequency": "rolling",
+      "notes": "Open access multidisciplinary journal; rapid review",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "sensors-mdpi",
+      "name": "Sensors",
+      "fullName": "Sensors (MDPI)",
+      "aliases": [
+        "MDPI Sensors"
+      ],
+      "type": "journal",
+      "topics": [
+        "signal-processing",
+        "image-processing",
+        "computer-vision",
+        "machine-learning",
+        "remote-sensing"
+      ],
+      "website": "https://www.mdpi.com/journal/sensors",
+      "publisher": "MDPI",
+      "eIssn": "1424-8220",
+      "rankings": {
+        "scopus": true,
+        "isi": true,
+        "dblp": true,
+        "scimagoQuartile": "Q1",
+        "sjr": 0.78,
+        "jcrImpactFactor": 3.4,
+        "jcrQuartile": "Q2",
+        "citeScore": 7.3,
+        "hIndex": 240
+      },
+      "frequency": "rolling",
+      "notes": "Open access; broad scope on sensing and instrumentation",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "remote-sensing-mdpi",
+      "name": "Remote Sensing",
+      "fullName": "Remote Sensing (MDPI)",
+      "aliases": [
+        "MDPI Remote Sensing",
+        "RS"
+      ],
+      "type": "journal",
+      "topics": [
+        "remote-sensing",
+        "image-processing",
+        "computer-vision",
+        "deep-learning",
+        "classification",
+        "segmentation"
+      ],
+      "website": "https://www.mdpi.com/journal/remotesensing",
+      "publisher": "MDPI",
+      "eIssn": "2072-4292",
+      "rankings": {
+        "scopus": true,
+        "isi": true,
+        "dblp": true,
+        "scimagoQuartile": "Q1",
+        "sjr": 1.09,
+        "jcrImpactFactor": 4.2,
+        "jcrQuartile": "Q1",
+        "citeScore": 8.3,
+        "hIndex": 196
+      },
+      "frequency": "rolling",
+      "notes": "Open access; remote sensing and Earth observation",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "eswa",
+      "name": "ESWA",
+      "fullName": "Expert Systems with Applications",
+      "aliases": [
+        "Expert Systems with Applications"
+      ],
+      "type": "journal",
+      "topics": [
+        "machine-learning",
+        "deep-learning",
+        "pattern-recognition",
+        "data-mining",
+        "knowledge-engineering"
+      ],
+      "website": "https://www.sciencedirect.com/journal/expert-systems-with-applications",
+      "publisher": "Elsevier",
+      "issn": "0957-4174",
+      "rankings": {
+        "scopus": true,
+        "isi": true,
+        "dblp": true,
+        "scimagoQuartile": "Q1",
+        "sjr": 1.87,
+        "jcrImpactFactor": 7.5,
+        "jcrQuartile": "Q1",
+        "citeScore": 13.8,
+        "hIndex": 287
+      },
+      "frequency": "rolling",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "kbs",
+      "name": "KBS",
+      "fullName": "Knowledge-Based Systems",
+      "aliases": [
+        "Knowledge-Based Systems"
+      ],
+      "type": "journal",
+      "topics": [
+        "machine-learning",
+        "deep-learning",
+        "knowledge-engineering",
+        "data-mining",
+        "pattern-recognition"
+      ],
+      "website": "https://www.sciencedirect.com/journal/knowledge-based-systems",
+      "publisher": "Elsevier",
+      "issn": "0950-7051",
+      "rankings": {
+        "scopus": true,
+        "isi": true,
+        "dblp": true,
+        "scimagoQuartile": "Q1",
+        "sjr": 2.07,
+        "jcrImpactFactor": 7.2,
+        "jcrQuartile": "Q1",
+        "citeScore": 14.8,
+        "hIndex": 167
+      },
+      "frequency": "rolling",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "information-sciences",
+      "name": "Information Sciences",
+      "fullName": "Information Sciences",
+      "aliases": [
+        "Inf. Sci.",
+        "INS"
+      ],
+      "type": "journal",
+      "topics": [
+        "machine-learning",
+        "data-mining",
+        "pattern-recognition",
+        "information-retrieval",
+        "knowledge-engineering"
+      ],
+      "website": "https://www.sciencedirect.com/journal/information-sciences",
+      "publisher": "Elsevier",
+      "issn": "0020-0255",
+      "rankings": {
+        "scopus": true,
+        "isi": true,
+        "dblp": true,
+        "scimagoQuartile": "Q1",
+        "sjr": 2.15,
+        "jcrImpactFactor": 8.1,
+        "jcrQuartile": "Q1",
+        "citeScore": 14.0,
+        "hIndex": 219
+      },
+      "frequency": "rolling",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "mtap",
+      "name": "MTAP",
+      "fullName": "Multimedia Tools and Applications",
+      "aliases": [
+        "Multimedia Tools and Applications"
+      ],
+      "type": "journal",
+      "topics": [
+        "multimedia",
+        "image-processing",
+        "computer-vision",
+        "video-analysis",
+        "pattern-recognition"
+      ],
+      "website": "https://link.springer.com/journal/11042",
+      "publisher": "Springer",
+      "issn": "1380-7501",
+      "eIssn": "1573-7721",
+      "rankings": {
+        "scopus": true,
+        "isi": true,
+        "dblp": true,
+        "scimagoQuartile": "Q2",
+        "sjr": 0.55,
+        "jcrImpactFactor": 3.0,
+        "jcrQuartile": "Q2",
+        "citeScore": 6.7,
+        "hIndex": 99
+      },
+      "frequency": "rolling",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "ieee-tgrs",
+      "name": "IEEE TGRS",
+      "fullName": "IEEE Transactions on Geoscience and Remote Sensing",
+      "aliases": [
+        "TGRS",
+        "T-GRS"
+      ],
+      "type": "journal",
+      "topics": [
+        "remote-sensing",
+        "image-processing",
+        "deep-learning",
+        "classification",
+        "segmentation"
+      ],
+      "website": "https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=36",
+      "publisher": "IEEE",
+      "issn": "0196-2892",
+      "eIssn": "1558-0644",
+      "rankings": {
+        "scopus": true,
+        "isi": true,
+        "dblp": true,
+        "scimagoQuartile": "Q1",
+        "sjr": 2.37,
+        "jcrImpactFactor": 8.2,
+        "jcrQuartile": "Q1",
+        "citeScore": 14.1,
+        "hIndex": 318
+      },
+      "frequency": "rolling",
+      "notes": "Top-tier remote sensing journal",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "isprs-jprs",
+      "name": "ISPRS JPRS",
+      "fullName": "ISPRS Journal of Photogrammetry and Remote Sensing",
+      "aliases": [
+        "ISPRS J. Photogramm. Remote Sens."
+      ],
+      "type": "journal",
+      "topics": [
+        "remote-sensing",
+        "3d-vision",
+        "image-processing",
+        "deep-learning",
+        "segmentation"
+      ],
+      "website": "https://www.sciencedirect.com/journal/isprs-journal-of-photogrammetry-and-remote-sensing",
+      "publisher": "Elsevier",
+      "issn": "0924-2716",
+      "rankings": {
+        "scopus": true,
+        "isi": true,
+        "dblp": true,
+        "scimagoQuartile": "Q1",
+        "sjr": 3.27,
+        "jcrImpactFactor": 12.7,
+        "jcrQuartile": "Q1",
+        "citeScore": 21.0,
+        "hIndex": 207
+      },
+      "frequency": "rolling",
+      "notes": "Premier journal for photogrammetry and remote sensing",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "rse",
+      "name": "RSE",
+      "fullName": "Remote Sensing of Environment",
+      "aliases": [
+        "Remote Sens. Environ."
+      ],
+      "type": "journal",
+      "topics": [
+        "remote-sensing",
+        "image-processing",
+        "classification",
+        "segmentation"
+      ],
+      "website": "https://www.sciencedirect.com/journal/remote-sensing-of-environment",
+      "publisher": "Elsevier",
+      "issn": "0034-4257",
+      "rankings": {
+        "scopus": true,
+        "isi": true,
+        "dblp": true,
+        "scimagoQuartile": "Q1",
+        "sjr": 4.31,
+        "jcrImpactFactor": 13.5,
+        "jcrQuartile": "Q1",
+        "citeScore": 25.6,
+        "hIndex": 326
+      },
+      "frequency": "rolling",
+      "notes": "Top journal for environmental remote sensing",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "ieee-jstars",
+      "name": "IEEE JSTARS",
+      "fullName": "IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing",
+      "aliases": [
+        "JSTARS",
+        "J-STARS"
+      ],
+      "type": "journal",
+      "topics": [
+        "remote-sensing",
+        "image-processing",
+        "deep-learning",
+        "classification",
+        "segmentation"
+      ],
+      "website": "https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=4609443",
+      "publisher": "IEEE",
+      "issn": "1939-1404",
+      "eIssn": "2151-1535",
+      "rankings": {
+        "scopus": true,
+        "isi": true,
+        "dblp": true,
+        "scimagoQuartile": "Q1",
+        "sjr": 1.31,
+        "jcrImpactFactor": 4.7,
+        "jcrQuartile": "Q1",
+        "citeScore": 9.3,
+        "hIndex": 121
+      },
+      "frequency": "rolling",
+      "notes": "Open access (hybrid); applied Earth observation",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "compag",
+      "name": "COMPAG",
+      "fullName": "Computers and Electronics in Agriculture",
+      "aliases": [
+        "Comput. Electron. Agric."
+      ],
+      "type": "journal",
+      "topics": [
+        "agriculture",
+        "computer-vision",
+        "deep-learning",
+        "image-processing",
+        "classification"
+      ],
+      "website": "https://www.sciencedirect.com/journal/computers-and-electronics-in-agriculture",
+      "publisher": "Elsevier",
+      "issn": "0168-1699",
+      "rankings": {
+        "scopus": true,
+        "isi": true,
+        "dblp": true,
+        "scimagoQuartile": "Q1",
+        "sjr": 1.65,
+        "jcrImpactFactor": 7.7,
+        "jcrQuartile": "Q1",
+        "citeScore": 15.3,
+        "hIndex": 174
+      },
+      "frequency": "rolling",
+      "notes": "Top venue for agricultural AI/precision agriculture",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "ieee-jbhi",
+      "name": "IEEE J-BHI",
+      "fullName": "IEEE Journal of Biomedical and Health Informatics",
+      "aliases": [
+        "J-BHI",
+        "JBHI"
+      ],
+      "type": "journal",
+      "topics": [
+        "medical-imaging",
+        "deep-learning",
+        "machine-learning",
+        "signal-processing",
+        "classification"
+      ],
+      "website": "https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=6221020",
+      "publisher": "IEEE",
+      "issn": "2168-2194",
+      "eIssn": "2168-2208",
+      "rankings": {
+        "scopus": true,
+        "isi": true,
+        "dblp": true,
+        "scimagoQuartile": "Q1",
+        "sjr": 1.61,
+        "jcrImpactFactor": 6.7,
+        "jcrQuartile": "Q1",
+        "citeScore": 13.4,
+        "hIndex": 119
+      },
+      "frequency": "rolling",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "jdi",
+      "name": "JDI",
+      "fullName": "Journal of Digital Imaging (Journal of Imaging Informatics in Medicine)",
+      "aliases": [
+        "Journal of Imaging Informatics in Medicine",
+        "JIIM"
+      ],
+      "type": "journal",
+      "topics": [
+        "medical-imaging",
+        "deep-learning",
+        "image-processing",
+        "segmentation",
+        "classification"
+      ],
+      "website": "https://link.springer.com/journal/10278",
+      "publisher": "Springer",
+      "issn": "0897-1889",
+      "eIssn": "1618-727X",
+      "rankings": {
+        "scopus": true,
+        "isi": true,
+        "dblp": true,
+        "scimagoQuartile": "Q1",
+        "sjr": 0.93,
+        "jcrImpactFactor": 4.4,
+        "jcrQuartile": "Q2",
+        "citeScore": 7.4,
+        "hIndex": 75
+      },
+      "frequency": "rolling",
+      "notes": "Renamed to Journal of Imaging Informatics in Medicine in 2024",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "cmig",
+      "name": "CMIG",
+      "fullName": "Computerized Medical Imaging and Graphics",
+      "aliases": [
+        "Comput. Med. Imaging Graph."
+      ],
+      "type": "journal",
+      "topics": [
+        "medical-imaging",
+        "image-processing",
+        "deep-learning",
+        "segmentation",
+        "classification"
+      ],
+      "website": "https://www.sciencedirect.com/journal/computerized-medical-imaging-and-graphics",
+      "publisher": "Elsevier",
+      "issn": "0895-6111",
+      "rankings": {
+        "scopus": true,
+        "isi": true,
+        "dblp": true,
+        "scimagoQuartile": "Q1",
+        "sjr": 1.21,
+        "jcrImpactFactor": 5.4,
+        "jcrQuartile": "Q1",
+        "citeScore": 11.1,
+        "hIndex": 92
+      },
+      "frequency": "rolling",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "iet-image-processing",
+      "name": "IET Image Processing",
+      "fullName": "IET Image Processing",
+      "aliases": [
+        "IET-IPR"
+      ],
+      "type": "journal",
+      "topics": [
+        "image-processing",
+        "computer-vision",
+        "low-level-vision",
+        "pattern-recognition"
+      ],
+      "website": "https://ietresearch.onlinelibrary.wiley.com/journal/17519667",
+      "publisher": "IET",
+      "issn": "1751-9659",
+      "eIssn": "1751-9667",
+      "rankings": {
+        "scopus": true,
+        "isi": true,
+        "dblp": true,
+        "scimagoQuartile": "Q2",
+        "sjr": 0.43,
+        "jcrImpactFactor": 2.0,
+        "jcrQuartile": "Q3",
+        "citeScore": 5.5,
+        "hIndex": 67
+      },
+      "frequency": "rolling",
+      "notes": "Open access (Wiley/IET hybrid)",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "iet-computer-vision",
+      "name": "IET Computer Vision",
+      "fullName": "IET Computer Vision",
+      "aliases": [
+        "IET-CV"
+      ],
+      "type": "journal",
+      "topics": [
+        "computer-vision",
+        "image-processing",
+        "pattern-recognition",
+        "object-detection",
+        "tracking"
+      ],
+      "website": "https://ietresearch.onlinelibrary.wiley.com/journal/17519640",
+      "publisher": "IET",
+      "issn": "1751-9632",
+      "eIssn": "1751-9640",
+      "rankings": {
+        "scopus": true,
+        "isi": true,
+        "dblp": true,
+        "scimagoQuartile": "Q2",
+        "sjr": 0.39,
+        "jcrImpactFactor": 1.5,
+        "jcrQuartile": "Q4",
+        "citeScore": 4.1,
+        "hIndex": 47
+      },
+      "frequency": "rolling",
+      "notes": "Open access (Wiley/IET hybrid)",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "frontiers-plant-science",
+      "name": "Frontiers in Plant Science",
+      "fullName": "Frontiers in Plant Science",
+      "aliases": [
+        "Front. Plant Sci."
+      ],
+      "type": "journal",
+      "topics": [
+        "agriculture",
+        "deep-learning",
+        "computer-vision",
+        "classification",
+        "image-processing"
+      ],
+      "website": "https://www.frontiersin.org/journals/plant-science",
+      "publisher": "Frontiers",
+      "eIssn": "1664-462X",
+      "rankings": {
+        "scopus": true,
+        "isi": true,
+        "scimagoQuartile": "Q1",
+        "sjr": 1.06,
+        "jcrImpactFactor": 4.6,
+        "jcrQuartile": "Q1",
+        "citeScore": 7.3,
+        "hIndex": 192
+      },
+      "frequency": "rolling",
+      "notes": "Open access; relevant for plant phenotyping / agri-vision papers",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "frontiers-neuroscience",
+      "name": "Frontiers in Neuroscience",
+      "fullName": "Frontiers in Neuroscience",
+      "aliases": [
+        "Front. Neurosci."
+      ],
+      "type": "journal",
+      "topics": [
+        "medical-imaging",
+        "signal-processing",
+        "machine-learning",
+        "deep-learning"
+      ],
+      "website": "https://www.frontiersin.org/journals/neuroscience",
+      "publisher": "Frontiers",
+      "issn": "1662-4548",
+      "eIssn": "1662-453X",
+      "rankings": {
+        "scopus": true,
+        "isi": true,
+        "scimagoQuartile": "Q2",
+        "sjr": 0.85,
+        "jcrImpactFactor": 3.2,
+        "jcrQuartile": "Q3",
+        "citeScore": 6.0,
+        "hIndex": 156
+      },
+      "frequency": "rolling",
+      "notes": "Open access; covers neuro-imaging and brain signal analysis",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "applied-sciences-mdpi",
+      "name": "Applied Sciences",
+      "fullName": "Applied Sciences (MDPI)",
+      "aliases": [
+        "MDPI Applied Sciences",
+        "Appl. Sci."
+      ],
+      "type": "journal",
+      "topics": [
+        "machine-learning",
+        "deep-learning",
+        "image-processing",
+        "signal-processing",
+        "computer-vision"
+      ],
+      "website": "https://www.mdpi.com/journal/applsci",
+      "publisher": "MDPI",
+      "eIssn": "2076-3417",
+      "rankings": {
+        "scopus": true,
+        "isi": true,
+        "dblp": true,
+        "scimagoQuartile": "Q2",
+        "sjr": 0.49,
+        "jcrImpactFactor": 2.5,
+        "jcrQuartile": "Q2",
+        "citeScore": 5.3,
+        "hIndex": 130
+      },
+      "frequency": "rolling",
+      "notes": "Open access multidisciplinary applied sciences journal",
       "lastVerified": "2026-04-29"
     }
   ]
