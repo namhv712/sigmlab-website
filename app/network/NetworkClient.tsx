@@ -174,9 +174,11 @@ export default function NetworkClient() {
             b.vx! += fx; b.vy! += fy
           }
         }
-        // Center gravity (also alpha-scaled)
-        a.vx! += -a.x! * 0.02 * fScale
-        a.vy! += -a.y! * 0.02 * fScale
+        // Center gravity. Selected node is pulled hard to the origin so
+        // collaborators visibly cluster around it.
+        const grav = a.id === selectedId ? 0.12 : 0.02
+        a.vx! += -a.x! * grav * fScale
+        a.vy! += -a.y! * grav * fScale
       }
       for (const l of links) {
         if (!visibleLink(l)) continue
@@ -186,10 +188,12 @@ export default function NetworkClient() {
         const dx = b.x! - a.x!
         const dy = b.y! - a.y!
         const d = Math.sqrt(dx * dx + dy * dy + 0.001)
-        const target = 90 + 220 / Math.sqrt(l.weight)
-        // Reduced gain (was 0.06) and tapered with alpha so the spring
-        // can't oscillate around the equilibrium length.
-        let f = (d - target) * 0.025 * fScale * Math.min(1, Math.log10(l.weight + 1) / 1.5)
+        // When a node is selected, its edges are 3× stronger AND aim for
+        // a much shorter target length so coauthors cluster around it.
+        const isSelEdge = selectedId && (l.source === selectedId || l.target === selectedId)
+        const target = isSelEdge ? 60 + 100 / Math.sqrt(l.weight) : 90 + 220 / Math.sqrt(l.weight)
+        const gain = isSelEdge ? 0.075 : 0.025
+        let f = (d - target) * gain * fScale * Math.min(1, Math.log10(l.weight + 1) / 1.5)
         if (f > FMAX) f = FMAX
         if (f < -FMAX) f = -FMAX
         const fx = (dx / d) * f
