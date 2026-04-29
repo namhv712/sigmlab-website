@@ -200,32 +200,44 @@ export default function NetworkClient() {
       ctx.translate(w / 2 + t.x, h / 2 + t.y)
       ctx.scale(t.k, t.k)
 
-      // Edges first (under nodes)
+      // Edges first (under nodes) — draw heaviest last so they sit on top
       ctx.lineCap = 'round'
       const nowYear = new Date().getFullYear()
-      for (const l of data!.links) {
+      const maxWeight = data!.links.reduce((m, l) => Math.max(m, l.weight), 1)
+      const sortedLinks = [...data!.links].sort((a, b) => a.weight - b.weight)
+      for (const l of sortedLinks) {
         if (!visibleLink(l)) continue
         const a = byId.get(l.source as string)
         const b = byId.get(l.target as string)
         if (!a || !b) continue
         const recency = l.last_year ? Math.max(0, 1 - (nowYear - l.last_year) / 12) : 0.25
-        const baseAlpha = 0.18 + 0.7 * recency
-        const lw = Math.min(7, 0.8 + Math.log2(l.weight + 1))
+        const wNorm = l.weight / maxWeight                    // 0..1
+        const wStrong = Math.pow(wNorm, 0.55)                 // boost low-mid range
+        // Thickness scales with sqrt(weight) — much more visible than log
+        const lw = 1 + Math.sqrt(l.weight) * 1.6
+        // Vibrancy: thin/old edges fade out, thick/recent edges saturate
+        const baseAlpha = Math.min(1, 0.10 + 0.55 * wStrong + 0.45 * recency)
+        const cA = topicColor(a.primary_topic)
+        const cB = topicColor(b.primary_topic)
+        // Heaviest edges punch through with a brighter inner core
+        if (wNorm > 0.25) {
+          ctx.strokeStyle = withAlpha('#ffffff', 0.18 * wStrong)
+          ctx.lineWidth = lw + 2.5
+          ctx.shadowColor = topicColor(l.primary_topic)
+          ctx.shadowBlur = 22 * wStrong
+          ctx.beginPath()
+          edgePath(ctx, a, b)
+          ctx.stroke()
+        }
         const grad = ctx.createLinearGradient(a.x!, a.y!, b.x!, b.y!)
-        grad.addColorStop(0, withAlpha(topicColor(a.primary_topic), baseAlpha))
-        grad.addColorStop(1, withAlpha(topicColor(b.primary_topic), baseAlpha))
+        grad.addColorStop(0, withAlpha(cA, baseAlpha))
+        grad.addColorStop(1, withAlpha(cB, baseAlpha))
         ctx.strokeStyle = grad
         ctx.lineWidth = lw
         ctx.shadowColor = topicColor(l.primary_topic)
-        ctx.shadowBlur = 14 * recency
+        ctx.shadowBlur = 6 + 18 * wStrong * (0.5 + 0.5 * recency)
         ctx.beginPath()
-        const mx = (a.x! + b.x!) / 2, my = (a.y! + b.y!) / 2
-        const dx = b.x! - a.x!, dy = b.y! - a.y!
-        const len = Math.sqrt(dx * dx + dy * dy) || 1
-        const nx = -dy / len, ny = dx / len
-        const off = 22 * (((a.x! * 31 + a.y! * 17) % 7) / 7 - 0.5)
-        ctx.moveTo(a.x!, a.y!)
-        ctx.quadraticCurveTo(mx + nx * off, my + ny * off, b.x!, b.y!)
+        edgePath(ctx, a, b)
         ctx.stroke()
       }
       ctx.shadowBlur = 0
@@ -575,6 +587,16 @@ export default function NetworkClient() {
       </div>
     </div>
   )
+}
+
+function edgePath(ctx: CanvasRenderingContext2D, a: Node, b: Node) {
+  const mx = (a.x! + b.x!) / 2, my = (a.y! + b.y!) / 2
+  const dx = b.x! - a.x!, dy = b.y! - a.y!
+  const len = Math.sqrt(dx * dx + dy * dy) || 1
+  const nx = -dy / len, ny = dx / len
+  const off = 22 * (((a.x! * 31 + a.y! * 17) % 7) / 7 - 0.5)
+  ctx.moveTo(a.x!, a.y!)
+  ctx.quadraticCurveTo(mx + nx * off, my + ny * off, b.x!, b.y!)
 }
 
 function withAlpha(hex: string, alpha: number): string {
