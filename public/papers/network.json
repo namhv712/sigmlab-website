@@ -3,13 +3,13 @@
     {
       "id": "thi_lan_le",
       "name": "Thi-Lan Le",
-      "papers": 211,
+      "papers": 210,
       "first_year": 2004,
       "last_year": 2026,
       "topics": [
         {
           "key": "Other",
-          "count": 54
+          "count": 53
         },
         {
           "key": "Plant ID",
@@ -34,13 +34,13 @@
     {
       "id": "thanh_hai_tran",
       "name": "Thanh-Hai Tran",
-      "papers": 170,
+      "papers": 168,
       "first_year": 2006,
       "last_year": 2026,
       "topics": [
         {
           "key": "Other",
-          "count": 49
+          "count": 48
         },
         {
           "key": "Hand Gesture",
@@ -56,7 +56,7 @@
         },
         {
           "key": "Visually Impaired",
-          "count": 14
+          "count": 13
         }
       ],
       "primary_topic": "Hand Gesture",
@@ -65,13 +65,13 @@
     {
       "id": "hai_vu",
       "name": "Hai Vu",
-      "papers": 164,
+      "papers": 163,
       "first_year": 2000,
       "last_year": 2025,
       "topics": [
         {
           "key": "Other",
-          "count": 42
+          "count": 41
         },
         {
           "key": "Medical Imaging",
@@ -156,15 +156,43 @@
       "avatar": ""
     },
     {
+      "id": "quoc_hung_nguyen",
+      "name": "Quoc-Hung Nguyen",
+      "papers": 65,
+      "first_year": 1999,
+      "last_year": 2025,
+      "topics": [
+        {
+          "key": "Other",
+          "count": 55
+        },
+        {
+          "key": "Visually Impaired",
+          "count": 6
+        },
+        {
+          "key": "Plant ID",
+          "count": 3
+        },
+        {
+          "key": "Medical Imaging",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Visually Impaired",
+      "avatar": "/assets/images/team/Allumi Member/NguyenQuocHUng.png",
+      "affiliation": "University Of Economics Ho Chi Minh City"
+    },
+    {
       "id": "van_toi_nguyen",
       "name": "Van-Toi Nguyen",
-      "papers": 56,
+      "papers": 57,
       "first_year": 2003,
       "last_year": 2025,
       "topics": [
         {
           "key": "Other",
-          "count": 26
+          "count": 27
         },
         {
           "key": "Hand Gesture",
@@ -285,17 +313,17 @@
     {
       "id": "hong_quan_nguyen",
       "name": "Hong-Quan Nguyen",
-      "papers": 44,
+      "papers": 47,
       "first_year": 2016,
       "last_year": 2025,
       "topics": [
         {
-          "key": "Person Re-ID",
-          "count": 14
+          "key": "Other",
+          "count": 16
         },
         {
-          "key": "Other",
-          "count": 13
+          "key": "Person Re-ID",
+          "count": 14
         },
         {
           "key": "Action Recognition",
@@ -582,6 +610,38 @@
       "affiliation": "Hanoi Architectural University"
     },
     {
+      "id": "trung_hieu_le",
+      "name": "Trung-Hieu Le",
+      "papers": 17,
+      "first_year": 2010,
+      "last_year": 2025,
+      "topics": [
+        {
+          "key": "Action Recognition",
+          "count": 8
+        },
+        {
+          "key": "Other",
+          "count": 4
+        },
+        {
+          "key": "Hand Gesture",
+          "count": 3
+        },
+        {
+          "key": "Document/OCR",
+          "count": 1
+        },
+        {
+          "key": "Surveillance",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Action Recognition",
+      "avatar": "/assets/images/team/PhD Students/phd_HieuLe.jpg",
+      "affiliation": "Dai Nam University"
+    },
+    {
       "id": "thi_lich_nghiem",
       "name": "Thi-Lich Nghiem",
       "papers": 16,
@@ -799,6 +859,21 @@
       "avatar": ""
     },
     {
+      "id": "thi_thu_hong_phan",
+      "name": "Thi-Thu-Hong Phan",
+      "papers": 1,
+      "first_year": 2015,
+      "last_year": 2015,
+      "topics": [
+        {
+          "key": "Plant ID",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Plant ID",
+      "avatar": ""
+    },
+    {
       "id": "sinh_huy_nguyen",
       "name": "Sinh-Huy Nguyen",
       "papers": 0,
@@ -847,18 +922,6 @@
       "no_data": true
     },
     {
-      "id": "quoc_hung_nguyen",
-      "name": "Quoc-Hung Nguyen",
-      "papers": 0,
-      "first_year": null,
-      "last_year": null,
-      "topics": [],
-      "primary_topic": "Other",
-      "avatar": "/assets/images/team/Allumi Member/NguyenQuocHUng.png",
-      "affiliation": "University Of Economics Ho Chi Minh City",
-      "no_data": true
-    },
-    {
       "id": "quang_minh_tran",
       "name": "Quang-Minh Tran",
       "papers": 0,
@@ -880,18 +943,6 @@
       "primary_topic": "Other",
       "avatar": "/assets/images/team/Permanent Members/Main - Thầy Dũng.png",
       "affiliation": "",
-      "no_data": true
-    },
-    {
-      "id": "trung_hieu_le",
-      "name": "Trung-Hieu Le",
-      "papers": 0,
-      "first_year": null,
-      "last_year": null,
-      "topics": [],
-      "primary_topic": "Other",
-      "avatar": "/assets/images/team/PhD Students/phd_HieuLe.jpg",
-      "affiliation": "Dai Nam University",
       "no_data": true
     },
     {
@@ -1151,16 +1202,16 @@
     {
       "source": "hai_vu",
       "target": "thanh_hai_tran",
-      "weight": 72,
+      "weight": 70,
       "first_year": 2013,
       "last_year": 2025,
       "topics": [
         {
-          "key": "Other",
-          "count": 16
+          "key": "Hand Gesture",
+          "count": 15
         },
         {
-          "key": "Hand Gesture",
+          "key": "Other",
           "count": 15
         },
         {
@@ -1675,6 +1726,28 @@
       "primary_topic": "Person Re-ID"
     },
     {
+      "source": "thanh_hai_tran",
+      "target": "trung_hieu_le",
+      "weight": 11,
+      "first_year": 2018,
+      "last_year": 2025,
+      "topics": [
+        {
+          "key": "Action Recognition",
+          "count": 7
+        },
+        {
+          "key": "Hand Gesture",
+          "count": 3
+        },
+        {
+          "key": "Other",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Action Recognition"
+    },
+    {
       "source": "dinh_tan_pham",
       "target": "hai_vu",
       "weight": 10,
@@ -1916,6 +1989,42 @@
     },
     {
       "source": "hai_vu",
+      "target": "quoc_hung_nguyen",
+      "weight": 7,
+      "first_year": 2014,
+      "last_year": 2017,
+      "topics": [
+        {
+          "key": "Visually Impaired",
+          "count": 5
+        },
+        {
+          "key": "Other",
+          "count": 2
+        }
+      ],
+      "primary_topic": "Visually Impaired"
+    },
+    {
+      "source": "quoc_hung_nguyen",
+      "target": "thanh_hai_tran",
+      "weight": 7,
+      "first_year": 2013,
+      "last_year": 2017,
+      "topics": [
+        {
+          "key": "Visually Impaired",
+          "count": 5
+        },
+        {
+          "key": "Other",
+          "count": 2
+        }
+      ],
+      "primary_topic": "Visually Impaired"
+    },
+    {
+      "source": "hai_vu",
       "target": "hong_quan_nguyen",
       "weight": 7,
       "first_year": 2016,
@@ -2041,6 +2150,28 @@
       "primary_topic": "Hand Gesture"
     },
     {
+      "source": "hong_quan_nguyen",
+      "target": "van_toi_nguyen",
+      "weight": 5,
+      "first_year": 2021,
+      "last_year": 2025,
+      "topics": [
+        {
+          "key": "Other",
+          "count": 3
+        },
+        {
+          "key": "Person Re-ID",
+          "count": 1
+        },
+        {
+          "key": "Hand Gesture",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Person Re-ID"
+    },
+    {
       "source": "hoang_son_bui",
       "target": "thuy_binh_nguyen",
       "weight": 5,
@@ -2075,6 +2206,50 @@
         }
       ],
       "primary_topic": "Person Re-ID"
+    },
+    {
+      "source": "hong_quan_nguyen",
+      "target": "trung_hieu_le",
+      "weight": 5,
+      "first_year": 2021,
+      "last_year": 2023,
+      "topics": [
+        {
+          "key": "Hand Gesture",
+          "count": 2
+        },
+        {
+          "key": "Action Recognition",
+          "count": 2
+        },
+        {
+          "key": "Document/OCR",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Hand Gesture"
+    },
+    {
+      "source": "thi_lan_le",
+      "target": "trung_hieu_le",
+      "weight": 5,
+      "first_year": 2018,
+      "last_year": 2023,
+      "topics": [
+        {
+          "key": "Action Recognition",
+          "count": 2
+        },
+        {
+          "key": "Hand Gesture",
+          "count": 1
+        },
+        {
+          "key": "Other",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Action Recognition"
     },
     {
       "source": "phuong_dung_nguyen",
@@ -2263,28 +2438,6 @@
         }
       ],
       "primary_topic": "Action Recognition"
-    },
-    {
-      "source": "hong_quan_nguyen",
-      "target": "van_toi_nguyen",
-      "weight": 4,
-      "first_year": 2021,
-      "last_year": 2021,
-      "topics": [
-        {
-          "key": "Other",
-          "count": 2
-        },
-        {
-          "key": "Person Re-ID",
-          "count": 1
-        },
-        {
-          "key": "Hand Gesture",
-          "count": 1
-        }
-      ],
-      "primary_topic": "Person Re-ID"
     },
     {
       "source": "hoang_son_bui",
@@ -2545,6 +2698,46 @@
         }
       ],
       "primary_topic": "Plant ID"
+    },
+    {
+      "source": "hai_vu",
+      "target": "trung_hieu_le",
+      "weight": 3,
+      "first_year": 2018,
+      "last_year": 2023,
+      "topics": [
+        {
+          "key": "Hand Gesture",
+          "count": 1
+        },
+        {
+          "key": "Other",
+          "count": 1
+        },
+        {
+          "key": "Action Recognition",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Hand Gesture"
+    },
+    {
+      "source": "thuy_binh_nguyen",
+      "target": "trung_hieu_le",
+      "weight": 3,
+      "first_year": 2021,
+      "last_year": 2023,
+      "topics": [
+        {
+          "key": "Action Recognition",
+          "count": 2
+        },
+        {
+          "key": "Document/OCR",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Action Recognition"
     },
     {
       "source": "hong_quan_nguyen",
@@ -2810,6 +3003,20 @@
         {
           "key": "Other",
           "count": 1
+        }
+      ],
+      "primary_topic": "Action Recognition"
+    },
+    {
+      "source": "phuong_dung_nguyen",
+      "target": "trung_hieu_le",
+      "weight": 2,
+      "first_year": 2021,
+      "last_year": 2023,
+      "topics": [
+        {
+          "key": "Action Recognition",
+          "count": 2
         }
       ],
       "primary_topic": "Action Recognition"
@@ -3229,6 +3436,20 @@
       "primary_topic": "Person Re-ID"
     },
     {
+      "source": "huong_giang_doan",
+      "target": "trung_hieu_le",
+      "weight": 1,
+      "first_year": 2018,
+      "last_year": 2018,
+      "topics": [
+        {
+          "key": "Other",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Other"
+    },
+    {
       "source": "duy_tung_nguyen",
       "target": "hong_quan_nguyen",
       "weight": 1,
@@ -3241,6 +3462,20 @@
         }
       ],
       "primary_topic": "Plant ID"
+    },
+    {
+      "source": "trung_hieu_le",
+      "target": "van_toi_nguyen",
+      "weight": 1,
+      "first_year": 2021,
+      "last_year": 2021,
+      "topics": [
+        {
+          "key": "Hand Gesture",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Hand Gesture"
     },
     {
       "source": "thuy_binh_nguyen",
@@ -3383,6 +3618,20 @@
       "primary_topic": "Hand Gesture"
     },
     {
+      "source": "quoc_hung_nguyen",
+      "target": "thi_lan_le",
+      "weight": 1,
+      "first_year": null,
+      "last_year": null,
+      "topics": [
+        {
+          "key": "Other",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Other"
+    },
+    {
       "source": "doan_duc_phan",
       "target": "thi_lan_le",
       "weight": 1,
@@ -3509,6 +3758,48 @@
       "primary_topic": "Action Recognition"
     },
     {
+      "source": "thanh_hai_tran",
+      "target": "thi_thu_hong_phan",
+      "weight": 1,
+      "first_year": 2015,
+      "last_year": 2015,
+      "topics": [
+        {
+          "key": "Plant ID",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Plant ID"
+    },
+    {
+      "source": "thi_lan_le",
+      "target": "thi_thu_hong_phan",
+      "weight": 1,
+      "first_year": 2015,
+      "last_year": 2015,
+      "topics": [
+        {
+          "key": "Plant ID",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Plant ID"
+    },
+    {
+      "source": "thi_thanh_thuy_pham",
+      "target": "trung_hieu_le",
+      "weight": 1,
+      "first_year": 2020,
+      "last_year": 2020,
+      "topics": [
+        {
+          "key": "Other",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Other"
+    },
+    {
       "source": "duy_tung_nguyen",
       "target": "thanh_hai_tran",
       "weight": 1,
@@ -3521,6 +3812,20 @@
         }
       ],
       "primary_topic": "Fall Detection"
+    },
+    {
+      "source": "quoc_hung_nguyen",
+      "target": "van_nam_hoang",
+      "weight": 1,
+      "first_year": 2014,
+      "last_year": 2014,
+      "topics": [
+        {
+          "key": "Visually Impaired",
+          "count": 1
+        }
+      ],
+      "primary_topic": "Visually Impaired"
     },
     {
       "source": "quang_tien_pham",
@@ -4541,6 +4846,97 @@
       ]
     },
     {
+      "title": "AIM: an accurate and explainable model for ATAC to GEX translation and pathway analysis",
+      "authors": "QH Nguyen, HV Tran, HT Nguyen, PTM Le, PL Nguyen, BP Nguyen",
+      "year": 2025,
+      "venue": "Memetic Computing 17 (2), 12, 2025",
+      "topic": "Other",
+      "lab_authors": [
+        "quoc_hung_nguyen"
+      ]
+    },
+    {
+      "title": "Microplastic abundance and characteristics in bivalves from Tam Giang-Cau Hai and O Loan Lagoons, coastal regions in Central Vietnam: Implication on human health",
+      "authors": "TTA My, ND Dat, NQ Hung, TTT Thuy, PTT Hang, ND Luu",
+      "year": 2025,
+      "venue": "Marine Pollution Bulletin 216, 117937, 2025",
+      "topic": "Other",
+      "lab_authors": [
+        "quoc_hung_nguyen"
+      ]
+    },
+    {
+      "title": "Absorption and scattering properties of nanoparticles in an absorbing medium: Modeling with experimental validation",
+      "authors": "TH Pham, KT Nguyen, VT Nguyen, HQ Nguyen, HTM Nghiem",
+      "year": 2025,
+      "venue": "Journal of Quantitative Spectroscopy and Radiative Transfer, 109679, 2025",
+      "topic": "Other",
+      "lab_authors": [
+        "van_toi_nguyen",
+        "hong_quan_nguyen"
+      ]
+    },
+    {
+      "title": "Effects of varying electrical conductivity levels on plant growth, yield, and photosynthetic parameters of Tochiotome strawberry ('Fragaria× ananassa''Tochiotome) in a greenhouse",
+      "authors": "NQ Hung, N Thi Thanh Nga, VP Lam",
+      "year": 2025,
+      "venue": "Australian Journal of Crop Science 19 (4), 436-441, 2025",
+      "topic": "Plant ID",
+      "lab_authors": [
+        "quoc_hung_nguyen"
+      ]
+    },
+    {
+      "title": "Selected models of innovation governance worldwide and an adaptive policy framework for Vietnam",
+      "authors": "NQ Hung, TVT Phan, DTH Hau, NTH Hanh, DTT Nga",
+      "year": 2025,
+      "venue": "Journal SCIENCE AND TECHNOLOGY POLICIES AND MANAGEMENT 14 (3), 105-119, 2025",
+      "topic": "Other",
+      "lab_authors": [
+        "quoc_hung_nguyen"
+      ]
+    },
+    {
+      "title": "A Deep Learning Approaches to Fake News Detection in E-commerce Platforms",
+      "authors": "HGLTHSL Thuy Kieu Phan Thi, Quoc Hung Nguyen",
+      "year": 2025,
+      "venue": "Innovative Computing and Communications, Lecture Notes in Networks and …, 2025",
+      "topic": "Other",
+      "lab_authors": [
+        "quoc_hung_nguyen"
+      ]
+    },
+    {
+      "title": "Comprehensive Approach to Vietnamese Scene Text Recognition: Challenges, Models and Framework Development",
+      "authors": "QH Nguyen, VT Tran, MHT Nguyen, NTA Nguyen, MP Huynh, NPA Do",
+      "year": 2025,
+      "venue": "International Conference on Data Analytics & Management, 27-38, 2025",
+      "topic": "Other",
+      "lab_authors": [
+        "quoc_hung_nguyen"
+      ]
+    },
+    {
+      "title": "The Proposed Deep Learning Model for Fuel Consumption Forecasting of Civil Aircraft",
+      "authors": "QH Nguyen, HL Nguyen",
+      "year": 2025,
+      "venue": "Doctoral Symposium on Computational Intelligence, 507-514, 2025",
+      "topic": "Other",
+      "lab_authors": [
+        "quoc_hung_nguyen"
+      ]
+    },
+    {
+      "title": "Anatomical traits and volatile compounds of acetone extract from Kaempferia champasakensis",
+      "authors": "TT Le-thi, MP Nguyen, HN Vu, HT Van, TV Pham, VS Le, …",
+      "year": 2025,
+      "venue": "PLANT SCIENCE, 2025",
+      "topic": "Plant ID",
+      "lab_authors": [
+        "quoc_hung_nguyen"
+      ]
+    },
+    {
       "title": "Reconfigurable intelligent surfaces: A hardware-centric review of structures, implementation, evaluation, and integration with uav and machine learning",
       "authors": "BN Thai, TN Tien, KD Minh, MN Tien, TTK Hue, NX Quyen",
       "year": 2025,
@@ -4621,6 +5017,7 @@
       "venue": "Journal of Computer Science and Cybernetics, 245-264, 2025",
       "topic": "Action Recognition",
       "lab_authors": [
+        "trung_hieu_le",
         "thanh_hai_tran"
       ]
     },
@@ -4662,7 +5059,28 @@
       "venue": "2025 International Conference on Multimedia Analysis and Pattern Recognition …, 2025",
       "topic": "Action Recognition",
       "lab_authors": [
+        "trung_hieu_le",
         "thanh_hai_tran"
+      ]
+    },
+    {
+      "title": "Detection of Driver Distraction from In-Vehicle Images Using Optimized YOLO Architecture",
+      "authors": "HV Trinh, TH Le, VNB Uyen, KX Pham, VN Nguyen, A Pham",
+      "year": 2025,
+      "venue": "International Conference on Artificial Intelligence: Impacts and Potentials, 2025",
+      "topic": "Other",
+      "lab_authors": [
+        "trung_hieu_le"
+      ]
+    },
+    {
+      "title": "Systematic Evaluation of YOLO in Student Behavior Detection - A New Dataset",
+      "authors": "AT Tran, TK Nguyen, TT Nguyen, AH Tuan, TH Le",
+      "year": 2025,
+      "venue": "2025 24th International Symposium on Communications and Information …, 2025",
+      "topic": "Other",
+      "lab_authors": [
+        "trung_hieu_le"
       ]
     },
     {
@@ -5162,6 +5580,56 @@
       ]
     },
     {
+      "title": "Picture Fuzzy Directed Hypergraphs with applications towards decision-making and managing hazardous chemicals",
+      "authors": "HVP Waheed Ahmad KHAN, Waqar ARIF, Quoc-Hung NGUYEN, Thanh Trung LE",
+      "year": 2024,
+      "venue": "IEEE Access 1 (1), 2024",
+      "topic": "Other",
+      "lab_authors": [
+        "quoc_hung_nguyen"
+      ]
+    },
+    {
+      "title": "Some novel concepts of intuitionistic fuzzy directed graphs with application in selecting a suitable place for opening restaurant",
+      "authors": "WA Khan, K Ali, A Fida, M Asif, H Van Pham, QH Nguyen, …",
+      "year": 2024,
+      "venue": "Heliyon 10 (14), 2024",
+      "topic": "Other",
+      "lab_authors": [
+        "quoc_hung_nguyen"
+      ]
+    },
+    {
+      "title": "Optimal shoot mass for propagation to increase the yield and quality of pineapple",
+      "authors": "NQ Hung, LTM Ha, DT Lien, NTT Nga, VP Lam",
+      "year": 2024,
+      "venue": "Sustainability 16 (13), 5729, 2024",
+      "topic": "Other",
+      "lab_authors": [
+        "quoc_hung_nguyen"
+      ]
+    },
+    {
+      "title": "Teachable Machine Model Combining Machine Learning and Deep Learning for Disease Diagnosis",
+      "authors": "QH Nguyen, XH BUI",
+      "year": 2024,
+      "venue": "International Conference on Computing and Communication Networks, 29-42, 2024",
+      "topic": "Other",
+      "lab_authors": [
+        "quoc_hung_nguyen"
+      ]
+    },
+    {
+      "title": "Absorption and scattering properties of nanoparticles in an absorbing medium: revisiting with experimental validation",
+      "authors": "PT Hong, NT Kien, N Viet Tuyen, HQ Nguyen, HTM Nghiem",
+      "year": 2024,
+      "venue": "arXiv e-prints, arXiv: 2408.04248, 2024",
+      "topic": "Other",
+      "lab_authors": [
+        "hong_quan_nguyen"
+      ]
+    },
+    {
       "title": "Design of Circularly Polarized 1-Bit Reconfigurable ME-Dipole Reflectarray for C-band",
       "authors": "TB Nguyen, TT Nguyen, TM Nguyen, TTK Hue, NX Quyen",
       "year": 2024,
@@ -5585,6 +6053,7 @@
       "topic": "Hand Gesture",
       "lab_authors": [
         "hong_quan_nguyen",
+        "trung_hieu_le",
         "thanh_hai_tran",
         "thi_lan_le",
         "hai_vu"
@@ -5622,6 +6091,7 @@
       "venue": "Vietnam Journal of Computer Science 10 (02), 243-271, 2023",
       "topic": "Action Recognition",
       "lab_authors": [
+        "trung_hieu_le",
         "phuong_dung_nguyen",
         "hong_quan_nguyen",
         "thuy_binh_nguyen",
@@ -5683,6 +6153,7 @@
       "venue": "2023 RIVF International Conference on Computing and Communication …, 2023",
       "topic": "Document/OCR",
       "lab_authors": [
+        "trung_hieu_le",
         "thuy_binh_nguyen",
         "hong_quan_nguyen",
         "thi_lan_le"
@@ -5864,6 +6335,156 @@
       ]
     },
     {
+      "title": "Occurrence and characteristics of microplastics in wild and farmed shrimps collected from Cau Hai Lagoon, Central Vietnam",
+      "authors": "TTA My, ND Dat, NQ Hung",
+      "year": 2023,
+      "venue": "Molecules 28 (12), 4634, 2023",
+      "topic": "Other",
+      "lab_authors": [
+        "quoc_hung_nguyen"
+      ]
+    },
+    {
+      "title": "Complex refractive index measurements of poly (methyl methacrylate)(PMMA) over the UV-VIS-NIR region",
+      "authors": "PT Hong, HQ Nguyen, HTM Nghiem",
+      "year": 2023,
+      "venue": "arXiv preprint arXiv:2305.06551, 2023",
+      "topic": "Other",
+      "lab_authors": [
+        "hong_quan_nguyen"
+      ]
+    },
+    {
+      "title": "Proposed Intelligent Decision Support System using Hedge Algebra integrated with Picture Fuzzy Relations for improvement of decision making in medical diagnoses",
+      "authors": "KPT Van Hai PHAM, Le Hoang TRAN, Quoc Hung NGUYEN",
+      "year": 2023,
+      "venue": "International Journal of Fuzzy Systems, 2023",
+      "topic": "Other",
+      "lab_authors": [
+        "quoc_hung_nguyen"
+      ]
+    },
+    {
+      "title": "Preliminary determination of microplastics in bivalves collected from Phu Yen, central Viet Nam",
+      "authors": "TTA My, ND Dat, NQ Hung, DT Quang",
+      "year": 2023,
+      "venue": "Vietnam Journal of Science and Technology 61 (3), 480-490, 2023",
+      "topic": "Other",
+      "lab_authors": [
+        "quoc_hung_nguyen"
+      ]
+    },
+    {
+      "title": "Proposed distance and entropy measures of picture fuzzy sets in decision support systems",
+      "authors": "TXDNTTKP Van Hai PHAM, Quoc Hung NGUYEN, Kim Phung THAI, Xuan Thao NGUYEN ...",
+      "year": 2023,
+      "venue": "Journal of Intelligent & Fuzzy Systems 1 (5), 1-17, 2023",
+      "topic": "Other",
+      "lab_authors": [
+        "quoc_hung_nguyen"
+      ]
+    },
+    {
+      "title": "Facile biosynthesis of copper oxide nanoparticles using Mangifera indica leaf extract: characterization and bioactivities",
+      "authors": "CQ Cong, NM Dat, ND Hai, NTH Nam, H An, NQ Hung, …",
+      "year": 2023,
+      "venue": "Materials Letters 337, 133996, 2023",
+      "topic": "Plant ID",
+      "lab_authors": [
+        "quoc_hung_nguyen"
+      ]
+    },
+    {
+      "title": "Micro-debris accumulated in marine fishes collected from Central Vietnam: Characteristics and implication for human health risk",
+      "authors": "TTA My, ND Dat, NQ Hung, PH Viet",
+      "year": 2023,
+      "venue": "Water, Air, & Soil Pollution 234 (10), 632, 2023",
+      "topic": "Other",
+      "lab_authors": [
+        "quoc_hung_nguyen"
+      ]
+    },
+    {
+      "title": "Gibberellin (GA3) and Copper Sulfate Pentahydrate (CuSO4·5H2O) Reduce Seeds per Fruit and Increase Fruit Quality in Bac Son Mandarin Fruit",
+      "authors": "NQ Hung, LT My Ha, NQ Hieu, PTT Tu, VP Lam",
+      "year": 2023,
+      "venue": "Seeds 2 (3), 318-330, 2023",
+      "topic": "Other",
+      "lab_authors": [
+        "quoc_hung_nguyen"
+      ]
+    },
+    {
+      "title": "Applied picture fuzzy sets with its picture fuzzy database for identification of patients in a hospital",
+      "authors": "LPTT Van Hai Pham, Quoc Hung Nguyen, Kim Phung Thai",
+      "year": 2023,
+      "venue": "Deep Learning in Personalized Healthcare and Decision Support 1, 305-313, 2023",
+      "topic": "Other",
+      "lab_authors": [
+        "quoc_hung_nguyen"
+      ]
+    },
+    {
+      "title": "The proposed deep learning combined with knowledge graphs for fake news detections on social networks",
+      "authors": "QH Nguyen, LT Trung, TTK Phan, TXD Nguyen, XN Vu, DD La",
+      "year": 2023,
+      "venue": "International Conference On Innovative Computing And Communication, 253-263, 2023",
+      "topic": "Other",
+      "lab_authors": [
+        "quoc_hung_nguyen"
+      ]
+    },
+    {
+      "title": "Changes in the spatial-temporal of the amount of sediment suspended in the Mekong Delta in Vietnam",
+      "authors": "DNL Phuong, DV Binh, SA Kantoush, QH Nguyen, TL Vinh, MNT Phuong, …",
+      "year": 2023,
+      "venue": "IOP Conference Series: Earth and Environmental Science 1143 (1), 012007, 2023",
+      "topic": "Other",
+      "lab_authors": [
+        "quoc_hung_nguyen"
+      ]
+    },
+    {
+      "title": "APPLICATION OF ULTRA-PERFORMANCE LIQUID CHROMATOGRAPHY WITH FLUORESCENCE DETECTION FOR INVESTIGATION OF AFLATOXIN CONTAMINATION IN PEANUTS.",
+      "authors": "DV Le, VTM Trinh, TD Nguyen, QH Nguyen",
+      "year": 2023,
+      "venue": "Rasayan Journal of Chemistry 16 (4), 2023",
+      "topic": "Other",
+      "lab_authors": [
+        "quoc_hung_nguyen"
+      ]
+    },
+    {
+      "title": "Combination of Hamming Distance and Entropy Measure of Picture Fuzzy Sets: Case Study of COVID-19 Medicine Selection",
+      "authors": "DDLHVP Xuan Thao Nguyen, Quoc Hung Nguyen",
+      "year": 2023,
+      "venue": "Evolution in Computational Intelligence 2, 599–609, 2023",
+      "topic": "Other",
+      "lab_authors": [
+        "quoc_hung_nguyen"
+      ]
+    },
+    {
+      "title": "Some transforming trends in science, technology and innovative services in the context of industrial revolution 4.0 in Vietnam",
+      "authors": "TVT Phan, NQ Hung, NX Hoa",
+      "year": 2023,
+      "venue": "Journal SCIENCE AND TECHNOLOGY POLICIES AND MANAGEMENT 12 (3), 108-120, 2023",
+      "topic": "Other",
+      "lab_authors": [
+        "quoc_hung_nguyen"
+      ]
+    },
+    {
+      "title": "Research on the theoretical basis of innovation clusters and some suggestions for Vietnam",
+      "authors": "NX Hoa, TVT Phan, NQ Hung, NQ Dat, TM Huyen",
+      "year": 2023,
+      "venue": "Journal SCIENCE AND TECHNOLOGY POLICIES AND MANAGEMENT 12 (4), 88-103, 2023",
+      "topic": "Other",
+      "lab_authors": [
+        "quoc_hung_nguyen"
+      ]
+    },
+    {
       "title": "Lessons for Vietnam on the use of digital technologies to support patient-centered care in low-and middle-income countries in the Asia-Pacific region: scoping review",
       "authors": "L Kosowicz, K Tran, TT Khanh, TH Dang, VA Pham, H Ta Thi Kim, …",
       "year": 2023,
@@ -5983,6 +6604,7 @@
       "venue": "2023 Asia Pacific Signal and Information Processing Association Annual …, 2023",
       "topic": "Action Recognition",
       "lab_authors": [
+        "trung_hieu_le",
         "thanh_hai_tran"
       ]
     },
@@ -6155,6 +6777,16 @@
       "lab_authors": [
         "dinh_viet_sang",
         "nguyen_thi_oanh"
+      ]
+    },
+    {
+      "title": "Improve polyp semi-supervised segmentation with prioritizing the reliability of unlabeled images",
+      "authors": "TV Pham, SV Dinh, LB Doan, TT Nguyen, QH Nguyen, DT Tran",
+      "year": 2022,
+      "venue": "Proceedings of the 11th International Conference on Software and Information …, 2022",
+      "topic": "Medical Imaging",
+      "lab_authors": [
+        "quoc_hung_nguyen"
       ]
     },
     {
@@ -6566,6 +7198,76 @@
       ]
     },
     {
+      "title": "A dish recognition framework using transfer learning",
+      "authors": "TT Tai, DNH Thanh, NQ Hung",
+      "year": 2022,
+      "venue": "IEEE Access 10, 7793-7799, 2022",
+      "topic": "Other",
+      "lab_authors": [
+        "quoc_hung_nguyen"
+      ]
+    },
+    {
+      "title": "How green hotel practices stimulates customer citizenship behavior? examining the role of green hotel mage and customer satisfaction in Vietnam",
+      "authors": "KP Thai, QH Nguyen",
+      "year": 2022,
+      "venue": "Geo J. Tour. Geosites 40, 274-282, 2022",
+      "topic": "Other",
+      "lab_authors": [
+        "quoc_hung_nguyen"
+      ]
+    },
+    {
+      "title": "Performance evaluation of ROS-based SLAM algorithms for handheld indoor mapping and tracking systems",
+      "authors": "QH Nguyen, P Johnson, D Latham",
+      "year": 2022,
+      "venue": "IEEE Sensors Journal 23 (1), 706-714, 2022",
+      "topic": "Other",
+      "lab_authors": [
+        "quoc_hung_nguyen"
+      ]
+    },
+    {
+      "title": "A proposal model using deep learning model integrated with knowledge graph for monitoring human behavior in forest protection",
+      "authors": "VH Pham, QH Nguyen, TT Le, TXD Nguyen, TTK Phan",
+      "year": 2022,
+      "venue": "Telkomnika 20 (6), 1276-1287, 2022",
+      "topic": "Other",
+      "lab_authors": [
+        "quoc_hung_nguyen"
+      ]
+    },
+    {
+      "title": "The proposed context matching algorithm and its application for user preferences of tourism in COVID-19 pandemic",
+      "authors": "VH Pham, QH Nguyen, VP Truong, LPT Tran",
+      "year": 2022,
+      "venue": "International Conference on Innovative Computing and Communications …, 2022",
+      "topic": "Other",
+      "lab_authors": [
+        "quoc_hung_nguyen"
+      ]
+    },
+    {
+      "title": "Applied Decision Support System Using TOPSIS–AHP, and ICT Newhouse Indicators for Evaluation of Courses at University of Economics Ho Chi Minh City (UEH), Vietnam",
+      "authors": "VP Truong, QH Nguyen",
+      "year": 2022,
+      "venue": "International Conference on Computing, Intelligence and Data Analytics, 39-54, 2022",
+      "topic": "Other",
+      "lab_authors": [
+        "quoc_hung_nguyen"
+      ]
+    },
+    {
+      "title": "Overview of innovation capability assessment methods in the world and application to SMEs in Vietnam",
+      "authors": "NQ Hung, TVT Phan",
+      "year": 2022,
+      "venue": "Journal SCIENCE AND TECHNOLOGY POLICIES AND MANAGEMENT 11 (4), 83-101, 2022",
+      "topic": "Other",
+      "lab_authors": [
+        "quoc_hung_nguyen"
+      ]
+    },
+    {
       "title": "Effective authentication mechanism for vehicular fog infrastructure",
       "authors": "TTK Hue, NGDND Tuan, A Braeken, K Steenhaut, KHP Seee",
       "year": 2022,
@@ -6657,6 +7359,7 @@
       "venue": "2022 international conference on multimedia analysis and pattern recognition …, 2022",
       "topic": "Action Recognition",
       "lab_authors": [
+        "trung_hieu_le",
         "thanh_hai_tran"
       ]
     },
@@ -6707,6 +7410,7 @@
       "venue": "International Conference on Intelligence of Things, 146-155, 2022",
       "topic": "Action Recognition",
       "lab_authors": [
+        "trung_hieu_le",
         "thanh_hai_tran"
       ]
     },
@@ -7001,6 +7705,7 @@
       "lab_authors": [
         "thanh_hai_tran",
         "hong_quan_nguyen",
+        "trung_hieu_le",
         "van_toi_nguyen"
       ]
     },
@@ -7025,6 +7730,7 @@
       "venue": "2021 International Conference on Multimedia Analysis and Pattern Recognition …, 2021",
       "topic": "Action Recognition",
       "lab_authors": [
+        "trung_hieu_le",
         "phuong_dung_nguyen",
         "hong_quan_nguyen",
         "thuy_binh_nguyen",
@@ -7244,6 +7950,56 @@
       "topic": "Action Recognition",
       "lab_authors": [
         "nguyen_thi_oanh"
+      ]
+    },
+    {
+      "title": "Digital transformation in the business: a solution for developing cash accounting information systems and digitizing documents",
+      "authors": "NM Tuan, NQ Hung, NT Hang",
+      "year": 2021,
+      "venue": "VNUHCM Journal of Science and Technology Development 24 (2), 1975-1987, 2021",
+      "topic": "Other",
+      "lab_authors": [
+        "quoc_hung_nguyen"
+      ]
+    },
+    {
+      "title": "Impulse denoising based on noise accumulation and harmonic analysis techniques",
+      "authors": "DNH Thanh, VBS Prasath, TK Phung, NQ Hung",
+      "year": 2021,
+      "venue": "Optik 241, 166163, 2021",
+      "topic": "Other",
+      "lab_authors": [
+        "quoc_hung_nguyen"
+      ]
+    },
+    {
+      "title": "AI and Blockchain: potential and challenge for building a smart E-Learning system in Vietnam",
+      "authors": "NQ Hung, TK Phung, P Hien, DN Hoang Thanh",
+      "year": 2021,
+      "venue": "IOP conference series: Materials Science and Engineering 1022 (1), 012001, 2021",
+      "topic": "Other",
+      "lab_authors": [
+        "quoc_hung_nguyen"
+      ]
+    },
+    {
+      "title": "Intelligent IoT monitoring system using rule-based for decision supports in fired forest images",
+      "authors": "H Van Pham, QH Nguyen",
+      "year": 2021,
+      "venue": "International conference on industrial networks and intelligent systems, 367-378, 2021",
+      "topic": "Other",
+      "lab_authors": [
+        "quoc_hung_nguyen"
+      ]
+    },
+    {
+      "title": "Building Virtual High-Performance Computing Clusters with Docker: An Application Study at the University of Economics Ho Chi Minh City",
+      "authors": "QH Nguyen, T Le, HQD Vo, VP Truong",
+      "year": 2021,
+      "venue": "International Conference on Innovative Computing and Communications, 1-9, 2021",
+      "topic": "Other",
+      "lab_authors": [
+        "quoc_hung_nguyen"
       ]
     },
     {
@@ -7727,6 +8483,26 @@
       ]
     },
     {
+      "title": "Multi-omics analysis detects novel prognostic subgroups of breast cancer",
+      "authors": "QH Nguyen, H Nguyen, T Nguyen, DH Le",
+      "year": 2020,
+      "venue": "Frontiers in genetics 11, 574661, 2020",
+      "topic": "Other",
+      "lab_authors": [
+        "quoc_hung_nguyen"
+      ]
+    },
+    {
+      "title": "Disease subtyping using community detection from consensus networks",
+      "authors": "H Nguyen, B Tran, D Tran, QH Nguyen, DH Le, T Nguyen",
+      "year": 2020,
+      "venue": "2020 12th International Conference on Knowledge and Systems Engineering (KSE …, 2020",
+      "topic": "Other",
+      "lab_authors": [
+        "quoc_hung_nguyen"
+      ]
+    },
+    {
       "title": "Prevalence of sarcopenia, sarcopenic obesity and their associations with metabolic syndrome in older people in Vietnam",
       "authors": "T Nguyen, NT Nguyen, N Trung-Anh, T Pham, H Vu",
       "year": 2020,
@@ -7754,6 +8530,16 @@
       "topic": "Action Recognition",
       "lab_authors": [
         "nguyen_thi_oanh"
+      ]
+    },
+    {
+      "title": "Multiscale Gradient Maps Augmented Fisher Information Based Image Edge Detection",
+      "authors": "VBS Prasath, DNH Thanh, NQ Hung, LM Hieu",
+      "year": 2020,
+      "venue": "IEEE Access 8, 141104-141110, 2020",
+      "topic": "Other",
+      "lab_authors": [
+        "quoc_hung_nguyen"
       ]
     },
     {
@@ -7785,6 +8571,7 @@
       "venue": "2020 7th NAFOSTED Conference on Information and Computer Science (NICS), 152-157, 2020",
       "topic": "Action Recognition",
       "lab_authors": [
+        "trung_hieu_le",
         "thi_lan_le"
       ]
     },
@@ -7816,7 +8603,8 @@
       "venue": "2020 12th International Conference on Knowledge and Systems Engineering (KSE …, 2020",
       "topic": "Other",
       "lab_authors": [
-        "thi_thanh_thuy_pham"
+        "thi_thanh_thuy_pham",
+        "trung_hieu_le"
       ]
     },
     {
@@ -8363,6 +9151,7 @@
       "venue": "2019 International Conference on Multimedia Analysis and Pattern Recognition …, 2019",
       "topic": "Hand Gesture",
       "lab_authors": [
+        "trung_hieu_le",
         "thanh_hai_tran"
       ]
     },
@@ -8519,6 +9308,7 @@
       "venue": "2018 5th Asian conference on defense technology (ACDT), 14-20, 2018",
       "topic": "Other",
       "lab_authors": [
+        "trung_hieu_le",
         "thanh_hai_tran",
         "hai_vu",
         "thi_lan_le",
@@ -8865,6 +9655,7 @@
       "venue": "Multimedia Tools and Applications 76 (2), 2645-2669, 2017",
       "topic": "Visually Impaired",
       "lab_authors": [
+        "quoc_hung_nguyen",
         "hai_vu",
         "thanh_hai_tran"
       ]
@@ -9042,6 +9833,16 @@
       "topic": "Other",
       "lab_authors": [
         "hai_vu"
+      ]
+    },
+    {
+      "title": "Selected-area growth of nickel micropillars on aluminum thin films by electroless plating for applications in microbolometers",
+      "authors": "DNH My, VT Thu, NQ Hung, DN Chung, NT Thuat",
+      "year": 2017,
+      "venue": "Journal of Science: Advanced Materials and Devices 2 (2), 192-198, 2017",
+      "topic": "Other",
+      "lab_authors": [
+        "quoc_hung_nguyen"
       ]
     },
     {
@@ -9869,6 +10670,7 @@
       "venue": "Tạp chí Khoa học Nông nghiệp Việt Nam 13 (6), 1036-1042, 2015",
       "topic": "Plant ID",
       "lab_authors": [
+        "thi_thu_hong_phan",
         "thanh_hai_tran",
         "thi_lan_le"
       ]
@@ -10069,6 +10871,7 @@
       "venue": "European Conference on Computer Vision, 716-729, 2014",
       "topic": "Visually Impaired",
       "lab_authors": [
+        "quoc_hung_nguyen",
         "hai_vu",
         "thanh_hai_tran"
       ]
@@ -10080,6 +10883,7 @@
       "venue": "2014 13th International Conference on Control Automation Robotics & Vision …, 2014",
       "topic": "Visually Impaired",
       "lab_authors": [
+        "quoc_hung_nguyen",
         "hai_vu",
         "thanh_hai_tran"
       ]
@@ -10178,6 +10982,27 @@
       "topic": "Other",
       "lab_authors": [
         "duy_tung_nguyen"
+      ]
+    },
+    {
+      "title": "Mapping services in indoor environments based on image sequences",
+      "authors": "QH Nguyen, QH Nguyen",
+      "year": 2014,
+      "venue": "2014 IEEE Fifth International Conference on Communications and Electronics …, 2014",
+      "topic": "Other",
+      "lab_authors": [
+        "quoc_hung_nguyen"
+      ]
+    },
+    {
+      "title": "AUTOMATIC LOCALIZATION AND NAVIGATION ASSISTANCE FOR VISUALLY IMPAIRED PEOPLE USING ROBOT",
+      "authors": "NQ Hung, TT Hai, V Hai, NQ Hoan",
+      "year": 2014,
+      "venue": "Journal of Science and Technology (ISSN:1859-0209) 164 (5), 5-30, 2014",
+      "topic": "Visually Impaired",
+      "lab_authors": [
+        "quoc_hung_nguyen",
+        "hai_vu"
       ]
     },
     {
@@ -10321,17 +11146,7 @@
       "venue": "FAIR, 2014",
       "topic": "Other",
       "lab_authors": [
-        "hai_vu",
-        "thanh_hai_tran"
-      ]
-    },
-    {
-      "title": "A vision -based system for autonomous Map Building and Localization",
-      "authors": "QH Nguyen, H Vu, TH Tran, QH Nguyen",
-      "year": 2014,
-      "venue": "Vietnamese Journal of Science and Technology Technical Universities, 2014",
-      "topic": "Other",
-      "lab_authors": [
+        "quoc_hung_nguyen",
         "hai_vu",
         "thanh_hai_tran"
       ]
@@ -10345,7 +11160,8 @@
       "lab_authors": [
         "hai_vu",
         "thanh_hai_tran",
-        "van_nam_hoang"
+        "van_nam_hoang",
+        "quoc_hung_nguyen"
       ]
     },
     {
@@ -10434,6 +11250,57 @@
       "topic": "Speech/NLP",
       "lab_authors": [
         "khoat_than"
+      ]
+    },
+    {
+      "title": "Pinus krempfii",
+      "authors": "P Thomas, TH Nguyen, KL Phan, QH Nguyen",
+      "year": 2013,
+      "venue": "Version 2014.2, 2013",
+      "topic": "Other",
+      "lab_authors": [
+        "quoc_hung_nguyen"
+      ]
+    },
+    {
+      "title": "Calocedrus rupestris",
+      "authors": "P Thomas, TH Nguyen, KL Phan, QH Nguyen",
+      "year": 2013,
+      "venue": "Version 2014.2, 2013",
+      "topic": "Other",
+      "lab_authors": [
+        "quoc_hung_nguyen"
+      ]
+    },
+    {
+      "title": "Amentotaxus poilanei",
+      "authors": "TH Nguyen, KL Phan, QH Nguyen, P Thomas",
+      "year": 2013,
+      "venue": "Version 2014.2, 2013",
+      "topic": "Other",
+      "lab_authors": [
+        "quoc_hung_nguyen"
+      ]
+    },
+    {
+      "title": "Amentotaxus hatuyenensis",
+      "authors": "TH Nguyen, KL Phan, QH Nguyen, P Thomas",
+      "year": 2013,
+      "venue": "Version 2014.2, 2013",
+      "topic": "Other",
+      "lab_authors": [
+        "quoc_hung_nguyen"
+      ]
+    },
+    {
+      "title": "Scene description for visually impaired in outdoor environment",
+      "authors": "QH Nguyen, TH Tran",
+      "year": 2013,
+      "venue": "2013 International Conference on Advanced Technologies for Communications …, 2013",
+      "topic": "Visually Impaired",
+      "lab_authors": [
+        "quoc_hung_nguyen",
+        "thanh_hai_tran"
       ]
     },
     {
@@ -10540,16 +11407,6 @@
       "lab_authors": [
         "trung_kien_dao",
         "thi_thanh_thuy_pham"
-      ]
-    },
-    {
-      "title": "Scene description for visually impaired in outdoor environment",
-      "authors": "QH Nguyen, TH Tran",
-      "year": 2013,
-      "venue": "2013 International Conference on Advanced Technologies for Communications …, 2013",
-      "topic": "Visually Impaired",
-      "lab_authors": [
-        "thanh_hai_tran"
       ]
     },
     {
@@ -11005,6 +11862,16 @@
       "topic": "Surveillance",
       "lab_authors": [
         "thi_lan_le"
+      ]
+    },
+    {
+      "title": "Trajectory-based video indexing and retrieval enabling relevance feedback",
+      "authors": "TH Le",
+      "year": 2010,
+      "venue": "",
+      "topic": "Surveillance",
+      "lab_authors": [
+        "trung_hieu_le"
       ]
     },
     {
@@ -11479,6 +12346,16 @@
       ]
     },
     {
+      "title": "A robust controller for underwater robotic vehicles under thruster redundancy and fault accommodation",
+      "authors": "QH Nguyen, E Kreuzer",
+      "year": 2006,
+      "venue": "VDI BERICHTE 1956, 219, 2006",
+      "topic": "Other",
+      "lab_authors": [
+        "quoc_hung_nguyen"
+      ]
+    },
+    {
       "title": "An interface for image retrieval and its extension to video retrieval",
       "authors": "TL Le, A Boucher, M Thonnat",
       "year": 2006,
@@ -11579,6 +12456,16 @@
       ]
     },
     {
+      "title": "Fuzzy sliding-mode controllers with applications",
+      "authors": "QP Ha, QH Nguyen, DC Rye, HF Durrant-Whyte",
+      "year": 2001,
+      "venue": "IEEE Transactions on industrial electronics 48 (1), 38-46, 2001",
+      "topic": "Other",
+      "lab_authors": [
+        "quoc_hung_nguyen"
+      ]
+    },
+    {
       "title": "Diphenylene iodonium sensitivity of a solubilized membrane enzyme from rose cells",
       "authors": "TM Murphy, H Vu, T Nguyen, CH Woo",
       "year": 2000,
@@ -11589,6 +12476,26 @@
       ]
     },
     {
+      "title": "Impedance control of a hydraulically actuated robotic excavator",
+      "authors": "QP Ha, QH Nguyen, DC Rye, HF Durrant-Whyte",
+      "year": 2000,
+      "venue": "Automation in construction 9 (5-6), 421-435, 2000",
+      "topic": "Other",
+      "lab_authors": [
+        "quoc_hung_nguyen"
+      ]
+    },
+    {
+      "title": "Force/position tracking for electrohydraulic systems of a robotic excavator",
+      "authors": "QH Nguyen, QP Ha, DC Rye, HF Durrant-Whyte",
+      "year": 2000,
+      "venue": "Proceedings of the 39th IEEE conference on decision and control (CAT. No …, 2000",
+      "topic": "Other",
+      "lab_authors": [
+        "quoc_hung_nguyen"
+      ]
+    },
+    {
       "title": "Imagerie de la fasciolose hépato-biliaire",
       "authors": "QK Nguyen, TH Nguyen, TTT PHAM, CC Hoeffel",
       "year": 1999,
@@ -11596,6 +12503,26 @@
       "topic": "Other",
       "lab_authors": [
         "thi_thanh_thuy_pham"
+      ]
+    },
+    {
+      "title": "Feedback linearisation control for electrohydraulic systems of a robotic excavator",
+      "authors": "QH Nguyen, QP Ha, DC Rye, HF Durrant-Whyte",
+      "year": 1999,
+      "venue": "Proceedings of the Australian Conference for Robotics and Automation 1, 190-195, 1999",
+      "topic": "Other",
+      "lab_authors": [
+        "quoc_hung_nguyen"
+      ]
+    },
+    {
+      "title": "Force and position control for electrohydraulic systems of a robotic excavator",
+      "authors": "QP Ha, QH Nguyen, DC Rye, HF Durrant-Whyte",
+      "year": 1999,
+      "venue": "ISARC'99: international symposium on automation and robotics in construction …, 1999",
+      "topic": "Other",
+      "lab_authors": [
+        "quoc_hung_nguyen"
       ]
     },
     {
@@ -11650,12 +12577,23 @@
       ]
     },
     {
+      "title": "Angelica De La Cruz 77 Angelique D. Lacasandile 77 Ariana Rodríguez-Cristiansen 66",
+      "authors": "AO Trillanes, Q Xu, QH Nguyen, R Huimin, S Elgamal, SD Viet, …",
+      "year": null,
+      "venue": "Proceedings of 2022 11th International Conference on Software and …, 0",
+      "topic": "Other",
+      "lab_authors": [
+        "quoc_hung_nguyen"
+      ]
+    },
+    {
       "title": "OBJECT CLASSIFICATION: A COMPARATIVE STUDY AND APPLYING FOR ADVERTISEMENT SERVICES BASED ON IMAGE CONTENT",
       "authors": "QH Nguyen, TH Tran, TL Le, H Vu, NH Pham, QH Nguyen",
       "year": null,
       "venue": "",
       "topic": "Other",
       "lab_authors": [
+        "quoc_hung_nguyen",
         "thanh_hai_tran",
         "thi_lan_le",
         "hai_vu"
@@ -11825,6 +12763,26 @@
       ]
     },
     {
+      "title": "THE IMPACT OF CORPORATE CULTURE ON EMPLOYEE CREATIVITY: USING DOCS MODEL INTEGRATED WITH THE ATTRIBUTES OF ICT CORPORATIONS (CASE: FPT CORPORATION)",
+      "authors": "NT Hue, LT Binh, BLV Son, N Khanh, NQ Hung",
+      "year": null,
+      "venue": "SMART BUSINESS AND DIGITAL ECONOMY, 441, 0",
+      "topic": "Other",
+      "lab_authors": [
+        "quoc_hung_nguyen"
+      ]
+    },
+    {
+      "title": "A ustralian Centre for Field Robotics Department of Mechanical and Mechatronic Engineering J07 The University of Sydney 2006 NSW, Australia {quang. ha (a) mech. eng. usyd. edu. au}",
+      "authors": "QP Ha, QH Nguyen, DC Rye, HF Durrant-Whyte",
+      "year": null,
+      "venue": "",
+      "topic": "Other",
+      "lab_authors": [
+        "quoc_hung_nguyen"
+      ]
+    },
+    {
       "title": "Accepted Manuscript Vietnam Journal of Computer Science",
       "authors": "HQ Nguyen, TB Nguyen, TL Le",
       "year": null,
@@ -11865,17 +12823,6 @@
       "topic": "Other",
       "lab_authors": [
         "dinh_tan_pham"
-      ]
-    },
-    {
-      "title": "Automatic Localization and Navigation Assistance for Visually Impaired People Using Robot",
-      "authors": "QH Nguyen, TH Tran, H Vu, QH Nguyen",
-      "year": null,
-      "venue": "JICT, a special edition of the Journal of Science and Technology, Le Quy Don …, 0",
-      "topic": "Visually Impaired",
-      "lab_authors": [
-        "thanh_hai_tran",
-        "hai_vu"
       ]
     },
     {
@@ -12040,16 +12987,6 @@
     },
     {
       "title": "An analysis on human activities recognition using Kinect sensor",
-      "authors": "Thi Lan Le",
-      "year": null,
-      "venue": "",
-      "topic": "Other",
-      "lab_authors": [
-        "thi_lan_le"
-      ]
-    },
-    {
-      "title": "Object detection and classification for advertising service based on image content",
       "authors": "Thi Lan Le",
       "year": null,
       "venue": "",
