@@ -29,25 +29,27 @@
       "deadlines": [
         {
           "year": 2026,
-          "kind": "abstract",
-          "date": "2025-11-07",
-          "timezone": "AoE"
-        },
-        {
-          "year": 2026,
-          "kind": "full-paper",
-          "date": "2025-11-14",
-          "timezone": "AoE"
+          "kind": "rebuttal",
+          "date": "2026-01-29",
+          "note": "rebuttal period ends; reviews released 2026-01-22"
         },
         {
           "year": 2026,
           "kind": "notification",
-          "date": "2026-02-26"
+          "date": "2026-02-20",
+          "note": "CVPR 2026 final decisions"
         },
         {
           "year": 2026,
-          "kind": "camera-ready",
-          "date": "2026-04-04"
+          "kind": "registration",
+          "date": "2026-04-23",
+          "note": "CVPR 2026 early registration deadline"
+        },
+        {
+          "year": 2026,
+          "kind": "registration",
+          "date": "2026-06-03",
+          "note": "conference June 3-7 in Denver (workshops Jun 3-4, main Jun 5-7)"
         }
       ],
       "frequency": "annual",
@@ -187,8 +189,33 @@
       "deadlines": [
         {
           "year": 2026,
-          "kind": "full-paper",
-          "date": "2026-03-06"
+          "kind": "rebuttal",
+          "date": "2026-05-14",
+          "note": "rebuttal period May 8-14"
+        },
+        {
+          "year": 2026,
+          "kind": "notification",
+          "date": "2026-06-12",
+          "note": "MICCAI 2026 paper decisions"
+        },
+        {
+          "year": 2026,
+          "kind": "camera-ready",
+          "date": "2026-05-25",
+          "note": "early-accept camera-ready"
+        },
+        {
+          "year": 2026,
+          "kind": "camera-ready",
+          "date": "2026-06-26",
+          "note": "all-others camera-ready & author registration"
+        },
+        {
+          "year": 2026,
+          "kind": "registration",
+          "date": "2026-09-27",
+          "note": "conference Sep 27 - Oct 1 in Strasbourg, France"
         }
       ],
       "frequency": "annual",
@@ -317,9 +344,21 @@
       "deadlines": [
         {
           "year": 2026,
-          "kind": "notification",
-          "date": "2026-01-25",
-          "timezone": "AoE"
+          "kind": "registration",
+          "date": "2026-03-14",
+          "note": "ICLR 2026 early registration deadline"
+        },
+        {
+          "year": 2026,
+          "kind": "registration",
+          "date": "2026-04-02",
+          "note": "ICLR 2026 cancellation deadline"
+        },
+        {
+          "year": 2026,
+          "kind": "registration",
+          "date": "2026-04-23",
+          "note": "conference April 23-25 (workshops Apr 26-27) in Rio de Janeiro"
         }
       ],
       "frequency": "annual",
@@ -353,7 +392,47 @@
       "acceptanceRate": 0.176,
       "location": "Montréal, Canada",
       "notes": "AAAI-27 in Montréal Feb 16-23, 2027. Submission deadlines TBD. AAAI-26 had 17.6% acceptance from 23,680 submissions.",
-      "lastVerified": "2026-04-29"
+      "lastVerified": "2026-04-29",
+      "deadlines": [
+        {
+          "year": 2026,
+          "kind": "registration",
+          "date": "2026-01-20",
+          "note": "AAAI-26 conference Jan 20-27 in Singapore (main track Jan 22-25)"
+        },
+        {
+          "year": 2027,
+          "kind": "abstract",
+          "date": "2026-07-25",
+          "timezone": "AoE",
+          "note": "AAAI-27 abstract deadline"
+        },
+        {
+          "year": 2027,
+          "kind": "full-paper",
+          "date": "2026-08-01",
+          "timezone": "AoE",
+          "note": "AAAI-27 full paper deadline"
+        },
+        {
+          "year": 2027,
+          "kind": "rebuttal",
+          "date": "2026-10-08",
+          "note": "AAAI-27 rebuttal period Oct 2-8"
+        },
+        {
+          "year": 2027,
+          "kind": "notification",
+          "date": "2026-11-03",
+          "note": "AAAI-27 final notification"
+        },
+        {
+          "year": 2027,
+          "kind": "registration",
+          "date": "2027-02-16",
+          "note": "AAAI-27 conference Feb 16-23 in Montreal"
+        }
+      ]
     },
     {
       "id": "ijcai",
@@ -545,7 +624,15 @@
       "frequency": "annual",
       "location": "Buena Vista, FL, USA",
       "notes": "WACV 2027 at Disney Springs, January 5-9, 2027. Submission deadlines TBD. Typical acceptance ~35-45%.",
-      "lastVerified": "2026-04-29"
+      "lastVerified": "2026-04-29",
+      "deadlines": [
+        {
+          "year": 2027,
+          "kind": "registration",
+          "date": "2027-01-01",
+          "note": "WACV 2027 scheduled January 2027 - dates and location TBD"
+        }
+      ]
     },
     {
       "id": "accv",
@@ -605,7 +692,15 @@
       "frequency": "annual",
       "location": "Vancouver, Canada",
       "notes": "3DV 2026 was held March 20-23, 2026 in Vancouver. 3DV 2027 planned in Thessaloniki, Greece. Annual since 2013.",
-      "lastVerified": "2026-04-29"
+      "lastVerified": "2026-04-29",
+      "deadlines": [
+        {
+          "year": 2027,
+          "kind": "registration",
+          "date": "2027-04-15",
+          "note": "3DV 2027 mid-April in Thessaloniki, Greece - exact dates TBD"
+        }
+      ]
     },
     {
       "id": "siggraph",
@@ -631,10 +726,35 @@
       "deadlines": [
         {
           "year": 2026,
+          "kind": "abstract",
+          "date": "2026-05-05",
+          "timezone": "AoE",
+          "note": "SIGGRAPH Asia 2026 abstract submission"
+        },
+        {
+          "year": 2026,
           "kind": "full-paper",
-          "date": "2026-01-15",
-          "timezone": "UTC",
-          "note": "Submissions closed"
+          "date": "2026-05-12",
+          "timezone": "AoE",
+          "note": "SIGGRAPH Asia 2026 full paper submission"
+        },
+        {
+          "year": 2026,
+          "kind": "registration",
+          "date": "2026-06-18",
+          "note": "SIGGRAPH 2026 Birds of a Feather submission deadline"
+        },
+        {
+          "year": 2026,
+          "kind": "registration",
+          "date": "2026-07-19",
+          "note": "SIGGRAPH 2026 conference July 19-23 in Los Angeles"
+        },
+        {
+          "year": 2026,
+          "kind": "registration",
+          "date": "2026-12-01",
+          "note": "SIGGRAPH Asia 2026 conference Dec 1-4 in Kuala Lumpur"
         }
       ],
       "frequency": "annual",
@@ -755,7 +875,29 @@
       "acceptanceRate": 0.25,
       "location": "Tangier, Morocco",
       "notes": "AISTATS 2026, May 2-5, 2026 in Tangier. AISTATS 2027 planned for Toronto, May 16-21, 2027 (deadlines TBD).",
-      "lastVerified": "2026-04-29"
+      "lastVerified": "2026-04-29",
+      "deadlines": [
+        {
+          "year": 2026,
+          "kind": "camera-ready",
+          "date": "2026-03-31",
+          "timezone": "AoE",
+          "note": "AISTATS 2026 camera-ready (strict, no extensions)"
+        },
+        {
+          "year": 2026,
+          "kind": "registration",
+          "date": "2026-03-26",
+          "timezone": "AoE",
+          "note": "AISTATS 2026 financial aid notifications"
+        },
+        {
+          "year": 2026,
+          "kind": "registration",
+          "date": "2026-05-02",
+          "note": "conference May 2-5 in Tangier, Morocco"
+        }
+      ]
     },
     {
       "id": "uai",
@@ -778,9 +920,21 @@
       "deadlines": [
         {
           "year": 2026,
-          "kind": "full-paper",
-          "date": "2026-02-25",
-          "timezone": "AoE"
+          "kind": "rebuttal",
+          "date": "2026-05-02",
+          "note": "UAI 2026 rebuttal period Apr 23 - May 2"
+        },
+        {
+          "year": 2026,
+          "kind": "notification",
+          "date": "2026-06-01",
+          "note": "UAI 2026 paper notification"
+        },
+        {
+          "year": 2026,
+          "kind": "registration",
+          "date": "2026-08-17",
+          "note": "conference Aug 17-21 in Amsterdam (tutorials Aug 17, main Aug 18-20, workshops Aug 21)"
         }
       ],
       "frequency": "annual",
@@ -813,7 +967,39 @@
       "acceptanceRate": 0.49,
       "location": "Toronto, Canada (2027)",
       "notes": "Flagship signal processing conference; ICASSP 2027 dates 16-21 May 2027, deadlines TBA",
-      "lastVerified": "2026-04-29"
+      "lastVerified": "2026-04-29",
+      "deadlines": [
+        {
+          "year": 2026,
+          "kind": "notification",
+          "date": "2026-01-16",
+          "note": "ICASSP 2026 paper acceptance notification"
+        },
+        {
+          "year": 2026,
+          "kind": "camera-ready",
+          "date": "2026-01-28",
+          "note": "ICASSP 2026 camera-ready deadline"
+        },
+        {
+          "year": 2026,
+          "kind": "registration",
+          "date": "2026-02-13",
+          "note": "ICASSP 2026 author registration deadline"
+        },
+        {
+          "year": 2026,
+          "kind": "registration",
+          "date": "2026-05-04",
+          "note": "ICASSP 2026 conference May 4-8 in Barcelona"
+        },
+        {
+          "year": 2027,
+          "kind": "registration",
+          "date": "2027-05-16",
+          "note": "ICASSP 2027 conference May 16-21 in Toronto"
+        }
+      ]
     },
     {
       "id": "icip",
@@ -838,10 +1024,45 @@
       "deadlines": [
         {
           "year": 2026,
+          "kind": "notification",
+          "date": "2026-04-29",
+          "note": "ICIP 2026 regular & special-session notifications"
+        },
+        {
+          "year": 2026,
+          "kind": "camera-ready",
+          "date": "2026-05-13",
+          "note": "ICIP 2026 regular/special-session camera-ready; also Grand Challenge abstract deadline"
+        },
+        {
+          "year": 2026,
           "kind": "full-paper",
-          "date": "2026-02-04",
-          "timezone": "AoE",
-          "note": "Grace period for completing started submissions until Feb 11, 2026"
+          "date": "2026-05-20",
+          "note": "ICIP 2026 satellite workshop paper submission"
+        },
+        {
+          "year": 2026,
+          "kind": "notification",
+          "date": "2026-06-17",
+          "note": "ICIP 2026 satellite workshop & grand challenge notifications"
+        },
+        {
+          "year": 2026,
+          "kind": "registration",
+          "date": "2026-06-17",
+          "note": "ICIP 2026 author registration deadline"
+        },
+        {
+          "year": 2026,
+          "kind": "camera-ready",
+          "date": "2026-07-01",
+          "note": "ICIP 2026 satellite workshop & grand challenge camera-ready"
+        },
+        {
+          "year": 2026,
+          "kind": "registration",
+          "date": "2026-09-13",
+          "note": "ICIP 2026 conference Sep 13-17 in Tampere, Finland"
         }
       ],
       "frequency": "annual",
@@ -872,7 +1093,19 @@
           "year": 2026,
           "kind": "notification",
           "date": "2026-03-31",
-          "timezone": "AoE"
+          "note": "ICPR 2026 author notification"
+        },
+        {
+          "year": 2026,
+          "kind": "camera-ready",
+          "date": "2026-05-04",
+          "note": "ICPR 2026 camera-ready (Springer) - no extension"
+        },
+        {
+          "year": 2026,
+          "kind": "registration",
+          "date": "2026-08-17",
+          "note": "ICPR 2026 conference Aug 17-22"
         }
       ],
       "frequency": "biannual",
@@ -904,7 +1137,27 @@
       "acceptanceRate": 0.45,
       "location": "(ICRA 2027 May 24-28, 2027)",
       "notes": "Top robotics conference; ICRA 2026 submissions closed; 2027 deadlines not yet announced",
-      "lastVerified": "2026-04-29"
+      "lastVerified": "2026-04-29",
+      "deadlines": [
+        {
+          "year": 2026,
+          "kind": "camera-ready",
+          "date": "2026-03-06",
+          "note": "ICRA 2026 camera-ready deadline"
+        },
+        {
+          "year": 2026,
+          "kind": "registration",
+          "date": "2026-06-01",
+          "note": "ICRA 2026 conference Jun 1-5 in Vienna"
+        },
+        {
+          "year": 2027,
+          "kind": "registration",
+          "date": "2027-05-24",
+          "note": "ICRA 2027 conference May 24-28 in Seoul"
+        }
+      ]
     },
     {
       "id": "iros",
@@ -964,7 +1217,36 @@
       "acceptanceRate": 0.295,
       "location": "Sydney, Australia (2026)",
       "notes": "Highly selective robotics venue; 2026 submission deadlines already passed (late January 2026)",
-      "lastVerified": "2026-04-29"
+      "lastVerified": "2026-04-29",
+      "deadlines": [
+        {
+          "year": 2026,
+          "kind": "abstract",
+          "date": "2026-01-23",
+          "timezone": "AoE",
+          "note": "RSS 2026 abstract/title submission"
+        },
+        {
+          "year": 2026,
+          "kind": "full-paper",
+          "date": "2026-01-30",
+          "timezone": "AoE",
+          "note": "RSS 2026 paper submission"
+        },
+        {
+          "year": 2026,
+          "kind": "full-paper",
+          "date": "2026-02-06",
+          "timezone": "AoE",
+          "note": "RSS 2026 supplementary material"
+        },
+        {
+          "year": 2026,
+          "kind": "registration",
+          "date": "2026-07-13",
+          "note": "RSS 2026 conference Jul 13-17 at UTS Sydney"
+        }
+      ]
     },
     {
       "id": "corl",
@@ -1024,7 +1306,33 @@
       "frequency": "annual",
       "location": "London, UK (2026, 8-11 April)",
       "notes": "ISBI 2026 deadlines already passed (Nov 2025); ISBI 2027 deadlines not yet announced",
-      "lastVerified": "2026-04-29"
+      "lastVerified": "2026-04-29",
+      "deadlines": [
+        {
+          "year": 2026,
+          "kind": "notification",
+          "date": "2026-02-03",
+          "note": "ISBI 2026 1-page abstract decisions"
+        },
+        {
+          "year": 2026,
+          "kind": "camera-ready",
+          "date": "2026-03-15",
+          "note": "ISBI 2026 challenge papers camera-ready"
+        },
+        {
+          "year": 2026,
+          "kind": "notification",
+          "date": "2026-03-20",
+          "note": "ISBI 2026 oral vs poster notification"
+        },
+        {
+          "year": 2026,
+          "kind": "registration",
+          "date": "2026-04-08",
+          "note": "ISBI 2026 conference Apr 8-11 in London"
+        }
+      ]
     },
     {
       "id": "ipmi",
@@ -1047,7 +1355,15 @@
       "frequency": "biannual",
       "location": "Quebec, Canada (2027, June 27 - July 02, estimated)",
       "notes": "Highly selective biennial conference (odd years); IPMI 2027 deadlines not yet announced",
-      "lastVerified": "2026-04-29"
+      "lastVerified": "2026-04-29",
+      "deadlines": [
+        {
+          "year": 2027,
+          "kind": "registration",
+          "date": "2027-06-27",
+          "note": "IPMI 2027 conference Jun 27 - Jul 2 in Quebec, Canada"
+        }
+      ]
     },
     {
       "id": "midl",
@@ -1115,7 +1431,15 @@
       "frequency": "annual",
       "location": "Washington, D.C., USA (2026, 9-14 August)",
       "notes": "IGARSS 2026 paper deadline (Jan 10, 2026) already passed",
-      "lastVerified": "2026-04-29"
+      "lastVerified": "2026-04-29",
+      "deadlines": [
+        {
+          "year": 2026,
+          "kind": "registration",
+          "date": "2026-08-09",
+          "note": "IGARSS 2026 conference Aug 9-14 in Washington, D.C."
+        }
+      ]
     },
     {
       "id": "avss",
@@ -1182,7 +1506,63 @@
       "frequency": "annual",
       "location": "Bangkok, Thailand (2026, July 5-9)",
       "notes": "ICME 2026 deadline (Dec 31, 2025) already passed",
-      "lastVerified": "2026-04-29"
+      "lastVerified": "2026-04-29",
+      "deadlines": [
+        {
+          "year": 2026,
+          "kind": "rebuttal",
+          "date": "2026-02-26",
+          "note": "ICME 2026 author rebuttal Feb 22-26"
+        },
+        {
+          "year": 2026,
+          "kind": "notification",
+          "date": "2026-03-13",
+          "note": "ICME 2026 regular paper acceptance notification"
+        },
+        {
+          "year": 2026,
+          "kind": "full-paper",
+          "date": "2026-04-01",
+          "note": "ICME 2026 workshop paper submissions Mar 25 - Apr 1"
+        },
+        {
+          "year": 2026,
+          "kind": "camera-ready",
+          "date": "2026-04-05",
+          "note": "ICME 2026 regular paper camera-ready"
+        },
+        {
+          "year": 2026,
+          "kind": "notification",
+          "date": "2026-04-25",
+          "note": "ICME 2026 workshop paper notification"
+        },
+        {
+          "year": 2026,
+          "kind": "registration",
+          "date": "2026-04-25",
+          "note": "ICME 2026 author registration deadline"
+        },
+        {
+          "year": 2026,
+          "kind": "camera-ready",
+          "date": "2026-05-15",
+          "note": "ICME 2026 workshop camera-ready"
+        },
+        {
+          "year": 2026,
+          "kind": "registration",
+          "date": "2026-05-30",
+          "note": "ICME 2026 advance registration deadline"
+        },
+        {
+          "year": 2026,
+          "kind": "registration",
+          "date": "2026-07-05",
+          "note": "ICME 2026 conference Jul 5-9 in Bangkok"
+        }
+      ]
     },
     {
       "id": "icmr",
@@ -1206,7 +1586,27 @@
       "frequency": "annual",
       "location": "Amsterdam, Netherlands (2026, June 16-19)",
       "notes": "ICMR 2026 deadlines (Feb 2026) already passed",
-      "lastVerified": "2026-04-29"
+      "lastVerified": "2026-04-29",
+      "deadlines": [
+        {
+          "year": 2026,
+          "kind": "notification",
+          "date": "2026-04-15",
+          "note": "ICMR 2026 acceptance notification (regular, BNI, demo, DS)"
+        },
+        {
+          "year": 2026,
+          "kind": "camera-ready",
+          "date": "2026-04-25",
+          "note": "ICMR 2026 camera-ready & author registration"
+        },
+        {
+          "year": 2026,
+          "kind": "registration",
+          "date": "2026-06-16",
+          "note": "ICMR 2026 conference Jun 16-19 in Amsterdam"
+        }
+      ]
     },
     {
       "id": "fg",
@@ -1233,7 +1633,29 @@
       "frequency": "annual",
       "location": "Kyoto, Japan (2026, May 25-29)",
       "notes": "FG 2026 paper deadlines (Jan 2026) already passed",
-      "lastVerified": "2026-04-29"
+      "lastVerified": "2026-04-29",
+      "deadlines": [
+        {
+          "year": 2026,
+          "kind": "notification",
+          "date": "2026-04-02",
+          "timezone": "AoE",
+          "note": "FG 2026 notification to authors"
+        },
+        {
+          "year": 2026,
+          "kind": "camera-ready",
+          "date": "2026-04-21",
+          "timezone": "AoE",
+          "note": "FG 2026 camera-ready"
+        },
+        {
+          "year": 2026,
+          "kind": "registration",
+          "date": "2026-05-25",
+          "note": "FG 2026 conference May 25-29 in Kyoto"
+        }
+      ]
     },
     {
       "id": "icdar",
@@ -1330,7 +1752,15 @@
       "frequency": "biannual",
       "location": "Japan",
       "notes": "Japan-based biennial conference (odd years); MVA 2027 deadlines not yet announced",
-      "lastVerified": "2026-04-29"
+      "lastVerified": "2026-04-29",
+      "deadlines": [
+        {
+          "year": 2027,
+          "kind": "registration",
+          "date": "2027-07-01",
+          "note": "MVA 2027 in Fukuoka, Japan - exact dates TBD (biennial, follows MVA 2025)"
+        }
+      ]
     },
     {
       "id": "mapr",
@@ -1485,7 +1915,39 @@
       "frequency": "annual",
       "location": "Bali, Indonesia (2026, October 10-13)",
       "notes": "Asia-Pacific regional flagship conference of IEEE Region 10",
-      "lastVerified": "2026-04-29"
+      "lastVerified": "2026-04-29",
+      "deadlines": [
+        {
+          "year": 2026,
+          "kind": "full-paper",
+          "date": "2026-04-28",
+          "note": "TENCON 2026 full paper submission (extended)"
+        },
+        {
+          "year": 2026,
+          "kind": "notification",
+          "date": "2026-06-27",
+          "note": "TENCON 2026 notification of acceptance"
+        },
+        {
+          "year": 2026,
+          "kind": "camera-ready",
+          "date": "2026-07-27",
+          "note": "TENCON 2026 final manuscript & early-bird registration"
+        },
+        {
+          "year": 2026,
+          "kind": "registration",
+          "date": "2026-08-31",
+          "note": "TENCON 2026 normal registration deadline"
+        },
+        {
+          "year": 2026,
+          "kind": "registration",
+          "date": "2026-10-10",
+          "note": "TENCON 2026 conference Oct 10-13 in Bali, Indonesia"
+        }
+      ]
     },
     {
       "id": "ijcv",
@@ -5782,6 +6244,271 @@
       "frequency": "annual",
       "location": "Toronto, Canada",
       "notes": "ICASSP 2027 (May 16-21, Toronto). Workshop CFP and deadlines not yet published as of April 29, 2026; historically opens August-October prior year with paper deadlines around October-December.",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "soict",
+      "name": "SOICT",
+      "fullName": "International Symposium on Information and Communication Technology",
+      "aliases": [
+        "SoICT"
+      ],
+      "type": "conference",
+      "topics": [
+        "machine-learning",
+        "deep-learning",
+        "multimedia",
+        "signal-processing"
+      ],
+      "website": "https://soict.org/",
+      "publisher": "ACM",
+      "rankings": {
+        "scopus": true,
+        "dblp": true,
+        "core": "unranked"
+      },
+      "deadlines": [
+        {
+          "year": 2026,
+          "kind": "full-paper",
+          "date": "2026-09-15",
+          "note": "Estimated based on SOICT 2025 cycle; verify on soict.org"
+        }
+      ],
+      "frequency": "annual",
+      "location": "Vietnam (rotates: Hanoi, Da Nang, Nha Trang, etc.)",
+      "notes": "Vietnam's flagship CS symposium since 2010, ACM in-cooperation, proceedings in ACM ICPS",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "nics",
+      "name": "NICS",
+      "fullName": "NAFOSTED Conference on Information and Computer Science",
+      "type": "conference",
+      "topics": [
+        "machine-learning",
+        "computer-vision",
+        "signal-processing",
+        "data-mining"
+      ],
+      "website": "https://nics.vn/",
+      "publisher": "IEEE",
+      "rankings": {
+        "scopus": true,
+        "dblp": true,
+        "core": "unranked"
+      },
+      "frequency": "annual",
+      "location": "Vietnam (rotates among major universities)",
+      "notes": "Annual IEEE technically-sponsored conference advised by NAFOSTED Scientific Council; one of Vietnam's top 5 CS venues",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "atc",
+      "name": "ATC",
+      "fullName": "International Conference on Advanced Technologies for Communications",
+      "type": "conference",
+      "topics": [
+        "signal-processing",
+        "machine-learning",
+        "image-processing"
+      ],
+      "website": "https://atc-conf.org/",
+      "publisher": "IEEE",
+      "rankings": {
+        "scopus": true,
+        "dblp": true,
+        "core": "unranked"
+      },
+      "frequency": "annual",
+      "location": "Vietnam (rotates: Hanoi, Ho Chi Minh City, Da Nang, etc.)",
+      "notes": "Co-organized by REV (Radio & Electronics Association of Vietnam) and IEEE ComSoc since 2008; flagship Vietnamese communications conference",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "iccais",
+      "name": "ICCAIS",
+      "fullName": "International Conference on Control, Automation and Information Sciences",
+      "type": "conference",
+      "topics": [
+        "signal-processing",
+        "machine-learning",
+        "pattern-recognition"
+      ],
+      "website": "https://iccais.info/",
+      "publisher": "IEEE",
+      "rankings": {
+        "scopus": true,
+        "dblp": true,
+        "core": "unranked"
+      },
+      "frequency": "annual",
+      "location": "Asia-Pacific (Vietnam, Korea, Japan rotation)",
+      "notes": "Vietnamese-initiated (since 2012), IEEE technically co-sponsored; rotates around Asia-Pacific",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "cita",
+      "name": "CITA",
+      "fullName": "Conference on Information Technology and its Applications",
+      "type": "conference",
+      "topics": [
+        "machine-learning",
+        "data-mining",
+        "image-processing",
+        "knowledge-engineering"
+      ],
+      "website": "https://cita.vku.udn.vn/",
+      "publisher": "Springer",
+      "rankings": {
+        "scopus": true,
+        "dblp": true,
+        "core": "unranked"
+      },
+      "frequency": "annual",
+      "location": "Da Nang, Vietnam (occasionally co-hosted in ASEAN partner cities)",
+      "notes": "Organized by Vietnam-Korea University of ICT (VKU); proceedings in Springer LNNS, indexed in Scopus and DBLP",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "fair",
+      "name": "FAIR",
+      "fullName": "National Conference on Fundamental and Applied IT Research",
+      "type": "conference",
+      "topics": [
+        "machine-learning",
+        "computer-vision",
+        "signal-processing",
+        "data-mining"
+      ],
+      "website": "https://fair.conf.vn/",
+      "publisher": "VAST",
+      "rankings": {
+        "scopus": false,
+        "dblp": false,
+        "core": "unranked"
+      },
+      "frequency": "annual",
+      "location": "Vietnam (rotates among universities)",
+      "notes": "Vietnam's main national IT research conference, organized by VUSTA and VAST; proceedings published by Publishing House for Natural Science and Technology (Vietnamese ISBN)",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "vlsp",
+      "name": "VLSP",
+      "fullName": "International Workshop on Vietnamese Language and Speech Processing",
+      "type": "workshop",
+      "topics": [
+        "machine-learning",
+        "deep-learning",
+        "signal-processing",
+        "pattern-recognition"
+      ],
+      "website": "https://vlsp.org.vn/",
+      "publisher": "ACL",
+      "rankings": {
+        "scopus": false,
+        "dblp": true,
+        "core": "unranked"
+      },
+      "frequency": "annual",
+      "location": "Vietnam (Hanoi, Ho Chi Minh City)",
+      "notes": "Workshop with shared-task evaluation campaigns for Vietnamese NLP/speech; proceedings on ACL Anthology since 2025",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "vnu-jcsce",
+      "name": "VNU-JCSCE",
+      "fullName": "VNU Journal of Science: Computer Science and Communication Engineering",
+      "type": "journal",
+      "topics": [
+        "machine-learning",
+        "signal-processing",
+        "computer-vision",
+        "information-retrieval"
+      ],
+      "website": "https://jcsce.vnu.edu.vn/",
+      "publisher": "VNU",
+      "eIssn": "2588-1086",
+      "rankings": {
+        "scopus": false,
+        "dblp": false
+      },
+      "frequency": "rolling",
+      "notes": "Published by Vietnam National University Hanoi; quarterly, English-language",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "jcc-vast",
+      "name": "JCC",
+      "fullName": "Journal of Computer Science and Cybernetics",
+      "aliases": [
+        "Tap chi Tin hoc va Dieu khien hoc"
+      ],
+      "type": "journal",
+      "topics": [
+        "machine-learning",
+        "signal-processing",
+        "pattern-recognition",
+        "knowledge-engineering"
+      ],
+      "website": "https://vjs.ac.vn/index.php/jcc",
+      "publisher": "VAST",
+      "issn": "1813-9663",
+      "rankings": {
+        "scopus": false,
+        "dblp": false
+      },
+      "frequency": "rolling",
+      "notes": "Vietnam's national CS journal, published quarterly by Vietnam Academy of Science and Technology; English-only since 2014",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "vjcs",
+      "name": "VJCS",
+      "fullName": "Vietnam Journal of Computer Science",
+      "type": "journal",
+      "topics": [
+        "machine-learning",
+        "data-mining",
+        "knowledge-engineering",
+        "computer-vision"
+      ],
+      "website": "https://www.worldscientific.com/worldscinet/vjcs",
+      "publisher": "World Scientific",
+      "issn": "2196-8888",
+      "eIssn": "2196-8896",
+      "rankings": {
+        "scopus": true,
+        "dblp": true,
+        "scimagoQuartile": "Q3",
+        "sjr": 0.272
+      },
+      "frequency": "rolling",
+      "notes": "Originally launched with Springer (2013-2020), now published by World Scientific; open access; Scopus-indexed Q3",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "jit-tandf",
+      "name": "JIT",
+      "fullName": "Journal of Information and Telecommunication",
+      "type": "journal",
+      "topics": [
+        "signal-processing",
+        "machine-learning",
+        "multimedia",
+        "information-retrieval"
+      ],
+      "website": "https://www.tandfonline.com/journals/tjit20",
+      "publisher": "Taylor & Francis",
+      "issn": "2475-1839",
+      "eIssn": "2475-1847",
+      "rankings": {
+        "scopus": true,
+        "dblp": true
+      },
+      "frequency": "rolling",
+      "notes": "Open-access journal published by Taylor & Francis with strong Vietnamese/regional editorial presence",
       "lastVerified": "2026-04-29"
     }
   ]
