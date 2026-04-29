@@ -2798,6 +2798,2991 @@
       "frequency": "rolling",
       "notes": "Open access multidisciplinary applied sciences journal",
       "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "cvpr-w-wad-2026",
+      "name": "CVPRW WAD",
+      "fullName": "Workshop on Autonomous Driving",
+      "aliases": [
+        "CVPR 2026 WAD",
+        "WAD@CVPR"
+      ],
+      "type": "workshop",
+      "parent": "cvpr",
+      "topics": [
+        "autonomous-driving",
+        "computer-vision",
+        "scene-understanding"
+      ],
+      "website": "https://cvpr.thecvf.com/Conferences/2026/Workshops",
+      "rankings": {
+        "scopus": true,
+        "isi": false,
+        "dblp": true
+      },
+      "frequency": "annual",
+      "notes": "Long-running flagship CVPR autonomous driving workshop; 2027 dates TBD",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "cvpr-w-ntire-2026",
+      "name": "CVPRW NTIRE",
+      "fullName": "11th New Trends in Image Restoration and Enhancement Workshop",
+      "aliases": [
+        "NTIRE 2026",
+        "New Trends in Image Restoration and Enhancement"
+      ],
+      "type": "workshop",
+      "parent": "cvpr",
+      "topics": [
+        "low-level-vision",
+        "image-processing",
+        "computer-vision"
+      ],
+      "website": "https://cvlai.net/ntire/2026/",
+      "rankings": {
+        "scopus": true,
+        "isi": false,
+        "dblp": true
+      },
+      "frequency": "annual",
+      "notes": "Largest CVPR low-level vision workshop with multiple challenge tracks; 2027 dates TBD",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "cvpr-w-eai-2026",
+      "name": "CVPRW EAI",
+      "fullName": "The Seventh Annual Embodied Artificial Intelligence Workshop",
+      "aliases": [
+        "Embodied AI Workshop",
+        "EAI@CVPR"
+      ],
+      "type": "workshop",
+      "parent": "cvpr",
+      "topics": [
+        "robotics",
+        "vision-language",
+        "scene-understanding"
+      ],
+      "website": "https://embodied-ai.org/",
+      "rankings": {
+        "scopus": true,
+        "isi": false,
+        "dblp": true
+      },
+      "frequency": "annual",
+      "notes": "Leading embodied AI workshop with multi-task simulation challenges; 2027 dates TBD",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "cvpr-w-vizwiz-2026",
+      "name": "CVPRW VizWiz",
+      "fullName": "VizWiz Grand Challenge: Interpreting Images Taken by Blind People",
+      "aliases": [
+        "VizWiz Grand Challenge"
+      ],
+      "type": "workshop",
+      "parent": "cvpr",
+      "topics": [
+        "vision-language",
+        "computer-vision"
+      ],
+      "website": "https://vizwiz.org/workshops/2026-workshop/",
+      "rankings": {
+        "scopus": true,
+        "isi": false,
+        "dblp": true
+      },
+      "frequency": "annual",
+      "notes": "Accessibility-focused CV workshop; 2027 dates TBD",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "cvpr-w-fgvc-2026",
+      "name": "CVPRW FGVC13",
+      "fullName": "13th Workshop on Fine-grained Visual Categorization",
+      "aliases": [
+        "FGVC 2026"
+      ],
+      "type": "workshop",
+      "parent": "cvpr",
+      "topics": [
+        "classification",
+        "computer-vision",
+        "deep-learning"
+      ],
+      "website": "https://sites.google.com/view/fgvc13",
+      "rankings": {
+        "scopus": true,
+        "isi": false,
+        "dblp": true
+      },
+      "frequency": "annual",
+      "notes": "Long-running FGVC series with iNaturalist/Herbarium challenges; 2027 dates TBD",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "cvpr-w-earthvision-2026",
+      "name": "CVPRW EarthVision",
+      "fullName": "EarthVision: Large Scale Computer Vision for Remote Sensing Imagery",
+      "aliases": [
+        "EarthVision 2026"
+      ],
+      "type": "workshop",
+      "parent": "cvpr",
+      "topics": [
+        "remote-sensing",
+        "computer-vision",
+        "segmentation"
+      ],
+      "website": "https://www.grss-ieee.org/events/earthvision-2026/",
+      "rankings": {
+        "scopus": true,
+        "isi": false,
+        "dblp": true
+      },
+      "frequency": "annual",
+      "notes": "Premier remote sensing CV workshop, IEEE GRSS co-sponsored; 2027 dates TBD",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "cvpr-w-agriculture-vision-2026",
+      "name": "CVPRW Agriculture-Vision",
+      "fullName": "7th International Workshop on Agriculture-Vision: Challenges & Opportunities for Computer Vision in Agriculture",
+      "aliases": [
+        "Agriculture-Vision 2026",
+        "V4A"
+      ],
+      "type": "workshop",
+      "parent": "cvpr",
+      "topics": [
+        "agriculture",
+        "remote-sensing",
+        "computer-vision"
+      ],
+      "website": "https://www.agriculture-vision.com/",
+      "rankings": {
+        "scopus": true,
+        "isi": false,
+        "dblp": true
+      },
+      "frequency": "annual",
+      "notes": "7th edition; agriculture-focused CV workshop with annual challenge; 2027 dates TBD",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "cvpr-w-mcv-2026",
+      "name": "CVPRW MCV",
+      "fullName": "12th Workshop on Medical Computer Vision",
+      "aliases": [
+        "MCV 2026",
+        "Medical Computer Vision"
+      ],
+      "type": "workshop",
+      "parent": "cvpr",
+      "topics": [
+        "medical-imaging",
+        "computer-vision",
+        "segmentation"
+      ],
+      "website": "https://mcv-workshop.github.io/",
+      "rankings": {
+        "scopus": true,
+        "isi": false,
+        "dblp": true
+      },
+      "frequency": "annual",
+      "notes": "Long-running medical CV workshop; 2027 dates TBD",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "cvpr-w-biom-2026",
+      "name": "CVPRW Biometrics",
+      "fullName": "CVPR 2026 Biometrics Workshop",
+      "aliases": [
+        "BIOM 2026",
+        "CVPR Biometrics Workshop"
+      ],
+      "type": "workshop",
+      "parent": "cvpr",
+      "topics": [
+        "biometrics",
+        "face-recognition",
+        "computer-vision"
+      ],
+      "website": "https://www.cvpr-biometrics.org/",
+      "rankings": {
+        "scopus": true,
+        "isi": false,
+        "dblp": true
+      },
+      "frequency": "annual",
+      "notes": "Annual CVPR biometrics workshop; 2027 dates TBD",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "cvpr-w-ai4cc-2026",
+      "name": "CVPRW AI4CC",
+      "fullName": "AI for Content Creation Workshop",
+      "aliases": [
+        "AI4CC 2026"
+      ],
+      "type": "workshop",
+      "parent": "cvpr",
+      "topics": [
+        "generative-models",
+        "graphics",
+        "computer-vision"
+      ],
+      "website": "https://ai4cc.net/",
+      "rankings": {
+        "scopus": true,
+        "isi": false,
+        "dblp": true
+      },
+      "frequency": "annual",
+      "notes": "Established generative-AI content-creation workshop; 2027 dates TBD",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "cvpr-w-egovis-2026",
+      "name": "CVPRW EgoVis",
+      "fullName": "Third Joint Egocentric Vision Workshop",
+      "aliases": [
+        "EgoVis 2026",
+        "Joint Egocentric Vision Workshop"
+      ],
+      "type": "workshop",
+      "parent": "cvpr",
+      "topics": [
+        "video-analysis",
+        "action-recognition",
+        "computer-vision"
+      ],
+      "website": "https://egovis.github.io/cvpr26/",
+      "rankings": {
+        "scopus": true,
+        "isi": false,
+        "dblp": true
+      },
+      "frequency": "annual",
+      "notes": "Egocentric vision workshop incorporating Ego4D / EPIC-Kitchens challenges; 2027 dates TBD",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "cvpr-w-abaw-2026",
+      "name": "CVPRW ABAW",
+      "fullName": "10th Affective & Behavior Analysis in-the-wild Workshop and Challenge",
+      "aliases": [
+        "ABAW 2026"
+      ],
+      "type": "workshop",
+      "parent": "cvpr",
+      "topics": [
+        "computer-vision",
+        "action-recognition",
+        "pattern-recognition"
+      ],
+      "website": "https://affective-behavior-analysis-in-the-wild.github.io/10th/",
+      "rankings": {
+        "scopus": true,
+        "isi": false,
+        "dblp": true
+      },
+      "frequency": "annual",
+      "notes": "10th edition; long-running affective behavior analysis challenge; 2027 dates TBD",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "cvpr-w-cvinw-2026",
+      "name": "CVPRW CVinW",
+      "fullName": "5th Workshop on Computer Vision in the Wild",
+      "aliases": [
+        "CVinW 2026"
+      ],
+      "type": "workshop",
+      "parent": "cvpr",
+      "topics": [
+        "vision-language",
+        "object-detection",
+        "computer-vision"
+      ],
+      "website": "https://computer-vision-in-the-wild.github.io/cvpr-2026/",
+      "rankings": {
+        "scopus": true,
+        "isi": false,
+        "dblp": true
+      },
+      "frequency": "annual",
+      "notes": "Open-vocabulary recognition / VLM benchmarking workshop; 2027 dates TBD",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "cvpr-w-mmfm-2026",
+      "name": "CVPRW MMFM",
+      "fullName": "5th Workshop on What is Next in Multimodal Foundation Models",
+      "aliases": [
+        "MMFM 2026"
+      ],
+      "type": "workshop",
+      "parent": "cvpr",
+      "topics": [
+        "vision-language",
+        "nlp-multimodal",
+        "deep-learning"
+      ],
+      "website": "https://sites.google.com/view/mmfm5thworkshop",
+      "rankings": {
+        "scopus": true,
+        "isi": false,
+        "dblp": true
+      },
+      "frequency": "annual",
+      "notes": "Multimodal foundation models workshop, 5th edition; 2027 dates TBD",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "cvpr-w-pbvs-2026",
+      "name": "CVPRW PBVS",
+      "fullName": "22nd Workshop on Perception Beyond the Visible Spectrum",
+      "aliases": [
+        "PBVS 2026"
+      ],
+      "type": "workshop",
+      "parent": "cvpr",
+      "topics": [
+        "image-processing",
+        "remote-sensing",
+        "computer-vision"
+      ],
+      "website": "https://pbvs-workshop.github.io/",
+      "rankings": {
+        "scopus": true,
+        "isi": false,
+        "dblp": true
+      },
+      "frequency": "annual",
+      "notes": "Long-running thermal/multispectral/SAR imaging workshop; 2027 dates TBD",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "wacv-w-cv4eo-2027",
+      "name": "WACVW CV4EO",
+      "fullName": "Workshop on Computer Vision for Earth Observation Applications",
+      "aliases": [
+        "CV4EO at WACV"
+      ],
+      "type": "workshop",
+      "parent": "wacv",
+      "topics": [
+        "remote-sensing",
+        "computer-vision",
+        "segmentation"
+      ],
+      "website": "https://geoai.ornl.gov/cv4eo-wacv/",
+      "rankings": {
+        "scopus": true,
+        "isi": false,
+        "dblp": true
+      },
+      "frequency": "annual",
+      "notes": "Recurring WACV remote-sensing/Earth observation workshop; 2027 dates TBD",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "wacv-w-rws-2027",
+      "name": "WACVW RWS",
+      "fullName": "Real-World Surveillance: Applications and Challenges Workshop",
+      "aliases": [
+        "RWS@WACV"
+      ],
+      "type": "workshop",
+      "parent": "wacv",
+      "topics": [
+        "surveillance",
+        "computer-vision",
+        "tracking"
+      ],
+      "website": "https://vap.aau.dk/rws/",
+      "rankings": {
+        "scopus": true,
+        "isi": false,
+        "dblp": true
+      },
+      "frequency": "annual",
+      "notes": "6th edition at WACV 2026; long-running surveillance workshop; 2027 dates TBD",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "wacv-w-safe-2027",
+      "name": "WACVW SAFE",
+      "fullName": "Synthetic and Adversarial ForEnsics Workshop",
+      "aliases": [
+        "SAFE@WACV"
+      ],
+      "type": "workshop",
+      "parent": "wacv",
+      "topics": [
+        "computer-vision",
+        "biometrics",
+        "deep-learning"
+      ],
+      "website": "https://www.safeworkshop.org/",
+      "rankings": {
+        "scopus": true,
+        "isi": false,
+        "dblp": true
+      },
+      "frequency": "annual",
+      "notes": "Synthetic media detection / adversarial forensics workshop; 2027 dates TBD",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "wacv-w-cv4ws-2027",
+      "name": "WACVW CV4WS",
+      "fullName": "Workshop on Computer Vision for Winter Sports",
+      "aliases": [
+        "CV4WS"
+      ],
+      "type": "workshop",
+      "parent": "wacv",
+      "topics": [
+        "action-recognition",
+        "video-analysis",
+        "computer-vision"
+      ],
+      "website": "https://sites.google.com/unitn.it/cv4ws2026/",
+      "rankings": {
+        "scopus": true,
+        "isi": false,
+        "dblp": true
+      },
+      "frequency": "annual",
+      "notes": "4th edition at WACV 2026; sports analytics workshop; 2027 dates TBD",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "wacv-w-visiondocs-2027",
+      "name": "WACVW VisionDocs",
+      "fullName": "Workshop on Computer Vision Systems for Document Analysis and Recognition",
+      "aliases": [
+        "VisionDocs"
+      ],
+      "type": "workshop",
+      "parent": "wacv",
+      "topics": [
+        "document-analysis",
+        "computer-vision",
+        "pattern-recognition"
+      ],
+      "website": "https://sites.google.com/view/avml-lab-visiondocs-wacv2026/",
+      "rankings": {
+        "scopus": true,
+        "isi": false,
+        "dblp": true
+      },
+      "frequency": "annual",
+      "notes": "3rd edition at WACV 2026; document analysis workshop; 2027 dates TBD",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "wacv-w-llvm-ad-2027",
+      "name": "WACVW LLVM-AD",
+      "fullName": "Workshop on Large Language and Vision Models for Autonomous Driving",
+      "aliases": [
+        "LLVM-AD"
+      ],
+      "type": "workshop",
+      "parent": "wacv",
+      "topics": [
+        "autonomous-driving",
+        "vision-language",
+        "nlp-multimodal"
+      ],
+      "website": "https://llvm-ad.github.io/WACV_2026/",
+      "rankings": {
+        "scopus": true,
+        "isi": false,
+        "dblp": true
+      },
+      "frequency": "annual",
+      "notes": "Recurring LLM/VLM for autonomous driving workshop; 2027 dates TBD",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "wacv-w-mapa-2027",
+      "name": "WACVW MAP-A",
+      "fullName": "Workshop on Manipulation, Generative, Adversarial, and Presentation Attacks in Biometrics",
+      "aliases": [
+        "MAP-A"
+      ],
+      "type": "workshop",
+      "parent": "wacv",
+      "topics": [
+        "biometrics",
+        "face-recognition",
+        "computer-vision"
+      ],
+      "website": "https://sites.google.com/view/wacv2026-map-a/home",
+      "rankings": {
+        "scopus": true,
+        "isi": false,
+        "dblp": true
+      },
+      "frequency": "annual",
+      "notes": "Biometric attack/anti-spoofing workshop; 2027 dates TBD",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "wacv-w-lfmbio-2027",
+      "name": "WACVW LFMBio",
+      "fullName": "Workshop on Large Foundation Models in Biology and Biomedicine",
+      "aliases": [
+        "LFMBio"
+      ],
+      "type": "workshop",
+      "parent": "wacv",
+      "topics": [
+        "medical-imaging",
+        "deep-learning",
+        "vision-language"
+      ],
+      "website": "https://sites.google.com/view/lfmbio",
+      "rankings": {
+        "scopus": true,
+        "isi": false,
+        "dblp": true
+      },
+      "frequency": "annual",
+      "notes": "Foundation models for biomedical imaging workshop; 2027 dates TBD",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "wacv-w-evgen-2027",
+      "name": "WACVW EVGEN",
+      "fullName": "Workshop on Event-based Vision in the Era of Generative AI",
+      "aliases": [
+        "EVGEN"
+      ],
+      "type": "workshop",
+      "parent": "wacv",
+      "topics": [
+        "computer-vision",
+        "generative-models",
+        "image-processing"
+      ],
+      "website": "https://eventbasedvision.github.io/EVGEN2026/",
+      "rankings": {
+        "scopus": true,
+        "isi": false,
+        "dblp": true
+      },
+      "frequency": "annual",
+      "notes": "Event-camera vision workshop; 2027 dates TBD",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "wacv-w-p2pcv-2027",
+      "name": "WACVW Pixels2Patients",
+      "fullName": "Pixels to Patients: Bridging Computer Vision State-of-the-Art with Clinical Impact",
+      "aliases": [
+        "P2PCV"
+      ],
+      "type": "workshop",
+      "parent": "wacv",
+      "topics": [
+        "medical-imaging",
+        "computer-vision",
+        "segmentation"
+      ],
+      "website": "https://p2pcv-wacv.github.io/",
+      "rankings": {
+        "scopus": true,
+        "isi": false,
+        "dblp": true
+      },
+      "frequency": "irregular",
+      "notes": "Clinical impact CV workshop at WACV 2026; 2027 dates TBD",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "eccv-w-recovering-6d-pose",
+      "name": "R6D",
+      "fullName": "Recovering 6D Object Pose Workshop",
+      "aliases": [
+        "R6D"
+      ],
+      "type": "workshop",
+      "parent": "eccv",
+      "topics": [
+        "3d-vision",
+        "object-detection",
+        "robotics"
+      ],
+      "website": "https://cmp.felk.cvut.cz/sixd/workshop_2024/",
+      "rankings": {
+        "scopus": true,
+        "isi": false,
+        "dblp": true
+      },
+      "frequency": "biannual",
+      "notes": "Long-running 6D pose estimation workshop with BOP challenge; recurs at ECCV/ICCV.",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "eccv-w-neuslam",
+      "name": "NeuSLAM",
+      "fullName": "Dense Neural SLAM Workshop",
+      "type": "workshop",
+      "parent": "eccv",
+      "topics": [
+        "3d-vision",
+        "scene-understanding",
+        "robotics"
+      ],
+      "website": "https://sites.google.com/view/neuslam",
+      "rankings": {
+        "scopus": true,
+        "isi": false,
+        "dblp": true
+      },
+      "frequency": "biannual",
+      "notes": "Dense neural SLAM and reconstruction.",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "eccv-w-wild3d",
+      "name": "Wild3D",
+      "fullName": "3D Modeling, Reconstruction, and Generation in the Wild",
+      "type": "workshop",
+      "parent": "eccv",
+      "topics": [
+        "3d-vision",
+        "generative-models",
+        "scene-understanding"
+      ],
+      "website": "https://wild3d.github.io/",
+      "rankings": {
+        "scopus": true,
+        "isi": false,
+        "dblp": true
+      },
+      "frequency": "biannual",
+      "notes": "In-the-wild 3D reconstruction and generation; recurred at ICCV 2025.",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "eccv-w-ai3dcc",
+      "name": "AI3DCC",
+      "fullName": "AI for 3D Content Creation Workshop",
+      "type": "workshop",
+      "parent": "eccv",
+      "topics": [
+        "3d-vision",
+        "generative-models",
+        "graphics"
+      ],
+      "website": "https://ai3dcc.github.io/",
+      "rankings": {
+        "scopus": true,
+        "isi": false,
+        "dblp": true
+      },
+      "frequency": "biannual",
+      "notes": "AI-based 3D asset generation; recurring at ECCV/ICCV.",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "eccv-w-cvppa",
+      "name": "CVPPA",
+      "fullName": "Workshop on Computer Vision in Plant Phenotyping and Agriculture",
+      "type": "workshop",
+      "parent": "eccv",
+      "topics": [
+        "agriculture",
+        "computer-vision",
+        "deep-learning"
+      ],
+      "website": "https://cvppa2024.github.io/",
+      "rankings": {
+        "scopus": true,
+        "isi": false,
+        "dblp": true
+      },
+      "frequency": "annual",
+      "notes": "Long-running agriculture/plant phenotyping workshop, ECCV/ICCV editions.",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "eccv-w-cv4e",
+      "name": "CV4E",
+      "fullName": "Computer Vision for Ecology Workshop",
+      "type": "workshop",
+      "parent": "eccv",
+      "topics": [
+        "computer-vision",
+        "remote-sensing",
+        "classification"
+      ],
+      "website": "https://sites.google.com/view/cv4e-workshop",
+      "rankings": {
+        "scopus": true,
+        "isi": false,
+        "dblp": true
+      },
+      "frequency": "annual",
+      "notes": "CV applications in wildlife/ecology; runs at multiple CV venues.",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "eccv-w-vision-inspection",
+      "name": "VISION",
+      "fullName": "Workshop on Vision-based Industrial Inspection",
+      "type": "workshop",
+      "parent": "eccv",
+      "topics": [
+        "computer-vision",
+        "object-detection",
+        "deep-learning"
+      ],
+      "website": "https://vision-based-industrial-inspection.github.io/",
+      "rankings": {
+        "scopus": true,
+        "isi": false,
+        "dblp": true
+      },
+      "frequency": "annual",
+      "notes": "Industrial visual inspection and anomaly detection.",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "eccv-w-roam",
+      "name": "ROAM",
+      "fullName": "Robust, Out-of-Distribution And Multi-modal models for Autonomous Driving",
+      "type": "workshop",
+      "parent": "eccv",
+      "topics": [
+        "autonomous-driving",
+        "deep-learning",
+        "object-detection"
+      ],
+      "website": "https://sites.google.com/view/roam-workshop",
+      "rankings": {
+        "scopus": true,
+        "isi": false,
+        "dblp": true
+      },
+      "frequency": "biannual",
+      "notes": "Autonomous driving robustness and multimodal foundation models.",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "eccv-w-vcad",
+      "name": "VCAD",
+      "fullName": "Vision-Centric Autonomous Driving Workshop",
+      "type": "workshop",
+      "parent": "eccv",
+      "topics": [
+        "autonomous-driving",
+        "object-detection",
+        "3d-vision"
+      ],
+      "website": "https://vcad.site/",
+      "rankings": {
+        "scopus": true,
+        "isi": false,
+        "dblp": true
+      },
+      "frequency": "annual",
+      "notes": "Camera-first autonomous driving perception.",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "eccv-w-vots",
+      "name": "VOTS",
+      "fullName": "Visual Object Tracking and Segmentation Challenge Workshop",
+      "aliases": [
+        "VOT"
+      ],
+      "type": "workshop",
+      "parent": "eccv",
+      "topics": [
+        "tracking",
+        "segmentation",
+        "video-analysis"
+      ],
+      "website": "https://www.votchallenge.net/",
+      "rankings": {
+        "scopus": true,
+        "isi": false,
+        "dblp": true
+      },
+      "frequency": "annual",
+      "notes": "Long-running visual object tracking benchmark workshop (since 2013).",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "eccv-w-aim",
+      "name": "AIM",
+      "fullName": "Advances in Image Manipulation Workshop and Challenges",
+      "type": "workshop",
+      "parent": "eccv",
+      "topics": [
+        "low-level-vision",
+        "image-processing",
+        "generative-models"
+      ],
+      "website": "https://www.cvlai.net/aim/",
+      "rankings": {
+        "scopus": true,
+        "isi": false,
+        "dblp": true
+      },
+      "frequency": "biannual",
+      "notes": "Super-resolution, denoising, restoration challenges; ECCV-affiliated since 2018.",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "eccv-w-acvr",
+      "name": "ACVR",
+      "fullName": "International Workshop on Assistive Computer Vision and Robotics",
+      "type": "workshop",
+      "parent": "eccv",
+      "topics": [
+        "robotics",
+        "computer-vision",
+        "scene-understanding"
+      ],
+      "website": "https://iplab.dmi.unict.it/acvr2024/",
+      "rankings": {
+        "scopus": true,
+        "isi": false,
+        "dblp": true
+      },
+      "frequency": "annual",
+      "notes": "Long-running assistive CV workshop since 2013.",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "eccv-w-hands",
+      "name": "HANDS",
+      "fullName": "Observing and Understanding Hands in Action",
+      "type": "workshop",
+      "parent": "eccv",
+      "topics": [
+        "human-pose",
+        "action-recognition",
+        "3d-vision"
+      ],
+      "website": "https://sites.google.com/view/hands2024/",
+      "rankings": {
+        "scopus": true,
+        "isi": false,
+        "dblp": true
+      },
+      "frequency": "annual",
+      "notes": "Hand pose, action and grasping workshop.",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "eccv-w-abaw",
+      "name": "ABAW",
+      "fullName": "Workshop and Competition on Affective Behavior Analysis in-the-wild",
+      "type": "workshop",
+      "parent": "eccv",
+      "topics": [
+        "face-recognition",
+        "action-recognition",
+        "deep-learning"
+      ],
+      "website": "https://affective-behavior-analysis-in-the-wild.github.io/",
+      "rankings": {
+        "scopus": true,
+        "isi": false,
+        "dblp": true
+      },
+      "frequency": "annual",
+      "notes": "Annual affective computing competition (Aff-Wild2).",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "eccv-w-bic",
+      "name": "BIC",
+      "fullName": "BioImage Computing Workshop",
+      "type": "workshop",
+      "parent": "eccv",
+      "topics": [
+        "medical-imaging",
+        "segmentation",
+        "image-processing"
+      ],
+      "website": "https://bioimagecomputing.github.io/",
+      "rankings": {
+        "scopus": true,
+        "isi": false,
+        "dblp": true
+      },
+      "frequency": "biannual",
+      "notes": "BioImage analysis, microscopy and cell imaging; recurring at ECCV/ICCV.",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "eccv-w-ssl",
+      "name": "SSL",
+      "fullName": "Self-Supervised Learning - What is Next?",
+      "type": "workshop",
+      "parent": "eccv",
+      "topics": [
+        "machine-learning",
+        "deep-learning",
+        "computer-vision"
+      ],
+      "website": "https://sslwin.org/",
+      "rankings": {
+        "scopus": true,
+        "isi": false,
+        "dblp": true
+      },
+      "frequency": "biannual",
+      "notes": "Self-supervised representation learning workshop.",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "eccv-w-uncv",
+      "name": "UNCV",
+      "fullName": "Uncertainty Quantification for Computer Vision Workshop",
+      "type": "workshop",
+      "parent": "eccv",
+      "topics": [
+        "machine-learning",
+        "computer-vision",
+        "deep-learning"
+      ],
+      "website": "https://uncertainty-cv.github.io/",
+      "rankings": {
+        "scopus": true,
+        "isi": false,
+        "dblp": true
+      },
+      "frequency": "biannual",
+      "notes": "Uncertainty estimation in deep CV models.",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "eccv-w-wicv",
+      "name": "WiCV",
+      "fullName": "Women in Computer Vision Workshop",
+      "type": "workshop",
+      "parent": "eccv",
+      "topics": [
+        "computer-vision",
+        "machine-learning"
+      ],
+      "website": "https://sites.google.com/view/wicv-eccv-2024",
+      "rankings": {
+        "scopus": true,
+        "isi": false,
+        "dblp": true
+      },
+      "frequency": "annual",
+      "notes": "Long-running diversity workshop at every CVPR/ECCV/ICCV.",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "eccv-w-ilr",
+      "name": "ILR",
+      "fullName": "Instance-Level Recognition Workshop",
+      "type": "workshop",
+      "parent": "eccv",
+      "topics": [
+        "classification",
+        "object-detection",
+        "computer-vision"
+      ],
+      "website": "https://ilr-workshop.github.io/",
+      "rankings": {
+        "scopus": true,
+        "isi": false,
+        "dblp": true
+      },
+      "frequency": "biannual",
+      "notes": "Landmark, product and fine-grained recognition workshop.",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "eccv-w-opensun3d",
+      "name": "OpenSUN3D",
+      "fullName": "Workshop on Open-Vocabulary 3D Scene Understanding",
+      "type": "workshop",
+      "parent": "eccv",
+      "topics": [
+        "3d-vision",
+        "scene-understanding",
+        "vision-language"
+      ],
+      "website": "https://opensun3d.github.io/",
+      "rankings": {
+        "scopus": true,
+        "isi": false,
+        "dblp": true
+      },
+      "frequency": "biannual",
+      "notes": "Open-vocabulary 3D scene understanding; OpenSUN3D challenge.",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "eccv-w-nevi",
+      "name": "NeVi",
+      "fullName": "Workshop on Neuromorphic Vision: Advantages and Applications of Event Cameras",
+      "type": "workshop",
+      "parent": "eccv",
+      "topics": [
+        "computer-vision",
+        "low-level-vision",
+        "robotics"
+      ],
+      "website": "https://sites.google.com/view/nevi2024",
+      "rankings": {
+        "scopus": true,
+        "isi": false,
+        "dblp": true
+      },
+      "frequency": "biannual",
+      "notes": "Event-based / neuromorphic vision sensors workshop.",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "eccv-w-perception-test",
+      "name": "Perception Test",
+      "fullName": "The Perception Test Challenge Workshop",
+      "type": "workshop",
+      "parent": "eccv",
+      "topics": [
+        "video-analysis",
+        "vision-language",
+        "scene-understanding"
+      ],
+      "website": "https://ptchallenge-workshop.github.io/",
+      "rankings": {
+        "scopus": true,
+        "isi": false,
+        "dblp": true
+      },
+      "frequency": "annual",
+      "notes": "DeepMind Perception Test multimodal benchmark; ICCV 2025 hosted 3rd edition.",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "eccv-w-xai-cv",
+      "name": "XAI4CV",
+      "fullName": "Explainable AI for Computer Vision Workshop",
+      "type": "workshop",
+      "parent": "eccv",
+      "topics": [
+        "computer-vision",
+        "machine-learning",
+        "deep-learning"
+      ],
+      "website": "https://xai4cv.github.io/",
+      "rankings": {
+        "scopus": true,
+        "isi": false,
+        "dblp": true
+      },
+      "frequency": "annual",
+      "notes": "Interpretability and explainability for CV; recurring at CVPR/ECCV/ICCV.",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "iccv-w-aicity",
+      "name": "AI City Challenge",
+      "fullName": "AI City Challenge Workshop",
+      "type": "workshop",
+      "parent": "iccv",
+      "topics": [
+        "surveillance",
+        "tracking",
+        "video-analysis"
+      ],
+      "website": "https://www.aicitychallenge.org/",
+      "rankings": {
+        "scopus": true,
+        "isi": false,
+        "dblp": true
+      },
+      "frequency": "annual",
+      "notes": "Smart-city / surveillance challenge; CVPR-flagship, ICCV 2025 edition.",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "iccv-w-amfg",
+      "name": "AMFG",
+      "fullName": "Analysis and Modeling of Faces and Gestures Workshop",
+      "type": "workshop",
+      "parent": "iccv",
+      "topics": [
+        "face-recognition",
+        "biometrics",
+        "human-pose"
+      ],
+      "website": "https://web.northeastern.edu/smilelab/amfg2025/",
+      "rankings": {
+        "scopus": true,
+        "isi": false,
+        "dblp": true
+      },
+      "frequency": "biannual",
+      "notes": "Long-running face and gesture analysis workshop since 2003.",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "accv-w-cv4dc",
+      "name": "CV4DC",
+      "fullName": "Computer Vision for Developing Countries Workshop",
+      "type": "workshop",
+      "parent": "accv",
+      "topics": [
+        "computer-vision",
+        "deep-learning",
+        "remote-sensing"
+      ],
+      "website": "https://cv4dc.github.io/",
+      "rankings": {
+        "dblp": true
+      },
+      "frequency": "annual",
+      "notes": "CV applications in low-resource settings; ACCV 2024 had successful edition.",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "accv-w-lava",
+      "name": "LAVA",
+      "fullName": "Large Vision-Language Model Learning and Applications Workshop",
+      "type": "workshop",
+      "parent": "accv",
+      "topics": [
+        "vision-language",
+        "deep-learning",
+        "nlp-multimodal"
+      ],
+      "website": "https://lava-workshop.github.io/",
+      "rankings": {
+        "dblp": true
+      },
+      "frequency": "annual",
+      "notes": "Vision-language models, prior ACCV 2024 edition; expected at ACCV 2026.",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "accv-w-wicv",
+      "name": "WiCV",
+      "fullName": "Women in Computer Vision Workshop (ACCV)",
+      "type": "workshop",
+      "parent": "accv",
+      "topics": [
+        "computer-vision",
+        "machine-learning"
+      ],
+      "website": "https://sites.google.com/view/wicvworkshop-accv2024/",
+      "rankings": {
+        "dblp": true
+      },
+      "frequency": "annual",
+      "notes": "WiCV recurring at ACCV; ACCV 2024 ran a Hanoi edition.",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "accv-w-mlcsa",
+      "name": "MLCSA",
+      "fullName": "Machine Learning and Computing for Visual Semantic Analysis Workshop",
+      "type": "workshop",
+      "parent": "accv",
+      "topics": [
+        "machine-learning",
+        "scene-understanding",
+        "computer-vision"
+      ],
+      "website": "https://openaccess.thecvf.com/ACCV2024_workshops/MLCSA",
+      "rankings": {
+        "dblp": true
+      },
+      "frequency": "biannual",
+      "notes": "Visual semantic analysis; ACCV 2024 edition.",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "accv-w-rmgenai",
+      "name": "RMGenAI",
+      "fullName": "Rich Media with Generative AI Workshop",
+      "type": "workshop",
+      "parent": "accv",
+      "topics": [
+        "generative-models",
+        "multimedia",
+        "vision-language"
+      ],
+      "website": "https://openaccess.thecvf.com/ACCV2024_workshops/RMGenAI",
+      "rankings": {
+        "dblp": true
+      },
+      "frequency": "biannual",
+      "notes": "Generative AI for rich media; second edition at ACCV 2024.",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "neurips-w-vlm-real-world",
+      "name": "NeurIPS-W VLM4RWD",
+      "fullName": "NeurIPS 2025 Workshop on Vision Language Models: Challenges of Real World Deployment",
+      "type": "workshop",
+      "parent": "neurips",
+      "topics": [
+        "vision-language",
+        "deep-learning",
+        "computer-vision"
+      ],
+      "website": "https://mozhgan91.github.io/vlm4rwd-neurips25-ws/",
+      "rankings": {
+        "dblp": true
+      },
+      "deadlines": [],
+      "frequency": "annual",
+      "notes": "NeurIPS 2025 (Mexico City). Focus on real-world deployment challenges of vision-language models.",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "neurips-w-good-video",
+      "name": "NeurIPS-W NextVid",
+      "fullName": "What Makes a Good Video: Next Practices in Video Generation and Evaluation",
+      "type": "workshop",
+      "parent": "neurips",
+      "topics": [
+        "generative-models",
+        "video-analysis",
+        "computer-vision"
+      ],
+      "website": "https://what-makes-good-video.github.io/",
+      "rankings": {
+        "dblp": true
+      },
+      "deadlines": [],
+      "frequency": "irregular",
+      "notes": "NeurIPS 2025 (San Diego). Video generation and evaluation methodology.",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "neurips-w-holistic-video",
+      "name": "NeurIPS-W HVU",
+      "fullName": "7th International Workshop on Large Scale Holistic Video Understanding: Toward Video Foundation Models",
+      "type": "workshop",
+      "parent": "neurips",
+      "topics": [
+        "video-analysis",
+        "action-recognition",
+        "deep-learning"
+      ],
+      "website": "https://holistic-video-understanding.github.io/workshops/neurips2025.html",
+      "rankings": {
+        "dblp": true
+      },
+      "deadlines": [],
+      "frequency": "annual",
+      "notes": "NeurIPS 2025 (Mexico City). 7th edition. Focus on video foundation models.",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "neurips-w-embodied-safe-robotics",
+      "name": "NeurIPS-W EmbodiedSafe",
+      "fullName": "NeurIPS 2025 Workshop on Embodied and Safe-Assured Robotic Systems",
+      "type": "workshop",
+      "parent": "neurips",
+      "topics": [
+        "robotics",
+        "autonomous-driving",
+        "deep-learning"
+      ],
+      "website": "https://neurips.cc/virtual/2025/loc/mexico-city/workshop/127833",
+      "rankings": {
+        "dblp": true
+      },
+      "deadlines": [],
+      "frequency": "irregular",
+      "notes": "NeurIPS 2025 (Mexico City). Autonomous robots, self-driving, humanoids with safety focus.",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "neurips-w-embodied-world-models",
+      "name": "NeurIPS-W EWM",
+      "fullName": "Embodied World Models for Decision Making",
+      "type": "workshop",
+      "parent": "neurips",
+      "topics": [
+        "robotics",
+        "generative-models",
+        "computer-vision"
+      ],
+      "website": "https://embodied-world-models.github.io/",
+      "rankings": {
+        "dblp": true
+      },
+      "deadlines": [],
+      "frequency": "irregular",
+      "notes": "NeurIPS 2025 (San Diego). Intersection of generative modeling, RL, CV, and robotics.",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "neurips-w-spavle",
+      "name": "NeurIPS-W SpaVLE",
+      "fullName": "NeurIPS 2025 Workshop on Space in Vision, Language, and Embodied AI",
+      "type": "workshop",
+      "parent": "neurips",
+      "topics": [
+        "vision-language",
+        "scene-understanding",
+        "robotics"
+      ],
+      "website": "https://space-in-vision-language-embodied-ai.github.io/",
+      "rankings": {
+        "dblp": true
+      },
+      "deadlines": [],
+      "frequency": "irregular",
+      "notes": "NeurIPS 2025 (San Diego). Spatial understanding bridging NLP, CV, and robotics communities.",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "neurips-w-genprocc",
+      "name": "NeurIPS-W GenProCC",
+      "fullName": "GenProCC: 1st Workshop on Generative and Protective AI for Content Creation",
+      "type": "workshop",
+      "parent": "neurips",
+      "topics": [
+        "generative-models",
+        "multimedia",
+        "computer-vision"
+      ],
+      "website": "https://genprocc.github.io/",
+      "rankings": {
+        "dblp": true
+      },
+      "deadlines": [],
+      "frequency": "irregular",
+      "notes": "NeurIPS 2025 (San Diego). Generative AI across image/video/audio plus IP protection.",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "neurips-w-imageomics",
+      "name": "NeurIPS-W Imageomics",
+      "fullName": "Imageomics: Discovering Biological Knowledge from Images Using AI",
+      "type": "workshop",
+      "parent": "neurips",
+      "topics": [
+        "computer-vision",
+        "image-processing",
+        "classification"
+      ],
+      "website": "https://imageomics.github.io/Imageomics-NeurIPS-2025/",
+      "rankings": {
+        "dblp": true
+      },
+      "deadlines": [],
+      "frequency": "annual",
+      "notes": "NeurIPS 2025 (San Diego). Visual data for biological discovery: detection, tracking, 3D, video.",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "neurips-w-mar",
+      "name": "NeurIPS-W MAR",
+      "fullName": "5th Multimodal Algorithmic Reasoning Workshop",
+      "aliases": [
+        "MAR"
+      ],
+      "type": "workshop",
+      "parent": "neurips",
+      "topics": [
+        "nlp-multimodal",
+        "vision-language",
+        "deep-learning"
+      ],
+      "website": "https://marworkshop.github.io/neurips25/",
+      "rankings": {
+        "dblp": true
+      },
+      "deadlines": [],
+      "frequency": "annual",
+      "notes": "NeurIPS 2025 (San Diego). Multimodal reasoning across vision and language.",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "neurips-w-responsible-fm",
+      "name": "NeurIPS-W ResponsibleFM",
+      "fullName": "Socially Responsible and Trustworthy Foundation Models",
+      "type": "workshop",
+      "parent": "neurips",
+      "topics": [
+        "deep-learning",
+        "machine-learning"
+      ],
+      "website": "https://responsible-fm.github.io/",
+      "rankings": {
+        "dblp": true
+      },
+      "deadlines": [],
+      "frequency": "irregular",
+      "notes": "NeurIPS 2025 (Mexico City). Trustworthy/ethical foundation models including vision-language.",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "iclr-w-multimodal-intelligence",
+      "name": "ICLR-W MMIntelligence",
+      "fullName": "ICLR 2026 Workshop on Multimodal Intelligence: Next Token Prediction and Beyond",
+      "type": "workshop",
+      "parent": "iclr",
+      "topics": [
+        "nlp-multimodal",
+        "vision-language",
+        "generative-models"
+      ],
+      "website": "https://mmintelligence.github.io/",
+      "rankings": {
+        "dblp": true
+      },
+      "deadlines": [
+        {
+          "year": 2026,
+          "kind": "full-paper",
+          "date": "2026-02-13",
+          "note": "approximate"
+        }
+      ],
+      "frequency": "annual",
+      "notes": "ICLR 2026 (Rio de Janeiro). Next-token prediction across vision, language, audio.",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "iclr-w-gram",
+      "name": "ICLR-W GRaM",
+      "fullName": "Geometry-grounded Representation Learning and Generative Modeling",
+      "type": "workshop",
+      "parent": "iclr",
+      "topics": [
+        "generative-models",
+        "deep-learning",
+        "3d-vision"
+      ],
+      "website": "https://gram-workshop.github.io/",
+      "rankings": {
+        "dblp": true
+      },
+      "deadlines": [
+        {
+          "year": 2026,
+          "kind": "full-paper",
+          "date": "2026-02-13",
+          "note": "approximate"
+        }
+      ],
+      "frequency": "annual",
+      "notes": "ICLR 2026 (Rio de Janeiro). Geometry/symmetry-grounded representations and generative models.",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "iclr-w-realm-gen",
+      "name": "ICLR-W ReALM-GEN",
+      "fullName": "ReALM-GEN: Real-World Constrained and Preference-Aligned Flow- and Diffusion-based Generative Models",
+      "type": "workshop",
+      "parent": "iclr",
+      "topics": [
+        "generative-models",
+        "deep-learning",
+        "computer-vision"
+      ],
+      "website": "https://iclr.cc/virtual/2026/workshop/10000809",
+      "rankings": {
+        "dblp": true
+      },
+      "deadlines": [
+        {
+          "year": 2026,
+          "kind": "full-paper",
+          "date": "2026-02-13",
+          "note": "approximate"
+        }
+      ],
+      "frequency": "irregular",
+      "notes": "ICLR 2026 (Rio de Janeiro). Constraint-aware diffusion/flow generative models.",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "iclr-w-deep-generative",
+      "name": "ICLR-W DGM",
+      "fullName": "Deep Generative Model in Machine Learning: Theory, Principle and Efficacy (2nd Workshop)",
+      "type": "workshop",
+      "parent": "iclr",
+      "topics": [
+        "generative-models",
+        "deep-learning",
+        "machine-learning"
+      ],
+      "website": "https://iclr.cc/virtual/2026/events/workshop",
+      "rankings": {
+        "dblp": true
+      },
+      "deadlines": [
+        {
+          "year": 2026,
+          "kind": "full-paper",
+          "date": "2026-02-13",
+          "note": "approximate"
+        }
+      ],
+      "frequency": "annual",
+      "notes": "ICLR 2026 (Rio de Janeiro). VAEs, GANs, flows, diffusion, flow matching.",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "iclr-w-world-models",
+      "name": "ICLR-W WorldModels",
+      "fullName": "The 2nd Workshop on World Models: Understanding, Modelling and Scaling",
+      "type": "workshop",
+      "parent": "iclr",
+      "topics": [
+        "generative-models",
+        "robotics",
+        "computer-vision"
+      ],
+      "website": "https://sites.google.com/view/iclr-2026-workshop-world-model/home",
+      "rankings": {
+        "dblp": true
+      },
+      "deadlines": [
+        {
+          "year": 2026,
+          "kind": "full-paper",
+          "date": "2026-02-13",
+          "note": "approximate"
+        }
+      ],
+      "frequency": "annual",
+      "notes": "ICLR 2026 (Rio de Janeiro). World models including pixel-grounded and robotics applications.",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "iclr-w-spatial-reasoning",
+      "name": "ICLR-W ES-Reasoning",
+      "fullName": "The First Workshop on Efficient Spatial Reasoning",
+      "type": "workshop",
+      "parent": "iclr",
+      "topics": [
+        "scene-understanding",
+        "3d-vision",
+        "vision-language"
+      ],
+      "website": "https://sites.google.com/ucsd.edu/efficient-spatial-reasoning/",
+      "rankings": {
+        "dblp": true
+      },
+      "deadlines": [
+        {
+          "year": 2026,
+          "kind": "full-paper",
+          "date": "2026-02-13",
+          "note": "approximate"
+        }
+      ],
+      "frequency": "irregular",
+      "notes": "ICLR 2026 (Rio de Janeiro). Spatial reasoning across vision and language.",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "iclr-w-ml4rs",
+      "name": "ICLR-W ML4RS",
+      "fullName": "4th ICLR Workshop on Machine Learning for Remote Sensing",
+      "type": "workshop",
+      "parent": "iclr",
+      "topics": [
+        "remote-sensing",
+        "computer-vision",
+        "deep-learning"
+      ],
+      "website": "https://ml-for-rs.github.io/iclr2026/",
+      "rankings": {
+        "dblp": true
+      },
+      "deadlines": [
+        {
+          "year": 2026,
+          "kind": "full-paper",
+          "date": "2026-02-13",
+          "note": "approximate"
+        }
+      ],
+      "frequency": "annual",
+      "notes": "ICLR 2026 (Rio de Janeiro). 4th edition. Remote sensing ML, publication to practice.",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "icml-w-f2s-video",
+      "name": "ICML-W F2S",
+      "fullName": "From Frames to Stories (F2S): Toward Reliable, Controllable and Trustworthy Long-Horizon Video Generation",
+      "type": "workshop",
+      "parent": "icml",
+      "topics": [
+        "generative-models",
+        "video-analysis",
+        "computer-vision"
+      ],
+      "website": "https://icml2026-f2s-workshop.github.io/",
+      "rankings": {
+        "dblp": true
+      },
+      "deadlines": [
+        {
+          "year": 2026,
+          "kind": "full-paper",
+          "date": "2026-05-30",
+          "note": "approximate"
+        }
+      ],
+      "frequency": "irregular",
+      "notes": "ICML 2026 (Seoul). Long-horizon video generation, control, evaluation.",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "icml-w-scale-multimodal",
+      "name": "ICML-W SCALE",
+      "fullName": "SCALE: Scalable Learning and Optimization for Efficient Multimodal AI Agents",
+      "type": "workshop",
+      "parent": "icml",
+      "topics": [
+        "nlp-multimodal",
+        "vision-language",
+        "deep-learning"
+      ],
+      "website": "https://scale-icml-2026.github.io/",
+      "rankings": {
+        "dblp": true
+      },
+      "deadlines": [
+        {
+          "year": 2026,
+          "kind": "full-paper",
+          "date": "2026-05-30",
+          "note": "approximate"
+        }
+      ],
+      "frequency": "irregular",
+      "notes": "ICML 2026 (Seoul). Scalable, efficient multimodal AI agents.",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "icml-w-fdgm",
+      "name": "ICML-W FDGM",
+      "fullName": "Foundations of Deep Generative Models: Understanding Memorization, Generalization, and Reasoning",
+      "type": "workshop",
+      "parent": "icml",
+      "topics": [
+        "generative-models",
+        "deep-learning",
+        "machine-learning"
+      ],
+      "website": "https://fdgm-workshop.github.io/FDGM_ICML2026/",
+      "rankings": {
+        "dblp": true
+      },
+      "deadlines": [
+        {
+          "year": 2026,
+          "kind": "full-paper",
+          "date": "2026-05-30",
+          "note": "approximate"
+        }
+      ],
+      "frequency": "irregular",
+      "notes": "ICML 2026 (Seoul). Theory of deep generative models including diffusion.",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "icml-w-spigm",
+      "name": "ICML-W SPIGM",
+      "fullName": "Structured Probabilistic Inference and Generative Modeling",
+      "type": "workshop",
+      "parent": "icml",
+      "topics": [
+        "generative-models",
+        "machine-learning",
+        "deep-learning"
+      ],
+      "website": "https://spigmworkshop2026.github.io/",
+      "rankings": {
+        "dblp": true
+      },
+      "deadlines": [
+        {
+          "year": 2026,
+          "kind": "full-paper",
+          "date": "2026-05-30",
+          "note": "approximate"
+        }
+      ],
+      "frequency": "annual",
+      "notes": "ICML 2026 (Seoul). Probabilistic inference and generative modeling.",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "icml-w-cocreativity",
+      "name": "ICML-W HumanAI-CoCreativity",
+      "fullName": "Workshop on Human-AI Co-Creativity: Advances, Opportunities, and Challenges",
+      "type": "workshop",
+      "parent": "icml",
+      "topics": [
+        "generative-models",
+        "multimedia",
+        "graphics"
+      ],
+      "website": "https://genaicreativity.org/icml2026/",
+      "rankings": {
+        "dblp": true
+      },
+      "deadlines": [
+        {
+          "year": 2026,
+          "kind": "full-paper",
+          "date": "2026-05-30",
+          "note": "approximate"
+        }
+      ],
+      "frequency": "irregular",
+      "notes": "ICML 2026 (Seoul). Human-AI co-creativity in image/video/audio generation.",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "aaai-w-cvm-video",
+      "name": "AAAI-W CVM",
+      "fullName": "Consistency in Video Generative Models: from Clip to Wild (CVM @ AAAI '26)",
+      "type": "workshop",
+      "parent": "aaai",
+      "topics": [
+        "generative-models",
+        "video-analysis",
+        "computer-vision"
+      ],
+      "website": "https://sites.google.com/view/aaai26-cvm",
+      "rankings": {
+        "dblp": true
+      },
+      "deadlines": [
+        {
+          "year": 2025,
+          "kind": "full-paper",
+          "date": "2025-11-15",
+          "note": "approximate"
+        }
+      ],
+      "frequency": "irregular",
+      "notes": "AAAI 2026 (Singapore), W22. Consistency in video generative models.",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "aaai-w-audio-multimodal",
+      "name": "AAAI-W Audio-Centric AI",
+      "fullName": "Audio-Centric AI: Towards Real-World Multimodal Reasoning and Application Use Cases",
+      "type": "workshop",
+      "parent": "aaai",
+      "topics": [
+        "nlp-multimodal",
+        "video-analysis",
+        "signal-processing"
+      ],
+      "website": "https://sites.google.com/view/audio-aaai/home",
+      "rankings": {
+        "dblp": true
+      },
+      "deadlines": [
+        {
+          "year": 2025,
+          "kind": "full-paper",
+          "date": "2025-11-15",
+          "note": "approximate"
+        }
+      ],
+      "frequency": "irregular",
+      "notes": "AAAI 2026 (Singapore), W18. Multimodal reasoning with audio-language-video LLMs/VLMs.",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "aaai-w-beeu",
+      "name": "AAAI-W BEEU",
+      "fullName": "Bodily Expressed Emotion Understanding (BEEU) 2026",
+      "type": "workshop",
+      "parent": "aaai",
+      "topics": [
+        "human-pose",
+        "action-recognition",
+        "computer-vision"
+      ],
+      "website": "https://openreview.net/group?id=AAAI.org/2026/Workshop/BEEU",
+      "rankings": {
+        "dblp": true
+      },
+      "deadlines": [
+        {
+          "year": 2025,
+          "kind": "full-paper",
+          "date": "2025-11-15",
+          "note": "approximate"
+        }
+      ],
+      "frequency": "annual",
+      "notes": "AAAI 2026 (Singapore), W20. Body language modeling and emotion recognition.",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "aaai-w-air-fm",
+      "name": "AAAI-W AIR-FM",
+      "fullName": "AIR-FM: Assessing and Improving Reliability of Foundation Models in the Real World",
+      "type": "workshop",
+      "parent": "aaai",
+      "topics": [
+        "vision-language",
+        "deep-learning",
+        "machine-learning"
+      ],
+      "website": "https://llmrel.github.io",
+      "rankings": {
+        "dblp": true
+      },
+      "deadlines": [
+        {
+          "year": 2025,
+          "kind": "full-paper",
+          "date": "2025-11-15",
+          "note": "approximate"
+        }
+      ],
+      "frequency": "irregular",
+      "notes": "AAAI 2026 (Singapore), W15. Robustness of language and vision models.",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "aaai-w-sparta",
+      "name": "AAAI-W SPARTA",
+      "fullName": "SPARTA - Spatial Reasoning and Therapeutics with AI: From Omics to Imaging",
+      "type": "workshop",
+      "parent": "aaai",
+      "topics": [
+        "medical-imaging",
+        "image-processing",
+        "deep-learning"
+      ],
+      "website": "https://aaai.org/conference/aaai/aaai-26/workshops-program/",
+      "rankings": {
+        "dblp": true
+      },
+      "deadlines": [
+        {
+          "year": 2025,
+          "kind": "full-paper",
+          "date": "2025-11-15",
+          "note": "approximate"
+        }
+      ],
+      "frequency": "irregular",
+      "notes": "AAAI 2026 (Singapore), W29. Spatial reasoning and imaging in biomedicine.",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "icpr-w-brain",
+      "name": "ICPR-W BRAIN",
+      "fullName": "BRAIN: Behavioral Robotics and AI for Industrial and Social Systems",
+      "aliases": [
+        "BRAIN 2026"
+      ],
+      "type": "workshop",
+      "parent": "icpr",
+      "topics": [
+        "robotics",
+        "pattern-recognition",
+        "machine-learning"
+      ],
+      "website": "https://mivia.unisa.it/brain2026/",
+      "rankings": {
+        "scopus": true,
+        "dblp": true
+      },
+      "deadlines": [
+        {
+          "year": 2026,
+          "kind": "full-paper",
+          "date": "2026-04-30",
+          "note": "extended deadline"
+        },
+        {
+          "year": 2026,
+          "kind": "notification",
+          "date": "2026-05-18"
+        },
+        {
+          "year": 2026,
+          "kind": "camera-ready",
+          "date": "2026-06-10"
+        }
+      ],
+      "frequency": "annual",
+      "location": "Lyon, France",
+      "notes": "ICPR 2026 satellite workshop on physical AI, robotic perception, and human-robot interaction; Springer LNCS proceedings.",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "icpr-w-prrs",
+      "name": "ICPR-W PRRS",
+      "fullName": "Pattern Recognition in Remote Sensing",
+      "aliases": [
+        "PRRS 2026"
+      ],
+      "type": "workshop",
+      "parent": "icpr",
+      "topics": [
+        "remote-sensing",
+        "deep-learning",
+        "pattern-recognition"
+      ],
+      "website": "https://iapr-tc7.github.io/prrs2026",
+      "rankings": {
+        "scopus": true,
+        "dblp": true
+      },
+      "deadlines": [
+        {
+          "year": 2026,
+          "kind": "full-paper",
+          "date": "2026-05-05"
+        },
+        {
+          "year": 2026,
+          "kind": "notification",
+          "date": "2026-06-11"
+        },
+        {
+          "year": 2026,
+          "kind": "camera-ready",
+          "date": "2026-06-18"
+        }
+      ],
+      "frequency": "annual",
+      "location": "Lyon, France",
+      "notes": "IAPR TC7 workshop on Earth observation, foundation models, and explainable ML; LNCS proceedings.",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "icpr-w-emm",
+      "name": "ICPR-W EMM",
+      "fullName": "Efficient Methods for Multimodal Models",
+      "aliases": [
+        "EMM 2026"
+      ],
+      "type": "workshop",
+      "parent": "icpr",
+      "topics": [
+        "deep-learning",
+        "vision-language",
+        "machine-learning"
+      ],
+      "website": "https://emm-workshop.github.io/workshop2026.html",
+      "rankings": {
+        "scopus": true,
+        "dblp": true
+      },
+      "deadlines": [
+        {
+          "year": 2026,
+          "kind": "full-paper",
+          "date": "2026-05-01"
+        },
+        {
+          "year": 2026,
+          "kind": "notification",
+          "date": "2026-05-21"
+        },
+        {
+          "year": 2026,
+          "kind": "camera-ready",
+          "date": "2026-06-20"
+        }
+      ],
+      "frequency": "annual",
+      "location": "Lyon, France",
+      "notes": "Compression, quantization, distillation for multimodal models; LNCS proceedings.",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "icpr-w-prestige",
+      "name": "ICPR-W PRESTIGE",
+      "fullName": "Pattern Recognition and Computer Vision for e-Heritage and Digital Humanities",
+      "aliases": [
+        "PRESTIGE 2026"
+      ],
+      "type": "workshop",
+      "parent": "icpr",
+      "topics": [
+        "computer-vision",
+        "document-analysis",
+        "3d-vision"
+      ],
+      "website": "https://sites.google.com/view/prestige-icpr2026",
+      "rankings": {
+        "scopus": true,
+        "dblp": true
+      },
+      "deadlines": [
+        {
+          "year": 2026,
+          "kind": "full-paper",
+          "date": "2026-05-16"
+        },
+        {
+          "year": 2026,
+          "kind": "notification",
+          "date": "2026-06-13"
+        },
+        {
+          "year": 2026,
+          "kind": "camera-ready",
+          "date": "2026-06-20"
+        }
+      ],
+      "frequency": "annual",
+      "location": "Lyon, France",
+      "notes": "Cultural heritage, artwork analysis, 3D reconstruction; LNCS proceedings.",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "icpr-w-compress-llms",
+      "name": "ICPR-W CompressLLMs",
+      "fullName": "The Art of Compressing LLMs: Pruning, Distillation, and Quantization Demystified",
+      "aliases": [
+        "CompressLLMs 2026"
+      ],
+      "type": "workshop",
+      "parent": "icpr",
+      "topics": [
+        "deep-learning",
+        "machine-learning",
+        "nlp-multimodal"
+      ],
+      "website": "https://lavinia13.github.io/ICPR-Compression-Workshop/",
+      "rankings": {
+        "scopus": true,
+        "dblp": true
+      },
+      "deadlines": [
+        {
+          "year": 2026,
+          "kind": "full-paper",
+          "date": "2026-05-15"
+        },
+        {
+          "year": 2026,
+          "kind": "notification",
+          "date": "2026-05-31"
+        },
+        {
+          "year": 2026,
+          "kind": "camera-ready",
+          "date": "2026-06-20"
+        }
+      ],
+      "frequency": "annual",
+      "location": "Lyon, France",
+      "notes": "LLM compression techniques and deployment strategies; LNCS proceedings.",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "icpr-w-v3sc",
+      "name": "ICPR-W V3SC",
+      "fullName": "International Workshop on Video Surveillance Systems in Smart Cities: Aerial Monitoring and Synthetic Data",
+      "aliases": [
+        "V3SC 2026"
+      ],
+      "type": "workshop",
+      "parent": "icpr",
+      "topics": [
+        "surveillance",
+        "video-analysis",
+        "object-detection"
+      ],
+      "website": "https://sites.google.com/view/v3sc-icpr2026",
+      "rankings": {
+        "scopus": true,
+        "dblp": true
+      },
+      "deadlines": [
+        {
+          "year": 2026,
+          "kind": "full-paper",
+          "date": "2026-04-30"
+        },
+        {
+          "year": 2026,
+          "kind": "notification",
+          "date": "2026-05-31"
+        },
+        {
+          "year": 2026,
+          "kind": "camera-ready",
+          "date": "2026-06-20"
+        }
+      ],
+      "frequency": "annual",
+      "location": "Lyon, France",
+      "notes": "3rd edition; aerial surveillance and synthetic data; LNCS proceedings.",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "icpr-w-paver",
+      "name": "ICPR-W PAVER",
+      "fullName": "Workshop on Physics-Aware Video Generation and Restoration",
+      "aliases": [
+        "PAVER 2026"
+      ],
+      "type": "workshop",
+      "parent": "icpr",
+      "topics": [
+        "generative-models",
+        "video-analysis",
+        "low-level-vision"
+      ],
+      "website": "https://icpr2026-paver-workshop.github.io/",
+      "rankings": {
+        "scopus": true,
+        "dblp": true
+      },
+      "deadlines": [
+        {
+          "year": 2026,
+          "kind": "full-paper",
+          "date": "2026-05-01"
+        },
+        {
+          "year": 2026,
+          "kind": "notification",
+          "date": "2026-06-10"
+        },
+        {
+          "year": 2026,
+          "kind": "camera-ready",
+          "date": "2026-06-20"
+        }
+      ],
+      "frequency": "annual",
+      "location": "Lyon, France",
+      "notes": "Physics-based video generation, restoration; OpenReview submissions; LNCS proceedings.",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "icpr-w-trustdoc",
+      "name": "ICPR-W TrustDoc",
+      "fullName": "Trustworthy Document Understanding: Privacy, Unlearning, Robustness, and Explainability",
+      "aliases": [
+        "TrustDoc 2026"
+      ],
+      "type": "workshop",
+      "parent": "icpr",
+      "topics": [
+        "document-analysis",
+        "machine-learning",
+        "deep-learning"
+      ],
+      "website": "https://sites.google.com/view/trustdoc/home",
+      "rankings": {
+        "scopus": true,
+        "dblp": true
+      },
+      "deadlines": [
+        {
+          "year": 2026,
+          "kind": "full-paper",
+          "date": "2026-05-16"
+        },
+        {
+          "year": 2026,
+          "kind": "notification",
+          "date": "2026-06-11"
+        },
+        {
+          "year": 2026,
+          "kind": "camera-ready",
+          "date": "2026-06-18"
+        }
+      ],
+      "frequency": "annual",
+      "location": "Lyon, France",
+      "notes": "Machine unlearning, privacy-preserving OCR, document AI robustness; LNCS proceedings.",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "icpr-w-mcmi",
+      "name": "ICPR-W MCMI",
+      "fullName": "Multi- and Cross-Modal Information for Enhanced Pattern Recognition",
+      "aliases": [
+        "MCMI 2026"
+      ],
+      "type": "workshop",
+      "parent": "icpr",
+      "topics": [
+        "multimedia",
+        "pattern-recognition",
+        "vision-language"
+      ],
+      "website": "https://mcmi-workshop.github.io/2026/",
+      "rankings": {
+        "scopus": true,
+        "dblp": true
+      },
+      "deadlines": [
+        {
+          "year": 2026,
+          "kind": "full-paper",
+          "date": "2026-05-05",
+          "note": "extended from April 20"
+        },
+        {
+          "year": 2026,
+          "kind": "notification",
+          "date": "2026-06-02"
+        },
+        {
+          "year": 2026,
+          "kind": "camera-ready",
+          "date": "2026-06-12"
+        }
+      ],
+      "frequency": "annual",
+      "location": "Lyon, France",
+      "notes": "Multimodal fusion, audio-visual processing, emotion recognition; LNCS proceedings.",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "icpr-w-prha",
+      "name": "ICPR-W PRHA",
+      "fullName": "International Workshop on Pattern Recognition in Healthcare Analytics and Bioinformatics",
+      "aliases": [
+        "PRHA 2026"
+      ],
+      "type": "workshop",
+      "parent": "icpr",
+      "topics": [
+        "medical-imaging",
+        "pattern-recognition",
+        "machine-learning"
+      ],
+      "website": "https://sites.google.com/view/prha2026/home",
+      "rankings": {
+        "scopus": true,
+        "dblp": true
+      },
+      "deadlines": [
+        {
+          "year": 2026,
+          "kind": "full-paper",
+          "date": "2026-05-15"
+        },
+        {
+          "year": 2026,
+          "kind": "notification",
+          "date": "2026-06-15"
+        },
+        {
+          "year": 2026,
+          "kind": "camera-ready",
+          "date": "2026-06-30"
+        }
+      ],
+      "frequency": "annual",
+      "location": "Lyon, France",
+      "notes": "4th edition; healthcare analytics, bioinformatics, interpretable models; LNCS proceedings.",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "icpr-w-manpu",
+      "name": "ICPR-W MANPU",
+      "fullName": "International Workshop on Comics Analysis, Processing and Understanding",
+      "aliases": [
+        "MANPU 2026"
+      ],
+      "type": "workshop",
+      "parent": "icpr",
+      "topics": [
+        "image-processing",
+        "document-analysis",
+        "computer-vision"
+      ],
+      "website": "https://manpu2026.imlab.jp",
+      "rankings": {
+        "scopus": true,
+        "dblp": true
+      },
+      "deadlines": [
+        {
+          "year": 2026,
+          "kind": "abstract",
+          "date": "2026-04-26"
+        },
+        {
+          "year": 2026,
+          "kind": "full-paper",
+          "date": "2026-05-03"
+        },
+        {
+          "year": 2026,
+          "kind": "notification",
+          "date": "2026-06-01"
+        },
+        {
+          "year": 2026,
+          "kind": "camera-ready",
+          "date": "2026-06-14"
+        }
+      ],
+      "frequency": "annual",
+      "location": "Lyon, France",
+      "notes": "Comics analysis, retrieval, generation; LNCS proceedings.",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "icpr-w-rrpr",
+      "name": "ICPR-W RRPR",
+      "fullName": "Reproducible Research in Pattern Recognition",
+      "aliases": [
+        "RRPR 2026"
+      ],
+      "type": "workshop",
+      "parent": "icpr",
+      "topics": [
+        "pattern-recognition",
+        "machine-learning"
+      ],
+      "website": "https://tc22-team.github.io/rrpr2026",
+      "rankings": {
+        "scopus": true,
+        "dblp": true
+      },
+      "deadlines": [
+        {
+          "year": 2026,
+          "kind": "full-paper",
+          "date": "2026-04-30"
+        },
+        {
+          "year": 2026,
+          "kind": "notification",
+          "date": "2026-06-15"
+        },
+        {
+          "year": 2026,
+          "kind": "camera-ready",
+          "date": "2026-06-27"
+        }
+      ],
+      "frequency": "annual",
+      "location": "Lyon, France",
+      "notes": "IAPR TC22; computational reproducibility; separate Springer LNCS post-proceedings.",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "icpr-w-xaie4",
+      "name": "ICPR-W XAIE",
+      "fullName": "Workshop on Explainable and Ethical AI",
+      "aliases": [
+        "XAIE4 2026"
+      ],
+      "type": "workshop",
+      "parent": "icpr",
+      "topics": [
+        "machine-learning",
+        "deep-learning",
+        "pattern-recognition"
+      ],
+      "website": "https://xaie4.sciencesconf.org/",
+      "rankings": {
+        "scopus": true,
+        "dblp": true
+      },
+      "deadlines": [
+        {
+          "year": 2026,
+          "kind": "full-paper",
+          "date": "2026-05-01"
+        },
+        {
+          "year": 2026,
+          "kind": "notification",
+          "date": "2026-06-10"
+        },
+        {
+          "year": 2026,
+          "kind": "camera-ready",
+          "date": "2026-06-20"
+        }
+      ],
+      "frequency": "annual",
+      "location": "Lyon, France",
+      "notes": "4th edition; explainability, bias detection, AI ethics; LNCS proceedings.",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "icpr-w-hgva",
+      "name": "ICPR-W HGVA",
+      "fullName": "Workshop on Human Gaze and Visual Attention Modeling",
+      "aliases": [
+        "HGVA 2026"
+      ],
+      "type": "workshop",
+      "parent": "icpr",
+      "topics": [
+        "computer-vision",
+        "human-pose",
+        "biometrics"
+      ],
+      "website": "https://sites.google.com/view/hgva-2026",
+      "rankings": {
+        "scopus": true,
+        "dblp": true
+      },
+      "deadlines": [
+        {
+          "year": 2026,
+          "kind": "full-paper",
+          "date": "2026-04-30",
+          "note": "extended from April 25"
+        },
+        {
+          "year": 2026,
+          "kind": "notification",
+          "date": "2026-05-25"
+        },
+        {
+          "year": 2026,
+          "kind": "camera-ready",
+          "date": "2026-06-07"
+        }
+      ],
+      "frequency": "annual",
+      "location": "Lyon, France",
+      "notes": "Gaze estimation, attention prediction; LNCS proceedings.",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "icpr-w-tips",
+      "name": "ICPR-W TIPS",
+      "fullName": "Workshop on Textual Information Processing and Synthesis in the Wild",
+      "aliases": [
+        "TIPS 2026"
+      ],
+      "type": "workshop",
+      "parent": "icpr",
+      "topics": [
+        "document-analysis",
+        "vision-language",
+        "image-processing"
+      ],
+      "website": "https://tips2026.midasoc.org",
+      "rankings": {
+        "scopus": true,
+        "dblp": true
+      },
+      "deadlines": [
+        {
+          "year": 2026,
+          "kind": "full-paper",
+          "date": "2026-05-05"
+        },
+        {
+          "year": 2026,
+          "kind": "rebuttal",
+          "date": "2026-06-01"
+        },
+        {
+          "year": 2026,
+          "kind": "notification",
+          "date": "2026-06-10"
+        },
+        {
+          "year": 2026,
+          "kind": "camera-ready",
+          "date": "2026-06-20"
+        }
+      ],
+      "frequency": "annual",
+      "location": "Lyon, France",
+      "notes": "Text editing in images/videos, OCR, vision-language models; LNCS proceedings.",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "icpr-w-genaai",
+      "name": "ICPR-W GenAAI",
+      "fullName": "Workshop on Generative and Agentic AI for Real-World Video Understanding",
+      "aliases": [
+        "GenAAI 2026"
+      ],
+      "type": "workshop",
+      "parent": "icpr",
+      "topics": [
+        "generative-models",
+        "video-analysis",
+        "surveillance"
+      ],
+      "website": "https://www.genai2026.org/",
+      "rankings": {
+        "scopus": true,
+        "dblp": true
+      },
+      "deadlines": [
+        {
+          "year": 2026,
+          "kind": "full-paper",
+          "date": "2026-04-30"
+        },
+        {
+          "year": 2026,
+          "kind": "notification",
+          "date": "2026-05-31"
+        },
+        {
+          "year": 2026,
+          "kind": "camera-ready",
+          "date": "2026-06-20"
+        }
+      ],
+      "frequency": "annual",
+      "location": "Lyon, France",
+      "notes": "Generative models, agentic AI for video understanding and surveillance; LNCS proceedings.",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "icip-w-satellite",
+      "name": "ICIP-W Satellite",
+      "fullName": "ICIP 2026 Satellite Workshops (general track)",
+      "type": "workshop",
+      "parent": "icip",
+      "topics": [
+        "image-processing",
+        "signal-processing",
+        "computer-vision"
+      ],
+      "website": "https://2026.ieeeicip.org/call-for-satellite-workshops/",
+      "rankings": {
+        "scopus": true,
+        "dblp": true
+      },
+      "deadlines": [
+        {
+          "year": 2026,
+          "kind": "full-paper",
+          "date": "2026-05-20"
+        },
+        {
+          "year": 2026,
+          "kind": "notification",
+          "date": "2026-06-17"
+        },
+        {
+          "year": 2026,
+          "kind": "camera-ready",
+          "date": "2026-07-01"
+        }
+      ],
+      "frequency": "annual",
+      "location": "Tampere, Finland",
+      "notes": "Satellite workshops are held Sept 13 or Sept 17, 2026; uniform paper deadline May 20, 2026 across satellite workshops.",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "icip-w-kuva-eo",
+      "name": "ICIP-W AI EO",
+      "fullName": "AI-native Earth Observation: In-situ Intelligence Generation and Real-time Spaceborne Hyperspectral Analytics",
+      "type": "workshop",
+      "parent": "icip",
+      "topics": [
+        "remote-sensing",
+        "deep-learning",
+        "image-processing"
+      ],
+      "website": "https://kuvaspace.com/en/resources/ieee-icip-2026-kuva-space-workshop",
+      "rankings": {
+        "scopus": true,
+        "dblp": true
+      },
+      "deadlines": [
+        {
+          "year": 2026,
+          "kind": "full-paper",
+          "date": "2026-05-13"
+        },
+        {
+          "year": 2026,
+          "kind": "notification",
+          "date": "2026-06-10"
+        },
+        {
+          "year": 2026,
+          "kind": "camera-ready",
+          "date": "2026-07-01"
+        },
+        {
+          "year": 2026,
+          "kind": "registration",
+          "date": "2026-07-16"
+        }
+      ],
+      "frequency": "annual",
+      "location": "Tampere, Finland",
+      "notes": "ICIP 2026 satellite workshop on hyperspectral satellite imagery, run by Kuva Space; double-blind review.",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "icip-w-grand-challenges",
+      "name": "ICIP Grand Challenges",
+      "fullName": "ICIP 2026 Grand Challenges Track",
+      "type": "workshop",
+      "parent": "icip",
+      "topics": [
+        "image-processing",
+        "computer-vision",
+        "deep-learning"
+      ],
+      "website": "https://2026.ieeeicip.org/grand-challenges/",
+      "rankings": {
+        "scopus": true,
+        "dblp": true
+      },
+      "deadlines": [
+        {
+          "year": 2026,
+          "kind": "full-paper",
+          "date": "2026-05-13",
+          "note": "two-page abstract"
+        }
+      ],
+      "frequency": "annual",
+      "location": "Tampere, Finland",
+      "notes": "Includes SAR Grand Challenge with Sentinel-1 data; co-located satellite track.",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "icip-w-special-sessions",
+      "name": "ICIP Special Sessions",
+      "fullName": "ICIP 2026 Special Sessions and One-Page Abstracts",
+      "type": "workshop",
+      "parent": "icip",
+      "topics": [
+        "image-processing",
+        "signal-processing"
+      ],
+      "website": "https://2026.ieeeicip.org/special-sessions/",
+      "rankings": {
+        "scopus": true,
+        "dblp": true
+      },
+      "deadlines": [
+        {
+          "year": 2026,
+          "kind": "abstract",
+          "date": "2026-05-20"
+        },
+        {
+          "year": 2026,
+          "kind": "notification",
+          "date": "2026-05-27"
+        }
+      ],
+      "frequency": "annual",
+      "location": "Tampere, Finland",
+      "notes": "ICIP 2026 Special Sessions / one-page abstract track held with main conference.",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "miccai-w-cbm",
+      "name": "MICCAI-W CBM XXI",
+      "fullName": "Computational Biomechanics for Medicine XXI",
+      "aliases": [
+        "CBM XXI",
+        "CBM 2026"
+      ],
+      "type": "workshop",
+      "parent": "miccai",
+      "topics": [
+        "medical-imaging",
+        "machine-learning"
+      ],
+      "website": "https://cbm.mech.uwa.edu.au/CBM2026/",
+      "rankings": {
+        "scopus": true,
+        "dblp": true
+      },
+      "deadlines": [
+        {
+          "year": 2026,
+          "kind": "full-paper",
+          "date": "2026-06-22"
+        }
+      ],
+      "frequency": "annual",
+      "location": "Strasbourg, France",
+      "notes": "21st edition; computational biomechanics co-located with MICCAI 2026 (Sept 27 or Oct 1).",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "miccai-w-emerge",
+      "name": "MICCAI-W EMERGE",
+      "fullName": "MICCAI Student Board EMERGE Workshop",
+      "aliases": [
+        "EMERGE 2026"
+      ],
+      "type": "workshop",
+      "parent": "miccai",
+      "topics": [
+        "medical-imaging",
+        "deep-learning"
+      ],
+      "website": "https://miccaimsb.github.io/emerge/",
+      "rankings": {
+        "scopus": true,
+        "dblp": true
+      },
+      "deadlines": [
+        {
+          "year": 2026,
+          "kind": "full-paper",
+          "date": "2026-06-30"
+        },
+        {
+          "year": 2026,
+          "kind": "rebuttal",
+          "date": "2026-07-14"
+        },
+        {
+          "year": 2026,
+          "kind": "notification",
+          "date": "2026-07-21"
+        },
+        {
+          "year": 2026,
+          "kind": "camera-ready",
+          "date": "2026-08-04"
+        }
+      ],
+      "frequency": "annual",
+      "location": "Strasbourg, France",
+      "notes": "3rd edition; student-led research workshop; archival LNCS track and non-archival posters.",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "miccai-w-mwm",
+      "name": "MICCAI-W MWM",
+      "fullName": "MICCAI Workshop on Medical World Model",
+      "aliases": [
+        "MWM 2026"
+      ],
+      "type": "workshop",
+      "parent": "miccai",
+      "topics": [
+        "medical-imaging",
+        "deep-learning",
+        "generative-models"
+      ],
+      "website": "https://mwm2026.github.io/",
+      "rankings": {
+        "scopus": true,
+        "dblp": true
+      },
+      "frequency": "annual",
+      "location": "Strasbourg, France",
+      "notes": "1st edition; medical world models, digital twins, simulation-based AI; outstanding works invited to IEEE TBME special issue. Workshop date Oct 4 or Oct 8, 2026.",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "miccai-w-callforworkshops",
+      "name": "MICCAI Workshops 2026",
+      "fullName": "MICCAI 2026 Workshops (general satellite events track)",
+      "type": "workshop",
+      "parent": "miccai",
+      "topics": [
+        "medical-imaging",
+        "deep-learning",
+        "machine-learning"
+      ],
+      "website": "https://conferences.miccai.org/2026/en/CALL-FOR-WORKSHOPS.html",
+      "rankings": {
+        "scopus": true,
+        "dblp": true
+      },
+      "deadlines": [
+        {
+          "year": 2026,
+          "kind": "notification",
+          "date": "2026-03-13",
+          "note": "workshop proposal acceptance notification"
+        }
+      ],
+      "frequency": "annual",
+      "location": "Strasbourg, France",
+      "notes": "Workshops held Oct 4 and Oct 8, 2026 at MICCAI 2026 venue; individual paper deadlines vary by workshop and typically open April–July 2026.",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "bmvc-w-callforworkshops",
+      "name": "BMVC 2026 Workshops",
+      "fullName": "BMVC 2026 Workshops Track",
+      "type": "workshop",
+      "parent": "bmvc",
+      "topics": [
+        "computer-vision",
+        "machine-learning",
+        "pattern-recognition"
+      ],
+      "website": "https://bmvc2026.bmva.org/calls/call-for-workshops/",
+      "rankings": {
+        "dblp": true
+      },
+      "deadlines": [
+        {
+          "year": 2026,
+          "kind": "full-paper",
+          "date": "2026-05-22",
+          "note": "workshop proposal deadline"
+        },
+        {
+          "year": 2026,
+          "kind": "notification",
+          "date": "2026-06-05",
+          "note": "workshop proposal notification"
+        }
+      ],
+      "frequency": "annual",
+      "location": "Lancaster, UK",
+      "notes": "BMVC 2026 (Nov 23-26); accepted workshop list and individual paper deadlines published after June 5, 2026 notifications.",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "acmmm-w-callforworkshops",
+      "name": "ACM MM 2026 Workshops",
+      "fullName": "ACM Multimedia 2026 Workshops Track",
+      "type": "workshop",
+      "parent": "acm-mm",
+      "topics": [
+        "multimedia",
+        "vision-language",
+        "machine-learning"
+      ],
+      "website": "https://2026.acmmm.org/site/call-workshops.html",
+      "rankings": {
+        "scopus": true,
+        "dblp": true
+      },
+      "deadlines": [
+        {
+          "year": 2026,
+          "kind": "full-paper",
+          "date": "2026-02-12",
+          "note": "workshop proposal deadline"
+        },
+        {
+          "year": 2026,
+          "kind": "notification",
+          "date": "2026-03-05",
+          "note": "workshop proposal notification"
+        }
+      ],
+      "frequency": "annual",
+      "location": "Rio de Janeiro, Brazil",
+      "notes": "ACM MM 2026 (Nov 10-14); workshops use OpenReview and publish in ACM DL. Individual workshop CFP deadlines released by accepted workshops post-March 2026.",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "acmmm-w-grand-challenges",
+      "name": "ACM MM Grand Challenges",
+      "fullName": "ACM Multimedia 2026 Grand Challenges",
+      "type": "workshop",
+      "parent": "acm-mm",
+      "topics": [
+        "multimedia",
+        "video-analysis",
+        "vision-language"
+      ],
+      "website": "https://2026.acmmm.org/site/call-grand-challenges.html",
+      "rankings": {
+        "scopus": true,
+        "dblp": true
+      },
+      "frequency": "annual",
+      "location": "Rio de Janeiro, Brazil",
+      "notes": "Grand Challenges co-located with ACM MM 2026 (Nov 10-14); proposal-driven track, deadlines vary by challenge.",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "acmmm-w-bni",
+      "name": "ACM MM BNI",
+      "fullName": "ACM Multimedia 2026 Brave New Ideas Track",
+      "aliases": [
+        "BNI 2026"
+      ],
+      "type": "workshop",
+      "parent": "acm-mm",
+      "topics": [
+        "multimedia",
+        "machine-learning"
+      ],
+      "website": "https://2026.acmmm.org/site/call-bni.html",
+      "rankings": {
+        "scopus": true,
+        "dblp": true
+      },
+      "frequency": "annual",
+      "location": "Rio de Janeiro, Brazil",
+      "notes": "Brave New Ideas track soliciting visionary multimedia research; co-located with ACM MM 2026.",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "acmmm-w-datasets",
+      "name": "ACM MM Datasets",
+      "fullName": "ACM Multimedia 2026 Dataset Papers Track",
+      "type": "workshop",
+      "parent": "acm-mm",
+      "topics": [
+        "multimedia",
+        "data-mining",
+        "machine-learning"
+      ],
+      "website": "https://2026.acmmm.org/site/call-datasets.html",
+      "rankings": {
+        "scopus": true,
+        "dblp": true
+      },
+      "frequency": "annual",
+      "location": "Rio de Janeiro, Brazil",
+      "notes": "Dataset papers track; co-located with ACM MM 2026 (Nov 10-14, Rio).",
+      "lastVerified": "2026-04-29"
+    },
+    {
+      "id": "icassp-w-callforworkshops",
+      "name": "ICASSP 2027 Workshops",
+      "fullName": "ICASSP 2027 Satellite Workshops Track",
+      "type": "workshop",
+      "parent": "icassp",
+      "topics": [
+        "signal-processing",
+        "machine-learning",
+        "deep-learning"
+      ],
+      "website": "https://2027.ieeeicassp.org/",
+      "rankings": {
+        "scopus": true,
+        "dblp": true
+      },
+      "frequency": "annual",
+      "location": "Toronto, Canada",
+      "notes": "ICASSP 2027 (May 16-21, Toronto). Workshop CFP and deadlines not yet published as of April 29, 2026; historically opens August-October prior year with paper deadlines around October-December.",
+      "lastVerified": "2026-04-29"
     }
   ]
 }
