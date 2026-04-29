@@ -12,6 +12,8 @@ type Node = {
   topics: Topic[]
   primary_topic: string
   avatar: string
+  affiliation?: string
+  no_data?: boolean
   // simulation state
   x?: number; y?: number; vx?: number; vy?: number
 }
@@ -131,6 +133,7 @@ export default function NetworkClient() {
       return true
     }
     const visibleNode = (n: Node) => {
+      if (n.no_data) return false  // hidden from canvas, still in member list
       if (n.last_year && n.last_year < yearMin) return false
       if (activeTopics.size > 0 && !matchesAnyTopic(n.topics)) return false
       if (search && !n.name.toLowerCase().includes(search.toLowerCase())) return false
@@ -629,33 +632,46 @@ export default function NetworkClient() {
               <div className="font-semibold">Members</div>
               <span className="text-[10px] text-white/45 font-mono">{data.nodes.length}</span>
             </div>
-            <ul className="space-y-1">
-              {data.nodes.map(n => (
-                <li key={n.id}>
-                  <button
-                    onClick={() => setSelectedId(n.id)}
-                    onMouseEnter={() => { hoverRef.current.node = n }}
-                    onMouseLeave={() => { hoverRef.current.node = null }}
-                    className="w-full flex items-center gap-2.5 px-1.5 py-1.5 rounded hover:bg-white/5 text-left"
-                  >
-                    {n.avatar ? (
-                      // eslint-disable-next-line @next/next/no-img-element
-                      <img src={n.avatar} alt=""
-                           className="w-7 h-7 rounded-full object-cover flex-shrink-0 ring-1"
-                           style={{ borderColor: topicColor(n.primary_topic) }} />
-                    ) : (
-                      <span className="w-7 h-7 rounded-full flex-shrink-0"
-                            style={{ background: topicColor(n.primary_topic), opacity: 0.5 }} />
-                    )}
-                    <div className="min-w-0 flex-1">
-                      <div className="truncate text-[12.5px]">{n.name}</div>
-                      <div className="text-[10px] text-white/45 truncate">
-                        {n.papers} · {n.primary_topic}
+            <ul className="space-y-0.5">
+              {data.nodes.map((n, i) => {
+                const prev = data.nodes[i - 1]
+                const showDivider = !!prev && !prev.no_data && !!n.no_data
+                return (
+                  <li key={n.id}>
+                    {showDivider && (
+                      <div className="text-[10px] uppercase tracking-wide text-white/35 px-1.5 pt-3 pb-1">
+                        Members without indexed papers
                       </div>
-                    </div>
-                  </button>
-                </li>
-              ))}
+                    )}
+                    <button
+                      onClick={() => setSelectedId(n.id)}
+                      onMouseEnter={() => { hoverRef.current.node = n.no_data ? null : n }}
+                      onMouseLeave={() => { hoverRef.current.node = null }}
+                      className={`w-full flex items-center gap-2.5 px-1.5 py-1.5 rounded hover:bg-white/5 text-left ${n.no_data ? 'opacity-55' : ''}`}
+                    >
+                      {n.avatar ? (
+                        // eslint-disable-next-line @next/next/no-img-element
+                        <img src={n.avatar} alt=""
+                             className="w-7 h-7 rounded-full object-cover flex-shrink-0 ring-1"
+                             style={{ borderColor: topicColor(n.primary_topic) }} />
+                      ) : (
+                        <span className="w-7 h-7 rounded-full flex-shrink-0 grid place-items-center text-[9px] text-white/50"
+                              style={{ background: 'rgba(255,255,255,0.05)', borderColor: topicColor(n.primary_topic) }}>
+                          {n.name.split(' ').map(w => w[0]).slice(0,2).join('')}
+                        </span>
+                      )}
+                      <div className="min-w-0 flex-1">
+                        <div className="truncate text-[12.5px]">{n.name}</div>
+                        <div className="text-[10px] text-white/45 truncate">
+                          {n.no_data
+                            ? (n.affiliation || 'no Scholar profile')
+                            : `${n.papers} · ${n.primary_topic}`}
+                        </div>
+                      </div>
+                    </button>
+                  </li>
+                )
+              })}
             </ul>
           </div>
         )}
