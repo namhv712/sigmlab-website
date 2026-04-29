@@ -231,28 +231,44 @@ export default function NetworkClient() {
       // Edges first (under nodes) — draw heaviest last so they sit on top
       ctx.lineCap = 'round'
       const nowYear = new Date().getFullYear()
-      const maxWeight = data!.links.reduce((m, l) => Math.max(m, l.weight), 1)
-      const sortedLinks = [...data!.links].sort((a, b) => a.weight - b.weight)
+      const visibleLinkList = data!.links.filter(visibleLink)
+      const maxWeight = visibleLinkList.reduce((m, l) => Math.max(m, l.weight), 1)
+      const sortedLinks = [...visibleLinkList].sort((a, b) => a.weight - b.weight)
+      // Top-3 weighted (visible) edges get a halo border
+      const top3Set = new Set(
+        [...visibleLinkList].sort((a, b) => b.weight - a.weight).slice(0, 3)
+          .map(l => `${l.source}__${l.target}`)
+      )
       for (const l of sortedLinks) {
-        if (!visibleLink(l)) continue
         const a = byId.get(l.source as string)
         const b = byId.get(l.target as string)
         if (!a || !b) continue
         const recency = l.last_year ? Math.max(0, 1 - (nowYear - l.last_year) / 12) : 0.25
         const wNorm = l.weight / maxWeight                    // 0..1
-        const wStrong = Math.pow(wNorm, 0.55)                 // boost low-mid range
-        // Thickness scales with sqrt(weight) — much more visible than log
-        const lw = 1 + Math.sqrt(l.weight) * 1.6
-        // Vibrancy: thin/old edges fade out, thick/recent edges saturate
-        const baseAlpha = Math.min(1, 0.10 + 0.55 * wStrong + 0.45 * recency)
+        // Stronger contrast: low-weight edges fade to near-zero
+        const wStrong = Math.pow(wNorm, 0.7)
+        // Thickness: log scale up to maxWeight for clarity
+        const lw = 0.8 + Math.sqrt(l.weight) * 1.5
+        // Vibrancy: low-weight + old = nearly invisible; recent + heavy = saturated
+        const baseAlpha = Math.min(1, 0.05 + 0.85 * wStrong * (0.4 + 0.6 * recency))
         const cA = topicColor(a.primary_topic)
         const cB = topicColor(b.primary_topic)
-        // Heaviest edges punch through with a brighter inner core
-        if (wNorm > 0.25) {
+        // Top-3 halo: bright white-ish outer ring drawn first so it sits behind the colored edge
+        if (top3Set.has(`${l.source}__${l.target}`)) {
+          ctx.strokeStyle = 'rgba(255,255,255,0.55)'
+          ctx.lineWidth = lw + 4
+          ctx.shadowColor = topicColor(l.primary_topic)
+          ctx.shadowBlur = 28
+          ctx.beginPath()
+          edgePath(ctx, a, b)
+          ctx.stroke()
+          ctx.shadowBlur = 0
+        } else if (wNorm > 0.3) {
+          // High-weight (but not top-3) gets a subtler bright core
           ctx.strokeStyle = withAlpha('#ffffff', 0.18 * wStrong)
           ctx.lineWidth = lw + 2.5
           ctx.shadowColor = topicColor(l.primary_topic)
-          ctx.shadowBlur = 22 * wStrong
+          ctx.shadowBlur = 18 * wStrong
           ctx.beginPath()
           edgePath(ctx, a, b)
           ctx.stroke()
@@ -263,7 +279,9 @@ export default function NetworkClient() {
         ctx.strokeStyle = grad
         ctx.lineWidth = lw
         ctx.shadowColor = topicColor(l.primary_topic)
-        ctx.shadowBlur = 6 + 18 * wStrong * (0.5 + 0.5 * recency)
+        ctx.shadowBlur = top3Set.has(`${l.source}__${l.target}`)
+          ? 24
+          : 4 + 14 * wStrong * (0.4 + 0.6 * recency)
         ctx.beginPath()
         edgePath(ctx, a, b)
         ctx.stroke()
@@ -533,10 +551,10 @@ export default function NetworkClient() {
         </p>
       </div>
 
-      <div ref={wrapRef} className="relative h-[72vh] mx-auto max-w-7xl border-y border-white/10">
+      <div ref={wrapRef} className="relative h-[58vh] sm:h-[68vh] lg:h-[72vh] mx-auto max-w-7xl border-y border-white/10">
         <canvas ref={canvasRef} className="block w-full h-full" />
 
-        <div className="absolute left-4 top-4 flex flex-col gap-3 max-w-[260px] z-10">
+        <div className="absolute left-2 sm:left-4 top-2 sm:top-4 flex flex-col gap-2 sm:gap-3 w-[200px] sm:max-w-[260px] sm:w-auto z-10">
           <div className="relative">
             <input
               value={search}
@@ -629,7 +647,7 @@ export default function NetworkClient() {
 
         {/* Right panel: detail view if a node is selected, otherwise member list */}
         {selectedNode ? (
-          <div className="absolute right-4 top-4 w-[300px] bg-white/5 backdrop-blur border border-white/15 rounded-lg p-4 text-sm z-10 max-h-[68vh] overflow-y-auto">
+          <div className="hidden md:block absolute right-4 top-4 w-[300px] bg-white/5 backdrop-blur border border-white/15 rounded-lg p-4 text-sm z-10 max-h-[68vh] overflow-y-auto">
             <div className="flex items-start justify-between gap-2 mb-3">
               <div className="flex items-center gap-3">
                 {selectedNode.avatar && (
@@ -676,7 +694,7 @@ export default function NetworkClient() {
             </ul>
           </div>
         ) : (
-          <div className="absolute right-4 top-4 w-[300px] bg-white/5 backdrop-blur border border-white/15 rounded-lg p-3 text-sm z-10 max-h-[68vh] overflow-y-auto">
+          <div className="hidden md:block absolute right-4 top-4 w-[300px] bg-white/5 backdrop-blur border border-white/15 rounded-lg p-3 text-sm z-10 max-h-[68vh] overflow-y-auto">
             <div className="flex items-center justify-between mb-3 px-1">
               <div className="font-semibold">Members</div>
               <span className="text-[10px] text-white/45 font-mono">{data.nodes.length}</span>
