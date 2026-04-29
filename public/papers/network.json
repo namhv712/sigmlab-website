@@ -9,23 +9,23 @@
       "topics": [
         {
           "key": "Other",
-          "count": 38
+          "count": 42
         },
         {
           "key": "Plant ID",
-          "count": 25
+          "count": 26
         },
         {
           "key": "Action Recognition",
-          "count": 20
+          "count": 22
         },
         {
           "key": "Person Re-ID",
-          "count": 20
+          "count": 22
         },
         {
-          "key": "Document/OCR",
-          "count": 18
+          "key": "Hand Gesture",
+          "count": 15
         }
       ],
       "primary_topic": "Other",
@@ -40,7 +40,7 @@
       "topics": [
         {
           "key": "Other",
-          "count": 45
+          "count": 47
         },
         {
           "key": "Hand Gesture",
@@ -48,15 +48,15 @@
         },
         {
           "key": "Medical Imaging",
-          "count": 23
+          "count": 24
         },
         {
           "key": "Action Recognition",
-          "count": 21
+          "count": 22
         },
         {
           "key": "Visually Impaired",
-          "count": 13
+          "count": 14
         }
       ],
       "primary_topic": "Other",
@@ -71,7 +71,7 @@
       "topics": [
         {
           "key": "Other",
-          "count": 41
+          "count": 42
         },
         {
           "key": "Medical Imaging",
@@ -83,7 +83,7 @@
         },
         {
           "key": "Hand Gesture",
-          "count": 17
+          "count": 18
         },
         {
           "key": "Action Recognition",
@@ -102,11 +102,11 @@
       "topics": [
         {
           "key": "Other",
-          "count": 82
+          "count": 68
         },
         {
-          "key": "Document/OCR",
-          "count": 2
+          "key": "Speech/NLP",
+          "count": 16
         },
         {
           "key": "Honey Bee",
@@ -133,14 +133,14 @@
       "topics": [
         {
           "key": "Other",
-          "count": 39
-        },
-        {
-          "key": "Surveillance",
-          "count": 12
+          "count": 52
         },
         {
           "key": "Plant ID",
+          "count": 5
+        },
+        {
+          "key": "Person Re-ID",
           "count": 5
         },
         {
@@ -148,8 +148,8 @@
           "count": 4
         },
         {
-          "key": "Person Re-ID",
-          "count": 4
+          "key": "Action Recognition",
+          "count": 1
         }
       ],
       "primary_topic": "Other",
@@ -164,23 +164,23 @@
       "topics": [
         {
           "key": "Other",
-          "count": 24
+          "count": 26
         },
         {
           "key": "Hand Gesture",
-          "count": 9
+          "count": 8
         },
         {
           "key": "Action Recognition",
           "count": 5
         },
         {
-          "key": "Speech/NLP",
+          "key": "Medical Imaging",
           "count": 4
         },
         {
-          "key": "Medical Imaging",
-          "count": 4
+          "key": "Speech/NLP",
+          "count": 3
         }
       ],
       "primary_topic": "Other",
@@ -195,7 +195,7 @@
       "topics": [
         {
           "key": "Other",
-          "count": 37
+          "count": 31
         },
         {
           "key": "Medical Imaging",
@@ -203,11 +203,11 @@
         },
         {
           "key": "Speech/NLP",
-          "count": 2
+          "count": 5
         },
         {
-          "key": "Document/OCR",
-          "count": 1
+          "key": "UAV",
+          "count": 3
         },
         {
           "key": "Action Recognition",
@@ -234,15 +234,15 @@
         },
         {
           "key": "Action Recognition",
-          "count": 3
-        },
-        {
-          "key": "Surveillance",
-          "count": 3
+          "count": 5
         },
         {
           "key": "Hand Gesture",
           "count": 3
+        },
+        {
+          "key": "Medical Imaging",
+          "count": 2
         }
       ],
       "primary_topic": "Person Re-ID",
@@ -257,15 +257,15 @@
       "topics": [
         {
           "key": "Other",
-          "count": 21
+          "count": 23
         },
         {
           "key": "Person Re-ID",
-          "count": 15
+          "count": 17
         },
         {
           "key": "Surveillance",
-          "count": 6
+          "count": 2
         },
         {
           "key": "Hand Gesture",
@@ -292,11 +292,11 @@
         },
         {
           "key": "Other",
-          "count": 10
+          "count": 11
         },
         {
           "key": "Action Recognition",
-          "count": 6
+          "count": 8
         },
         {
           "key": "Plant ID",
@@ -319,22 +319,22 @@
       "topics": [
         {
           "key": "Other",
-          "count": 29
+          "count": 32
         },
         {
           "key": "Honey Bee",
-          "count": 4
-        },
-        {
-          "key": "Medical Imaging",
-          "count": 2
-        },
-        {
-          "key": "Speech/NLP",
-          "count": 2
+          "count": 3
         },
         {
           "key": "Action Recognition",
+          "count": 1
+        },
+        {
+          "key": "Medical Imaging",
+          "count": 1
+        },
+        {
+          "key": "Plant ID",
           "count": 1
         }
       ],
@@ -354,14 +354,14 @@
         },
         {
           "key": "Other",
-          "count": 13
-        },
-        {
-          "key": "Surveillance",
-          "count": 3
+          "count": 14
         },
         {
           "key": "Person Re-ID",
+          "count": 2
+        },
+        {
+          "key": "Surveillance",
           "count": 2
         },
         {
@@ -381,11 +381,7 @@
       "topics": [
         {
           "key": "Other",
-          "count": 13
-        },
-        {
-          "key": "Document/OCR",
-          "count": 10
+          "count": 23
         },
         {
           "key": "Action Recognition",
@@ -412,15 +408,15 @@
       "topics": [
         {
           "key": "Action Recognition",
-          "count": 12
+          "count": 14
         },
         {
           "key": "Other",
-          "count": 9
+          "count": 6
         },
         {
           "key": "Hand Gesture",
-          "count": 5
+          "count": 4
         },
         {
           "key": "Fall Detection",
@@ -450,16 +446,16 @@
           "count": 5
         },
         {
-          "key": "Action Recognition",
-          "count": 4
-        },
-        {
           "key": "Hand Gesture",
-          "count": 4
+          "count": 5
         },
         {
           "key": "Visually Impaired",
           "count": 4
+        },
+        {
+          "key": "Action Recognition",
+          "count": 3
         }
       ],
       "primary_topic": "Plant ID",
@@ -473,19 +469,19 @@
       "last_year": 2025,
       "topics": [
         {
+          "key": "Other",
+          "count": 12
+        },
+        {
           "key": "Speech/NLP",
-          "count": 19
+          "count": 8
         },
         {
           "key": "Visually Impaired",
           "count": 1
-        },
-        {
-          "key": "Other",
-          "count": 1
         }
       ],
-      "primary_topic": "Speech/NLP",
+      "primary_topic": "Other",
       "avatar": ""
     },
     {
@@ -500,12 +496,12 @@
           "count": 9
         },
         {
-          "key": "Speech/NLP",
-          "count": 8
+          "key": "Other",
+          "count": 6
         },
         {
-          "key": "Other",
-          "count": 3
+          "key": "Speech/NLP",
+          "count": 5
         },
         {
           "key": "Visually Impaired",
@@ -524,11 +520,11 @@
       "topics": [
         {
           "key": "Document/OCR",
-          "count": 11
+          "count": 9
         },
         {
           "key": "Other",
-          "count": 4
+          "count": 6
         },
         {
           "key": "Plant ID",
@@ -550,7 +546,7 @@
           "count": 14
         },
         {
-          "key": "Speech/NLP",
+          "key": "Action Recognition",
           "count": 1
         },
         {
@@ -574,7 +570,11 @@
         },
         {
           "key": "Other",
-          "count": 3
+          "count": 2
+        },
+        {
+          "key": "Pose Estimation",
+          "count": 1
         }
       ],
       "primary_topic": "Medical Imaging",
@@ -589,11 +589,11 @@
       "topics": [
         {
           "key": "Document/OCR",
-          "count": 10
+          "count": 8
         },
         {
           "key": "Other",
-          "count": 4
+          "count": 6
         }
       ],
       "primary_topic": "Document/OCR",
@@ -608,11 +608,11 @@
       "topics": [
         {
           "key": "Hand Gesture",
-          "count": 5
+          "count": 6
         },
         {
           "key": "Action Recognition",
-          "count": 4
+          "count": 3
         },
         {
           "key": "Other",
@@ -654,14 +654,10 @@
       "topics": [
         {
           "key": "Action Recognition",
-          "count": 5
+          "count": 7
         },
         {
           "key": "Other",
-          "count": 2
-        },
-        {
-          "key": "Surveillance",
           "count": 1
         },
         {
@@ -681,18 +677,14 @@
       "topics": [
         {
           "key": "Action Recognition",
-          "count": 3
-        },
-        {
-          "key": "Other",
-          "count": 2
+          "count": 5
         },
         {
           "key": "Medical Imaging",
           "count": 2
         },
         {
-          "key": "Hand Gesture",
+          "key": "Other",
           "count": 1
         }
       ],
@@ -708,10 +700,14 @@
       "topics": [
         {
           "key": "Federated Learning",
-          "count": 3
+          "count": 2
         },
         {
           "key": "Action Recognition",
+          "count": 1
+        },
+        {
+          "key": "Medical Imaging",
           "count": 1
         }
       ],
@@ -730,7 +726,7 @@
           "count": 1
         },
         {
-          "key": "Speech/NLP",
+          "key": "Other",
           "count": 1
         }
       ],
@@ -777,19 +773,19 @@
       "last_year": 2025,
       "topics": [
         {
-          "key": "Hand Gesture",
-          "count": 14
+          "key": "Other",
+          "count": 16
         },
         {
-          "key": "Other",
-          "count": 13
+          "key": "Hand Gesture",
+          "count": 15
         },
         {
           "key": "Medical Imaging",
           "count": 13
         }
       ],
-      "primary_topic": "Hand Gesture"
+      "primary_topic": "Other"
     },
     {
       "source": "thanh_hai_tran",
@@ -799,19 +795,19 @@
       "last_year": 2026,
       "topics": [
         {
-          "key": "Other",
-          "count": 15
+          "key": "Hand Gesture",
+          "count": 11
         },
         {
-          "key": "Hand Gesture",
-          "count": 10
+          "key": "Other",
+          "count": 11
         },
         {
           "key": "Action Recognition",
           "count": 9
         }
       ],
-      "primary_topic": "Other"
+      "primary_topic": "Hand Gesture"
     },
     {
       "source": "hai_vu",
@@ -829,8 +825,8 @@
           "count": 13
         },
         {
-          "key": "Other",
-          "count": 10
+          "key": "Hand Gesture",
+          "count": 8
         }
       ],
       "primary_topic": "Plant ID"
@@ -848,7 +844,7 @@
         },
         {
           "key": "Action Recognition",
-          "count": 3
+          "count": 4
         },
         {
           "key": "Other",
@@ -869,11 +865,11 @@
           "count": 14
         },
         {
-          "key": "Other",
-          "count": 3
+          "key": "Action Recognition",
+          "count": 5
         },
         {
-          "key": "Action Recognition",
+          "key": "Other",
           "count": 3
         }
       ],
@@ -892,7 +888,7 @@
         },
         {
           "key": "Action Recognition",
-          "count": 6
+          "count": 7
         },
         {
           "key": "Other",
@@ -913,12 +909,12 @@
           "count": 6
         },
         {
-          "key": "Action Recognition",
-          "count": 4
+          "key": "Hand Gesture",
+          "count": 5
         },
         {
-          "key": "Hand Gesture",
-          "count": 4
+          "key": "Action Recognition",
+          "count": 3
         }
       ],
       "primary_topic": "Plant ID"
@@ -932,15 +928,15 @@
       "topics": [
         {
           "key": "Person Re-ID",
-          "count": 11
+          "count": 12
         },
         {
           "key": "Other",
-          "count": 4
+          "count": 6
         },
         {
-          "key": "Surveillance",
-          "count": 3
+          "key": "Visually Impaired",
+          "count": 1
         }
       ],
       "primary_topic": "Person Re-ID"
@@ -953,19 +949,19 @@
       "last_year": 2024,
       "topics": [
         {
-          "key": "Action Recognition",
-          "count": 4
+          "key": "Hand Gesture",
+          "count": 5
         },
         {
           "key": "Plant ID",
           "count": 4
         },
         {
-          "key": "Hand Gesture",
+          "key": "Visually Impaired",
           "count": 4
         }
       ],
-      "primary_topic": "Action Recognition"
+      "primary_topic": "Hand Gesture"
     },
     {
       "source": "thi_lan_le",
@@ -976,15 +972,15 @@
       "topics": [
         {
           "key": "Other",
-          "count": 6
-        },
-        {
-          "key": "Surveillance",
-          "count": 5
+          "count": 10
         },
         {
           "key": "Person Re-ID",
-          "count": 4
+          "count": 5
+        },
+        {
+          "key": "Plant ID",
+          "count": 2
         }
       ],
       "primary_topic": "Other"
@@ -1001,12 +997,12 @@
           "count": 6
         },
         {
-          "key": "Other",
-          "count": 3
+          "key": "Action Recognition",
+          "count": 5
         },
         {
-          "key": "Action Recognition",
-          "count": 3
+          "key": "Other",
+          "count": 2
         }
       ],
       "primary_topic": "Person Re-ID"
@@ -1046,11 +1042,11 @@
         },
         {
           "key": "Hand Gesture",
-          "count": 4
+          "count": 5
         },
         {
           "key": "Action Recognition",
-          "count": 3
+          "count": 2
         }
       ],
       "primary_topic": "Plant ID"
@@ -1068,10 +1064,10 @@
         },
         {
           "key": "Other",
-          "count": 2
+          "count": 4
         },
         {
-          "key": "Surveillance",
+          "key": "Action Recognition",
           "count": 1
         }
       ],
@@ -1086,15 +1082,15 @@
       "topics": [
         {
           "key": "Other",
-          "count": 7
+          "count": 9
         },
         {
           "key": "Person Re-ID",
-          "count": 4
+          "count": 5
         },
         {
-          "key": "Surveillance",
-          "count": 3
+          "key": "Visually Impaired",
+          "count": 1
         }
       ],
       "primary_topic": "Other"
@@ -1108,14 +1104,14 @@
       "topics": [
         {
           "key": "Hand Gesture",
-          "count": 4
+          "count": 3
+        },
+        {
+          "key": "Other",
+          "count": 3
         },
         {
           "key": "Action Recognition",
-          "count": 2
-        },
-        {
-          "key": "Person Re-ID",
           "count": 2
         }
       ],
@@ -1133,8 +1129,8 @@
           "count": 9
         },
         {
-          "key": "Surveillance",
-          "count": 1
+          "key": "Other",
+          "count": 3
         },
         {
           "key": "Action Recognition",
@@ -1155,11 +1151,11 @@
           "count": 6
         },
         {
-          "key": "Other",
-          "count": 2
+          "key": "Action Recognition",
+          "count": 4
         },
         {
-          "key": "Action Recognition",
+          "key": "Medical Imaging",
           "count": 2
         }
       ],
@@ -1174,7 +1170,7 @@
       "topics": [
         {
           "key": "Other",
-          "count": 8
+          "count": 9
         },
         {
           "key": "Person Re-ID",
@@ -1196,11 +1192,11 @@
       "topics": [
         {
           "key": "Document/OCR",
-          "count": 10
+          "count": 8
         },
         {
           "key": "Other",
-          "count": 1
+          "count": 3
         }
       ],
       "primary_topic": "Document/OCR"
@@ -1214,11 +1210,11 @@
       "topics": [
         {
           "key": "Document/OCR",
-          "count": 10
+          "count": 8
         },
         {
           "key": "Other",
-          "count": 1
+          "count": 3
         }
       ],
       "primary_topic": "Document/OCR"
@@ -1232,11 +1228,11 @@
       "topics": [
         {
           "key": "Document/OCR",
-          "count": 10
+          "count": 8
         },
         {
           "key": "Other",
-          "count": 1
+          "count": 3
         }
       ],
       "primary_topic": "Document/OCR"
@@ -1250,14 +1246,14 @@
       "topics": [
         {
           "key": "Action Recognition",
-          "count": 8
+          "count": 9
         },
         {
           "key": "Fall Detection",
           "count": 1
         },
         {
-          "key": "Hand Gesture",
+          "key": "Person Re-ID",
           "count": 1
         }
       ],
@@ -1290,11 +1286,7 @@
       "topics": [
         {
           "key": "Action Recognition",
-          "count": 8
-        },
-        {
-          "key": "Hand Gesture",
-          "count": 1
+          "count": 9
         },
         {
           "key": "Honey Bee",
@@ -1351,19 +1343,19 @@
       "last_year": 2025,
       "topics": [
         {
-          "key": "Action Recognition",
-          "count": 3
-        },
-        {
           "key": "Hand Gesture",
-          "count": 3
+          "count": 4
         },
         {
           "key": "Other",
           "count": 3
+        },
+        {
+          "key": "Action Recognition",
+          "count": 2
         }
       ],
-      "primary_topic": "Action Recognition"
+      "primary_topic": "Hand Gesture"
     },
     {
       "source": "hong_quan_nguyen",
@@ -1534,14 +1526,14 @@
       "topics": [
         {
           "key": "Action Recognition",
-          "count": 3
+          "count": 4
         },
         {
           "key": "Hand Gesture",
           "count": 1
         },
         {
-          "key": "Surveillance",
+          "key": "Visually Impaired",
           "count": 1
         }
       ],
@@ -1602,14 +1594,10 @@
       "topics": [
         {
           "key": "Action Recognition",
-          "count": 3
+          "count": 5
         },
         {
           "key": "Other",
-          "count": 2
-        },
-        {
-          "key": "Surveillance",
           "count": 1
         }
       ],
@@ -1627,7 +1615,7 @@
           "count": 2
         },
         {
-          "key": "Surveillance",
+          "key": "Other",
           "count": 1
         },
         {
@@ -1700,11 +1688,7 @@
       "topics": [
         {
           "key": "Action Recognition",
-          "count": 4
-        },
-        {
-          "key": "Other",
-          "count": 1
+          "count": 5
         }
       ],
       "primary_topic": "Action Recognition"
@@ -1718,14 +1702,10 @@
       "topics": [
         {
           "key": "Action Recognition",
-          "count": 2
+          "count": 4
         },
         {
           "key": "Other",
-          "count": 2
-        },
-        {
-          "key": "Surveillance",
           "count": 1
         }
       ],
@@ -1743,7 +1723,7 @@
           "count": 3
         },
         {
-          "key": "Speech/NLP",
+          "key": "Action Recognition",
           "count": 1
         },
         {
@@ -1783,7 +1763,7 @@
       "last_year": 2017,
       "topics": [
         {
-          "key": "Surveillance",
+          "key": "Person Re-ID",
           "count": 2
         },
         {
@@ -1791,11 +1771,11 @@
           "count": 1
         },
         {
-          "key": "Person Re-ID",
+          "key": "Surveillance",
           "count": 1
         }
       ],
-      "primary_topic": "Surveillance"
+      "primary_topic": "Person Re-ID"
     },
     {
       "source": "dang_khoa_mac",
@@ -1824,15 +1804,7 @@
       "topics": [
         {
           "key": "Action Recognition",
-          "count": 2
-        },
-        {
-          "key": "Other",
-          "count": 1
-        },
-        {
-          "key": "Hand Gesture",
-          "count": 1
+          "count": 4
         }
       ],
       "primary_topic": "Action Recognition"
@@ -1845,19 +1817,15 @@
       "last_year": 2025,
       "topics": [
         {
-          "key": "Medical Imaging",
+          "key": "Action Recognition",
           "count": 2
         },
         {
-          "key": "Hand Gesture",
-          "count": 1
-        },
-        {
-          "key": "Action Recognition",
-          "count": 1
+          "key": "Medical Imaging",
+          "count": 2
         }
       ],
-      "primary_topic": "Medical Imaging"
+      "primary_topic": "Action Recognition"
     },
     {
       "source": "thanh_hai_tran",
@@ -1868,11 +1836,11 @@
       "topics": [
         {
           "key": "Action Recognition",
-          "count": 3
+          "count": 2
         },
         {
           "key": "Hand Gesture",
-          "count": 1
+          "count": 2
         }
       ],
       "primary_topic": "Action Recognition"
@@ -1922,14 +1890,10 @@
       "topics": [
         {
           "key": "Action Recognition",
-          "count": 1
+          "count": 3
         },
         {
-          "key": "Surveillance",
-          "count": 1
-        },
-        {
-          "key": "Other",
+          "key": "Hand Gesture",
           "count": 1
         }
       ],
@@ -1944,11 +1908,7 @@
       "topics": [
         {
           "key": "Action Recognition",
-          "count": 2
-        },
-        {
-          "key": "Surveillance",
-          "count": 1
+          "count": 3
         },
         {
           "key": "Medical Imaging",
@@ -1984,10 +1944,14 @@
       "topics": [
         {
           "key": "Federated Learning",
-          "count": 3
+          "count": 2
         },
         {
           "key": "Action Recognition",
+          "count": 1
+        },
+        {
+          "key": "Medical Imaging",
           "count": 1
         }
       ],
@@ -2095,15 +2059,15 @@
       "last_year": 2023,
       "topics": [
         {
-          "key": "Action Recognition",
+          "key": "Hand Gesture",
           "count": 2
         },
         {
-          "key": "Hand Gesture",
+          "key": "Action Recognition",
           "count": 1
         }
       ],
-      "primary_topic": "Action Recognition"
+      "primary_topic": "Hand Gesture"
     },
     {
       "source": "hai_vu",
@@ -2113,15 +2077,15 @@
       "last_year": 2023,
       "topics": [
         {
-          "key": "Action Recognition",
+          "key": "Hand Gesture",
           "count": 2
         },
         {
-          "key": "Hand Gesture",
+          "key": "Action Recognition",
           "count": 1
         }
       ],
-      "primary_topic": "Action Recognition"
+      "primary_topic": "Hand Gesture"
     },
     {
       "source": "duy_tung_nguyen",
@@ -2315,15 +2279,11 @@
       "last_year": 2023,
       "topics": [
         {
-          "key": "Hand Gesture",
-          "count": 1
-        },
-        {
           "key": "Action Recognition",
-          "count": 1
+          "count": 2
         }
       ],
-      "primary_topic": "Hand Gesture"
+      "primary_topic": "Action Recognition"
     },
     {
       "source": "dinh_tan_pham",
@@ -2434,11 +2394,7 @@
       "topics": [
         {
           "key": "Action Recognition",
-          "count": 1
-        },
-        {
-          "key": "Surveillance",
-          "count": 1
+          "count": 2
         }
       ],
       "primary_topic": "Action Recognition"
@@ -2554,7 +2510,11 @@
       "topics": [
         {
           "key": "Federated Learning",
-          "count": 2
+          "count": 1
+        },
+        {
+          "key": "Medical Imaging",
+          "count": 1
         }
       ],
       "primary_topic": "Federated Learning"
@@ -3141,11 +3101,11 @@
       "last_year": 2021,
       "topics": [
         {
-          "key": "Hand Gesture",
+          "key": "Fall Detection",
           "count": 1
         }
       ],
-      "primary_topic": "Hand Gesture"
+      "primary_topic": "Fall Detection"
     },
     {
       "source": "quang_tien_pham",
@@ -3210,6 +3170,14 @@
     {
       "key": "Surveillance",
       "color": "#7CADFF"
+    },
+    {
+      "key": "UAV",
+      "color": "#FFA87C"
+    },
+    {
+      "key": "Pose Estimation",
+      "color": "#C7FF7C"
     },
     {
       "key": "Other",

@@ -113,15 +113,17 @@ export default function NetworkClient() {
     const byId = new Map<string, Node>()
     data.nodes.forEach(n => byId.set(n.id, n))
 
+    const matchesAnyTopic = (topics: Topic[]) =>
+      topics.some(t => activeTopics.has(t.key))
     const visibleLink = (l: Link) => {
       if (l.last_year && l.last_year < yearMin) return false
-      if (activeTopics.size > 0 && !activeTopics.has(l.primary_topic)) return false
+      if (activeTopics.size > 0 && !matchesAnyTopic(l.topics)) return false
       if (selectedId && l.source !== selectedId && l.target !== selectedId) return false
       return true
     }
     const visibleNode = (n: Node) => {
       if (n.last_year && n.last_year < yearMin) return false
-      if (activeTopics.size > 0 && !activeTopics.has(n.primary_topic)) return false
+      if (activeTopics.size > 0 && !matchesAnyTopic(n.topics)) return false
       if (search && !n.name.toLowerCase().includes(search.toLowerCase())) return false
       return true
     }
