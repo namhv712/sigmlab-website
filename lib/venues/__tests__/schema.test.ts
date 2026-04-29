@@ -36,19 +36,19 @@ describe('VenuesDatasetSchema', () => {
 
   it('rejects an invalid type', () => {
     const bad = structuredClone(validFixture)
-    ;(bad.venues[0] as any).type = 'preprint'
+    ;(bad.venues[0] as unknown as { type: string }).type = 'preprint'
     expect(() => VenuesDatasetSchema.parse(bad)).toThrow()
   })
 
   it('rejects acceptanceRate > 1', () => {
     const bad = structuredClone(validFixture)
-    ;(bad.venues[0] as any).acceptanceRate = 24
+    ;(bad.venues[0] as unknown as { acceptanceRate: number }).acceptanceRate = 24
     expect(() => VenuesDatasetSchema.parse(bad)).toThrow()
   })
 
   it('rejects malformed lastVerified', () => {
     const bad = structuredClone(validFixture)
-    ;(bad.venues[0] as any).lastVerified = 'April 2026'
+    ;(bad.venues[0] as unknown as { lastVerified: string }).lastVerified = 'April 2026'
     expect(() => VenuesDatasetSchema.parse(bad)).toThrow()
   })
 })

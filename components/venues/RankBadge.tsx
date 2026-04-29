@@ -1,5 +1,3 @@
-import type { Quartile, CoreRank, CcfRank } from '@/lib/venues/types'
-
 type BadgeKind = 'quartile' | 'core' | 'ccf' | 'type'
 type Props = { kind: BadgeKind; value: string | undefined }
 

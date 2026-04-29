@@ -4,7 +4,7 @@ import { useMemo, useState, useEffect, useCallback } from 'react'
 import { useRouter, useSearchParams, usePathname } from 'next/navigation'
 import type { VenueWithDerived } from '@/lib/venues/types'
 import { UpcomingDeadlines } from '@/components/venues/UpcomingDeadlines'
-import { VenuesFilters, EMPTY_FILTERS, type FilterState } from '@/components/venues/VenuesFilters'
+import { VenuesFilters, type FilterState } from '@/components/venues/VenuesFilters'
 import { VenuesTable, type SortColumn, type SortDir } from '@/components/venues/VenuesTable'
 
 type Tab = 'all' | 'conferences' | 'journals' | 'workshops'
