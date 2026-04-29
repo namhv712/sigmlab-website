@@ -221,7 +221,7 @@
     {
       "id": "thuy_binh_nguyen",
       "name": "Thuy-Binh Nguyen",
-      "papers": 49,
+      "papers": 51,
       "first_year": 2007,
       "last_year": 2026,
       "topics": [
@@ -231,7 +231,7 @@
         },
         {
           "key": "Other",
-          "count": 9
+          "count": 10
         },
         {
           "key": "Action Recognition",
@@ -438,6 +438,25 @@
       "affiliation": "International School, Vietnam National University"
     },
     {
+      "id": "manh_thang_hoang",
+      "name": "Manh-Thang Hoang",
+      "papers": 28,
+      "first_year": 2012,
+      "last_year": 2024,
+      "topics": [
+        {
+          "key": "Other",
+          "count": 20
+        },
+        {
+          "key": "Document/OCR",
+          "count": 8
+        }
+      ],
+      "primary_topic": "Document/OCR",
+      "avatar": "/assets/images/team/Permanent Members/Main - Thầy Thắng.png"
+    },
+    {
       "id": "van_nam_hoang",
       "name": "Van-Nam Hoang",
       "papers": 28,
@@ -520,6 +539,25 @@
       "avatar": "/assets/images/team/Permanent Members/Main - Cô Diệp.jpg"
     },
     {
+      "id": "kim_hue_ta",
+      "name": "Kim-Hue Ta",
+      "papers": 22,
+      "first_year": 2012,
+      "last_year": 2026,
+      "topics": [
+        {
+          "key": "Other",
+          "count": 20
+        },
+        {
+          "key": "UAV",
+          "count": 2
+        }
+      ],
+      "primary_topic": "UAV",
+      "avatar": "/assets/images/team/Permanent Members/Main - Cô Huệ.png"
+    },
+    {
       "id": "bui_hai_phong",
       "name": "Bui Hai Phong",
       "papers": 19,
@@ -590,25 +628,6 @@
       "primary_topic": "Medical Imaging",
       "avatar": "/assets/images/team/PhD Students/PhD - Chị Loan.jpg",
       "affiliation": "Hai Duong University"
-    },
-    {
-      "id": "manh_thang_hoang",
-      "name": "Manh-Thang Hoang",
-      "papers": 14,
-      "first_year": 2016,
-      "last_year": 2024,
-      "topics": [
-        {
-          "key": "Document/OCR",
-          "count": 8
-        },
-        {
-          "key": "Other",
-          "count": 6
-        }
-      ],
-      "primary_topic": "Document/OCR",
-      "avatar": "/assets/images/team/Permanent Members/Main - Thầy Thắng.png"
     },
     {
       "id": "viet_duc_le",
@@ -849,18 +868,6 @@
       "primary_topic": "Other",
       "avatar": "/assets/images/team/Master Students/Master - MinhTQ.jpg",
       "affiliation": "S-Phenikaa",
-      "no_data": true
-    },
-    {
-      "id": "kim_hue_ta",
-      "name": "Kim-Hue Ta",
-      "papers": 0,
-      "first_year": null,
-      "last_year": null,
-      "topics": [],
-      "primary_topic": "Other",
-      "avatar": "/assets/images/team/Permanent Members/Main - Cô Huệ.png",
-      "affiliation": "",
       "no_data": true
     },
     {
@@ -1558,6 +1565,20 @@
         }
       ],
       "primary_topic": "Person Re-ID"
+    },
+    {
+      "source": "kim_hue_ta",
+      "target": "manh_thang_hoang",
+      "weight": 12,
+      "first_year": 2012,
+      "last_year": 2024,
+      "topics": [
+        {
+          "key": "Other",
+          "count": 12
+        }
+      ],
+      "primary_topic": "Other"
     },
     {
       "source": "bui_hai_phong",
@@ -2878,6 +2899,24 @@
       "primary_topic": "Action Recognition"
     },
     {
+      "source": "kim_hue_ta",
+      "target": "thuy_binh_nguyen",
+      "weight": 2,
+      "first_year": 2023,
+      "last_year": 2024,
+      "topics": [
+        {
+          "key": "UAV",
+          "count": 1
+        },
+        {
+          "key": "Other",
+          "count": 1
+        }
+      ],
+      "primary_topic": "UAV"
+    },
+    {
       "source": "thi_lan_le",
       "target": "tuan_dung_kieu",
       "weight": 2,
@@ -3670,6 +3709,16 @@
       "topic": "Other",
       "lab_authors": [
         "duy_tung_nguyen"
+      ]
+    },
+    {
+      "title": "Deep Hybrid Learning Model for Fading Mitigation in MC-DCSK Receivers",
+      "authors": "TTK Hue, NT Dat, NH Tien, NX Quyen",
+      "year": 2026,
+      "venue": "International Journal of Bifurcation and Chaos, 2650068, 2026",
+      "topic": "Other",
+      "lab_authors": [
+        "kim_hue_ta"
       ]
     },
     {
@@ -4492,6 +4541,26 @@
       ]
     },
     {
+      "title": "Reconfigurable intelligent surfaces: A hardware-centric review of structures, implementation, evaluation, and integration with uav and machine learning",
+      "authors": "BN Thai, TN Tien, KD Minh, MN Tien, TTK Hue, NX Quyen",
+      "year": 2025,
+      "venue": "IEEE Access, 2025",
+      "topic": "UAV",
+      "lab_authors": [
+        "kim_hue_ta"
+      ]
+    },
+    {
+      "title": "Chaos-based block cipher for video stream encryption",
+      "authors": "TQ Do, NVH Linh, NH Minh, TTK Hue",
+      "year": 2025,
+      "venue": "International Journal of Internet Technology and Secured Transactions, 2025",
+      "topic": "Other",
+      "lab_authors": [
+        "kim_hue_ta"
+      ]
+    },
+    {
       "title": "Text line segmentation approach combining deep learning model and traditional image processing techniques-application to transliteration of Cham manuscripts",
       "authors": "TN Nguyen, JC Burie, TL Le, AV Schweyer",
       "year": 2025,
@@ -5090,6 +5159,39 @@
         "viet_duc_le",
         "hong_quan_nguyen",
         "thi_lan_le"
+      ]
+    },
+    {
+      "title": "Design of Circularly Polarized 1-Bit Reconfigurable ME-Dipole Reflectarray for C-band",
+      "authors": "TB Nguyen, TT Nguyen, TM Nguyen, TTK Hue, NX Quyen",
+      "year": 2024,
+      "venue": "2024 Tenth International Conference on Communications and Electronics (ICCE …, 2024",
+      "topic": "Other",
+      "lab_authors": [
+        "thuy_binh_nguyen",
+        "kim_hue_ta"
+      ]
+    },
+    {
+      "title": "Effective Consensus Computation for Public Blockchain in Small-World Network Environment",
+      "authors": "TTK Hue, NX Quyen, NT Anh, MH Hoang, TM Hoang",
+      "year": 2024,
+      "venue": "2024 Tenth International Conference on Communications and Electronics (ICCE …, 2024",
+      "topic": "Other",
+      "lab_authors": [
+        "kim_hue_ta",
+        "manh_thang_hoang"
+      ]
+    },
+    {
+      "title": "Stream Cipher Using Chaotic Maps for Secure Multimedia Data",
+      "authors": "UD Manh, NVH Linh, TTK Hue, TM Hoang",
+      "year": 2024,
+      "venue": "2024 Tenth International Conference on Communications and Electronics (ICCE …, 2024",
+      "topic": "Other",
+      "lab_authors": [
+        "kim_hue_ta",
+        "manh_thang_hoang"
       ]
     },
     {
@@ -5762,6 +5864,47 @@
       ]
     },
     {
+      "title": "Lessons for Vietnam on the use of digital technologies to support patient-centered care in low-and middle-income countries in the Asia-Pacific region: scoping review",
+      "authors": "L Kosowicz, K Tran, TT Khanh, TH Dang, VA Pham, H Ta Thi Kim, …",
+      "year": 2023,
+      "venue": "Journal of medical Internet research 25, e43224, 2023",
+      "topic": "Other",
+      "lab_authors": [
+        "kim_hue_ta"
+      ]
+    },
+    {
+      "title": "On the Design of A Reflective RIS for C-Band UAVs Beam-Steering Applications",
+      "authors": "MH Tao, TB Nguyen, DP Nguyen, TM Nguyen, TTK Hue, NX Quyen",
+      "year": 2023,
+      "venue": "2023 International Conference on Advanced Technologies for Communications …, 2023",
+      "topic": "UAV",
+      "lab_authors": [
+        "thuy_binh_nguyen",
+        "kim_hue_ta"
+      ]
+    },
+    {
+      "title": "Identity-Based Authenticated Encryption in Internet of Medical Things",
+      "authors": "NM Quan, TV Dung, DM Khanh, NX Quyen, TTK Hue",
+      "year": 2023,
+      "venue": "2023 8th International Scientific Conference on Applying New Technology in …, 2023",
+      "topic": "Other",
+      "lab_authors": [
+        "kim_hue_ta"
+      ]
+    },
+    {
+      "title": "Chaos-based stream cipher for embedded systems",
+      "authors": "TQ Do, TT Van Anh, NX Quyen, TTK Hue",
+      "year": 2023,
+      "venue": "2023 International Conference on Advanced Technologies for Communications …, 2023",
+      "topic": "Other",
+      "lab_authors": [
+        "kim_hue_ta"
+      ]
+    },
+    {
       "title": "Accurate continuous action and gesture recognition method based on skeleton and sliding windows techniques",
       "authors": "VD Le, TL Nghiem, TL Le",
       "year": 2023,
@@ -6420,6 +6563,27 @@
       "topic": "Other",
       "lab_authors": [
         "thi_loan_pham"
+      ]
+    },
+    {
+      "title": "Effective authentication mechanism for vehicular fog infrastructure",
+      "authors": "TTK Hue, NGDND Tuan, A Braeken, K Steenhaut, KHP Seee",
+      "year": 2022,
+      "venue": "2022 IEEE Ninth International Conference on Communications and Electronics …, 2022",
+      "topic": "Other",
+      "lab_authors": [
+        "kim_hue_ta"
+      ]
+    },
+    {
+      "title": "Key Agreement Protocol Based on Chaotic Authenticated Encryption Scheme",
+      "authors": "TTK Hue, NX Quyen, TM Hoang",
+      "year": 2022,
+      "venue": "2022 IEEE Ninth International Conference on Communications and Electronics …, 2022",
+      "topic": "Other",
+      "lab_authors": [
+        "kim_hue_ta",
+        "manh_thang_hoang"
       ]
     },
     {
@@ -7083,6 +7247,17 @@
       ]
     },
     {
+      "title": "Data Hiding in Bit-plane Medical Image Using Chaos-based Steganography",
+      "authors": "TTK Hue, NT Linh, M Nguyen-Duc, TM Hoang",
+      "year": 2021,
+      "venue": "2021 International Conference on Multimedia Analysis and Pattern Recognition …, 2021",
+      "topic": "Other",
+      "lab_authors": [
+        "kim_hue_ta",
+        "manh_thang_hoang"
+      ]
+    },
+    {
       "title": "On the use of attention in deep learning based denoising method for ancient Cham inscription images",
       "authors": "TN Nguyen, JC Burie, TL Le, AV Schweyer",
       "year": 2021,
@@ -7579,6 +7754,17 @@
       "topic": "Action Recognition",
       "lab_authors": [
         "nguyen_thi_oanh"
+      ]
+    },
+    {
+      "title": "Key-dependent permutation layer based on two dimensional discretised chaotic maps for lightweight block ciphers",
+      "authors": "TTK Hue, TM Hoang, A Braeken",
+      "year": 2020,
+      "venue": "International Journal of Internet Technology and Secured Transactions 10 (3 …, 2020",
+      "topic": "Other",
+      "lab_authors": [
+        "kim_hue_ta",
+        "manh_thang_hoang"
       ]
     },
     {
@@ -8516,6 +8702,38 @@
       ]
     },
     {
+      "title": "An efficient anonymous authentication protocol in multiple server communication networks (EAAM)",
+      "authors": "A Braeken, P Kumar, M Liyanage, TTK Hue",
+      "year": 2018,
+      "venue": "The Journal of Supercomputing 74 (4), 1695-1714, 2018",
+      "topic": "Other",
+      "lab_authors": [
+        "kim_hue_ta"
+      ]
+    },
+    {
+      "title": "An approach for image analysis using complex network",
+      "authors": "N Van Giang, TM Hoang, HX Thanh, TTK Hue",
+      "year": 2018,
+      "venue": "2018 IEEE Seventh International Conference on Communications and Electronics …, 2018",
+      "topic": "Other",
+      "lab_authors": [
+        "manh_thang_hoang",
+        "kim_hue_ta"
+      ]
+    },
+    {
+      "title": "Bit plane decomposing image encryption based on discrete cat-hadamard map",
+      "authors": "TTK Hue, TM Hoang, HX Thanh, A Braeken",
+      "year": 2018,
+      "venue": "2018 IEEE Seventh International Conference on Communications and Electronics …, 2018",
+      "topic": "Other",
+      "lab_authors": [
+        "kim_hue_ta",
+        "manh_thang_hoang"
+      ]
+    },
+    {
       "title": "Towards On-Demand Mobility Management in SDN",
       "authors": "Y Kim, SM Raza, DT Nguyen, S Jeon, H Choo",
       "year": 2018,
@@ -8827,6 +9045,37 @@
       ]
     },
     {
+      "title": "Lightweight Signcryption Scheme Based on Discrete Chebyshev Maps",
+      "authors": "TTK Hue, TM Hoang, A Braeken",
+      "year": 2017,
+      "venue": "Internet Technology and Secured Transactions (ICITST), 2017 12th …, 2017",
+      "topic": "Other",
+      "lab_authors": [
+        "kim_hue_ta",
+        "manh_thang_hoang"
+      ]
+    },
+    {
+      "title": "Complexity and properties of a multidimensional Cat-Hadamard map for pseudo random number generation",
+      "authors": "TT Kim Hue, TM Hoang",
+      "year": 2017,
+      "venue": "The European Physical Journal Special Topics 226 (10), 2263-2280, 2017",
+      "topic": "Other",
+      "lab_authors": [
+        "manh_thang_hoang"
+      ]
+    },
+    {
+      "title": "On construction of multi-maximum distance separable (MDS) matrix generator based on high dimensional Cat matrices",
+      "authors": "TKH Ta, TM Hoang, A Braeken, K Steenhaut",
+      "year": 2017,
+      "venue": "Optik 131, 454-466, 2017",
+      "topic": "Other",
+      "lab_authors": [
+        "manh_thang_hoang"
+      ]
+    },
+    {
       "title": "Challenges to development of bus system evidence from a comparative analysis of surveys in Hanoi",
       "authors": "MH Nguyen, TT Ha, TL Le, TC Nguyen",
       "year": 2017,
@@ -9121,6 +9370,17 @@
       "topic": "Other",
       "lab_authors": [
         "nguyen_thi_oanh"
+      ]
+    },
+    {
+      "title": "Design of the chaos-based diffusion layer for Lightweight block cipher",
+      "authors": "TTK Hue, TM Hoang, A Braeken, K Steenhaut",
+      "year": 2016,
+      "venue": "JOURNAL OF SCIENCE AND TECHNOLOGY TECHNICAL UNIVERSITIES 113 (2354-1083), 86-92, 2016",
+      "topic": "Other",
+      "lab_authors": [
+        "kim_hue_ta",
+        "manh_thang_hoang"
       ]
     },
     {
@@ -9921,6 +10181,17 @@
       ]
     },
     {
+      "title": "Chaos-based S-box for lightweight block cipher",
+      "authors": "TTK Hue, TM Hoang, D Tran",
+      "year": 2014,
+      "venue": "2014 IEEE Fifth International Conference on Communications and Electronics …, 2014",
+      "topic": "Other",
+      "lab_authors": [
+        "kim_hue_ta",
+        "manh_thang_hoang"
+      ]
+    },
+    {
       "title": "An analysis on human fall detection using skeleton from Microsoft kinect",
       "authors": "TH Tran, TL Le, J Morel",
       "year": 2014,
@@ -10163,6 +10434,17 @@
       "topic": "Speech/NLP",
       "lab_authors": [
         "khoat_than"
+      ]
+    },
+    {
+      "title": "Design and implementation of a Chaotic Cipher block chaining mode for image encryption",
+      "authors": "TTK Hue, TM Hoang, S Al Assad",
+      "year": 2013,
+      "venue": "2013 International Conference on Advanced Technologies for Communications …, 2013",
+      "topic": "Other",
+      "lab_authors": [
+        "kim_hue_ta",
+        "manh_thang_hoang"
       ]
     },
     {
@@ -10430,6 +10712,17 @@
       "topic": "Other",
       "lab_authors": [
         "hai_vu"
+      ]
+    },
+    {
+      "title": "Implementation of secure SPN chaos-based cryptosystem on FPGA",
+      "authors": "TTK Hue, C Van Lam, TM Hoang, S Al Assad",
+      "year": 2012,
+      "venue": "2012 IEEE international symposium on signal processing and information …, 2012",
+      "topic": "Other",
+      "lab_authors": [
+        "kim_hue_ta",
+        "manh_thang_hoang"
       ]
     },
     {
