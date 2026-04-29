@@ -139,9 +139,14 @@ export default function NetworkClient() {
 
     function step() {
       const alpha = alphaRef.current
-      if (alpha < 0.005 && !draggingRef.current?.node) return  // settled
+      if (alpha < 0.01 && !draggingRef.current?.node) return  // fully settled
       const nodes = data!.nodes
       const links = data!.links
+
+      // Force scale tapers with alpha so the system can't keep injecting energy
+      // into itself once it's mostly cooled.
+      const fScale = alpha
+      const FMAX = 30  // cap on per-pair force magnitude (prevents kicks at close range)
 
       for (let i = 0; i < nodes.length; i++) {
         const a = nodes[i]
@@ -153,18 +158,19 @@ export default function NetworkClient() {
           const dy = b.y! - a.y!
           const d2 = dx * dx + dy * dy + 0.001
           const d = Math.sqrt(d2)
-          // only repel when too close
           const minDist = 70
-          if (d < minDist * 4) {
-            const f = (minDist * minDist * 6) / d2
+          if (d < minDist * 3) {
+            // raw f = const / d^2, capped to avoid impulsive kicks
+            const f = Math.min(FMAX, (minDist * minDist * 4) / d2) * fScale
             const fx = (dx / d) * f
             const fy = (dy / d) * f
             a.vx! -= fx; a.vy! -= fy
             b.vx! += fx; b.vy! += fy
           }
         }
-        a.vx! += -a.x! * 0.025
-        a.vy! += -a.y! * 0.025
+        // Center gravity (also alpha-scaled)
+        a.vx! += -a.x! * 0.02 * fScale
+        a.vy! += -a.y! * 0.02 * fScale
       }
       for (const l of links) {
         if (!visibleLink(l)) continue
@@ -175,26 +181,33 @@ export default function NetworkClient() {
         const dy = b.y! - a.y!
         const d = Math.sqrt(dx * dx + dy * dy + 0.001)
         const target = 90 + 220 / Math.sqrt(l.weight)
-        const f = (d - target) * 0.06 * Math.min(1, Math.log10(l.weight + 1) / 1.5)
+        // Reduced gain (was 0.06) and tapered with alpha so the spring
+        // can't oscillate around the equilibrium length.
+        let f = (d - target) * 0.025 * fScale * Math.min(1, Math.log10(l.weight + 1) / 1.5)
+        if (f > FMAX) f = FMAX
+        if (f < -FMAX) f = -FMAX
         const fx = (dx / d) * f
         const fy = (dy / d) * f
         a.vx! += fx; a.vy! += fy
         b.vx! -= fx; b.vy! -= fy
       }
       let totalKE = 0
+      const damping = 0.55     // stronger damping kills jitter fast
       for (const n of nodes) {
         const dragging = draggingRef.current && draggingRef.current.node === n
         if (dragging) { n.vx = 0; n.vy = 0; continue }
-        n.vx! *= 0.78
-        n.vy! *= 0.78
-        n.x! += n.vx! * alpha
-        n.y! += n.vy! * alpha
+        n.vx! *= damping
+        n.vy! *= damping
+        // Zero out tiny velocities so floating-point churn doesn't keep redrawing
+        if (Math.abs(n.vx!) < 0.005) n.vx = 0
+        if (Math.abs(n.vy!) < 0.005) n.vy = 0
+        n.x! += n.vx!
+        n.y! += n.vy!
         totalKE += n.vx! * n.vx! + n.vy! * n.vy!
       }
-      // Cool down: alpha decays, faster when system is settled
-      const settledFactor = totalKE < 0.5 ? 0.92 : 0.985
+      const settledFactor = totalKE < 0.05 ? 0.85 : 0.975
       alphaRef.current = Math.max(0, alpha * settledFactor)
-      if (alphaRef.current < 0.003) alphaRef.current = 0
+      if (alphaRef.current < 0.005) alphaRef.current = 0
     }
 
     function render() {
