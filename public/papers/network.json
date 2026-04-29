@@ -28,7 +28,8 @@
           "count": 18
         }
       ],
-      "primary_topic": "Other"
+      "primary_topic": "Other",
+      "avatar": "/assets/images/team/Permanent Members/Main - Cô Lan.png"
     },
     {
       "id": "thanh_hai_tran",
@@ -58,7 +59,8 @@
           "count": 13
         }
       ],
-      "primary_topic": "Other"
+      "primary_topic": "Other",
+      "avatar": "/assets/images/team/Permanent Members/Main - Cô Hải.png"
     },
     {
       "id": "hai_vu",
@@ -88,7 +90,8 @@
           "count": 15
         }
       ],
-      "primary_topic": "Other"
+      "primary_topic": "Other",
+      "avatar": "/assets/images/team/Permanent Members/Main - Thầy Hải.png"
     },
     {
       "id": "khoat_than",
@@ -118,7 +121,8 @@
           "count": 1
         }
       ],
-      "primary_topic": "Other"
+      "primary_topic": "Other",
+      "avatar": ""
     },
     {
       "id": "trung_kien_dao",
@@ -148,7 +152,8 @@
           "count": 4
         }
       ],
-      "primary_topic": "Other"
+      "primary_topic": "Other",
+      "avatar": ""
     },
     {
       "id": "van_toi_nguyen",
@@ -178,7 +183,8 @@
           "count": 4
         }
       ],
-      "primary_topic": "Other"
+      "primary_topic": "Other",
+      "avatar": "/assets/images/team/Invited Researchers/IR Anh Tới.jpg"
     },
     {
       "id": "dinh_viet_sang",
@@ -208,7 +214,8 @@
           "count": 1
         }
       ],
-      "primary_topic": "Other"
+      "primary_topic": "Other",
+      "avatar": ""
     },
     {
       "id": "thuy_binh_nguyen",
@@ -238,7 +245,8 @@
           "count": 3
         }
       ],
-      "primary_topic": "Person Re-ID"
+      "primary_topic": "Person Re-ID",
+      "avatar": "/assets/images/team/Invited Researchers/IR Chị Bình.jpg"
     },
     {
       "id": "thi_thanh_thuy_pham",
@@ -268,7 +276,8 @@
           "count": 1
         }
       ],
-      "primary_topic": "Other"
+      "primary_topic": "Other",
+      "avatar": "/assets/images/team/Allumi Member/PhamThanhThuy.png"
     },
     {
       "id": "hong_quan_nguyen",
@@ -298,7 +307,8 @@
           "count": 3
         }
       ],
-      "primary_topic": "Person Re-ID"
+      "primary_topic": "Person Re-ID",
+      "avatar": "/assets/images/team/Invited Researchers/IR Anh Quân.png"
     },
     {
       "id": "duy_tung_nguyen",
@@ -328,7 +338,8 @@
           "count": 1
         }
       ],
-      "primary_topic": "Other"
+      "primary_topic": "Other",
+      "avatar": "/assets/images/team/Invited Researchers/Master - TungND.jpg"
     },
     {
       "id": "huong_giang_doan",
@@ -358,7 +369,8 @@
           "count": 1
         }
       ],
-      "primary_topic": "Hand Gesture"
+      "primary_topic": "Hand Gesture",
+      "avatar": "/assets/images/team/Allumi Member/DoanThiHuongGiang.png"
     },
     {
       "id": "nguyen_thi_oanh",
@@ -388,7 +400,8 @@
           "count": 2
         }
       ],
-      "primary_topic": "Other"
+      "primary_topic": "Other",
+      "avatar": ""
     },
     {
       "id": "dinh_tan_pham",
@@ -418,7 +431,8 @@
           "count": 1
         }
       ],
-      "primary_topic": "Action Recognition"
+      "primary_topic": "Action Recognition",
+      "avatar": "/assets/images/team/Allumi Member/PhamDinhTan.png"
     },
     {
       "id": "van_nam_hoang",
@@ -448,7 +462,8 @@
           "count": 4
         }
       ],
-      "primary_topic": "Plant ID"
+      "primary_topic": "Plant ID",
+      "avatar": "/assets/images/team/Invited Researchers/IR Anh Nam.jpg"
     },
     {
       "id": "dang_khoa_mac",
@@ -470,7 +485,8 @@
           "count": 1
         }
       ],
-      "primary_topic": "Speech/NLP"
+      "primary_topic": "Speech/NLP",
+      "avatar": ""
     },
     {
       "id": "thi_ngoc_diep_do",
@@ -496,7 +512,8 @@
           "count": 1
         }
       ],
-      "primary_topic": "Person Re-ID"
+      "primary_topic": "Person Re-ID",
+      "avatar": "/assets/images/team/Permanent Members/Main - Cô Diệp.jpg"
     },
     {
       "id": "bui_hai_phong",
@@ -518,7 +535,8 @@
           "count": 4
         }
       ],
-      "primary_topic": "Document/OCR"
+      "primary_topic": "Document/OCR",
+      "avatar": "/assets/images/team/Allumi Member/BuiHaiPhong.jpg"
     },
     {
       "id": "thi_lich_nghiem",
@@ -540,7 +558,8 @@
           "count": 1
         }
       ],
-      "primary_topic": "Other"
+      "primary_topic": "Other",
+      "avatar": "/assets/images/team/Invited Researchers/PhD - Chị Lịch.jpg"
     },
     {
       "id": "thi_loan_pham",
@@ -558,7 +577,8 @@
           "count": 3
         }
       ],
-      "primary_topic": "Medical Imaging"
+      "primary_topic": "Medical Imaging",
+      "avatar": "/assets/images/team/PhD Students/PhD - Chị Loan.jpg"
     },
     {
       "id": "manh_thang_hoang",
@@ -576,7 +596,8 @@
           "count": 4
         }
       ],
-      "primary_topic": "Document/OCR"
+      "primary_topic": "Document/OCR",
+      "avatar": "/assets/images/team/Permanent Members/Main - Thầy Thắng.png"
     },
     {
       "id": "viet_duc_le",
@@ -598,7 +619,8 @@
           "count": 3
         }
       ],
-      "primary_topic": "Hand Gesture"
+      "primary_topic": "Hand Gesture",
+      "avatar": ""
     },
     {
       "id": "hoang_son_bui",
@@ -620,7 +642,8 @@
           "count": 1
         }
       ],
-      "primary_topic": "Medical Imaging"
+      "primary_topic": "Medical Imaging",
+      "avatar": "/assets/images/team/Invited Researchers/Master - SonBH.jpg"
     },
     {
       "id": "phuong_dung_nguyen",
@@ -646,7 +669,8 @@
           "count": 1
         }
       ],
-      "primary_topic": "Action Recognition"
+      "primary_topic": "Action Recognition",
+      "avatar": "/assets/images/team/PhD Students/phd_DungNguyen.jpg"
     },
     {
       "id": "quang_tien_pham",
@@ -672,7 +696,8 @@
           "count": 1
         }
       ],
-      "primary_topic": "Action Recognition"
+      "primary_topic": "Action Recognition",
+      "avatar": ""
     },
     {
       "id": "tuan_dung_kieu",
@@ -690,7 +715,8 @@
           "count": 1
         }
       ],
-      "primary_topic": "Federated Learning"
+      "primary_topic": "Federated Learning",
+      "avatar": "/assets/images/team/PhD Students/PhD - Anh Dũng.jpg"
     },
     {
       "id": "hien_thanh_duong",
@@ -708,7 +734,8 @@
           "count": 1
         }
       ],
-      "primary_topic": "Person Re-ID"
+      "primary_topic": "Person Re-ID",
+      "avatar": "/assets/images/team/Invited Researchers/IR Chị Hiền Thanh.jpg"
     },
     {
       "id": "doan_duc_phan",
@@ -722,7 +749,8 @@
           "count": 2
         }
       ],
-      "primary_topic": "Plant ID"
+      "primary_topic": "Plant ID",
+      "avatar": "/assets/images/team/Master Students/Master - DucPD.jpg"
     },
     {
       "id": "khanh_huyen_bui",
@@ -736,7 +764,8 @@
           "count": 2
         }
       ],
-      "primary_topic": "Action Recognition"
+      "primary_topic": "Action Recognition",
+      "avatar": ""
     }
   ],
   "links": [
