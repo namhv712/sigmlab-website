@@ -61,6 +61,8 @@ export default function NetworkClient() {
   const [activeTopics, setActiveTopics] = useState<Set<string>>(new Set())
   const [search, setSearch] = useState('')
   const [searchFocus, setSearchFocus] = useState(false)
+  const [leftOpen, setLeftOpen] = useState(true)
+  const [rightOpen, setRightOpen] = useState(true)
 
   // Load data
   useEffect(() => {
@@ -383,24 +385,31 @@ export default function NetworkClient() {
 
     let lastHoverId: string | null = null
     let lastTransform = ''
+    let dirty = true  // force first paint
     function frame() {
       const settled = alphaRef.current < 0.01 && !draggingRef.current?.node && !panRef.current
       const hoverId = hoverRef.current.node?.id || null
       const transformKey = `${transformRef.current.k}|${transformRef.current.x}|${transformRef.current.y}`
-      const inputDirty = hoverId !== lastHoverId || transformKey !== lastTransform
+      const inputDirty = hoverId !== lastHoverId || transformKey !== lastTransform || dirty
       if (!settled || inputDirty) {
         step()
         render()
         lastHoverId = hoverId
         lastTransform = transformKey
+        dirty = false
       }
       raf = requestAnimationFrame(frame)
     }
+    // Force a redraw on resize (canvas dimensions reset → blank without this)
+    const onResizeRedraw = () => { resize(); dirty = true }
+    window.removeEventListener('resize', onResize)
+    window.addEventListener('resize', onResizeRedraw)
     frame()
 
     return () => {
       cancelAnimationFrame(raf)
       window.removeEventListener('resize', onResize)
+      window.removeEventListener('resize', onResizeRedraw)
     }
   }, [data, yearMin, activeTopics, selectedId, search, topicColor])
 
@@ -574,7 +583,24 @@ export default function NetworkClient() {
       <div ref={wrapRef} className="relative h-[58vh] sm:h-[68vh] lg:h-[72vh] mx-auto max-w-7xl border-y border-white/10">
         <canvas ref={canvasRef} className="block w-full h-full" />
 
-        <div className="absolute left-2 sm:left-4 top-2 sm:top-4 flex flex-col gap-2 sm:gap-3 w-[200px] sm:max-w-[260px] sm:w-auto z-10">
+        {/* Left collapse pull-tab when closed */}
+        {!leftOpen && (
+          <button
+            onClick={() => setLeftOpen(true)}
+            className="absolute left-2 sm:left-4 top-2 sm:top-4 z-10 px-2 py-1.5 rounded-md bg-[#0d1020]/92 border border-white/20 text-xs text-white/80 hover:text-white"
+            aria-label="Open filters"
+          >
+            ☰ Filters
+          </button>
+        )}
+        <div className={`absolute left-2 sm:left-4 top-2 sm:top-4 flex flex-col gap-2 sm:gap-3 w-[200px] sm:max-w-[260px] sm:w-auto z-10 ${leftOpen ? '' : 'hidden'}`}>
+          <div className="flex justify-end">
+            <button
+              onClick={() => setLeftOpen(false)}
+              className="text-white/40 hover:text-white text-xs px-2 py-0.5 rounded hover:bg-white/5"
+              aria-label="Hide filters"
+            >−</button>
+          </div>
           <div className="relative">
             <input
               value={search}
@@ -665,8 +691,17 @@ export default function NetworkClient() {
           </div>
         </div>
 
-        {/* Right panel: detail view if a node is selected, otherwise member list */}
-        {selectedNode ? (
+        {/* Right panel: collapsible. If selected -> detail; else -> member list */}
+        {!rightOpen && (
+          <button
+            onClick={() => setRightOpen(true)}
+            className="hidden md:block absolute right-4 top-4 z-10 px-2 py-1.5 rounded-md bg-[#0d1020]/92 border border-white/20 text-xs text-white/80 hover:text-white"
+            aria-label="Open members"
+          >
+            {selectedNode ? `${selectedNode.name.split(' ').slice(-1)} ▸` : `Members (${data.nodes.length}) ▸`}
+          </button>
+        )}
+        {selectedNode && rightOpen ? (
           <div className="hidden md:block absolute right-4 top-4 w-[300px] bg-[#0d1020]/92 backdrop-blur-md border border-white/20 rounded-lg p-4 text-sm z-10 max-h-[68vh] overflow-y-auto">
             <div className="flex items-start justify-between gap-2 mb-3">
               <div className="flex items-center gap-3">
@@ -683,7 +718,10 @@ export default function NetworkClient() {
                   </div>
                 </div>
               </div>
-              <button onClick={() => setSelectedId(null)} className="text-white/40 hover:text-white">×</button>
+              <div className="flex items-center gap-2">
+                <button onClick={() => setRightOpen(false)} className="text-white/40 hover:text-white text-xs" aria-label="Hide panel">−</button>
+                <button onClick={() => setSelectedId(null)} className="text-white/40 hover:text-white">×</button>
+              </div>
             </div>
             <div className="text-xs text-white/60 mb-1">Topics</div>
             <div className="flex flex-wrap gap-1 mb-4">
@@ -713,11 +751,14 @@ export default function NetworkClient() {
               ))}
             </ul>
           </div>
-        ) : (
+        ) : (!selectedNode && rightOpen) ? (
           <div className="hidden md:block absolute right-4 top-4 w-[300px] bg-[#0d1020]/92 backdrop-blur-md border border-white/20 rounded-lg p-3 text-sm z-10 max-h-[68vh] overflow-y-auto">
             <div className="flex items-center justify-between mb-3 px-1">
               <div className="font-semibold">Members</div>
-              <span className="text-[10px] text-white/45 font-mono">{data.nodes.length}</span>
+              <div className="flex items-center gap-2">
+                <span className="text-[10px] text-white/45 font-mono">{data.nodes.length}</span>
+                <button onClick={() => setRightOpen(false)} className="text-white/40 hover:text-white text-xs" aria-label="Hide panel">−</button>
+              </div>
             </div>
             <ul className="space-y-0.5">
               {data.nodes.map((n, i) => {
@@ -761,7 +802,7 @@ export default function NetworkClient() {
               })}
             </ul>
           </div>
-        )}
+        ) : null}
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-6 text-sm">
