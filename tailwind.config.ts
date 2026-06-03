@@ -11,6 +11,7 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        "wc-gold": "#ffc72c",
       },
       fontFamily: {
         sans: ['Inter', 'Arial', 'sans-serif'],

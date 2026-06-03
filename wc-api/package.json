@@ -1,0 +1,13 @@
+{
+  "name": "wc-api",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "World Cup 2026 betting pool API (Fastify + node:sqlite)",
+  "scripts": {
+    "test": "node --test",
+    "start": "node src/server.js"
+  },
+  "dependencies": {
+    "fastify": "^4.28.1"
+  }
+}

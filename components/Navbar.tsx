@@ -13,6 +13,7 @@ const navLinks = [
   { href: '/datasets', label: 'Datasets' },
   { href: '/team', label: 'Team' },
   { href: '/about', label: 'About' },
+  { href: '/wc', label: 'World Cup ⚽' },
 ]
 
 export default function Navbar() {
