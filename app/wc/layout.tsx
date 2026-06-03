@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import './wc-theme.css'
+import ViewGate from '@/components/wc/ViewGate'
 
 export const metadata: Metadata = {
   title: 'World Cup 2026 · SigM Lab',
@@ -11,7 +12,7 @@ export default function WcLayout({ children }: { children: React.ReactNode }) {
   return (
     <div className="wc-root">
       <div className="wc-host-bar" />
-      {children}
+      <ViewGate>{children}</ViewGate>
     </div>
   )
 }
