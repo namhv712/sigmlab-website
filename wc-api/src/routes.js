@@ -47,15 +47,66 @@ function bearer(req) {
   return m ? m[1] : null
 }
 
+function parseCookies(req) {
+  const out = {}
+  const h = req.headers['cookie']
+  if (!h) return out
+  for (const part of h.split(';')) {
+    const i = part.indexOf('=')
+    if (i < 0) continue
+    out[part.slice(0, i).trim()] = part.slice(i + 1).trim()
+  }
+  return out
+}
+
 export default async function routes(fastify) {
   const secret = process.env.WC_TOKEN_SECRET || ''
   const memberHash = process.env.WC_MEMBER_PASSCODE_HASH || ''
   const adminHash = process.env.WC_ADMIN_PASSCODE_HASH || ''
 
+  // View gate: a single shared passcode unlocks the whole WC tab. On success
+  // we set an opaque, HttpOnly cookie whose value matches WC_VIEW_COOKIE; every
+  // data/login route then requires that cookie. Fail-open when unconfigured so
+  // local/dev and the test suite keep working without the env set.
+  const viewHash = process.env.WC_VIEW_PASSCODE_HASH || ''
+  const viewCookie = process.env.WC_VIEW_COOKIE || ''
+
+  function hasView(req) {
+    if (!viewCookie) return true // gate disabled when unconfigured
+    return parseCookies(req).wc_view === viewCookie
+  }
+
+  // Block everything except obtaining the cookie (/view) and admin scoring
+  // (which carries its own passcode header) until the view cookie is present.
+  fastify.addHook('onRequest', async (req, reply) => {
+    const path = req.url.split('?')[0]
+    if (path === '/view' || path.startsWith('/admin/')) return
+    if (!hasView(req)) return reply.code(401).send({ error: 'view_locked' })
+  })
+
   // 5 attempts burst, refill 1 per 10s
   const loginLimiter = makeRateLimiter({ capacity: 5, refillPerSec: 0.1 })
+  // view-gate unlock: same shape as login limiter
+  const viewLimiter = makeRateLimiter({ capacity: 5, refillPerSec: 0.1 })
   // 30 writes burst, refill 1 per 2s
   const pickLimiter = makeRateLimiter({ capacity: 30, refillPerSec: 0.5 })
+
+  // POST /view {passcode} → sets the shared view cookie on success.
+  fastify.post('/view', async (req, reply) => {
+    if (!viewLimiter.take(req.ip)) {
+      return reply.code(429).send({ error: 'rate_limited' })
+    }
+    const { passcode } = req.body || {}
+    if (typeof passcode !== 'string' || !checkPasscode(passcode, viewHash)) {
+      return reply.code(401).send({ error: 'bad_passcode' })
+    }
+    const maxAge = 30 * 24 * 60 * 60 // 30 days
+    reply.header(
+      'Set-Cookie',
+      `wc_view=${viewCookie}; Path=/; Max-Age=${maxAge}; HttpOnly; Secure; SameSite=Lax`,
+    )
+    return { ok: true }
+  })
 
   function authUser(req) {
     const tok = bearer(req)

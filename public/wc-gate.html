@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <title>World Cup 2026 · SigM Lab</title>
+    <style>
+      :root {
+        --gold: #f5c451;
+        --bg: #0a0e1a;
+        --card: #0d1428;
+      }
+      * { box-sizing: border-box; }
+      html, body { height: 100%; margin: 0; }
+      body {
+        background: radial-gradient(1200px 600px at 50% -10%, #16203d 0%, var(--bg) 60%);
+        color: #fff;
+        font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+        display: grid;
+        place-items: center;
+        padding: 16px;
+      }
+      form {
+        width: 100%;
+        max-width: 360px;
+        background: var(--card);
+        border: 1px solid rgba(245, 196, 81, 0.3);
+        border-radius: 18px;
+        padding: 28px 24px;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+      }
+      h1 { margin: 0; text-align: center; font-size: 24px; color: var(--gold); }
+      p { margin: 6px 0 0; text-align: center; font-size: 12px; color: rgba(255, 255, 255, 0.5); }
+      label { display: block; margin-top: 20px; font-size: 12px; font-weight: 600; color: rgba(255, 255, 255, 0.7); }
+      input {
+        width: 100%;
+        margin-top: 6px;
+        padding: 10px 12px;
+        border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        background: rgba(255, 255, 255, 0.05);
+        color: #fff;
+        font-size: 14px;
+      }
+      input:focus { outline: none; border-color: var(--gold); }
+      button {
+        width: 100%;
+        margin-top: 20px;
+        padding: 11px;
+        border: 0;
+        border-radius: 10px;
+        background: var(--gold);
+        color: #0a0e1a;
+        font-size: 14px;
+        font-weight: 800;
+        cursor: pointer;
+      }
+      button:disabled { opacity: 0.5; cursor: default; }
+      .err { margin-top: 12px; font-size: 12px; font-weight: 600; color: #f87171; min-height: 14px; }
+    </style>
+  </head>
+  <body>
+    <form id="gate">
+      <h1>🏆 World Cup 2026</h1>
+      <p>Nhập mật khẩu chung của phòng lab để xem sảnh dự đoán.</p>
+      <label for="pass">Mật khẩu</label>
+      <input id="pass" name="pass" type="password" autocomplete="current-password" autofocus />
+      <div class="err" id="err"></div>
+      <button id="btn" type="submit">Vào xem</button>
+    </form>
+    <script>
+      var form = document.getElementById('gate');
+      var btn = document.getElementById('btn');
+      var err = document.getElementById('err');
+      // Return to the originally requested WC path if present, else the hall.
+      var dest = new URLSearchParams(location.search).get('next') || '/wc/';
+      if (dest.indexOf('/wc') !== 0) dest = '/wc/';
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        err.textContent = '';
+        btn.disabled = true;
+        btn.textContent = 'Đang kiểm tra…';
+        fetch('/api/wc/view', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ passcode: document.getElementById('pass').value }),
+        })
+          .then(function (r) {
+            if (r.ok) {
+              location.href = dest;
+              return;
+            }
+            err.textContent = r.status === 429 ? 'Thử lại sau ít phút.' : 'Mật khẩu không đúng';
+            btn.disabled = false;
+            btn.textContent = 'Vào xem';
+          })
+          .catch(function () {
+            err.textContent = 'Lỗi kết nối, thử lại.';
+            btn.disabled = false;
+            btn.textContent = 'Vào xem';
+          });
+      });
+    </script>
+  </body>
+</html>
