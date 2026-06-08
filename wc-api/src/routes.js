@@ -93,6 +93,8 @@ export default async function routes(fastify) {
   const registerLimiter = makeRateLimiter({ capacity: 5, refillPerSec: 0.1 })
   // view-gate unlock: same shape as login limiter
   const viewLimiter = makeRateLimiter({ capacity: 5, refillPerSec: 0.1 })
+  // admin password reset: throttle brute force against the shared admin passcode
+  const adminLimiter = makeRateLimiter({ capacity: 5, refillPerSec: 0.1 })
   // 30 writes burst, refill 1 per 2s
   const pickLimiter = makeRateLimiter({ capacity: 30, refillPerSec: 0.5 })
 
@@ -256,6 +258,9 @@ export default async function routes(fastify) {
   // POST /admin/reset-password {name, newPassword}  (x-admin-passcode header)
   // Lets the admin reset a member's forgotten betting password.
   fastify.post('/admin/reset-password', async (req, reply) => {
+    if (!adminLimiter.take(req.ip)) {
+      return reply.code(429).send({ error: 'rate_limited' })
+    }
     const pass = req.headers['x-admin-passcode']
     if (typeof pass !== 'string' || !checkPasscode(pass, adminHash)) {
       return reply.code(401).send({ error: 'unauthorized' })
