@@ -20,7 +20,9 @@ db.exec(`
   CREATE TABLE IF NOT EXISTS users (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     name TEXT UNIQUE,
-    created_at INTEGER
+    created_at INTEGER,
+    pass_hash TEXT,
+    pass_salt TEXT
   );
   CREATE TABLE IF NOT EXISTS picks (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -31,6 +33,12 @@ db.exec(`
     UNIQUE(user_id, match_id)
   );
 `)
+
+// Migrate pre-existing DBs created before per-user passwords: add the
+// credential columns if they are missing (existing rows get NULL).
+const userCols = db.prepare(`PRAGMA table_info(users)`).all().map((c) => c.name)
+if (!userCols.includes('pass_hash')) db.exec(`ALTER TABLE users ADD COLUMN pass_hash TEXT`)
+if (!userCols.includes('pass_salt')) db.exec(`ALTER TABLE users ADD COLUMN pass_salt TEXT`)
 
 const now = () => Math.floor(Date.now() / 1000)
 
@@ -80,7 +88,9 @@ export function setScore(id, s1, s2) {
   return res.changes > 0
 }
 
-const stGetUserByName = db.prepare(`SELECT id, name, created_at FROM users WHERE name=?`)
+const stGetUserByName = db.prepare(
+  `SELECT id, name, created_at, pass_hash, pass_salt FROM users WHERE name=?`
+)
 export const getUserByName = (name) => stGetUserByName.get(name)
 
 const stCreateUser = db.prepare(`INSERT INTO users (name, created_at) VALUES (?, ?)`)
@@ -91,6 +101,24 @@ export function createUser(name) {
 
 export function getOrCreateUser(name) {
   return getUserByName(name) || createUser(name)
+}
+
+// Create a user that owns a password (used by /register).
+const stCreateUserPw = db.prepare(
+  `INSERT INTO users (name, created_at, pass_hash, pass_salt) VALUES (?, ?, ?, ?)`
+)
+export function createUserWithPassword(name, hash, salt) {
+  const t = now()
+  const res = stCreateUserPw.run(name, t, hash, salt)
+  return { id: Number(res.lastInsertRowid), name, created_at: t }
+}
+
+// Set/replace a user's password (register-claim of an unclaimed name, or
+// admin reset). Returns true if an existing row was updated.
+const stSetUserPw = db.prepare(`UPDATE users SET pass_hash=?, pass_salt=? WHERE name=?`)
+export function setUserPassword(name, hash, salt) {
+  const res = stSetUserPw.run(hash, salt, name)
+  return res.changes > 0
 }
 
 const stMatchExists = db.prepare(`SELECT 1 FROM matches WHERE id=?`)
