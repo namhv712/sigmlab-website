@@ -1,9 +1,10 @@
-import { verifyToken, signToken, checkPasscode } from './auth.js'
+import { verifyToken, signToken, checkPasscode, hashPassword, verifyPassword } from './auth.js'
 import {
   allMatches,
   leaderboard,
-  getOrCreateUser,
   getUserByName,
+  createUserWithPassword,
+  setUserPassword,
   userPicks,
   upsertPick,
   matchExists,
@@ -13,6 +14,9 @@ import {
 const LIVE_WINDOW = 150 * 60 // 150 minutes in seconds
 const TOKEN_TTL = 30 * 24 * 60 * 60 // 30 days in seconds
 const VALID_PICKS = new Set(['1', 'X', '2'])
+const MAX_NAME = 40
+const MIN_PW = 4
+const MAX_PW = 128
 
 function deriveStatus(m, now) {
   if (now < m.kickoff_utc) return 'upcoming'
@@ -61,7 +65,6 @@ function parseCookies(req) {
 
 export default async function routes(fastify) {
   const secret = process.env.WC_TOKEN_SECRET || ''
-  const memberHash = process.env.WC_MEMBER_PASSCODE_HASH || ''
   const adminHash = process.env.WC_ADMIN_PASSCODE_HASH || ''
 
   // View gate: a single shared passcode unlocks the whole WC tab. On success
@@ -86,8 +89,12 @@ export default async function routes(fastify) {
 
   // 5 attempts burst, refill 1 per 10s
   const loginLimiter = makeRateLimiter({ capacity: 5, refillPerSec: 0.1 })
+  // registration: same shape, separate bucket from login
+  const registerLimiter = makeRateLimiter({ capacity: 5, refillPerSec: 0.1 })
   // view-gate unlock: same shape as login limiter
   const viewLimiter = makeRateLimiter({ capacity: 5, refillPerSec: 0.1 })
+  // admin password reset: throttle brute force against the shared admin passcode
+  const adminLimiter = makeRateLimiter({ capacity: 5, refillPerSec: 0.1 })
   // 30 writes burst, refill 1 per 2s
   const pickLimiter = makeRateLimiter({ capacity: 30, refillPerSec: 0.5 })
 
@@ -147,23 +154,54 @@ export default async function routes(fastify) {
   // GET /leaderboard  (public)
   fastify.get('/leaderboard', async () => ({ rows: leaderboard() }))
 
-  // POST /login {name, passcode} → {token}
+  // Validate a {name, password} body. Returns a cleaned name or null.
+  function cleanCredentials(name, password) {
+    if (typeof name !== 'string' || !name.trim()) return null
+    if (typeof password !== 'string' || password.length < MIN_PW || password.length > MAX_PW) {
+      return null
+    }
+    return name.trim().slice(0, MAX_NAME)
+  }
+
+  // POST /register {name, password} → {token}. Each member owns their password.
+  fastify.post('/register', async (req, reply) => {
+    if (!registerLimiter.take(req.ip)) {
+      return reply.code(429).send({ error: 'rate_limited' })
+    }
+    const { name, password } = req.body || {}
+    const cleanName = cleanCredentials(name, password)
+    if (!cleanName) return reply.code(400).send({ error: 'bad_request' })
+
+    const { hash, salt } = hashPassword(password)
+    const existing = getUserByName(cleanName)
+    if (existing) {
+      if (existing.pass_hash) return reply.code(409).send({ error: 'name_taken' })
+      // Legacy/unclaimed name (created before passwords existed): claim it.
+      setUserPassword(cleanName, hash, salt)
+    } else {
+      createUserWithPassword(cleanName, hash, salt)
+    }
+    const exp = Math.floor(Date.now() / 1000) + TOKEN_TTL
+    return { token: signToken(cleanName, secret, exp) }
+  })
+
+  // POST /login {name, password} → {token}. Verifies the per-user password.
   fastify.post('/login', async (req, reply) => {
     if (!loginLimiter.take(req.ip)) {
       return reply.code(429).send({ error: 'rate_limited' })
     }
-    const { name, passcode } = req.body || {}
-    if (typeof name !== 'string' || !name.trim() || typeof passcode !== 'string') {
+    const { name, password } = req.body || {}
+    if (typeof name !== 'string' || !name.trim() || typeof password !== 'string') {
       return reply.code(400).send({ error: 'bad_request' })
     }
-    if (!checkPasscode(passcode, memberHash)) {
-      return reply.code(401).send({ error: 'bad_passcode' })
+    const cleanName = name.trim().slice(0, MAX_NAME)
+    const user = getUserByName(cleanName)
+    // Single generic failure — never reveal whether the name exists.
+    if (!user || !user.pass_hash || !verifyPassword(password, user.pass_hash, user.pass_salt)) {
+      return reply.code(401).send({ error: 'bad_login' })
     }
-    const cleanName = name.trim().slice(0, 40)
-    const user = getOrCreateUser(cleanName)
     const exp = Math.floor(Date.now() / 1000) + TOKEN_TTL
-    const token = signToken(user.name, secret, exp)
-    return { token }
+    return { token: signToken(user.name, secret, exp) }
   })
 
   // GET /mypicks  (Bearer)
@@ -214,6 +252,34 @@ export default async function routes(fastify) {
       return reply.code(400).send({ error: 'unknown_match' })
     }
     setScore(matchId, score1, score2)
+    return { ok: true }
+  })
+
+  // POST /admin/reset-password {name, newPassword}  (x-admin-passcode header)
+  // Lets the admin reset a member's forgotten betting password.
+  fastify.post('/admin/reset-password', async (req, reply) => {
+    if (!adminLimiter.take(req.ip)) {
+      return reply.code(429).send({ error: 'rate_limited' })
+    }
+    const pass = req.headers['x-admin-passcode']
+    if (typeof pass !== 'string' || !checkPasscode(pass, adminHash)) {
+      return reply.code(401).send({ error: 'unauthorized' })
+    }
+    const { name, newPassword } = req.body || {}
+    if (
+      typeof name !== 'string' ||
+      !name.trim() ||
+      typeof newPassword !== 'string' ||
+      newPassword.length < MIN_PW ||
+      newPassword.length > MAX_PW
+    ) {
+      return reply.code(400).send({ error: 'bad_request' })
+    }
+    const cleanName = name.trim().slice(0, MAX_NAME)
+    const { hash, salt } = hashPassword(newPassword)
+    if (!setUserPassword(cleanName, hash, salt)) {
+      return reply.code(404).send({ error: 'unknown_user' })
+    }
     return { ok: true }
   })
 }

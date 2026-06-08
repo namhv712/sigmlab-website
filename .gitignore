@@ -2,9 +2,13 @@
 
 # dependencies
 /node_modules
+wc-api/node_modules
 /.pnp
 .pnp.js
 .yarn/install-state.gz
+
+# autodev session scratch
+.ai-sessions/
 
 # testing
 /coverage

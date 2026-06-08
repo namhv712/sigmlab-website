@@ -43,11 +43,40 @@ export function verifyToken(token, secret) {
 }
 
 // Constant-time compare of sha256(input) hex against a stored hex digest.
+// Used for the shared single-secret passcodes (view gate, admin) only.
 export function checkPasscode(input, sha256hex) {
   if (typeof input !== 'string' || typeof sha256hex !== 'string') return false
   const got = crypto.createHash('sha256').update(input).digest('hex')
   const a = Buffer.from(got)
   const b = Buffer.from(sha256hex)
+  if (a.length !== b.length) return false
+  return crypto.timingSafeEqual(a, b)
+}
+
+// --- per-user password hashing -------------------------------------------
+// Salted scrypt (built-in, no native deps) for individual betting accounts.
+// Stored as a hex-encoded derived key + the hex salt it was derived with.
+const SCRYPT_KEYLEN = 32
+
+export function hashPassword(password) {
+  const salt = crypto.randomBytes(16).toString('hex')
+  const hash = crypto.scryptSync(password, salt, SCRYPT_KEYLEN).toString('hex')
+  return { hash, salt }
+}
+
+// Verify a password against a stored {hash, salt}. Timing-safe; returns false
+// for any missing/empty/mismatched input rather than throwing.
+export function verifyPassword(password, hash, salt) {
+  if (typeof password !== 'string') return false
+  if (typeof hash !== 'string' || typeof salt !== 'string' || !hash || !salt) return false
+  let got
+  try {
+    got = crypto.scryptSync(password, salt, SCRYPT_KEYLEN).toString('hex')
+  } catch {
+    return false
+  }
+  const a = Buffer.from(got)
+  const b = Buffer.from(hash)
   if (a.length !== b.length) return false
   return crypto.timingSafeEqual(a, b)
 }

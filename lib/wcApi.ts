@@ -59,14 +59,34 @@ export async function getLeaderboard(): Promise<LeaderRow[]> {
   return data.rows as LeaderRow[]
 }
 
-// Returns the token on success; throws on bad passcode (HTTP 401) or error.
-export async function login(name: string, passcode: string): Promise<string> {
+// Register a new betting account (name + own password). Returns the token on
+// success. Throws an Error whose message is a stable code the UI maps to text:
+// 'name_taken' (409), 'bad_request' (400), 'rate_limited' (429).
+export async function register(name: string, password: string): Promise<string> {
+  const res = await fetch(`${BASE}/register`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ name, password }),
+  })
+  if (res.status === 409) throw new Error('name_taken')
+  if (res.status === 429) throw new Error('rate_limited')
+  if (res.status === 400) throw new Error('bad_request')
+  if (!res.ok) throw new Error(`register failed: ${res.status}`)
+  const data = await res.json()
+  setSession(data.token, name)
+  return data.token as string
+}
+
+// Log in with name + the account's own password. Returns the token on success.
+// Throws an Error with a stable code: 'bad_login' (401), 'rate_limited' (429).
+export async function login(name: string, password: string): Promise<string> {
   const res = await fetch(`${BASE}/login`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ name, passcode }),
+    body: JSON.stringify({ name, password }),
   })
-  if (res.status === 401) throw new Error('Mật khẩu không đúng')
+  if (res.status === 401) throw new Error('bad_login')
+  if (res.status === 429) throw new Error('rate_limited')
   if (!res.ok) throw new Error(`login failed: ${res.status}`)
   const data = await res.json()
   setSession(data.token, name)
