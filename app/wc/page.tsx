@@ -12,6 +12,9 @@ import DateStrip from '@/components/wc/DateStrip'
 import FilterChips, { type WcFilter } from '@/components/wc/FilterChips'
 import LoginGate from '@/components/wc/LoginGate'
 import RulesPanel from '@/components/wc/RulesPanel'
+import WcBanner from '@/components/wc/WcBanner'
+import MoneySummary from '@/components/wc/MoneySummary'
+import ConfirmPick from '@/components/wc/ConfirmPick'
 
 export default function WcPage() {
   const [matches, setMatches] = useState<Match[]>([])
@@ -22,6 +25,9 @@ export default function WcPage() {
   const [betting, setBetting] = useState(false)
   const [gateOpen, setGateOpen] = useState(false)
   const [savingId, setSavingId] = useState<string | null>(null)
+
+  // Pending pick awaiting confirmation in the dialog.
+  const [confirm, setConfirm] = useState<{ match: Match; pick: Pick } | null>(null)
 
   const [filter, setFilter] = useState<WcFilter>('all')
   const [day, setDay] = useState<string | null>(null)
@@ -67,23 +73,29 @@ export default function WcPage() {
     load()
   }, [load])
 
-  // Optimistic pick: update UI immediately, persist, revert on failure.
-  const onPick = useCallback(
-    async (match: Match, pick: Pick) => {
-      const prev = match.myPick ?? null
-      setSavingId(match.id)
-      setMatches(ms => ms.map(m => (m.id === match.id ? { ...m, myPick: pick } : m)))
-      try {
-        await savePick(match.id, pick)
-      } catch (err) {
-        setMatches(ms => ms.map(m => (m.id === match.id ? { ...m, myPick: prev } : m)))
-        setError(err instanceof Error ? err.message : 'Lưu cược thất bại')
-      } finally {
-        setSavingId(null)
-      }
-    },
-    [],
-  )
+  // Clicking an option opens the confirmation dialog (no save yet).
+  const requestPick = useCallback((match: Match, pick: Pick) => {
+    setConfirm({ match, pick })
+  }, [])
+
+  // Optimistic commit after the user confirms: update UI, persist, revert on fail.
+  const commitPick = useCallback(async () => {
+    if (!confirm) return
+    const { match, pick } = confirm
+    const prev = match.myPick ?? null
+    setSavingId(match.id)
+    setMatches(ms => ms.map(m => (m.id === match.id ? { ...m, myPick: pick } : m)))
+    try {
+      await savePick(match.id, pick)
+      setConfirm(null)
+    } catch (err) {
+      setMatches(ms => ms.map(m => (m.id === match.id ? { ...m, myPick: prev } : m)))
+      setError(err instanceof Error ? err.message : 'Lưu cược thất bại')
+      setConfirm(null)
+    } finally {
+      setSavingId(null)
+    }
+  }, [confirm])
 
   const visible = useMemo(() => {
     return matches.filter(m => {
@@ -97,36 +109,39 @@ export default function WcPage() {
   }, [matches, day, filter])
 
   return (
-    <div className="mx-auto max-w-3xl px-4 py-8 sm:px-6">
+    <div className="mx-auto max-w-3xl px-4 py-6 sm:px-6 sm:py-8">
+      {/* Hero banner */}
+      <WcBanner priority />
+
       {/* Header */}
-      <header className="text-center">
-        <h1 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
-          🏆 <span className="text-wc-gold">World Cup 2026</span>
+      <header className="mt-6 text-center">
+        <h1 className="text-4xl font-black tracking-tight sm:text-5xl">
+          <span className="wc-gradient-text">World Cup 2026</span>
         </h1>
-        <p className="mt-1 text-sm text-white/60">
+        <p className="mt-2 text-sm text-white/60 sm:text-base">
           Sảnh dự đoán của phòng lab SigM · 🇨🇦 🇲🇽 🇺🇸 · giờ Việt Nam (GMT+7)
         </p>
-        <div className="mt-3 flex items-center justify-center gap-2">
+        <div className="mt-4 flex flex-wrap items-center justify-center gap-2">
           {betting ? (
             <>
-              <span className="rounded-full bg-emerald-500/15 px-3 py-1 text-xs font-semibold text-emerald-300">
+              <span className="rounded-full bg-emerald-500/15 px-3 py-1.5 text-xs font-semibold text-emerald-300">
                 Chế độ cược · {name}
               </span>
               <button
                 onClick={onLogout}
-                className="rounded-full border border-white/15 px-3 py-1 text-xs font-semibold text-white/60 hover:text-white"
+                className="rounded-full border border-white/15 px-3 py-1.5 text-xs font-semibold text-white/60 hover:text-white"
               >
                 Đăng xuất
               </button>
             </>
           ) : (
             <>
-              <span className="rounded-full bg-white/10 px-3 py-1 text-xs font-semibold text-white/60">
+              <span className="rounded-full bg-white/10 px-3 py-1.5 text-xs font-semibold text-white/60">
                 Chế độ xem
               </span>
               <button
                 onClick={() => setGateOpen(true)}
-                className="rounded-full bg-wc-gold px-3 py-1 text-xs font-extrabold text-[#0a0e1a] hover:opacity-90"
+                className="rounded-full bg-gradient-to-b from-[#ffd95e] to-wc-gold px-4 py-1.5 text-xs font-extrabold text-[#0a0e1a] shadow-lg shadow-wc-gold/30 hover:brightness-105"
               >
                 Đăng nhập để cược
               </button>
@@ -134,7 +149,7 @@ export default function WcPage() {
           )}
           <Link
             href="/wc/leaderboard"
-            className="rounded-full border border-wc-gold/40 px-3 py-1 text-xs font-semibold text-wc-gold hover:bg-wc-gold/10"
+            className="rounded-full border border-wc-gold/40 px-3 py-1.5 text-xs font-semibold text-wc-gold hover:bg-wc-gold/10"
           >
             🏅 Bảng xếp hạng
           </Link>
@@ -148,6 +163,8 @@ export default function WcPage() {
       )}
 
       <div className="mt-6 space-y-5">
+        {betting && name && <MoneySummary matches={matches} name={name} />}
+
         <NowNextStrip matches={matches} />
 
         <RulesPanel />
@@ -163,19 +180,29 @@ export default function WcPage() {
             Không có trận nào khớp bộ lọc.
           </div>
         ) : (
-          <div className="space-y-3">
+          <div className="space-y-3.5">
             {visible.map(m => (
               <MatchCard
                 key={m.id}
                 match={m}
                 mode={mode}
                 pending={savingId === m.id}
-                onPick={pick => onPick(m, pick)}
+                onPick={pick => requestPick(m, pick)}
               />
             ))}
           </div>
         )}
       </div>
+
+      {confirm && (
+        <ConfirmPick
+          match={confirm.match}
+          pick={confirm.pick}
+          pending={savingId === confirm.match.id}
+          onConfirm={commitPick}
+          onCancel={() => setConfirm(null)}
+        />
+      )}
 
       {gateOpen && (
         <LoginGate onClose={() => setGateOpen(false)} onSuccess={onLoginSuccess} />

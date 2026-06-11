@@ -1,6 +1,6 @@
 import { test } from 'node:test'
 import assert from 'node:assert'
-import { result, pointsFor } from '../src/scoring.js'
+import { result, moneyFor, FINE_WRONG, FINE_MISS } from '../src/scoring.js'
 
 test('result', () => {
   assert.equal(result(2, 1), '1')
@@ -8,15 +8,30 @@ test('result', () => {
   assert.equal(result(0, 2), '2')
 })
 
-test('points', () => {
-  assert.equal(pointsFor('1', 2, 1), 3)
-  assert.equal(pointsFor('X', 2, 1), 0)
-  assert.equal(pointsFor('X', 1, 1), 3)
-  assert.equal(pointsFor('2', 0, 2), 3)
+test('money: correct guess costs nothing', () => {
+  assert.equal(moneyFor('1', 2, 1), 0)
+  assert.equal(moneyFor('X', 1, 1), 0)
+  assert.equal(moneyFor('2', 0, 2), 0)
 })
 
-test('points null-safe', () => {
-  assert.equal(pointsFor('1', null, 1), 0)
-  assert.equal(pointsFor('1', 1, null), 0)
-  assert.equal(pointsFor(null, 1, 0), 0)
+test('money: wrong guess is fined FINE_WRONG', () => {
+  assert.equal(moneyFor('X', 2, 1), -FINE_WRONG)
+  assert.equal(moneyFor('1', 1, 1), -FINE_WRONG)
+  assert.equal(moneyFor('1', 0, 2), -FINE_WRONG)
+})
+
+test('money: not selected is fined FINE_MISS', () => {
+  assert.equal(moneyFor(null, 1, 0), -FINE_MISS)
+  assert.equal(moneyFor(null, 1, 1), -FINE_MISS)
+})
+
+test('money: null-safe before the match has a score', () => {
+  assert.equal(moneyFor('1', null, 1), 0)
+  assert.equal(moneyFor('1', 1, null), 0)
+  assert.equal(moneyFor(null, null, null), 0)
+})
+
+test('fines have the expected magnitudes', () => {
+  assert.equal(FINE_WRONG, 30000)
+  assert.equal(FINE_MISS, 100000)
 })

@@ -20,7 +20,9 @@ export interface Match {
 
 export interface LeaderRow {
   name: string
-  points: number
+  vnd: number // net VND, ≤ 0 (penalty-only money model)
   correct: number
-  played: number
+  wrong: number
+  missed: number // finished matches with no pick ("không chọn")
+  finished: number // total finished matches counted (the denominator)
 }

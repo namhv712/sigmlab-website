@@ -31,17 +31,20 @@ export default function PickButtons({
   // View mode on an upcoming match → CTA to unlock betting.
   if (mode === 'view' && !locked) {
     return (
-      <div className="mt-3">
+      <div className="mt-4">
         <button
           type="button"
           disabled
-          className="w-full rounded-lg border border-dashed border-wc-gold/40 bg-white/5 px-3 py-2 text-xs font-semibold text-wc-gold/80 cursor-default"
+          className="w-full cursor-default rounded-xl border border-dashed border-wc-gold/40 bg-white/5 px-3 py-2.5 text-sm font-semibold text-wc-gold/80"
         >
-          🔒 Nhập mật khẩu để cược
+          🔒 Đăng nhập để cược
         </button>
       </div>
     )
   }
+
+  // Locked finished match where the member never picked → "không chọn" (-100k).
+  const missed = finished && pick == null
 
   const options: { code: Pick; label: string }[] = [
     { code: '1', label: 'Đội 1' },
@@ -50,44 +53,52 @@ export default function PickButtons({
   ]
 
   return (
-    <div className="mt-3 grid grid-cols-3 gap-2">
-      {options.map(opt => {
-        const selected = pick === opt.code
-        const isActual = actual === opt.code
-        const correct = finished && selected && isActual
-        const wrong = finished && selected && !isActual
+    <>
+      <div className="mt-4 grid grid-cols-3 gap-2.5">
+        {options.map(opt => {
+          const selected = pick === opt.code
+          const isActual = actual === opt.code
+          const correct = finished && selected && isActual
+          const wrong = finished && selected && !isActual
 
-        let cls =
-          'relative rounded-lg border px-2 py-2 text-xs font-bold transition-all '
-        if (correct) {
-          cls += 'border-emerald-400 bg-emerald-500/20 text-emerald-200'
-        } else if (wrong) {
-          cls += 'border-red-500 bg-red-600/20 text-red-200'
-        } else if (selected) {
-          cls += 'border-wc-gold bg-wc-gold text-[#0a0e1a] shadow'
-        } else if (finished && isActual) {
-          cls += 'border-emerald-400/40 text-emerald-200/70'
-        } else if (locked) {
-          cls += 'border-white/10 text-white/40'
-        } else {
-          cls += 'border-white/15 text-white/80 hover:border-wc-gold hover:text-wc-gold'
-        }
+          let cls =
+            'relative rounded-xl border px-2 py-2.5 text-sm font-bold transition-all '
+          if (correct) {
+            cls += 'border-emerald-400 bg-emerald-500/20 text-emerald-200'
+          } else if (wrong) {
+            cls += 'border-red-500 bg-red-600/20 text-red-200'
+          } else if (selected) {
+            cls += 'wc-pick-selected border'
+          } else if (finished && isActual) {
+            cls += 'border-emerald-400/40 text-emerald-200/70'
+          } else if (locked) {
+            cls += 'border-white/10 text-white/40'
+          } else {
+            cls += 'border-white/15 text-white/80 hover:-translate-y-0.5 hover:border-wc-gold hover:text-wc-gold'
+          }
 
-        return (
-          <button
-            key={opt.code}
-            type="button"
-            disabled={locked || pending || mode !== 'active'}
-            aria-pressed={selected}
-            onClick={() => onPick?.(opt.code)}
-            className={cls}
-          >
-            {opt.label}
-            {correct && <span className="ml-1">✓ +3</span>}
-            {wrong && <span className="ml-1">✗</span>}
-          </button>
-        )
-      })}
-    </div>
+          return (
+            <button
+              key={opt.code}
+              type="button"
+              disabled={locked || pending || mode !== 'active'}
+              aria-pressed={selected}
+              onClick={() => onPick?.(opt.code)}
+              className={cls}
+            >
+              {opt.label}
+              {correct && <span className="ml-1">✓</span>}
+              {wrong && <span className="ml-1">✗ -30k</span>}
+            </button>
+          )
+        })}
+      </div>
+
+      {missed && (
+        <p className="mt-2 text-center text-[11px] font-semibold text-red-300/80">
+          Không chọn trận này · phạt 100.000đ
+        </p>
+      )}
+    </>
   )
 }

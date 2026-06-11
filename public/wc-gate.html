@@ -74,8 +74,11 @@
       var btn = document.getElementById('btn');
       var err = document.getElementById('err');
       // Return to the originally requested WC path if present, else the hall.
-      var dest = new URLSearchParams(location.search).get('next') || '/wc/';
-      if (dest.indexOf('/wc') !== 0) dest = '/wc/';
+      // Only ever land on a real WC page. The view-gate regex also catches the
+      // Next.js RSC payloads (e.g. /wc/index.txt), so `next` can point at a raw
+      // .txt file — whitelist the actual routes and fall back to the hall.
+      var raw = new URLSearchParams(location.search).get('next') || '/wc/';
+      var dest = /^\/wc(\/(leaderboard\/?)?)?$/.test(raw) ? raw : '/wc/';
       form.addEventListener('submit', function (e) {
         e.preventDefault();
         err.textContent = '';

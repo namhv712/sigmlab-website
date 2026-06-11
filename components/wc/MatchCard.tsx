@@ -59,12 +59,12 @@ export default function MatchCard({
 
   return (
     <article
-      className={`wc-card rounded-2xl border p-4 transition-colors ${
+      className={`wc-panel p-4 sm:p-5 ${
         finished
-          ? 'border-white/5 bg-white/[0.03] opacity-80'
+          ? 'opacity-80'
           : live
-            ? 'border-red-500/40 bg-white/[0.06]'
-            : 'border-white/10 bg-white/[0.05]'
+            ? 'wc-live-panel !border-red-500/40'
+            : 'wc-panel-hover'
       }`}
     >
       <div className="flex items-center justify-between gap-2">
@@ -87,27 +87,27 @@ export default function MatchCard({
       </div>
 
       {/* Teams + score */}
-      <div className="mt-3 flex items-center justify-between gap-3">
-        <div className="flex min-w-0 flex-1 items-center gap-2">
-          <Flag team={match.team1} className="text-2xl" />
-          <span className="truncate text-sm font-bold text-white">{match.team1}</span>
+      <div className="mt-3.5 flex items-center justify-between gap-3">
+        <div className="flex min-w-0 flex-1 items-center gap-2.5">
+          <Flag team={match.team1} className="text-3xl" />
+          <span className="truncate text-base font-extrabold text-white sm:text-lg">{match.team1}</span>
         </div>
 
         <div className="flex-shrink-0 px-2 text-center">
           {hasScore ? (
-            <span className="font-mono text-xl font-extrabold text-wc-gold">
-              {match.score1} <span className="text-white/40">–</span> {match.score2}
+            <span className="wc-gradient-text font-mono text-2xl font-extrabold sm:text-3xl">
+              {match.score1} <span className="opacity-50">–</span> {match.score2}
             </span>
           ) : (
             <span className="text-sm font-bold text-white/40">vs</span>
           )}
         </div>
 
-        <div className="flex min-w-0 flex-1 items-center justify-end gap-2">
-          <span className="truncate text-right text-sm font-bold text-white">
+        <div className="flex min-w-0 flex-1 items-center justify-end gap-2.5">
+          <span className="truncate text-right text-base font-extrabold text-white sm:text-lg">
             {match.team2}
           </span>
-          <Flag team={match.team2} className="text-2xl" />
+          <Flag team={match.team2} className="text-3xl" />
         </div>
       </div>
 

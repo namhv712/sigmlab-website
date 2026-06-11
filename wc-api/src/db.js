@@ -1,5 +1,5 @@
 import { DatabaseSync } from 'node:sqlite'
-import { pointsFor } from './scoring.js'
+import { result, FINE_WRONG, FINE_MISS } from './scoring.js'
 
 const db = new DatabaseSync(process.env.WC_DB || './wc.db')
 
@@ -141,41 +141,55 @@ export function userPicks(userId) {
   return out
 }
 
-// Leaderboard: join picks to matches that have BOTH scores, +3 per correct.
-// Order: points desc, correct desc, created_at asc.
-const stLeaderRows = db.prepare(`
-  SELECT u.id AS user_id, u.name AS name, u.created_at AS created_at,
-         p.pick AS pick, m.score1 AS score1, m.score2 AS score2
-  FROM users u
-  JOIN picks p ON p.user_id = u.id
-  JOIN matches m ON m.id = p.match_id
-  WHERE m.score1 IS NOT NULL AND m.score2 IS NOT NULL
-`)
+// Leaderboard (penalty-only money model). EVERY finished match counts for
+// EVERY user, regardless of when they registered: a user with no pick on a
+// finished match is fined FINE_MISS ("không chọn"), a wrong pick FINE_WRONG,
+// a correct pick costs nothing. `vnd` is the net total (≤ 0). This is why a
+// member who registers late still owes 100k for each already-played match.
+// Order: vnd desc (least owed on top), then more-correct, then earlier signup.
+const stFinishedMatches = db.prepare(
+  `SELECT id, score1, score2 FROM matches WHERE score1 IS NOT NULL AND score2 IS NOT NULL`
+)
+const stAllPicks = db.prepare(`SELECT user_id, match_id, pick FROM picks`)
 const stAllUsers = db.prepare(`SELECT id, name, created_at FROM users`)
 
 export function leaderboard() {
-  const agg = new Map()
-  for (const u of stAllUsers.all()) {
-    agg.set(u.id, { name: u.name, points: 0, correct: 0, played: 0, created_at: u.created_at })
+  const finished = stFinishedMatches.all()
+  const picksByUser = new Map()
+  for (const p of stAllPicks.all()) {
+    let map = picksByUser.get(p.user_id)
+    if (!map) { map = new Map(); picksByUser.set(p.user_id, map) }
+    map.set(p.match_id, p.pick)
   }
-  for (const r of stLeaderRows.all()) {
-    const row = agg.get(r.user_id)
-    if (!row) continue
-    row.played += 1
-    const pts = pointsFor(r.pick, r.score1, r.score2)
-    if (pts > 0) {
-      row.points += pts
-      row.correct += 1
+
+  const rows = stAllUsers.all().map((u) => {
+    const mine = picksByUser.get(u.id)
+    let vnd = 0, correct = 0, wrong = 0, missed = 0
+    for (const m of finished) {
+      const pick = (mine && mine.get(m.id)) ?? null
+      if (pick == null) {
+        missed += 1
+        vnd -= FINE_MISS
+      } else if (pick === result(m.score1, m.score2)) {
+        correct += 1
+      } else {
+        wrong += 1
+        vnd -= FINE_WRONG
+      }
     }
-  }
-  return [...agg.values()]
+    return { name: u.name, vnd, correct, wrong, missed, finished: finished.length, created_at: u.created_at }
+  })
+
+  return rows
     .sort(
       (a, b) =>
-        b.points - a.points ||
+        b.vnd - a.vnd ||
         b.correct - a.correct ||
         a.created_at - b.created_at
     )
-    .map(({ name, points, correct, played }) => ({ name, points, correct, played }))
+    .map(({ name, vnd, correct, wrong, missed, finished }) => ({
+      name, vnd, correct, wrong, missed, finished,
+    }))
 }
 
 export default db

@@ -5,6 +5,7 @@ import Link from 'next/link'
 import type { LeaderRow } from '@/lib/wcTypes'
 import { getLeaderboard, getName } from '@/lib/wcApi'
 import LeaderboardTable from '@/components/wc/LeaderboardTable'
+import WcBanner from '@/components/wc/WcBanner'
 
 export default function WcLeaderboardPage() {
   const [rows, setRows] = useState<LeaderRow[]>([])
@@ -32,13 +33,16 @@ export default function WcLeaderboardPage() {
   }, [load])
 
   return (
-    <div className="mx-auto max-w-2xl px-4 py-8 sm:px-6">
-      <header className="text-center">
-        <h1 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
-          🏅 <span className="text-wc-gold">Bảng xếp hạng</span>
+    <div className="mx-auto max-w-2xl px-4 py-6 sm:px-6 sm:py-8">
+      <WcBanner />
+      <header className="mt-6 text-center">
+        <h1 className="text-3xl font-black tracking-tight sm:text-4xl">
+          🏅 <span className="wc-gradient-text">Bảng xếp hạng</span>
         </h1>
-        <p className="mt-1 text-sm text-white/60">World Cup 2026 · phòng lab SigM</p>
-        <div className="mt-3">
+        <p className="mt-2 text-sm text-white/60">
+          World Cup 2026 · phòng lab SigM · xếp theo tổng tiền (mất ít xếp trên)
+        </p>
+        <div className="mt-4">
           <Link
             href="/wc"
             className="rounded-full border border-wc-gold/40 px-3 py-1 text-xs font-semibold text-wc-gold hover:bg-wc-gold/10"
