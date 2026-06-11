@@ -35,14 +35,19 @@ loadDotEnv()
 const Fastify = (await import('fastify')).default
 const { default: routes } = await import('./routes.js')
 const { ingest } = await import('./ingest.js')
+const { updateResults } = await import('./results.js')
 const { default: db } = await import('./db.js')
 
 const fastify = Fastify({ logger: true })
 await fastify.register(routes)
 
 const start = async () => {
-  // Seed/refresh on boot, then hourly. Failures are tolerated inside ingest().
-  ingest(db).catch((e) => fastify.log.error(e))
+  // Seed the schedule on boot, then refresh hourly (it rarely changes).
+  // Pull finished results right after, so a restart is immediately up to date —
+  // the server cron then keeps them current via POST /admin/refresh.
+  ingest(db)
+    .then(() => updateResults())
+    .catch((e) => fastify.log.error(e))
   setInterval(() => ingest(db).catch((e) => fastify.log.error(e)), 3600_000)
 
   try {

@@ -10,6 +10,7 @@ import {
   matchExists,
   setScore,
 } from './db.js'
+import { updateResults } from './results.js'
 
 const LIVE_WINDOW = 150 * 60 // 150 minutes in seconds
 const TOKEN_TTL = 30 * 24 * 60 * 60 // 30 days in seconds
@@ -281,5 +282,17 @@ export default async function routes(fastify) {
       return reply.code(404).send({ error: 'unknown_user' })
     }
     return { ok: true }
+  })
+
+  // POST /admin/refresh  (x-admin-passcode header) — pull the latest FINISHED
+  // results from the upstream scores feed and apply them. Idempotent; meant to
+  // be poked by the server cron every few minutes during the tournament.
+  fastify.post('/admin/refresh', async (req, reply) => {
+    const pass = req.headers['x-admin-passcode']
+    if (typeof pass !== 'string' || !checkPasscode(pass, adminHash)) {
+      return reply.code(401).send({ error: 'unauthorized' })
+    }
+    const updated = await updateResults()
+    return { ok: true, updated }
   })
 }
