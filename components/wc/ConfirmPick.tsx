@@ -7,12 +7,22 @@ import { FINE_WRONG } from '@/lib/wcMoney'
 const PICK_LABEL = (m: Match, p: Pick) =>
   p === '1' ? `${m.team1} thắng` : p === '2' ? `${m.team2} thắng` : 'Hòa'
 
-// A few playful lines reminding the bettor what a wrong guess costs.
+// Playful lines reminding the bettor what a wrong guess costs (30k).
 const FUN_LINES = [
   'Sai là mất 30.000đ đó nha, suy nghĩ kỹ chưa? 💸',
   'Chốt kèo này, lỡ sai thì rút ví 30.000đ đấy! 🤑',
   'Tự tin chưa? Đoán trật là đi 30.000đ tiền trà sữa 🧋',
   'Kèo này mà sai thì 30.000đ bay màu nhé 😎',
+  'Trật là mất 30.000đ, đủ một tô phở đó nha! 🍜',
+  'Đoán sai = nuôi heo đất của lab thêm 30.000đ 🐷',
+  'Tay nhanh hơn não là mất 30.000đ đấy sếp ơi ✋',
+  'Não cá vàng chốt bừa là 30.000đ rời ví nha 🐠',
+  'Sai một ly đi 30.000đ một dặm, cân nhắc nhé 🏃',
+  'Chốt đi! Sai thì coi như ủng hộ quỹ trà chanh 30.000đ 🍹',
+  'Lỡ sai mất 30.000đ, nhưng bỏ trống còn đau hơn — 100.000đ lận! 😵',
+  'Kèo thơm hay kèo thúi? Đoán trật là 30.000đ bay liền 👃',
+  'Hên xui đoán bừa, gãy kèo là 30.000đ ra đi mãi mãi 🎲',
+  'Chốt cho máu! Sai thì khao cả team 30.000đ trà sữa nha 🧋',
 ]
 
 export default function ConfirmPick({
