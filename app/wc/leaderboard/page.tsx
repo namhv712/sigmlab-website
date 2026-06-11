@@ -40,7 +40,7 @@ export default function WcLeaderboardPage() {
           🏅 <span className="wc-gradient-text">Bảng xếp hạng</span>
         </h1>
         <p className="mt-2 text-sm text-white/60">
-          World Cup 2026 · phòng lab SigM · xếp theo tổng tiền (mất ít xếp trên)
+          World Cup 2026 · phòng lab SigM · xếp theo tổng tiền (mất nhiều xếp trên 💸)
         </p>
         <div className="mt-4">
           <Link

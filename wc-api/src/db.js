@@ -146,7 +146,8 @@ export function userPicks(userId) {
 // finished match is fined FINE_MISS ("không chọn"), a wrong pick FINE_WRONG,
 // a correct pick costs nothing. `vnd` is the net total (≤ 0). This is why a
 // member who registers late still owes 100k for each already-played match.
-// Order: vnd desc (least owed on top), then more-correct, then earlier signup.
+// Order: vnd asc (MOST owed on top — it's a penalty "shame board"), then
+// fewer-correct, then earlier signup.
 const stFinishedMatches = db.prepare(
   `SELECT id, score1, score2 FROM matches WHERE score1 IS NOT NULL AND score2 IS NOT NULL`
 )
@@ -183,8 +184,8 @@ export function leaderboard() {
   return rows
     .sort(
       (a, b) =>
-        b.vnd - a.vnd ||
-        b.correct - a.correct ||
+        a.vnd - b.vnd ||
+        a.correct - b.correct ||
         a.created_at - b.created_at
     )
     .map(({ name, vnd, correct, wrong, missed, finished }) => ({
