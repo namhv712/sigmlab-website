@@ -32,6 +32,11 @@ yarn-error.log*
 # local env files
 .env*.local
 
+# wc-api sqlite db (runtime data — never commit; would clobber the live DB)
+wc-api/wc.db
+wc-api/*.db
+wc-api/wc.db-*
+
 # vercel
 .vercel
 
