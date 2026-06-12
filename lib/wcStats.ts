@@ -12,22 +12,20 @@ export type Highlight =
   | { kind: 'fun'; text: string }
   | { kind: 'stat'; text: string }
 
-// Playful lines reminding the bettor a wrong guess costs 30k.
+// Playful lines reminding the bettor a wrong guess adds one Raptor.
 export const FUN_LINES = [
-  'Sai là mất 30.000đ đó nha, suy nghĩ kỹ chưa? 💸',
-  'Chốt kèo này, lỡ sai thì rút ví 30.000đ đấy! 🤑',
-  'Tự tin chưa? Đoán trật là đi 30.000đ tiền trà sữa 🧋',
-  'Kèo này mà sai thì 30.000đ bay màu nhé 😎',
-  'Trật là mất 30.000đ, đủ một tô phở đó nha! 🍜',
-  'Đoán sai = nuôi heo đất của lab thêm 30.000đ 🐷',
-  'Tay nhanh hơn não là mất 30.000đ đấy sếp ơi ✋',
-  'Não cá vàng chốt bừa là 30.000đ rời ví nha 🐠',
-  'Sai một ly đi 30.000đ một dặm, cân nhắc nhé 🏃',
-  'Chốt đi! Sai thì coi như ủng hộ quỹ trà chanh 30.000đ 🍹',
-  'Lỡ sai mất 30.000đ, nhưng bỏ trống còn đau hơn — 100.000đ lận! 😵',
-  'Kèo thơm hay kèo thúi? Đoán trật là 30.000đ bay liền 👃',
-  'Hên xui đoán bừa, gãy kèo là 30.000đ ra đi mãi mãi 🎲',
-  'Chốt cho máu! Sai thì khao cả team 30.000đ trà sữa nha 🧋',
+  'Sai là nhận thêm 1 Raptor đó nha, suy nghĩ kỹ chưa? 🦖',
+  'Chốt kèo này, lỡ sai thì Raptor theo về tận lab!',
+  'Tự tin chưa? Đoán trật là chuồng khủng long đông thêm đó.',
+  'Kèo này mà sai thì Raptor gõ cửa liền nhé.',
+  'Trật là thêm một bé Raptor, cũng oai mà hơi đau.',
+  'Đoán sai = nuôi đàn khủng long của lab thêm 1 Raptor.',
+  'Tay nhanh hơn não là Raptor chạy vào bảng xếp hạng đấy sếp ơi.',
+  'Chốt đi! Sai thì tên bạn có cơ hội trông trang trọng hơn.',
+  'Lỡ sai thêm 1 Raptor, nhưng bỏ trống còn gọi hẳn T-Rex về!',
+  'Kèo thơm hay kèo thúi? Đoán trật là Raptor xuất hiện.',
+  'Hên xui đoán bừa, gãy kèo là khủng long tăng dân số.',
+  'Chốt cho máu! Sai thì chuồng Raptor có thêm thành viên.',
 ]
 
 const ri = (min: number, max: number) => min + Math.floor(Math.random() * (max - min + 1))

@@ -1,10 +1,11 @@
 'use client'
 
 import type { Match } from '@/lib/wcTypes'
-import { tally, formatVnd } from '@/lib/wcMoney'
+import { tally } from '@/lib/wcMoney'
+import { dinoSummary } from '@/lib/wcDinos'
 
-// Top-of-page money strip for the logged-in member: net VND owed + how many
-// finished matches it covers, with a correct / wrong / "không chọn" breakdown.
+// Top-of-page dinosaur strip for the logged-in member: wrong picks become
+// Raptors, missed picks become T-Rexes. Cash values stay out of the UI.
 export default function MoneySummary({
   matches,
   name,
@@ -13,35 +14,38 @@ export default function MoneySummary({
   name: string
 }) {
   const t = tally(matches)
-  const owes = t.vnd < 0
+  const dinoText = dinoSummary({
+    raptors: t.wrong,
+    trexes: t.missed,
+    total: t.wrong + t.missed,
+  })
+  const hasDinos = t.wrong + t.missed > 0
 
   return (
     <div className="wc-money-card p-5 sm:p-6">
       <div className="flex items-center justify-between gap-3">
         <div className="min-w-0">
           <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-wc-gold/80">
-            Tiền của {name}
+            Đàn khủng long của {name}
           </p>
-          <p
-            className={`mt-1 font-mono text-3xl font-extrabold leading-none sm:text-4xl ${
-              owes ? 'text-red-400' : 'text-emerald-300'
-            }`}
-          >
-            {formatVnd(t.vnd)}
+          <p className={`mt-1 text-2xl font-black leading-tight sm:text-3xl ${
+            hasDinos ? 'text-wc-gold' : 'text-emerald-300'
+          }`}>
+            {dinoText}
           </p>
           <p className="mt-1.5 text-xs text-white/55">
             {t.finished > 0
               ? `Tính trên ${t.finished} trận đã kết thúc`
-              : 'Chưa có trận nào kết thúc'}
+            : 'Chưa có trận nào kết thúc'}
           </p>
         </div>
-        <div className="text-5xl sm:text-6xl">{owes ? '💸' : '🤑'}</div>
+        <div className="text-6xl sm:text-7xl">{hasDinos ? '🦖' : '🥚'}</div>
       </div>
 
       <div className="mt-4 grid grid-cols-3 gap-2">
-        <Stat label="Đúng" value={t.correct} tone="ok" sub="0đ" />
-        <Stat label="Sai" value={t.wrong} tone="warn" sub="-30k" />
-        <Stat label="Bỏ lỡ" value={t.missed} tone="bad" sub="-100k" />
+        <Stat label="Đúng" value={t.correct} tone="ok" sub="Không nuôi" />
+        <Stat label="Sai" value={t.wrong} tone="warn" sub="Raptor" />
+        <Stat label="Bỏ lỡ" value={t.missed} tone="bad" sub="T-Rex" />
       </div>
     </div>
   )

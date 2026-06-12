@@ -5,7 +5,7 @@ import Link from 'next/link'
 import type { LeaderRow } from '@/lib/wcTypes'
 import { getLeaderboard, getName } from '@/lib/wcApi'
 import LeaderboardTable from '@/components/wc/LeaderboardTable'
-import PiggyBankTotal from '@/components/wc/PiggyBankTotal'
+import DinosaurFundTotal from '@/components/wc/DinosaurFundTotal'
 import WcBanner from '@/components/wc/WcBanner'
 
 export default function WcLeaderboardPage() {
@@ -36,7 +36,7 @@ export default function WcLeaderboardPage() {
   return (
     <div className="mx-auto max-w-2xl px-4 py-6 sm:px-6 sm:py-8">
       <div className="mb-3 flex justify-end sm:mb-0">
-        <PiggyBankTotal rows={rows} />
+        <DinosaurFundTotal rows={rows} />
       </div>
       <WcBanner />
       <header className="mt-6 text-center">
@@ -44,7 +44,7 @@ export default function WcLeaderboardPage() {
           🏅 <span className="wc-gradient-text">Bảng xếp hạng</span>
         </h1>
         <p className="mt-2 text-sm text-white/60">
-          World Cup 2026 · phòng lab SigM · xếp theo tổng tiền (mất nhiều xếp trên 💸)
+          World Cup 2026 · phòng lab SigM · ai nuôi nhiều khủng long sẽ nổi bật hơn
         </p>
         <div className="mt-4">
           <Link

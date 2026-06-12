@@ -2,7 +2,6 @@
 
 import { useEffect, useMemo } from 'react'
 import type { Match, Pick } from '@/lib/wcTypes'
-import { FINE_WRONG } from '@/lib/wcMoney'
 import { makeHighlight } from '@/lib/wcStats'
 
 const PICK_LABEL = (m: Match, p: Pick) =>
@@ -74,7 +73,7 @@ export default function ConfirmPick({
           </div>
         )}
         <p className="mt-2 text-[11px] text-white/45">
-          Đoán sai phạt {FINE_WRONG.toLocaleString('vi-VN')}đ · còn được đổi đến khi bóng lăn.
+          Đoán sai nhận 1 Raptor · còn được đổi đến khi bóng lăn.
         </p>
 
         <div className="mt-5 grid grid-cols-2 gap-2">

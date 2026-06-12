@@ -50,9 +50,3 @@ export function tally(matches: Match[]): Tally {
   }
   return { vnd, correct, wrong, missed, finished }
 }
-
-// Format VND like "-130.000đ" (vi-VN grouping). 0 → "0đ".
-export function formatVnd(v: number): string {
-  const abs = Math.abs(v).toLocaleString('vi-VN')
-  return v < 0 ? `-${abs}đ` : `${abs}đ`
-}

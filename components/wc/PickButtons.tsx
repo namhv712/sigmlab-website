@@ -6,9 +6,9 @@ import { result } from '@/lib/wcResult'
 // Three 1X2 buttons: Đội 1 / Hòa / Đội 2.
 // Modes:
 //  - active   : selectable, fires onPick (betting mode, upcoming match)
-//  - view     : disabled, shows "Nhập mật khẩu để cược" CTA
+//  - view     : disabled, shows login CTA
 //  - locked   : match started / finished, shows the user's locked pick
-//  - result   : finished match, marks pick ✓ / ✗ with +3 when correct
+//  - result   : finished match, marks pick ✓ / ✗ with dinosaur labels
 export default function PickButtons({
   match,
   mode,
@@ -43,7 +43,7 @@ export default function PickButtons({
     )
   }
 
-  // Locked finished match where the member never picked → "không chọn" (-100k).
+  // Locked finished match where the member never picked → one T-Rex.
   const missed = finished && pick == null
 
   const options: { code: Pick; label: string }[] = [
@@ -88,7 +88,7 @@ export default function PickButtons({
             >
               {opt.label}
               {correct && <span className="ml-1">✓</span>}
-              {wrong && <span className="ml-1">✗ -30k</span>}
+              {wrong && <span className="ml-1">✗ +Raptor</span>}
             </button>
           )
         })}
@@ -96,7 +96,7 @@ export default function PickButtons({
 
       {missed && (
         <p className="mt-2 text-center text-[11px] font-semibold text-red-300/80">
-          Không chọn trận này · phạt 100.000đ
+          Không chọn trận này · +1 T-Rex
         </p>
       )}
     </>
