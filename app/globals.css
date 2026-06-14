@@ -97,6 +97,10 @@
   mask-size: var(--dino-sprite-sheet-width) var(--dino-sprite-sheet-height);
   -webkit-mask-position: var(--dino-mask-x) var(--dino-mask-y);
   mask-position: var(--dino-mask-x) var(--dino-mask-y);
+  /* 1px white outline around every dino (raptors + T-Rex). Drop-shadows hug
+     the masked silhouette; 4 cardinal offsets give a clean 1px border. */
+  filter: drop-shadow(1px 0 0 #fff) drop-shadow(-1px 0 0 #fff)
+    drop-shadow(0 1px 0 #fff) drop-shadow(0 -1px 0 #fff);
 }
 
 .chrome-dino-sprite::after {

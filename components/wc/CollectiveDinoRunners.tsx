@@ -56,12 +56,26 @@ const LAND_SQUASH_MS = 150
 const SIZE_SCALE = 1.6
 const CHROME_DINO_SPRITE_WIDTH = 1233
 const CHROME_DINO_SPRITE_HEIGHT = 100
-const CHROME_DINO_FRAME_WIDTH = 44
-const CHROME_DINO_FRAME_HEIGHT = 47
-const CHROME_DINO_FRAME_Y = 2
-const CHROME_DINO_RUN_FRAMES = [936, 980] as const
 const CHROME_DINO_FRAME_MS = 1000 / 12
-const CHROME_DINO_ASPECT = CHROME_DINO_FRAME_HEIGHT / CHROME_DINO_FRAME_WIDTH
+
+// Per-species frames cut from the Chrome offline sprite sheet (measured from
+// the PNG). `frames` are the x-offsets of the two running poses; the cell is
+// frameW×frameH at top frameY; eye is a faked dot (the sprite's own eye is part
+// of the opaque silhouette). T-Rex uses the upright run; raptor uses the two
+// DUCKING frames — the crouched, head-down "sprinting" dino.
+interface SpriteDef {
+  frames: readonly [number, number]
+  frameW: number
+  frameH: number
+  frameY: number
+  eyeX: number
+  eyeY: number
+  eyeSize: number
+}
+const SPRITES: Record<Species, SpriteDef> = {
+  trex: { frames: [936, 980], frameW: 44, frameH: 47, frameY: 2, eyeX: 34, eyeY: 8, eyeSize: 2 },
+  raptor: { frames: [1112, 1171], frameW: 59, frameH: 30, frameY: 19, eyeX: 47, eyeY: 4, eyeSize: 2 },
+}
 const CHROME_DINO_COLORS: Record<Species, string> = {
   trex: '#e3741f', // orange — the bigger, dominant species
   raptor: '#7d8c7f', // gray-greenish — the smaller pack species
@@ -173,6 +187,7 @@ export default function CollectiveDinoRunners() {
       {runners.map((runner) => {
         const track = groundTracks[runner.trackIndex % groundTracks.length]
         const pose = poseOnTrack(runner, track, now, fallStartRef.current)
+        const def = SPRITES[runner.species]
 
         return (
           <div
@@ -192,13 +207,13 @@ export default function CollectiveDinoRunners() {
               '--dino-opacity': pose.opacity,
               '--dino-scale-y': pose.scaleY,
               '--dino-color': CHROME_DINO_COLORS[runner.species],
-              '--dino-sprite-sheet-width': `${pose.size * (CHROME_DINO_SPRITE_WIDTH / CHROME_DINO_FRAME_WIDTH)}px`,
-              '--dino-sprite-sheet-height': `${pose.height * (CHROME_DINO_SPRITE_HEIGHT / CHROME_DINO_FRAME_HEIGHT)}px`,
-              '--dino-mask-x': `${-pose.size * (CHROME_DINO_RUN_FRAMES[pose.frame] / CHROME_DINO_FRAME_WIDTH)}px`,
-              '--dino-mask-y': `${-pose.height * (CHROME_DINO_FRAME_Y / CHROME_DINO_FRAME_HEIGHT)}px`,
-              '--dino-eye-x': `${pose.size * (34 / CHROME_DINO_FRAME_WIDTH)}px`,
-              '--dino-eye-y': `${pose.height * (8 / CHROME_DINO_FRAME_HEIGHT)}px`,
-              '--dino-eye-size': `${Math.max(2, pose.size * (2 / CHROME_DINO_FRAME_WIDTH))}px`,
+              '--dino-sprite-sheet-width': `${pose.size * (CHROME_DINO_SPRITE_WIDTH / def.frameW)}px`,
+              '--dino-sprite-sheet-height': `${pose.height * (CHROME_DINO_SPRITE_HEIGHT / def.frameH)}px`,
+              '--dino-mask-x': `${-pose.size * (def.frames[pose.frame] / def.frameW)}px`,
+              '--dino-mask-y': `${-pose.height * (def.frameY / def.frameH)}px`,
+              '--dino-eye-x': `${pose.size * (def.eyeX / def.frameW)}px`,
+              '--dino-eye-y': `${pose.height * (def.eyeY / def.frameH)}px`,
+              '--dino-eye-size': `${Math.max(2, pose.size * (def.eyeSize / def.frameW))}px`,
             } as CSSProperties}
           >
             <ChromeDino />
@@ -231,7 +246,7 @@ function makeRunners(species: Species, count: number): Runner[] {
       species,
       weight,
       trackIndex: index * 3 + (trex ? 1 : 0),
-      size: baseSize * (large ? (trex ? 2.2 : 1.5) : 1) * SIZE_SCALE,
+      size: baseSize * (large ? (trex ? 2.2 : 3.2) : 1) * SIZE_SCALE,
       speed: baseSpeed * (large ? (trex ? 0.82 : 0.86) : 1),
       offset: index * (trex ? 7311 : 4217) + (trex ? 13_000 : 0),
       reverse: (index + (trex ? 1 : 0)) % 2 === 1,
@@ -244,8 +259,9 @@ function makeRunners(species: Species, count: number): Runner[] {
 }
 
 function poseOnTrack(runner: Runner, track: GroundTrack, now: number, fallStart: number): RunnerPose {
+  const def = SPRITES[runner.species]
   const size = runner.size * track.scale
-  const height = size * CHROME_DINO_ASPECT
+  const height = size * (def.frameH / def.frameW)
   const speed = runner.speed * (track.viewportWidth < 640 ? 0.58 : 1)
   const frame = Math.floor((now + runner.offset) / CHROME_DINO_FRAME_MS) % 2 as 0 | 1
   const movingLeft = runner.reverse
