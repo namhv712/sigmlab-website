@@ -6,6 +6,7 @@ import {
   createUserWithPassword,
   setUserPassword,
   userPicks,
+  picksByMatch,
   upsertPick,
   matchExists,
   setScore,
@@ -134,21 +135,28 @@ export default async function routes(fastify) {
       const u = getUserByName(String(name))
       if (u) picks = userPicks(u.id)
     }
+    // Everyone's picks per match — attached ONLY to finished matches so a
+    // pending match never leaks who bet what before it's locked.
+    const allPicks = picksByMatch()
     return {
-      matches: ms.map((m) => ({
-        id: m.id,
-        stage: m.stage,
-        round: m.round,
-        group: m.group,
-        kickoff: m.kickoff_utc,
-        team1: m.team1,
-        team2: m.team2,
-        ground: m.ground,
-        score1: m.score1,
-        score2: m.score2,
-        status: deriveStatus(m, now),
-        ...(name ? { myPick: picks[m.id] ?? null } : {}),
-      })),
+      matches: ms.map((m) => {
+        const status = deriveStatus(m, now)
+        return {
+          id: m.id,
+          stage: m.stage,
+          round: m.round,
+          group: m.group,
+          kickoff: m.kickoff_utc,
+          team1: m.team1,
+          team2: m.team2,
+          ground: m.ground,
+          score1: m.score1,
+          score2: m.score2,
+          status,
+          ...(name ? { myPick: picks[m.id] ?? null } : {}),
+          ...(status === 'finished' ? { picks: allPicks.get(m.id) || [] } : {}),
+        }
+      }),
     }
   })
 

@@ -141,6 +141,28 @@ export function userPicks(userId) {
   return out
 }
 
+// Every pick joined to its picker's name, grouped by match id:
+//   Map<matchId, [{ name, pick }]>  (names sorted A→Z within each match).
+// Used to reveal "who picked what" — only ever exposed for matches whose
+// kickoff has passed (picks are locked then), never for upcoming ones.
+const stPicksWithNames = db.prepare(
+  `SELECT p.match_id AS matchId, u.name AS name, p.pick AS pick
+   FROM picks p JOIN users u ON u.id = p.user_id`
+)
+export function picksByMatch() {
+  const out = new Map()
+  for (const r of stPicksWithNames.all()) {
+    let arr = out.get(r.matchId)
+    if (!arr) {
+      arr = []
+      out.set(r.matchId, arr)
+    }
+    arr.push({ name: r.name, pick: r.pick })
+  }
+  for (const arr of out.values()) arr.sort((a, b) => a.name.localeCompare(b.name))
+  return out
+}
+
 // Leaderboard (penalty-only money model). EVERY finished match counts for
 // EVERY user, regardless of when they registered: a user with no pick on a
 // finished match is fined FINE_MISS ("không chọn"), a wrong pick FINE_WRONG,

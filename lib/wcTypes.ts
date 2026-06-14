@@ -4,6 +4,12 @@ export type Pick = '1' | 'X' | '2'
 
 export type MatchStatus = 'upcoming' | 'live' | 'finished'
 
+// One member's pick on a match. Only revealed by the API for finished matches.
+export interface MatchPick {
+  name: string
+  pick: Pick
+}
+
 export interface Match {
   id: string
   stage: string
@@ -16,6 +22,7 @@ export interface Match {
   score2: number | null
   status: MatchStatus
   myPick?: Pick | null
+  picks?: MatchPick[] // everyone's picks; present only for finished matches
 }
 
 export interface LeaderRow {

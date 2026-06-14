@@ -5,6 +5,7 @@ import { vnLabel } from '@/lib/wcTime'
 import Flag from './Flag'
 import CountdownTimer from './CountdownTimer'
 import PickButtons from './PickButtons'
+import MatchPicksBreakdown from './MatchPicksBreakdown'
 
 const STAGE_LABELS: Record<string, string> = {
   group: 'Vòng bảng',
@@ -120,6 +121,9 @@ export default function MatchCard({
 
       {/* Picker / pick result */}
       <PickButtons match={match} mode={mode} onPick={onPick} pending={pending} />
+
+      {/* Who picked what — revealed only once the match is finished */}
+      {finished && <MatchPicksBreakdown match={match} />}
     </article>
   )
 }

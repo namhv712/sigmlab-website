@@ -12,6 +12,7 @@ delete process.env.WC_MEMBER_PASSCODE_HASH
 
 const Fastify = (await import('fastify')).default
 const { default: routes } = await import('../src/routes.js')
+const db = await import('../src/db.js')
 
 const app = Fastify()
 await app.register(routes)
@@ -87,4 +88,38 @@ test('admin reset-password rejects bad admin passcode and unknown user', async (
   )
   assert.equal(unknownUser.statusCode, 404)
   assert.equal(J(unknownUser).error, 'unknown_user')
+})
+
+test('/schedule reveals everyone’s picks for finished matches but not upcoming ones', async () => {
+  const nowSec = Math.floor(Date.now() / 1000)
+  // A finished match (kicked off 3h ago, has a score) and an upcoming one.
+  db.upsertMatch({
+    id: 'fin-1', stage: 'group', group: 'A', kickoff_utc: nowSec - 3 * 3600,
+    team1: 'Mexico', team2: 'South Africa', ground: 'X', score1: 2, score2: 0,
+  })
+  db.upsertMatch({
+    id: 'up-1', stage: 'group', group: 'A', kickoff_utc: nowSec + 86400,
+    team1: 'Brazil', team2: 'Morocco', ground: 'Y',
+  })
+  const zoe = db.getOrCreateUser('Zoe')
+  const yan = db.getOrCreateUser('Yan')
+  db.upsertPick(zoe.id, 'fin-1', '1')
+  db.upsertPick(yan.id, 'fin-1', 'X')
+  db.upsertPick(zoe.id, 'up-1', '2') // must stay hidden — match not started
+
+  const res = await app.inject({ method: 'GET', url: '/schedule' })
+  assert.equal(res.statusCode, 200)
+  const matches = J(res).matches
+  const fin = matches.find((m) => m.id === 'fin-1')
+  const up = matches.find((m) => m.id === 'up-1')
+
+  assert.equal(fin.status, 'finished')
+  // Sorted A→Z by name, includes both picks.
+  assert.deepEqual(fin.picks, [
+    { name: 'Yan', pick: 'X' },
+    { name: 'Zoe', pick: '1' },
+  ])
+  // Upcoming match never leaks picks.
+  assert.equal(up.status, 'upcoming')
+  assert.equal(up.picks, undefined)
 })
