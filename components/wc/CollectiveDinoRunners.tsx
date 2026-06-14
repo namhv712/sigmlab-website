@@ -52,6 +52,8 @@ const TRACK_REFRESH_MS = 900
 const JUMP_RETRIGGER_MS = 1_100
 // Landing squash window after a dino touches down.
 const LAND_SQUASH_MS = 150
+// Global size multiplier applied to every dino (keeps the size hierarchy).
+const SIZE_SCALE = 1.6
 const CHROME_DINO_SPRITE_WIDTH = 1233
 const CHROME_DINO_SPRITE_HEIGHT = 100
 const CHROME_DINO_FRAME_WIDTH = 44
@@ -229,7 +231,7 @@ function makeRunners(species: Species, count: number): Runner[] {
       species,
       weight,
       trackIndex: index * 3 + (trex ? 1 : 0),
-      size: baseSize * (large ? (trex ? 2.2 : 1.5) : 1),
+      size: baseSize * (large ? (trex ? 2.2 : 1.5) : 1) * SIZE_SCALE,
       speed: baseSpeed * (large ? (trex ? 0.82 : 0.86) : 1),
       offset: index * (trex ? 7311 : 4217) + (trex ? 13_000 : 0),
       reverse: (index + (trex ? 1 : 0)) % 2 === 1,
