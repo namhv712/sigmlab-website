@@ -34,7 +34,7 @@ export default function WcLeaderboardPage() {
   }, [load])
 
   return (
-    <div className="mx-auto max-w-5xl px-4 py-6 sm:px-6 sm:py-8">
+    <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 sm:py-8">
       <div className="mb-3 flex justify-end sm:mb-0">
         <DinosaurFundTotal rows={rows} />
       </div>
