@@ -43,3 +43,4 @@ wc-api/wc.db-*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+wc-api/src/results.js.tsdb.bak
