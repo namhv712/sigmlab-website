@@ -57,8 +57,8 @@ const CHROME_DINO_RUN_FRAMES = [936, 980] as const
 const CHROME_DINO_FRAME_MS = 1000 / 12
 const CHROME_DINO_ASPECT = CHROME_DINO_FRAME_HEIGHT / CHROME_DINO_FRAME_WIDTH
 const CHROME_DINO_COLORS: Record<Species, string> = {
-  trex: '#535353',
-  raptor: '#d97706',
+  trex: '#e3741f', // orange — the bigger, dominant species
+  raptor: '#7d8c7f', // gray-greenish — the smaller pack species
 }
 
 export default function CollectiveDinoRunners() {
@@ -198,7 +198,10 @@ function makeRunners(species: Species, count: number): Runner[] {
   return weights.map((weight, index) => {
     const trex = species === 'trex'
     const large = weight === DINO_GROUP_SIZE
-    const baseSize = trex ? 42 + (index % 2) * 4 : 29 + (index % 3) * 3
+    // Size tiers, smallest → largest, never overlapping:
+    //   small raptor (22-26) < large raptor (33-39) < normal trex (44-48) < large trex (97-106).
+    // A large raptor (a pack of 10) stays smaller than a single normal T-Rex.
+    const baseSize = trex ? 44 + (index % 2) * 4 : 22 + (index % 3) * 2
     const baseSpeed = trex ? 42 + (index % 3) * 4 : 66 + (index % 4) * 5
 
     return {
@@ -206,7 +209,7 @@ function makeRunners(species: Species, count: number): Runner[] {
       species,
       weight,
       trackIndex: index * 3 + (trex ? 1 : 0),
-      size: baseSize * (large ? (trex ? 2.25 : 2.3) : 1),
+      size: baseSize * (large ? (trex ? 2.2 : 1.5) : 1),
       speed: baseSpeed * (large ? (trex ? 0.82 : 0.86) : 1),
       offset: index * (trex ? 7311 : 4217) + (trex ? 13_000 : 0),
       reverse: (index + (trex ? 1 : 0)) % 2 === 1,
