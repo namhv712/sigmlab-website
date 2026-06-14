@@ -21,6 +21,14 @@ describe('DinosaurFundTotal', () => {
     expect(dinoSummary(tally)).toBe('4 T-Rex · 3 Raptor')
   })
 
+  it('rolls every ten same-species dinos into a giant in the summary', () => {
+    // 9 missed -> no giant T-Rex (9 < 10); 82 wrong -> 8 giant + 2 Raptor
+    const tally = dinoTallyFromRows([row('A', 50, 5), row('B', 32, 4)])
+    expect(tally.trexes).toBe(9)
+    expect(tally.raptors).toBe(82)
+    expect(dinoSummary(tally)).toBe('9 T-Rex · 8 Raptor khổng lồ · 2 Raptor')
+  })
+
   it('renders the dinosaur pack without showing cash', () => {
     render(<DinosaurFundTotal rows={[row('A', 2, 1), row('B', 1, 3)]} />)
     expect(screen.getByText('Tổng đàn')).toBeInTheDocument()

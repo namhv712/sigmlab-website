@@ -1,7 +1,7 @@
 'use client'
 
 import { type CSSProperties, useEffect, useMemo, useRef, useState } from 'react'
-import { dinoTallyFromRows } from '@/lib/wcDinos'
+import { DINO_GROUP_SIZE, dinoTallyFromRows } from '@/lib/wcDinos'
 import { getLeaderboard } from '@/lib/wcApi'
 import type { LeaderRow } from '@/lib/wcTypes'
 
@@ -56,7 +56,6 @@ const CHROME_DINO_FRAME_Y = 2
 const CHROME_DINO_RUN_FRAMES = [936, 980] as const
 const CHROME_DINO_FRAME_MS = 1000 / 12
 const CHROME_DINO_ASPECT = CHROME_DINO_FRAME_HEIGHT / CHROME_DINO_FRAME_WIDTH
-const DINO_GROUP_SIZE = 10
 const CHROME_DINO_COLORS: Record<Species, string> = {
   trex: '#535353',
   raptor: '#d97706',

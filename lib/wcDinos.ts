@@ -13,6 +13,11 @@ export interface DinoTally {
 const HERD_THRESHOLD = 1_000_000
 const LEGEND_THRESHOLD = 5_000_000
 
+// A full pack of this many same-species dinos rolls up into one "khổng lồ"
+// (giant) dino. Shared with the running-dino animation so the text total and
+// the runners agree (e.g. 82 Raptor → 8 giant Raptor + 2 Raptor).
+export const DINO_GROUP_SIZE = 10
+
 export function contributionOf(row: Pick<LeaderRow, 'vnd'>): number {
   return Math.max(0, -row.vnd)
 }
@@ -67,10 +72,22 @@ export function prestigeTitle(tier: PrestigeTier): string {
   }
 }
 
+// Roll a same-species count up into giant packs of DINO_GROUP_SIZE plus the
+// leftover singles, e.g. 82 -> "8 Raptor khổng lồ · 2 Raptor"; 9 -> "9 Raptor".
+function speciesParts(count: number, name: string): string[] {
+  if (count <= 0) return []
+  const large = Math.floor(count / DINO_GROUP_SIZE)
+  const single = count % DINO_GROUP_SIZE
+  const parts: string[] = []
+  if (large > 0) parts.push(`${large} ${name} khổng lồ`)
+  if (single > 0) parts.push(`${single} ${name}`)
+  return parts
+}
+
 export function dinoSummary(tally: Pick<DinoTally, 'raptors' | 'trexes' | 'total'>): string {
   if (tally.total <= 0) return 'Chưa có khủng long'
-  const parts = []
-  if (tally.trexes > 0) parts.push(`${tally.trexes} T-Rex`)
-  if (tally.raptors > 0) parts.push(`${tally.raptors} Raptor`)
-  return parts.join(' · ')
+  return [
+    ...speciesParts(tally.trexes, 'T-Rex'),
+    ...speciesParts(tally.raptors, 'Raptor'),
+  ].join(' · ')
 }
