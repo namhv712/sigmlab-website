@@ -18,7 +18,7 @@ interface Runner {
   reverse: boolean
   fallHeight: number
   fallMs: number
-  waitMs: number
+  fallDelay: number
   spawnRatio: number
 }
 
@@ -48,6 +48,10 @@ interface RunnerPose {
 
 const POLL_MS = 60_000
 const TRACK_REFRESH_MS = 900
+// Minimum gap between scroll-triggered herd hops (covers the longest fall).
+const JUMP_RETRIGGER_MS = 1_100
+// Landing squash window after a dino touches down.
+const LAND_SQUASH_MS = 150
 const CHROME_DINO_SPRITE_WIDTH = 1233
 const CHROME_DINO_SPRITE_HEIGHT = 100
 const CHROME_DINO_FRAME_WIDTH = 44
@@ -66,6 +70,8 @@ export default function CollectiveDinoRunners() {
   const [tracks, setTracks] = useState<GroundTrack[]>([])
   const [now, setNow] = useState(0)
   const animationStartedAt = useRef<number | null>(null)
+  const nowRef = useRef(0)
+  const fallStartRef = useRef(0)
 
   useEffect(() => {
     let cancelled = false
@@ -120,12 +126,26 @@ export default function CollectiveDinoRunners() {
 
     function tick(time: number) {
       if (animationStartedAt.current === null) animationStartedAt.current = time
-      setNow(time - animationStartedAt.current)
+      const elapsed = time - animationStartedAt.current
+      nowRef.current = elapsed
+      setNow(elapsed)
       animation = window.requestAnimationFrame(tick)
     }
 
     animation = window.requestAnimationFrame(tick)
     return () => window.cancelAnimationFrame(animation)
+  }, [])
+
+  // Scrolling makes the whole herd hop: every scroll re-triggers a
+  // fall-from-above that lands back on the viewport floor. Gated to one jump
+  // at a time so continuous scrolling produces repeated hops, not hovering.
+  useEffect(() => {
+    function onScroll() {
+      const n = nowRef.current
+      if (n - fallStartRef.current >= JUMP_RETRIGGER_MS) fallStartRef.current = n
+    }
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
   const tally = useMemo(() => dinoTallyFromRows(rows), [rows])
@@ -150,7 +170,7 @@ export default function CollectiveDinoRunners() {
     >
       {runners.map((runner) => {
         const track = groundTracks[runner.trackIndex % groundTracks.length]
-        const pose = poseOnTrack(runner, track, now)
+        const pose = poseOnTrack(runner, track, now, fallStartRef.current)
 
         return (
           <div
@@ -214,105 +234,76 @@ function makeRunners(species: Species, count: number): Runner[] {
       offset: index * (trex ? 7311 : 4217) + (trex ? 13_000 : 0),
       reverse: (index + (trex ? 1 : 0)) % 2 === 1,
       fallHeight: (trex ? 92 + (index % 4) * 18 : 68 + (index % 5) * 12) * (large ? 1.45 : 1),
-      fallMs: (trex ? 780 + (index % 3) * 70 : 560 + (index % 4) * 55) * (large ? 1.25 : 1),
-      waitMs: trex ? 34_000 + (index % 7) * 3100 : 24_000 + (index % 11) * 1900,
+      fallMs: (trex ? 640 + (index % 3) * 60 : 520 + (index % 4) * 45) * (large ? 1.2 : 1),
+      fallDelay: (index % 6) * 45 + (trex ? 0 : 25),
       spawnRatio: ((index * (trex ? 41 : 29) + (trex ? 17 : 7)) % 100) / 100,
     }
   })
 }
 
-function poseOnTrack(runner: Runner, track: GroundTrack, now: number): RunnerPose {
+function poseOnTrack(runner: Runner, track: GroundTrack, now: number, fallStart: number): RunnerPose {
   const size = runner.size * track.scale
   const height = size * CHROME_DINO_ASPECT
   const speed = runner.speed * (track.viewportWidth < 640 ? 0.58 : 1)
-  const runMs = Math.max(18_000, (track.length / speed) * 1000)
-  const cycleMs = runner.waitMs + runner.fallMs + runMs
   const frame = Math.floor((now + runner.offset) / CHROME_DINO_FRAME_MS) % 2 as 0 | 1
   const movingLeft = runner.reverse
   const edgePadding = Math.max(2, size * 0.18)
   const leftBound = edgePadding
   const rightBound = Math.max(leftBound, track.viewportWidth - size - edgePadding)
   const runRange = Math.max(1, rightBound - leftBound)
-  const landingX = leftBound + runner.spawnRatio * runRange
   const groundY = track.y1 - height
 
-  function runningPose(runElapsedMs: number): RunnerPose {
-    const signedDistance = (runElapsedMs / 1000) * speed * (movingLeft ? -1 : 1)
-    const currentOffset = pingPong(runner.spawnRatio * runRange + signedDistance, runRange)
-    const nextOffset = pingPong(runner.spawnRatio * runRange + signedDistance + (movingLeft ? -1 : 1) * speed * 0.016, runRange)
-    const landingAge = Math.min(1, runElapsedMs / 180)
-    const landingBounce = (1 - landingAge) * Math.sin(landingAge * Math.PI) * 3
-    const movingRight = nextOffset >= currentOffset
+  // Horizontal: never stop — ping-pong across the viewport floor forever.
+  const signedDistance = (now / 1000) * speed * (movingLeft ? -1 : 1)
+  const here = pingPong(runner.spawnRatio * runRange + signedDistance, runRange)
+  const ahead = pingPong(
+    runner.spawnRatio * runRange + signedDistance + (movingLeft ? -1 : 1) * speed * 0.016,
+    runRange,
+  )
+  const movingRight = ahead >= here
+  const x = leftBound + here
 
-    return {
-      frame,
-      phase: 'running',
-      size,
-      height,
-      x: leftBound + currentOffset,
-      y: groundY - landingBounce,
-      angle: 0,
-      flip: movingRight ? 1 : -1,
-      opacity: 0.94,
-      scaleY: 0.9 + landingAge * 0.1,
-    }
-  }
+  // Vertical: a fall-from-above triggered on load and on every scroll. Each
+  // dino starts `fallHeight` above the floor and accelerates down (gravity),
+  // then squashes on impact. Between falls it just runs on the floor.
+  const t = now - fallStart - runner.fallDelay
+  let y = groundY
+  let phase: RunnerPose['phase'] = 'running'
+  let scaleY = 1
+  let angle = 0
 
-  if (now < runMs) {
-    return runningPose(positiveModulo(now + runner.offset, runMs))
-  }
-
-  const localMs = positiveModulo(now - runMs + runner.offset, cycleMs)
-
-  if (localMs < runner.waitMs) {
-    const offscreenX = movingLeft ? track.x2 + size * 1.5 : track.x1 - size * 1.5
-    return {
-      frame,
-      phase: 'waiting',
-      size,
-      height,
-      x: offscreenX,
-      y: groundY,
-      angle: 0,
-      flip: movingLeft ? -1 : 1,
-      opacity: 0,
-      scaleY: 1,
-    }
-  }
-
-  const afterWait = localMs - runner.waitMs
-  if (afterWait < runner.fallMs) {
-    const progress = afterWait / runner.fallMs
+  if (t >= 0 && t < runner.fallMs) {
+    const progress = t / runner.fallMs
     const gravity = progress * progress
-    const drift = (movingLeft ? -1 : 1) * size * 0.16 * progress
-    const landingSquash = progress > 0.86 ? 0.9 + (1 - progress) * 0.7 : 1
-    const visibleDrop = Math.max(0, (progress - 0.58) / 0.42)
-
-    return {
-      frame,
-      phase: 'falling',
-      size,
-      height,
-      x: landingX + drift,
-      y: groundY - runner.fallHeight * (1 - gravity),
-      angle: (movingLeft ? -1 : 1) * (1 - progress) * 5,
-      flip: movingLeft ? -1 : 1,
-      opacity: Math.min(0.94, visibleDrop * 0.94),
-      scaleY: landingSquash,
-    }
+    y = groundY - runner.fallHeight * (1 - gravity)
+    phase = 'falling'
+    angle = (movingRight ? 1 : -1) * (1 - progress) * 6
+  } else if (t >= runner.fallMs && t < runner.fallMs + LAND_SQUASH_MS) {
+    const land = (t - runner.fallMs) / LAND_SQUASH_MS
+    scaleY = 0.8 + 0.2 * land
   }
 
-  const runElapsedMs = afterWait - runner.fallMs
-  return runningPose(runElapsedMs)
+  return {
+    frame,
+    phase,
+    size,
+    height,
+    x,
+    y,
+    angle,
+    flip: movingRight ? 1 : -1,
+    opacity: 0.94,
+    scaleY,
+  }
 }
 
 function measureGroundTracks(): GroundTrack[] {
   const width = window.innerWidth
   const height = window.innerHeight
-  const footer = document.querySelector('footer')?.getBoundingClientRect()
-  const footerTop = footer && footer.top > 120 && footer.top < height + 48 ? footer.top : null
+  // Always the bottom of the viewport — the runners layer is position:fixed,
+  // so this keeps the herd glued to the viewport floor while scrolling.
   const floorPadding = width < 640 ? 3 : 5
-  const floorY = Math.min(height - floorPadding, (footerTop ?? height) - floorPadding)
+  const floorY = height - floorPadding
   const laneGap = width < 640 ? 8 : 12
   const laneCount = width < 640 ? 3 : 4
   const trackWidth = width * (width < 640 ? 3.2 : 3.9)
