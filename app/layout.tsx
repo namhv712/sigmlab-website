@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import './globals.css'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
+import CollectiveDinoRunners from '@/components/wc/CollectiveDinoRunners'
 
 export const metadata: Metadata = {
   title: {
@@ -30,6 +31,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body className="min-h-screen flex flex-col bg-gray-50 font-sans antialiased">
         <Navbar />
+        <CollectiveDinoRunners />
         <main className="flex-1">
           {children}
         </main>

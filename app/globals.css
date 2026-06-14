@@ -33,3 +33,78 @@
 ::-webkit-scrollbar-track { background: #f1f1f1; }
 ::-webkit-scrollbar-thumb { background: #94a3b8; border-radius: 99px; }
 ::-webkit-scrollbar-thumb:hover { background: #64748b; }
+
+.dino-runners {
+  position: fixed;
+  inset: 0;
+  z-index: 45;
+  overflow: hidden;
+  pointer-events: none;
+  contain: layout style;
+}
+
+.dino-runner {
+  --dino-size: 52px;
+  --dino-height: 34px;
+  --dino-x: 0px;
+  --dino-y: 0px;
+  --dino-angle: 0deg;
+  --dino-flip: 1;
+  --dino-opacity: 0.94;
+  --dino-scale-y: 1;
+  --dino-color: #535353;
+  --dino-sprite-sheet-width: 1456px;
+  --dino-sprite-sheet-height: 72px;
+  --dino-mask-x: -1105px;
+  --dino-mask-y: -1px;
+  --dino-eye-x: 32px;
+  --dino-eye-y: 8px;
+  --dino-eye-size: 2px;
+
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  width: var(--dino-size);
+  height: var(--dino-height);
+  opacity: var(--dino-opacity);
+  transform: translate3d(var(--dino-x), var(--dino-y), 0);
+  will-change: transform, opacity;
+}
+
+.dino-runner--trex {
+  z-index: 2;
+}
+
+.dino-runner--raptor {
+  z-index: 1;
+}
+
+.chrome-dino-sprite {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: var(--dino-color);
+  image-rendering: pixelated;
+  transform: rotate(var(--dino-angle)) scaleX(var(--dino-flip)) scaleY(var(--dino-scale-y));
+  transform-origin: 50% 100%;
+  -webkit-mask-image: url('/wc/chrome-offline-sprite.png');
+  mask-image: url('/wc/chrome-offline-sprite.png');
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: var(--dino-sprite-sheet-width) var(--dino-sprite-sheet-height);
+  mask-size: var(--dino-sprite-sheet-width) var(--dino-sprite-sheet-height);
+  -webkit-mask-position: var(--dino-mask-x) var(--dino-mask-y);
+  mask-position: var(--dino-mask-x) var(--dino-mask-y);
+}
+
+.chrome-dino-sprite::after {
+  content: '';
+  position: absolute;
+  left: var(--dino-eye-x);
+  top: var(--dino-eye-y);
+  width: var(--dino-eye-size);
+  height: var(--dino-eye-size);
+  background: #111827;
+}

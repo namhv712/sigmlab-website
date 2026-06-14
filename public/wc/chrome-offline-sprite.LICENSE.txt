@@ -1,0 +1,2 @@
+Source: Chromium project, components/neterror/resources/images/default_100_percent/offline/100-offline-sprite.png
+License: BSD-style Chromium license, see https://chromium.googlesource.com/chromium/src/+/main/LICENSE

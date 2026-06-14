@@ -31,7 +31,7 @@ export default function LeaderboardTable({
 
   return (
     <div className="wc-panel overflow-x-auto">
-      <table className="w-full min-w-[650px] text-sm">
+      <table className="w-full min-w-[860px] text-sm">
         <thead>
           <tr className="bg-white/[0.06] text-left text-[11px] uppercase tracking-wide text-white/50">
             <th className="px-3 py-3 font-semibold">Hạng</th>
@@ -39,7 +39,7 @@ export default function LeaderboardTable({
             <th className="px-2 py-3 text-center font-semibold">Đúng</th>
             <th className="px-2 py-3 text-center font-semibold">Sai</th>
             <th className="px-2 py-3 text-center font-semibold">Bỏ lỡ</th>
-            <th className="px-3 py-3 text-right font-semibold">Đàn khủng long</th>
+            <th className="w-[260px] px-5 py-3 text-right font-semibold">Đàn khủng long</th>
           </tr>
         </thead>
         <tbody>
@@ -69,10 +69,12 @@ export default function LeaderboardTable({
                 </td>
                 <td className="px-2 py-2.5 text-center text-amber-300/80">{r.wrong}</td>
                 <td className="px-2 py-2.5 text-center text-red-400/80">{r.missed}</td>
-                <td className="px-3 py-2.5 text-right text-xs font-black text-white">
+                <td className="w-[260px] px-5 py-2.5 text-right text-xs font-black text-white">
                   {tally.total > 0 ? (
                     <span className="inline-flex flex-col items-end gap-0.5">
-                      <span className="text-sm text-wc-gold">{dinoSummary(tally)}</span>
+                      <span className="whitespace-nowrap text-sm text-wc-gold">
+                        {dinoSummary(tally)}
+                      </span>
                       <span className="text-[10px] uppercase tracking-wide text-white/35">
                         {prestige === 'legend' ? 'danh dự tối cao' : 'đóng góp cho đàn'}
                       </span>
