@@ -1,7 +1,14 @@
 'use client'
 
 import type { LeaderRow } from '@/lib/wcTypes'
-import { dinoSummary, dinoTallyFromRows, dinoTier, type DinoTier } from '@/lib/wcDinos'
+import {
+  dinoSummary,
+  dinoSummaryParts,
+  dinoTallyFromRows,
+  dinoTier,
+  hasLegendaryPack,
+  type DinoTier,
+} from '@/lib/wcDinos'
 
 const DIALOGUES: Record<DinoTier, string[]> = {
   hungry: ['Grrr... đàn còn bé lắm!', 'Cho tôi thêm Raptor đi!'],
@@ -9,15 +16,50 @@ const DIALOGUES: Record<DinoTier, string[]> = {
   legend: ['Kỷ Phấn Trắng trở lại!', 'Đàn này nghe tên đã thấy trang trọng.'],
 }
 
+// Extra one-liners that scale with the raw pack size (total dinos), so the
+// chatter gets sillier the bigger the herd grows.
+function packQuotes(total: number, legendary: boolean): string[] {
+  if (legendary)
+    return [
+      'Cả trăm con tụ về — huyền thoại sắc tím giáng trần!',
+      'Mặt đất rung chuyển, đàn huyền thoại đã thức giấc!',
+    ]
+  if (total >= 50)
+    return [
+      'Đông tới mức đếm muốn trẹo cả lưỡi!',
+      'Thêm chút nữa là chạm ngưỡng huyền thoại rồi đó!',
+    ]
+  if (total >= 20)
+    return [
+      'Sân cỏ bắt đầu chật chội rồi nha!',
+      'Đàn này gáy một tiếng là cả làng nghe thấy.',
+    ]
+  if (total >= 10)
+    return [
+      'Gom đủ một "khổng lồ" rồi đấy, oách chưa!',
+      'Đàn nhỏ mà gân, đừng coi thường.',
+    ]
+  if (total >= 1)
+    return [
+      'Mới lèo tèo vài con, nuôi tiếp đi sếp!',
+      'Một chú Raptor đang gặm cỏ lẻ loi.',
+    ]
+  return ['Sân vắng tanh, chưa con khủng long nào.']
+}
+
 export default function DinosaurFundTotal({ rows }: { rows: LeaderRow[] }) {
   const tally = dinoTallyFromRows(rows)
   const tier = dinoTier(tally.contribution)
-  const label =
-    tier === 'hungry'
+  const legendary = hasLegendaryPack(tally)
+  const parts = dinoSummaryParts(tally)
+  const label = legendary
+    ? 'Đàn khủng long huyền thoại'
+    : tier === 'hungry'
       ? 'Khủng long đang đói'
       : tier === 'herd'
         ? 'Đàn khủng long hùng hậu'
         : 'Khủng long huyền thoại'
+  const quotes = [...DIALOGUES[tier], ...packQuotes(tally.total, legendary)]
 
   return (
     <aside
@@ -30,32 +72,65 @@ export default function DinosaurFundTotal({ rows }: { rows: LeaderRow[] }) {
       >
         <div className="pointer-events-none absolute right-0 top-full mt-2 w-56 rounded-2xl border border-white/15 bg-white px-3 py-2 text-left text-[11px] font-bold leading-snug text-slate-900 opacity-0 shadow-xl transition duration-200 group-hover:opacity-100 group-focus:opacity-100 sm:right-full sm:top-2 sm:mr-3 sm:mt-0">
           <span className="absolute -top-1 right-8 h-3 w-3 rotate-45 border-l border-t border-white/15 bg-white sm:-right-1 sm:top-4 sm:border-l-0 sm:border-r sm:border-t" />
-          {DIALOGUES[tier].map((line) => (
+          {quotes.map((line) => (
             <span key={line} className="block">
               Khủng long: {line}
             </span>
           ))}
         </div>
 
-        <DinosaurIllustration tier={tier} label={label} />
+        <DinosaurIllustration tier={tier} label={label} legendary={legendary} />
 
         <p className="mt-1 text-[10px] font-black uppercase tracking-[0.16em] text-wc-gold/80">
           Tổng đàn
         </p>
         <p className="mt-0.5 text-sm font-black leading-tight text-white sm:text-base">
-          {dinoSummary(tally)}
+          {tally.total <= 0 ? (
+            dinoSummary(tally)
+          ) : legendary ? (
+            parts.map((part, index) => (
+              <span key={part.text}>
+                {index > 0 ? ' · ' : ''}
+                <span
+                  className={
+                    part.tier === 'legendary'
+                      ? 'text-purple-300 drop-shadow-[0_0_6px_rgba(168,85,247,0.55)]'
+                      : undefined
+                  }
+                >
+                  {part.text}
+                </span>
+              </span>
+            ))
+          ) : (
+            dinoSummary(tally)
+          )}
         </p>
       </div>
     </aside>
   )
 }
 
-function DinosaurIllustration({ tier, label }: { tier: DinoTier; label: string }) {
+function DinosaurIllustration({
+  tier,
+  label,
+  legendary,
+}: {
+  tier: DinoTier
+  label: string
+  legendary: boolean
+}) {
   const hungry = tier === 'hungry'
-  const legend = tier === 'legend'
-  const body = hungry ? '#8fbf7d' : legend ? '#e2b33b' : '#27b299'
-  const bodyDark = hungry ? '#4f7c45' : legend ? '#946b12' : '#087967'
-  const belly = hungry ? '#d8e2a4' : legend ? '#ffe08a' : '#a8ead8'
+  const legendContrib = tier === 'legend'
+  // A purple legendary pack outranks the gold contribution-legend look; both
+  // wear the crown.
+  const crown = legendary || legendContrib
+  const body = legendary ? '#a855f7' : hungry ? '#8fbf7d' : legendContrib ? '#e2b33b' : '#27b299'
+  const bodyDark = legendary ? '#6b21a8' : hungry ? '#4f7c45' : legendContrib ? '#946b12' : '#087967'
+  const belly = legendary ? '#e9d5ff' : hungry ? '#d8e2a4' : legendContrib ? '#ffe08a' : '#a8ead8'
+  const crownFill = legendary ? '#f3e8ff' : '#f4f0d8'
+  const crownStroke = legendary ? '#7e22ce' : '#a98b4c'
+  const spikeFill = legendary ? '#f3e8ff' : legendContrib ? '#ffe08a' : '#d7f4e9'
   const eye = '#101827'
 
   return (
@@ -67,11 +142,11 @@ function DinosaurIllustration({ tier, label }: { tier: DinoTier; label: string }
     >
       <ellipse cx="124" cy="155" rx={hungry ? '72' : '88'} ry="11" fill="rgba(0,0,0,0.24)" />
 
-      {legend && (
+      {crown && (
         <g aria-hidden="true">
-          <circle cx="40" cy="138" r="12" fill="#f4f0d8" stroke="#a98b4c" strokeWidth="4" />
-          <circle cx="200" cy="132" r="14" fill="#f4f0d8" stroke="#a98b4c" strokeWidth="4" />
-          <path d="M65 134c10-19 33-22 45-5-14-5-28-3-45 5Z" fill="#f4f0d8" stroke="#a98b4c" strokeWidth="4" />
+          <circle cx="40" cy="138" r="12" fill={crownFill} stroke={crownStroke} strokeWidth="4" />
+          <circle cx="200" cy="132" r="14" fill={crownFill} stroke={crownStroke} strokeWidth="4" />
+          <path d="M65 134c10-19 33-22 45-5-14-5-28-3-45 5Z" fill={crownFill} stroke={crownStroke} strokeWidth="4" />
         </g>
       )}
 
@@ -125,7 +200,7 @@ function DinosaurIllustration({ tier, label }: { tier: DinoTier; label: string }
         <rect x={hungry ? '145' : '158'} y={hungry ? '134' : '143'} width="17" height="25" rx="7" />
       </g>
 
-      <g aria-hidden="true" fill={legend ? '#ffe08a' : '#d7f4e9'} stroke={bodyDark} strokeLinejoin="round" strokeWidth="4">
+      <g aria-hidden="true" fill={spikeFill} stroke={bodyDark} strokeLinejoin="round" strokeWidth="4">
         <path d="M76 69 85 47l10 25Z" />
         <path d="M108 62 118 39l11 26Z" />
         <path d="M141 64 152 43l9 25Z" />

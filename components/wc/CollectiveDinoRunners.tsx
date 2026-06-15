@@ -1,7 +1,7 @@
 'use client'
 
 import { type CSSProperties, useEffect, useMemo, useRef, useState } from 'react'
-import { DINO_GROUP_SIZE, dinoTallyFromRows } from '@/lib/wcDinos'
+import { DINO_GROUP_SIZE, DINO_LEGEND_SIZE, dinoTallyFromRows } from '@/lib/wcDinos'
 import { getLeaderboard } from '@/lib/wcApi'
 import type { LeaderRow } from '@/lib/wcTypes'
 
@@ -206,7 +206,10 @@ export default function CollectiveDinoRunners() {
               '--dino-flip': pose.flip,
               '--dino-opacity': pose.opacity,
               '--dino-scale-y': pose.scaleY,
-              '--dino-color': CHROME_DINO_COLORS[runner.species],
+              '--dino-color':
+                runner.weight === DINO_LEGEND_SIZE
+                  ? '#a855f7' // purple — the legendary super-pack boss
+                  : CHROME_DINO_COLORS[runner.species],
               '--dino-sprite-sheet-width': `${pose.size * (CHROME_DINO_SPRITE_WIDTH / def.frameW)}px`,
               '--dino-sprite-sheet-height': `${pose.height * (CHROME_DINO_SPRITE_HEIGHT / def.frameH)}px`,
               '--dino-mask-x': `${-pose.size * (def.frames[pose.frame] / def.frameW)}px`,
@@ -225,9 +228,11 @@ export default function CollectiveDinoRunners() {
 }
 
 function makeRunners(species: Species, count: number): Runner[] {
-  const largeCount = Math.floor(count / DINO_GROUP_SIZE)
+  const legendCount = Math.floor(count / DINO_LEGEND_SIZE)
+  const largeCount = Math.floor((count % DINO_LEGEND_SIZE) / DINO_GROUP_SIZE)
   const singleCount = count % DINO_GROUP_SIZE
   const weights = [
+    ...Array.from({ length: legendCount }, () => DINO_LEGEND_SIZE),
     ...Array.from({ length: largeCount }, () => DINO_GROUP_SIZE),
     ...Array.from({ length: singleCount }, () => 1),
   ]
@@ -235,23 +240,29 @@ function makeRunners(species: Species, count: number): Runner[] {
   return weights.map((weight, index) => {
     const trex = species === 'trex'
     const large = weight === DINO_GROUP_SIZE
+    const legend = weight === DINO_LEGEND_SIZE
     // Size tiers, smallest → largest, never overlapping:
-    //   small raptor (22-26) < large raptor (33-39) < normal trex (44-48) < large trex (97-106).
+    //   small raptor (22-26) < large raptor (33-39) < normal trex (44-48) <
+    //   large trex (97-106) < legendary super-pack (the towering purple boss).
     // A large raptor (a pack of 10) stays smaller than a single normal T-Rex.
     const baseSize = trex ? 44 + (index % 2) * 4 : 22 + (index % 3) * 2
     const baseSpeed = trex ? 42 + (index % 3) * 4 : 66 + (index % 4) * 5
+    const sizeMult = legend ? (trex ? 3.0 : 4.2) : large ? (trex ? 2.2 : 3.2) : 1
+    const speedMult = legend ? (trex ? 0.68 : 0.72) : large ? (trex ? 0.82 : 0.86) : 1
+    const fallHeightMult = legend ? 1.8 : large ? 1.45 : 1
+    const fallMsMult = legend ? 1.4 : large ? 1.2 : 1
 
     return {
       id: `${species}-${weight}-${index}`,
       species,
       weight,
       trackIndex: index * 3 + (trex ? 1 : 0),
-      size: baseSize * (large ? (trex ? 2.2 : 3.2) : 1) * SIZE_SCALE,
-      speed: baseSpeed * (large ? (trex ? 0.82 : 0.86) : 1),
+      size: baseSize * sizeMult * SIZE_SCALE,
+      speed: baseSpeed * speedMult,
       offset: index * (trex ? 7311 : 4217) + (trex ? 13_000 : 0),
       reverse: (index + (trex ? 1 : 0)) % 2 === 1,
-      fallHeight: (trex ? 92 + (index % 4) * 18 : 68 + (index % 5) * 12) * (large ? 1.45 : 1),
-      fallMs: (trex ? 640 + (index % 3) * 60 : 520 + (index % 4) * 45) * (large ? 1.2 : 1),
+      fallHeight: (trex ? 92 + (index % 4) * 18 : 68 + (index % 5) * 12) * fallHeightMult,
+      fallMs: (trex ? 640 + (index % 3) * 60 : 520 + (index % 4) * 45) * fallMsMult,
       fallDelay: (index % 6) * 45 + (trex ? 0 : 25),
       spawnRatio: ((index * (trex ? 41 : 29) + (trex ? 17 : 7)) % 100) / 100,
     }

@@ -29,6 +29,19 @@ describe('DinosaurFundTotal', () => {
     expect(dinoSummary(tally)).toBe('9 T-Rex · 8 Raptor khổng lồ · 2 Raptor')
   })
 
+  it('rolls every ten giants into a legendary huyền thoại', () => {
+    // 235 wrong -> 2 huyền thoại + 3 khổng lồ + 5 Raptor
+    const tally = dinoTallyFromRows([row('A', 235, 0)])
+    expect(tally.raptors).toBe(235)
+    expect(dinoSummary(tally)).toBe('2 Raptor huyền thoại · 3 Raptor khổng lồ · 5 Raptor')
+  })
+
+  it('renders legendary raptor packs in purple', () => {
+    render(<DinosaurFundTotal rows={[row('A', 235, 0)]} />)
+    const legendPart = screen.getByText('2 Raptor huyền thoại')
+    expect(legendPart.className).toContain('text-purple')
+  })
+
   it('renders the dinosaur pack without showing cash', () => {
     render(<DinosaurFundTotal rows={[row('A', 2, 1), row('B', 1, 3)]} />)
     expect(screen.getByText('Tổng đàn')).toBeInTheDocument()
