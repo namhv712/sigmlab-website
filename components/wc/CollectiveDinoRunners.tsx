@@ -81,6 +81,17 @@ const CHROME_DINO_COLORS: Record<Species, string> = {
   raptor: '#7d8c7f', // gray-greenish — the smaller pack species
 }
 
+// Run speed is purely a function of body size: bigger legs cover more ground, so
+// speed scales linearly with the rendered size (px/s per px of size). Raptors
+// are the nimble pack hunters — at the SAME size a raptor runs 1.5× as fast as a
+// T-Rex. This is the single source of truth for runner speed (no random base).
+export const TREX_SPEED_PER_PX = 0.6
+export const RAPTOR_SPEED_FACTOR = 1.5
+export function dinoSpeed(size: number, species: Species): number {
+  const perPx = species === 'raptor' ? TREX_SPEED_PER_PX * RAPTOR_SPEED_FACTOR : TREX_SPEED_PER_PX
+  return size * perPx
+}
+
 export default function CollectiveDinoRunners() {
   const [rows, setRows] = useState<LeaderRow[]>([])
   const [tracks, setTracks] = useState<GroundTrack[]>([])
@@ -246,19 +257,20 @@ function makeRunners(species: Species, count: number): Runner[] {
     //   large trex (97-106) < legendary super-pack (the towering purple boss).
     // A large raptor (a pack of 10) stays smaller than a single normal T-Rex.
     const baseSize = trex ? 44 + (index % 2) * 4 : 22 + (index % 3) * 2
-    const baseSpeed = trex ? 42 + (index % 3) * 4 : 66 + (index % 4) * 5
     const sizeMult = legend ? (trex ? 3.0 : 4.2) : large ? (trex ? 2.2 : 3.2) : 1
-    const speedMult = legend ? (trex ? 0.68 : 0.72) : large ? (trex ? 0.82 : 0.86) : 1
     const fallHeightMult = legend ? 1.8 : large ? 1.45 : 1
     const fallMsMult = legend ? 1.4 : large ? 1.2 : 1
+    const size = baseSize * sizeMult * SIZE_SCALE
 
     return {
       id: `${species}-${weight}-${index}`,
       species,
       weight,
       trackIndex: index * 3 + (trex ? 1 : 0),
-      size: baseSize * sizeMult * SIZE_SCALE,
-      speed: baseSpeed * speedMult,
+      size,
+      // Speed follows size (raptors 1.5× a same-size T-Rex), so bigger dinos
+      // stride faster and the legendary boss leads the herd.
+      speed: dinoSpeed(size, species),
       offset: index * (trex ? 7311 : 4217) + (trex ? 13_000 : 0),
       reverse: (index + (trex ? 1 : 0)) % 2 === 1,
       fallHeight: (trex ? 92 + (index % 4) * 18 : 68 + (index % 5) * 12) * fallHeightMult,

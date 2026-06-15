@@ -1,6 +1,24 @@
 import { afterEach, describe, expect, it, vi } from 'vitest'
 import { cleanup, render, screen } from '@testing-library/react'
-import CollectiveDinoRunners from '@/components/wc/CollectiveDinoRunners'
+import CollectiveDinoRunners, { dinoSpeed } from '@/components/wc/CollectiveDinoRunners'
+
+describe('dinoSpeed', () => {
+  it('scales speed linearly with size', () => {
+    expect(dinoSpeed(100, 'trex')).toBeCloseTo(2 * dinoSpeed(50, 'trex'))
+    expect(dinoSpeed(100, 'raptor')).toBeCloseTo(2 * dinoSpeed(50, 'raptor'))
+  })
+
+  it('makes a raptor 1.5x faster than a T-Rex of the same size', () => {
+    for (const size of [40, 73, 160, 220]) {
+      expect(dinoSpeed(size, 'raptor')).toBeCloseTo(1.5 * dinoSpeed(size, 'trex'))
+    }
+  })
+
+  it('gives a bigger dino a higher speed than a smaller one of the same species', () => {
+    expect(dinoSpeed(160, 'trex')).toBeGreaterThan(dinoSpeed(73, 'trex'))
+    expect(dinoSpeed(160, 'raptor')).toBeGreaterThan(dinoSpeed(73, 'raptor'))
+  })
+})
 
 describe('CollectiveDinoRunners', () => {
   afterEach(() => {
