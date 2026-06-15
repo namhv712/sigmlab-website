@@ -28,6 +28,13 @@ export interface Match {
   picks?: MatchPick[] // everyone's picks; present only for finished matches
 }
 
+// One edge of the public copy graph: `follower` copies `target`. Shown level by
+// level (each direct edge is its own row), never flattened into a chain.
+export interface CopyLink {
+  follower: string
+  target: string
+}
+
 export interface LeaderRow {
   name: string
   vnd: number // net VND, ≤ 0 (penalty-only money model)

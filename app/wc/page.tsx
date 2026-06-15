@@ -16,6 +16,7 @@ import WcBanner from '@/components/wc/WcBanner'
 import MoneySummary from '@/components/wc/MoneySummary'
 import ConfirmPick from '@/components/wc/ConfirmPick'
 import CopyControl from '@/components/wc/CopyControl'
+import CopyRelations from '@/components/wc/CopyRelations'
 
 export default function WcPage() {
   const [matches, setMatches] = useState<Match[]>([])
@@ -32,6 +33,9 @@ export default function WcPage() {
 
   const [filter, setFilter] = useState<WcFilter>('all')
   const [day, setDay] = useState<string | null>(null)
+
+  // Bumped whenever a follow changes so the public copy board refreshes at once.
+  const [copyTick, setCopyTick] = useState(0)
 
   const mode = betting ? 'active' : 'view'
 
@@ -128,7 +132,15 @@ export default function WcPage() {
               <span className="rounded-full bg-emerald-500/15 px-3 py-1.5 text-xs font-semibold text-emerald-300">
                 Chế độ cược · {name}
               </span>
-              {name && <CopyControl name={name} onChanged={load} />}
+              {name && (
+                <CopyControl
+                  name={name}
+                  onChanged={() => {
+                    load()
+                    setCopyTick((t) => t + 1)
+                  }}
+                />
+              )}
               <button
                 onClick={onLogout}
                 className="rounded-full border border-white/15 px-3 py-1.5 text-xs font-semibold text-white/60 hover:text-white"
@@ -168,6 +180,8 @@ export default function WcPage() {
         {betting && name && <MoneySummary matches={matches} name={name} />}
 
         <NowNextStrip matches={matches} />
+
+        <CopyRelations version={copyTick} />
 
         <RulesPanel />
 

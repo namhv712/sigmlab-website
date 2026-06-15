@@ -146,6 +146,11 @@ export function upsertPick(userId, matchId, pick, copiedFrom = null) {
   stUpsertPick.run(userId, matchId, pick, now(), copiedFrom == null ? null : copiedFrom)
 }
 
+const stDeletePick = db.prepare(`DELETE FROM picks WHERE user_id=? AND match_id=?`)
+export function deletePick(userId, matchId) {
+  stDeletePick.run(userId, matchId)
+}
+
 const stUserPicks = db.prepare(`SELECT match_id, pick FROM picks WHERE user_id=?`)
 export function userPicks(userId) {
   const rows = stUserPicks.all(userId)
@@ -217,14 +222,23 @@ export function clearFollow(followerId) {
 const stFollowersOf = db.prepare(`SELECT follower_id AS id FROM follows WHERE target_id=?`)
 export const followersOf = (targetId) => stFollowersOf.all(targetId).map((r) => r.id)
 
+// The whole copy graph as name edges (follower copies target), for the public
+// "who is copying who" panel. Shown level by level — each direct edge is one
+// row; chains are read off as A→B and B→C, never flattened.
+const stAllFollows = db.prepare(
+  `SELECT fu.name AS follower, tu.name AS target
+   FROM follows f
+   JOIN users fu ON fu.id = f.follower_id
+   JOIN users tu ON tu.id = f.target_id
+   ORDER BY tu.name COLLATE NOCASE, fu.name COLLATE NOCASE`
+)
+export const allFollows = () => stAllFollows.all()
+
 const stPickRow = db.prepare(`SELECT pick, copied_from FROM picks WHERE user_id=? AND match_id=?`)
 const stMatchKickoff = db.prepare(`SELECT kickoff_utc FROM matches WHERE id=?`)
-// The target's own upcoming picks (kickoff still ahead of `nowSec`).
-const stUpcomingPicksOf = db.prepare(
-  `SELECT p.match_id AS matchId, p.pick AS pick
-   FROM picks p JOIN matches m ON m.id = p.match_id
-   WHERE p.user_id = ? AND m.kickoff_utc > ?`
-)
+// Every still-open match (kickoff ahead of `nowSec`) — used to fully re-sync a
+// follower against a target (covers both adopting and dropping picks).
+const stUpcomingMatchIds = db.prepare(`SELECT id FROM matches WHERE kickoff_utc > ?`)
 
 // Propagate one (target → match → pick) change to the target's followers, then
 // recurse so follow-chains (A→B→C) mirror too. Sticky + idempotent + manual-wins
@@ -245,19 +259,40 @@ export function propagateToFollowers(targetId, matchId, pick, nowSec) {
   }
 }
 
-// Initial fill when `followerId` starts following `targetId`: copy the target's
-// current upcoming picks into matches the follower has NO pick row for yet
-// (sticky — never clobbers a manual pick or a copy from a previous target).
-// Each filled pick also propagates down the follower's own chain. Returns count.
-export function fillFromTarget(followerId, targetId, nowSec) {
-  let filled = 0
-  for (const tp of stUpcomingPicksOf.all(targetId, nowSec)) {
-    if (stPickRow.get(followerId, tp.matchId)) continue // sticky
-    upsertPick(followerId, tp.matchId, tp.pick, targetId)
-    propagateToFollowers(followerId, tp.matchId, tp.pick, nowSec)
-    filled += 1
+// Make copying LIVE and transitive. When `followerId` (re)follows `targetId`,
+// re-materialize the follower's COPIED picks across every still-open match so
+// they exactly mirror the target right now: adopt the target's pick (overwriting
+// a copy from a previous target), and DROP a stale copied pick the target no
+// longer holds. Manual picks (copied_from = null) are never touched.
+//
+// Then cascade the same re-sync down the follower's own followers, so chains
+// re-root end to end: with A→B→C, if B switches to D, A re-roots onto D too.
+// `seen` guards against follow cycles (A↔B). Returns how many of the follower's
+// own matches changed (the "filled" count surfaced to the API caller).
+export function resyncFromTarget(followerId, targetId, nowSec, seen = new Set()) {
+  if (seen.has(followerId)) return 0 // cycle guard
+  seen.add(followerId)
+
+  let changed = 0
+  for (const { id: matchId } of stUpcomingMatchIds.all(nowSec)) {
+    const existing = stPickRow.get(followerId, matchId)
+    if (existing && existing.copied_from == null) continue // manual override wins
+    const tp = stPickRow.get(targetId, matchId)
+    if (tp) {
+      if (!existing || existing.pick !== tp.pick || existing.copied_from !== targetId) {
+        upsertPick(followerId, matchId, tp.pick, targetId)
+        changed += 1
+      }
+    } else if (existing) {
+      deletePick(followerId, matchId) // target dropped/never held it → stop copying it
+      changed += 1
+    }
   }
-  return filled
+
+  for (const fId of followersOf(followerId)) {
+    resyncFromTarget(fId, followerId, nowSec, seen)
+  }
+  return changed
 }
 
 // Leaderboard (penalty-only money model). EVERY finished match counts for

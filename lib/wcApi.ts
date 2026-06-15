@@ -1,7 +1,7 @@
 // Typed client for the World Cup betting API.
 // Same-origin proxy by default; token + name kept in localStorage. SSR-safe.
 
-import type { Match, LeaderRow, Pick } from './wcTypes'
+import type { Match, LeaderRow, Pick, CopyLink } from './wcTypes'
 
 export const BASE = process.env.NEXT_PUBLIC_WC_API || '/api/wc'
 
@@ -125,6 +125,15 @@ export async function follow(targetName: string): Promise<{ following: string; f
   if (!res.ok) throw new Error(`follow failed: ${res.status}`)
   const data = await res.json()
   return { following: data.following as string, filled: data.filled as number }
+}
+
+// The whole public copy graph: every follower→target edge, so everyone can see
+// who is copying who. Public (no auth).
+export async function getAllFollows(): Promise<CopyLink[]> {
+  const res = await fetch(`${BASE}/follows`)
+  if (!res.ok) throw new Error(`follows failed: ${res.status}`)
+  const data = await res.json()
+  return (data.follows as CopyLink[]) ?? []
 }
 
 export async function unfollow(): Promise<void> {

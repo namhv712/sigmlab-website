@@ -72,7 +72,7 @@ export default function CopyControl({
   if (following) {
     return (
       <span className="inline-flex items-center gap-1.5 rounded-full bg-wc-gold/15 px-3 py-1.5 text-xs font-semibold text-wc-gold">
-        📋 Đang copy: {following}
+        📋 Bạn đang copy: {following}
         <button
           onClick={onUnfollow}
           disabled={busy}

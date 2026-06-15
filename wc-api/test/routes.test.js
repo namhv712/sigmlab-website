@@ -202,6 +202,53 @@ test('follow validation: self-follow → 400, unknown target → 404', async () 
   assert.equal(ghost.statusCode, 404)
 })
 
+test('derivative copying: chains mirror the root and re-root when an intermediate switches', async () => {
+  const nowSec = Math.floor(Date.now() / 1000)
+  db.upsertMatch({
+    id: 'cb-chain', stage: 'group', group: 'E', kickoff_utc: nowSec + 86400,
+    team1: 'Brazil', team2: 'Serbia', ground: 'Z',
+  })
+  const aTok = await reg('CB-Ann', '11.0.4.1')
+  const bTok = await reg('CB-Ben', '11.0.4.2')
+  const cTok = await reg('CB-Ced', '11.0.4.3')
+  const dTok = await reg('CB-Dan', '11.0.4.4')
+
+  // C and D each have a (different) manual pick up front.
+  await post('/picks', { matchId: 'cb-chain', pick: '1' }, { ip: '11.0.4.3', headers: auth(cTok) })
+  await post('/picks', { matchId: 'cb-chain', pick: '2' }, { ip: '11.0.4.4', headers: auth(dTok) })
+
+  // Build the chain A → B → C. A should end up mirroring C's '1' through B.
+  await post('/follow', { targetName: 'CB-Ced' }, { ip: '11.0.4.2', headers: auth(bTok) })
+  await post('/follow', { targetName: 'CB-Ben' }, { ip: '11.0.4.1', headers: auth(aTok) })
+  let a = db.userPickRows(db.getUserByName('CB-Ann').id)
+  let b = db.userPickRows(db.getUserByName('CB-Ben').id)
+  assert.equal(b['cb-chain'].pick, '1', 'B mirrors C')
+  assert.equal(a['cb-chain'].pick, '1', 'A mirrors C transitively through B')
+
+  // B switches to copy D → the whole chain re-roots: B and A now mirror D's '2'.
+  await post('/follow', { targetName: 'CB-Dan' }, { ip: '11.0.4.2', headers: auth(bTok) })
+  a = db.userPickRows(db.getUserByName('CB-Ann').id)
+  b = db.userPickRows(db.getUserByName('CB-Ben').id)
+  assert.equal(b['cb-chain'].pick, '2', 'B re-roots onto D')
+  assert.equal(a['cb-chain'].pick, '2', 'A re-roots onto D through B')
+
+  // A later manual pick by D still propagates down the live chain.
+  await post('/picks', { matchId: 'cb-chain', pick: 'X' }, { ip: '11.0.4.4', headers: auth(dTok) })
+  a = db.userPickRows(db.getUserByName('CB-Ann').id)
+  assert.equal(a['cb-chain'].pick, 'X', 'new root pick flows down to A')
+})
+
+test('GET /follows returns the public copy graph as name edges', async () => {
+  const res = await app.inject({ method: 'GET', url: '/follows' })
+  assert.equal(res.statusCode, 200)
+  const { follows } = J(res)
+  assert.ok(Array.isArray(follows))
+  // From the chain test above: A→B and B→D are active edges.
+  const has = (f, t) => follows.some((e) => e.follower === f && e.target === t)
+  assert.ok(has('CB-Ann', 'CB-Ben'), 'A copies B edge present')
+  assert.ok(has('CB-Ben', 'CB-Dan'), 'B copies D edge present')
+})
+
 test('finished-match breakdown reveals copiedFrom', async () => {
   const nowSec = Math.floor(Date.now() / 1000)
   // A future match the pair both bet on, which we then move to the past + score.

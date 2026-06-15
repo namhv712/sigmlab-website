@@ -15,8 +15,9 @@ import {
   getFollow,
   setFollow,
   clearFollow,
-  fillFromTarget,
+  resyncFromTarget,
   propagateToFollowers,
+  allFollows,
 } from './db.js'
 import { updateResults } from './results.js'
 
@@ -275,6 +276,10 @@ export default async function routes(fastify) {
     return { following: f ? f.targetName : null }
   })
 
+  // GET /follows → { follows: [{ follower, target }] }  (public) — the whole
+  // copy graph so everyone can see who is copying who, level by level.
+  fastify.get('/follows', async () => ({ follows: allFollows() }))
+
   // POST /follow {targetName}  (Bearer) — start copying targetName's future
   // picks. Replaces any existing follow, then fills the caller's empty upcoming
   // matches from the target. Returns how many matches were filled.
@@ -293,7 +298,9 @@ export default async function routes(fastify) {
     if (target.id === user.id) return reply.code(400).send({ error: 'cannot_follow_self' })
     setFollow(user.id, target.id)
     const now = Math.floor(Date.now() / 1000)
-    const filled = fillFromTarget(user.id, target.id, now)
+    // Live re-sync: adopt the target's current picks and re-root any chain of
+    // followers below us onto the new target.
+    const filled = resyncFromTarget(user.id, target.id, now)
     return { ok: true, following: target.name, filled }
   })
 
