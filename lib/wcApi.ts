@@ -39,6 +39,21 @@ export function logout() {
   s.removeItem(NAME_KEY)
 }
 
+const DINO_SEEN_PREFIX = 'wc_dino_seen_'
+
+// Last herd total the login celebration showed this member. Per-name so two
+// people sharing a device keep separate baselines. null = never celebrated.
+export function getDinoSeen(name: string): number | null {
+  const raw = ls()?.getItem(DINO_SEEN_PREFIX + name)
+  if (raw == null) return null
+  const n = Number(raw)
+  return Number.isFinite(n) ? n : null
+}
+
+export function setDinoSeen(name: string, total: number): void {
+  ls()?.setItem(DINO_SEEN_PREFIX + name, String(total))
+}
+
 function authHeaders(): Record<string, string> {
   const token = getToken()
   return token ? { Authorization: `Bearer ${token}` } : {}

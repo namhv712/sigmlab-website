@@ -4,8 +4,10 @@ import { useCallback, useEffect, useMemo, useState } from 'react'
 import Link from 'next/link'
 import type { Match, Pick } from '@/lib/wcTypes'
 import { vnDayKey } from '@/lib/wcTime'
-import { getSchedule, getToken, getName, logout } from '@/lib/wcApi'
+import { getSchedule, getToken, getName, logout, getLeaderboard, getDinoSeen, setDinoSeen } from '@/lib/wcApi'
 import { savePick } from '@/lib/wcApi'
+import { dinoTallyFromRow, dinoCelebration, type DinoCelebration as DinoCelebrationData } from '@/lib/wcDinos'
+import DinoCelebration from '@/components/wc/DinoCelebration'
 import MatchCard from '@/components/wc/MatchCard'
 import NowNextStrip from '@/components/wc/NowNextStrip'
 import DateStrip from '@/components/wc/DateStrip'
@@ -37,6 +39,9 @@ export default function WcPage() {
   // Bumped whenever a follow changes so the public copy board refreshes at once.
   const [copyTick, setCopyTick] = useState(0)
 
+  // Login celebration: shown when the member's dino herd has grown since last seen.
+  const [celebration, setCelebration] = useState<DinoCelebrationData | null>(null)
+
   const mode = betting ? 'active' : 'view'
 
   const load = useCallback(async () => {
@@ -52,14 +57,37 @@ export default function WcPage() {
     }
   }, [])
 
-  // Read session on mount (SSR-safe), then load + poll every 60s.
+  // Compare the member's current herd against the last total we celebrated and,
+  // if it grew, pop the fireworks. Always persist the new total so each herd is
+  // celebrated once. Best-effort: leaderboard hiccups never block the page.
+  const checkDinoGrowth = useCallback(async (memberName: string) => {
+    try {
+      const rows = await getLeaderboard()
+      const row = rows.find((r) => r.name === memberName)
+      // No matching row (e.g. name normalised server-side) → leave the stored
+      // baseline untouched so we never reset it to 0 and re-celebrate the whole
+      // herd on the next login.
+      if (!row) return
+      const tally = dinoTallyFromRow(row)
+      const cel = dinoCelebration(tally, getDinoSeen(memberName))
+      setDinoSeen(memberName, tally.total)
+      if (cel) setCelebration(cel)
+    } catch {
+      /* ignore — celebration is non-critical */
+    }
+  }, [])
+
+  // Read session on mount (SSR-safe), then load + poll every 60s. A returning
+  // logged-in member also gets a celebration if their herd grew while away.
   useEffect(() => {
     setBetting(!!getToken())
-    setNameState(getName())
+    const savedName = getName()
+    setNameState(savedName)
     load()
+    if (getToken() && savedName) checkDinoGrowth(savedName)
     const id = setInterval(load, 60_000)
     return () => clearInterval(id)
-  }, [load])
+  }, [load, checkDinoGrowth])
 
   const onLoginSuccess = useCallback(
     (loggedName: string) => {
@@ -67,8 +95,9 @@ export default function WcPage() {
       setNameState(loggedName)
       setGateOpen(false)
       load()
+      checkDinoGrowth(loggedName)
     },
-    [load],
+    [load, checkDinoGrowth],
   )
 
   const onLogout = useCallback(() => {
@@ -222,6 +251,10 @@ export default function WcPage() {
 
       {gateOpen && (
         <LoginGate onClose={() => setGateOpen(false)} onSuccess={onLoginSuccess} />
+      )}
+
+      {celebration && (
+        <DinoCelebration data={celebration} onClose={() => setCelebration(null)} />
       )}
     </div>
   )

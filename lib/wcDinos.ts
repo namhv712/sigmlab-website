@@ -122,3 +122,28 @@ export function dinoSummary(tally: Pick<DinoTally, 'raptors' | 'trexes' | 'total
 export function hasLegendaryPack(tally: Pick<DinoTally, 'raptors' | 'trexes'>): boolean {
   return tally.raptors >= DINO_LEGEND_SIZE || tally.trexes >= DINO_LEGEND_SIZE
 }
+
+export interface DinoCelebration {
+  total: number // the herd's full size right now
+  delta: number // how many new dinos arrived since last seen
+  parts: DinoSummaryPart[] // tier-coloured breakdown for the popup
+  legendary: boolean // any species reached a purple super-pack
+}
+
+// Decide whether a freshly-logged-in member earns a celebration. `seen` is the
+// herd total the popup last showed them (null = never seen). We celebrate only
+// when the herd grew — including the very first non-empty sighting — and report
+// just the growth as `delta`. The caller persists the new total afterwards.
+export function dinoCelebration(
+  tally: Pick<DinoTally, 'raptors' | 'trexes' | 'total'>,
+  seen: number | null,
+): DinoCelebration | null {
+  const baseline = seen ?? 0
+  if (tally.total <= baseline) return null
+  return {
+    total: tally.total,
+    delta: tally.total - baseline,
+    parts: dinoSummaryParts(tally),
+    legendary: hasLegendaryPack(tally),
+  }
+}
