@@ -94,6 +94,12 @@ export default function PickButtons({
         })}
       </div>
 
+      {!locked && match.copying && (
+        <p className="mt-2 text-center text-[11px] font-semibold text-wc-gold/80">
+          📋 Đang copy theo {match.copyingFrom} · bấm để tự chọn
+        </p>
+      )}
+
       {missed && (
         <p className="mt-2 text-center text-[11px] font-semibold text-red-300/80">
           Không chọn trận này · +1 T-Rex

@@ -15,6 +15,7 @@ import RulesPanel from '@/components/wc/RulesPanel'
 import WcBanner from '@/components/wc/WcBanner'
 import MoneySummary from '@/components/wc/MoneySummary'
 import ConfirmPick from '@/components/wc/ConfirmPick'
+import CopyControl from '@/components/wc/CopyControl'
 
 export default function WcPage() {
   const [matches, setMatches] = useState<Match[]>([])
@@ -127,6 +128,7 @@ export default function WcPage() {
               <span className="rounded-full bg-emerald-500/15 px-3 py-1.5 text-xs font-semibold text-emerald-300">
                 Chế độ cược · {name}
               </span>
+              {name && <CopyControl name={name} onChanged={load} />}
               <button
                 onClick={onLogout}
                 className="rounded-full border border-white/15 px-3 py-1.5 text-xs font-semibold text-white/60 hover:text-white"

@@ -100,6 +100,38 @@ export async function getMyPicks(): Promise<Record<string, Pick>> {
   return data.picks as Record<string, Pick>
 }
 
+// --- Copy-betting (live follow) -------------------------------------------
+
+// Who the caller is currently copying, or null.
+export async function getFollow(): Promise<string | null> {
+  const res = await fetch(`${BASE}/follow`, { headers: authHeaders() })
+  if (!res.ok) throw new Error(`follow status failed: ${res.status}`)
+  const data = await res.json()
+  return (data.following as string | null) ?? null
+}
+
+// Start copying `targetName`'s future picks. Returns how many matches were
+// filled. Throws a stable code: 'unknown_user' (404), 'cannot_follow_self' /
+// 'bad_request' (400), 'rate_limited' (429).
+export async function follow(targetName: string): Promise<{ following: string; filled: number }> {
+  const res = await fetch(`${BASE}/follow`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', ...authHeaders() },
+    body: JSON.stringify({ targetName }),
+  })
+  if (res.status === 404) throw new Error('unknown_user')
+  if (res.status === 429) throw new Error('rate_limited')
+  if (res.status === 400) throw new Error((await res.json().catch(() => ({}))).error || 'bad_request')
+  if (!res.ok) throw new Error(`follow failed: ${res.status}`)
+  const data = await res.json()
+  return { following: data.following as string, filled: data.filled as number }
+}
+
+export async function unfollow(): Promise<void> {
+  const res = await fetch(`${BASE}/unfollow`, { method: 'POST', headers: authHeaders() })
+  if (!res.ok) throw new Error(`unfollow failed: ${res.status}`)
+}
+
 // Throws on locked match (HTTP 423) or invalid pick (400).
 export async function savePick(matchId: string, pick: Pick): Promise<void> {
   const res = await fetch(`${BASE}/picks`, {

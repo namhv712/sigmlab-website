@@ -8,6 +8,7 @@ export type MatchStatus = 'upcoming' | 'live' | 'finished'
 export interface MatchPick {
   name: string
   pick: Pick
+  copiedFrom?: string // present when this pick was copied from another member
 }
 
 export interface Match {
@@ -22,6 +23,8 @@ export interface Match {
   score2: number | null
   status: MatchStatus
   myPick?: Pick | null
+  copying?: boolean // caller is copying this match from someone they follow
+  copyingFrom?: string | null // who the caller copies it from (blind: value hidden until kickoff)
   picks?: MatchPick[] // everyone's picks; present only for finished matches
 }
 

@@ -30,7 +30,13 @@ db.exec(`
     match_id TEXT,
     pick TEXT,
     updated_at INTEGER,
+    copied_from INTEGER,
     UNIQUE(user_id, match_id)
+  );
+  CREATE TABLE IF NOT EXISTS follows (
+    follower_id INTEGER PRIMARY KEY,
+    target_id INTEGER NOT NULL,
+    created_at INTEGER
   );
 `)
 
@@ -39,6 +45,11 @@ db.exec(`
 const userCols = db.prepare(`PRAGMA table_info(users)`).all().map((c) => c.name)
 if (!userCols.includes('pass_hash')) db.exec(`ALTER TABLE users ADD COLUMN pass_hash TEXT`)
 if (!userCols.includes('pass_salt')) db.exec(`ALTER TABLE users ADD COLUMN pass_salt TEXT`)
+
+// Migrate DBs created before copy-betting: a pick now records who it was copied
+// from (NULL = the user's own manual pick).
+const pickCols = db.prepare(`PRAGMA table_info(picks)`).all().map((c) => c.name)
+if (!pickCols.includes('copied_from')) db.exec(`ALTER TABLE picks ADD COLUMN copied_from INTEGER`)
 
 const now = () => Math.floor(Date.now() / 1000)
 
@@ -125,12 +136,14 @@ const stMatchExists = db.prepare(`SELECT 1 FROM matches WHERE id=?`)
 export const matchExists = (id) => !!stMatchExists.get(id)
 
 const stUpsertPick = db.prepare(`
-  INSERT INTO picks (user_id, match_id, pick, updated_at)
-  VALUES (?, ?, ?, ?)
-  ON CONFLICT(user_id, match_id) DO UPDATE SET pick=excluded.pick, updated_at=excluded.updated_at
+  INSERT INTO picks (user_id, match_id, pick, updated_at, copied_from)
+  VALUES (?, ?, ?, ?, ?)
+  ON CONFLICT(user_id, match_id) DO UPDATE SET
+    pick=excluded.pick, updated_at=excluded.updated_at, copied_from=excluded.copied_from
 `)
-export function upsertPick(userId, matchId, pick) {
-  stUpsertPick.run(userId, matchId, pick, now())
+// copiedFrom = null → the user's own manual pick; a user_id → copied from them.
+export function upsertPick(userId, matchId, pick, copiedFrom = null) {
+  stUpsertPick.run(userId, matchId, pick, now(), copiedFrom == null ? null : copiedFrom)
 }
 
 const stUserPicks = db.prepare(`SELECT match_id, pick FROM picks WHERE user_id=?`)
@@ -141,13 +154,29 @@ export function userPicks(userId) {
   return out
 }
 
+// Like userPicks but keeps provenance: { matchId: { pick, copiedFrom } }.
+// copiedFrom is the user_id this pick was copied from, or null for a manual pick.
+const stUserPickRows = db.prepare(`SELECT match_id, pick, copied_from FROM picks WHERE user_id=?`)
+export function userPickRows(userId) {
+  const out = {}
+  for (const r of stUserPickRows.all(userId)) {
+    out[r.match_id] = { pick: r.pick, copiedFrom: r.copied_from ?? null }
+  }
+  return out
+}
+
+const stUserById = db.prepare(`SELECT name FROM users WHERE id=?`)
+export const getUserName = (id) => stUserById.get(id)?.name ?? null
+
 // Every pick joined to its picker's name, grouped by match id:
 //   Map<matchId, [{ name, pick }]>  (names sorted A→Z within each match).
 // Used to reveal "who picked what" — only ever exposed for matches whose
 // kickoff has passed (picks are locked then), never for upcoming ones.
 const stPicksWithNames = db.prepare(
-  `SELECT p.match_id AS matchId, u.name AS name, p.pick AS pick
-   FROM picks p JOIN users u ON u.id = p.user_id`
+  `SELECT p.match_id AS matchId, u.name AS name, p.pick AS pick, cu.name AS copiedFrom
+   FROM picks p
+   JOIN users u ON u.id = p.user_id
+   LEFT JOIN users cu ON cu.id = p.copied_from`
 )
 export function picksByMatch() {
   const out = new Map()
@@ -157,10 +186,78 @@ export function picksByMatch() {
       arr = []
       out.set(r.matchId, arr)
     }
-    arr.push({ name: r.name, pick: r.pick })
+    arr.push(r.copiedFrom ? { name: r.name, pick: r.pick, copiedFrom: r.copiedFrom } : { name: r.name, pick: r.pick })
   }
   for (const arr of out.values()) arr.sort((a, b) => a.name.localeCompare(b.name))
   return out
+}
+
+// --- Copy-betting (live follow) -------------------------------------------
+// One active follow per user (follower_id is the primary key). Following a new
+// person replaces the old target.
+const stGetFollow = db.prepare(
+  `SELECT f.target_id AS targetId, u.name AS targetName
+   FROM follows f JOIN users u ON u.id = f.target_id WHERE f.follower_id = ?`
+)
+export const getFollow = (followerId) => stGetFollow.get(followerId) ?? null
+
+const stSetFollow = db.prepare(`
+  INSERT INTO follows (follower_id, target_id, created_at) VALUES (?, ?, ?)
+  ON CONFLICT(follower_id) DO UPDATE SET target_id=excluded.target_id, created_at=excluded.created_at
+`)
+export function setFollow(followerId, targetId) {
+  stSetFollow.run(followerId, targetId, now())
+}
+
+const stClearFollow = db.prepare(`DELETE FROM follows WHERE follower_id=?`)
+export function clearFollow(followerId) {
+  stClearFollow.run(followerId)
+}
+
+const stFollowersOf = db.prepare(`SELECT follower_id AS id FROM follows WHERE target_id=?`)
+export const followersOf = (targetId) => stFollowersOf.all(targetId).map((r) => r.id)
+
+const stPickRow = db.prepare(`SELECT pick, copied_from FROM picks WHERE user_id=? AND match_id=?`)
+const stMatchKickoff = db.prepare(`SELECT kickoff_utc FROM matches WHERE id=?`)
+// The target's own upcoming picks (kickoff still ahead of `nowSec`).
+const stUpcomingPicksOf = db.prepare(
+  `SELECT p.match_id AS matchId, p.pick AS pick
+   FROM picks p JOIN matches m ON m.id = p.match_id
+   WHERE p.user_id = ? AND m.kickoff_utc > ?`
+)
+
+// Propagate one (target → match → pick) change to the target's followers, then
+// recurse so follow-chains (A→B→C) mirror too. Sticky + idempotent + manual-wins
+// rules make this safe against cycles: an originator's manual pick blocks the
+// loop, and re-applying an identical value is a no-op.
+export function propagateToFollowers(targetId, matchId, pick, nowSec) {
+  const m = stMatchKickoff.get(matchId)
+  if (!m || m.kickoff_utc <= nowSec) return // only mirror while the match is still open
+  for (const fId of followersOf(targetId)) {
+    const existing = stPickRow.get(fId, matchId)
+    if (existing) {
+      if (existing.copied_from == null) continue // manual override wins
+      if (existing.copied_from !== targetId) continue // copied from a different target — sticky
+      if (existing.pick === pick) continue // idempotent
+    }
+    upsertPick(fId, matchId, pick, targetId)
+    propagateToFollowers(fId, matchId, pick, nowSec)
+  }
+}
+
+// Initial fill when `followerId` starts following `targetId`: copy the target's
+// current upcoming picks into matches the follower has NO pick row for yet
+// (sticky — never clobbers a manual pick or a copy from a previous target).
+// Each filled pick also propagates down the follower's own chain. Returns count.
+export function fillFromTarget(followerId, targetId, nowSec) {
+  let filled = 0
+  for (const tp of stUpcomingPicksOf.all(targetId, nowSec)) {
+    if (stPickRow.get(followerId, tp.matchId)) continue // sticky
+    upsertPick(followerId, tp.matchId, tp.pick, targetId)
+    propagateToFollowers(followerId, tp.matchId, tp.pick, nowSec)
+    filled += 1
+  }
+  return filled
 }
 
 // Leaderboard (penalty-only money model). EVERY finished match counts for

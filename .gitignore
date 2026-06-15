@@ -44,3 +44,7 @@ wc-api/wc.db-*
 *.tsbuildinfo
 next-env.d.ts
 wc-api/src/results.js.tsdb.bak
+
+# stray root-level sqlite (runtime data — never commit)
+/wc.db
+/*.db

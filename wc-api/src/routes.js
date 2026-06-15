@@ -6,10 +6,17 @@ import {
   createUserWithPassword,
   setUserPassword,
   userPicks,
+  userPickRows,
+  getUserName,
   picksByMatch,
   upsertPick,
   matchExists,
   setScore,
+  getFollow,
+  setFollow,
+  clearFollow,
+  fillFromTarget,
+  propagateToFollowers,
 } from './db.js'
 import { updateResults } from './results.js'
 
@@ -99,6 +106,8 @@ export default async function routes(fastify) {
   const adminLimiter = makeRateLimiter({ capacity: 5, refillPerSec: 0.1 })
   // 30 writes burst, refill 1 per 2s
   const pickLimiter = makeRateLimiter({ capacity: 30, refillPerSec: 0.5 })
+  // follow/unfollow: same shape as the pick limiter (a follow can fan out picks)
+  const followLimiter = makeRateLimiter({ capacity: 30, refillPerSec: 0.5 })
 
   // POST /view {passcode} → sets the shared view cookie on success.
   fastify.post('/view', async (req, reply) => {
@@ -130,10 +139,10 @@ export default async function routes(fastify) {
     const now = Math.floor(Date.now() / 1000)
     const ms = allMatches()
     const name = req.query && req.query.name
-    let picks = {}
+    let pickRows = {}
     if (name) {
       const u = getUserByName(String(name))
-      if (u) picks = userPicks(u.id)
+      if (u) pickRows = userPickRows(u.id)
     }
     // Everyone's picks per match — attached ONLY to finished matches so a
     // pending match never leaks who bet what before it's locked.
@@ -141,6 +150,20 @@ export default async function routes(fastify) {
     return {
       matches: ms.map((m) => {
         const status = deriveStatus(m, now)
+        // Caller's own pick. A COPIED pick on an UPCOMING match stays blind: we
+        // expose that it's covered (and by whom) but withhold the value until
+        // kickoff — same secrecy rule as a manual pick.
+        let mine = {}
+        if (name) {
+          const row = pickRows[m.id] ?? null
+          if (!row) {
+            mine = { myPick: null, copying: false }
+          } else if (row.copiedFrom != null && status === 'upcoming') {
+            mine = { myPick: null, copying: true, copyingFrom: getUserName(row.copiedFrom) }
+          } else {
+            mine = { myPick: row.pick, copying: row.copiedFrom != null }
+          }
+        }
         return {
           id: m.id,
           stage: m.stage,
@@ -153,7 +176,7 @@ export default async function routes(fastify) {
           score1: m.score1,
           score2: m.score2,
           status,
-          ...(name ? { myPick: picks[m.id] ?? null } : {}),
+          ...mine,
           ...(status === 'finished' ? { picks: allPicks.get(m.id) || [] } : {}),
         }
       }),
@@ -237,7 +260,49 @@ export default async function routes(fastify) {
     if (now >= m.kickoff_utc) {
       return reply.code(423).send({ error: 'locked' })
     }
+    // Manual pick (copied_from = null) always wins, then mirror it to anyone
+    // following this user who hasn't manually overridden the same match.
     upsertPick(user.id, matchId, pick)
+    propagateToFollowers(user.id, matchId, pick, now)
+    return { ok: true }
+  })
+
+  // GET /follow → { following: name|null }  (Bearer) — who the caller copies.
+  fastify.get('/follow', async (req, reply) => {
+    const user = authUser(req)
+    if (!user) return reply.code(401).send({ error: 'unauthorized' })
+    const f = getFollow(user.id)
+    return { following: f ? f.targetName : null }
+  })
+
+  // POST /follow {targetName}  (Bearer) — start copying targetName's future
+  // picks. Replaces any existing follow, then fills the caller's empty upcoming
+  // matches from the target. Returns how many matches were filled.
+  fastify.post('/follow', async (req, reply) => {
+    const user = authUser(req)
+    if (!user) return reply.code(401).send({ error: 'unauthorized' })
+    if (!followLimiter.take(req.ip)) {
+      return reply.code(429).send({ error: 'rate_limited' })
+    }
+    const { targetName } = req.body || {}
+    if (typeof targetName !== 'string' || !targetName.trim()) {
+      return reply.code(400).send({ error: 'bad_request' })
+    }
+    const target = getUserByName(targetName.trim().slice(0, MAX_NAME))
+    if (!target) return reply.code(404).send({ error: 'unknown_user' })
+    if (target.id === user.id) return reply.code(400).send({ error: 'cannot_follow_self' })
+    setFollow(user.id, target.id)
+    const now = Math.floor(Date.now() / 1000)
+    const filled = fillFromTarget(user.id, target.id, now)
+    return { ok: true, following: target.name, filled }
+  })
+
+  // POST /unfollow  (Bearer) — stop copying. Already-materialized picks stay
+  // (sticky); only future auto-fill/propagation stops.
+  fastify.post('/unfollow', async (req, reply) => {
+    const user = authUser(req)
+    if (!user) return reply.code(401).send({ error: 'unauthorized' })
+    clearFollow(user.id)
     return { ok: true }
   })
 

@@ -75,9 +75,14 @@ export default function MatchPicksBreakdown({ match }: { match: Match }) {
                     <li
                       key={p.name}
                       className={`truncate text-xs ${win ? 'text-emerald-100' : 'text-white/55'}`}
-                      title={p.name}
+                      title={p.copiedFrom ? `${p.name} — copy theo ${p.copiedFrom}` : p.name}
                     >
                       {p.name}
+                      {p.copiedFrom && (
+                        <span className="ml-1 text-[10px] font-semibold text-wc-gold/70">
+                          📋←{p.copiedFrom}
+                        </span>
+                      )}
                     </li>
                   ))}
                   {people.length === 0 && <li className="text-xs text-white/25">—</li>}
