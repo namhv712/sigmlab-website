@@ -203,6 +203,39 @@ test('follow resets all future selections to copy mode; later manual tap overrid
   rows = db.userPickRows(db.getUserByName('CB-ResetFollower').id)
   assert.equal(rows['cb-reset-empty'].pick, '1', 'manual override after copy stays local to that match')
   assert.equal(rows['cb-reset-empty'].copiedFrom, null)
+
+  const unfollow = await post('/unfollow', {}, { ip: '11.0.5.2', headers: auth(followerTok) })
+  assert.equal(unfollow.statusCode, 200)
+  rows = db.userPickRows(db.getUserByName('CB-ResetFollower').id)
+  assert.equal(rows['cb-reset-picked'].pick, '1', 'unfollow restores pre-copy manual pick')
+  assert.equal(rows['cb-reset-picked'].copiedFrom, null)
+  assert.equal(rows['cb-reset-empty'].pick, '1', 'unfollow keeps manual override made while copying')
+  assert.equal(rows['cb-reset-empty'].copiedFrom, null)
+
+  const after = await app.inject({ method: 'GET', url: '/schedule?name=CB-ResetFollower' })
+  const afterPicked = J(after).matches.find((m) => m.id === 'cb-reset-picked')
+  assert.equal(afterPicked.copying, false)
+  assert.equal(afterPicked.myPick, '1')
+})
+
+test('unfollow removes copied picks when there was no previous selection', async () => {
+  const nowSec = Math.floor(Date.now() / 1000)
+  db.upsertMatch({
+    id: 'cb-unfollow-empty', stage: 'group', group: 'B', kickoff_utc: nowSec + 86400,
+    team1: 'Germany', team2: 'Chile', ground: 'Z',
+  })
+  const targetTok = await reg('CB-UnfollowTarget', '11.0.6.1')
+  const followerTok = await reg('CB-UnfollowFollower', '11.0.6.2')
+  await post('/picks', { matchId: 'cb-unfollow-empty', pick: '2' }, { ip: '11.0.6.1', headers: auth(targetTok) })
+  await post('/follow', { targetName: 'CB-UnfollowTarget' }, { ip: '11.0.6.2', headers: auth(followerTok) })
+
+  let rows = db.userPickRows(db.getUserByName('CB-UnfollowFollower').id)
+  assert.equal(rows['cb-unfollow-empty'].pick, '2')
+  assert.ok(rows['cb-unfollow-empty'].copiedFrom != null)
+
+  await post('/unfollow', {}, { ip: '11.0.6.2', headers: auth(followerTok) })
+  rows = db.userPickRows(db.getUserByName('CB-UnfollowFollower').id)
+  assert.equal(rows['cb-unfollow-empty'], undefined)
 })
 
 test('follow propagates later target changes; manual override wins and is sticky', async () => {

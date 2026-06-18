@@ -38,6 +38,14 @@ db.exec(`
     target_id INTEGER NOT NULL,
     created_at INTEGER
   );
+  CREATE TABLE IF NOT EXISTS follow_restore_picks (
+    user_id INTEGER,
+    match_id TEXT,
+    pick TEXT,
+    copied_from INTEGER,
+    updated_at INTEGER,
+    PRIMARY KEY(user_id, match_id)
+  );
 `)
 
 // Migrate pre-existing DBs created before per-user passwords: add the
@@ -246,6 +254,24 @@ const stMatchKickoff = db.prepare(`SELECT kickoff_utc FROM matches WHERE id=?`)
 // follower against a target (covers both adopting and dropping picks).
 const stUpcomingMatchIds = db.prepare(`SELECT id FROM matches WHERE kickoff_utc > ?`)
 
+const stRememberRestorePick = db.prepare(`
+  INSERT INTO follow_restore_picks (user_id, match_id, pick, copied_from, updated_at)
+  VALUES (?, ?, ?, ?, ?)
+  ON CONFLICT(user_id, match_id) DO UPDATE SET
+    pick=excluded.pick,
+    copied_from=excluded.copied_from,
+    updated_at=excluded.updated_at
+`)
+const stRestorePick = db.prepare(`
+  SELECT pick, copied_from FROM follow_restore_picks WHERE user_id=? AND match_id=?
+`)
+const stClearRestorePicks = db.prepare(`DELETE FROM follow_restore_picks WHERE user_id=?`)
+
+function rememberManualPickForRestore(userId, matchId, row) {
+  if (!row || row.copied_from != null) return
+  stRememberRestorePick.run(userId, matchId, row.pick, null, row.updated_at ?? now())
+}
+
 // Propagate one (target → match → pick) change to the target's followers, then
 // recurse so follow-chains (A→B→C) mirror too. Sticky + idempotent + manual-wins
 // rules make this safe against cycles: an originator's manual pick blocks the
@@ -262,6 +288,22 @@ export function propagateToFollowers(targetId, matchId, pick, nowSec) {
     }
     upsertPick(fId, matchId, pick, targetId)
     propagateToFollowers(fId, matchId, pick, nowSec)
+  }
+}
+
+// A followed user can return to "no pick" on an upcoming match when they
+// unfollow and had no pre-copy selection to restore. Followers who were only
+// copying that row should drop it too; manual overrides stay untouched.
+export function propagateDropToFollowers(targetId, matchId, nowSec, seen = new Set()) {
+  if (seen.has(targetId)) return
+  seen.add(targetId)
+  const m = stMatchKickoff.get(matchId)
+  if (!m || m.kickoff_utc <= nowSec) return
+  for (const fId of followersOf(targetId)) {
+    const existing = stPickRow.get(fId, matchId)
+    if (!existing || existing.copied_from !== targetId) continue
+    deletePick(fId, matchId)
+    propagateDropToFollowers(fId, matchId, nowSec, seen)
   }
 }
 
@@ -303,6 +345,7 @@ export function resyncFromTarget(
       ) {
         continue
       }
+      rememberManualPickForRestore(followerId, matchId, existing)
     }
     const tp = stPickRow.get(targetId, matchId)
     if (tp) {
@@ -319,6 +362,37 @@ export function resyncFromTarget(
   for (const fId of followersOf(followerId)) {
     resyncFromTarget(fId, followerId, nowSec, seen)
   }
+  return changed
+}
+
+// Stop following and restore the member's previous visible choices for still
+// open matches. Manual picks made while copying are already current rows and
+// therefore win; copied rows are replaced with the remembered manual pick, or
+// removed if the member had no pick before copy mode.
+export function restoreAfterUnfollow(userId, nowSec) {
+  let changed = 0
+  for (const { id: matchId } of stUpcomingMatchIds.all(nowSec)) {
+    const existing = stPickRow.get(userId, matchId)
+    if (existing && existing.copied_from == null) continue
+
+    const restore = stRestorePick.get(userId, matchId)
+    if (restore) {
+      if (
+        !existing ||
+        existing.pick !== restore.pick ||
+        existing.copied_from !== restore.copied_from
+      ) {
+        upsertPick(userId, matchId, restore.pick, restore.copied_from)
+        propagateToFollowers(userId, matchId, restore.pick, nowSec)
+        changed += 1
+      }
+    } else if (existing) {
+      deletePick(userId, matchId)
+      propagateDropToFollowers(userId, matchId, nowSec)
+      changed += 1
+    }
+  }
+  stClearRestorePicks.run(userId)
   return changed
 }
 

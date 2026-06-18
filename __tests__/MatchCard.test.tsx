@@ -52,7 +52,7 @@ describe('MatchCard', () => {
     expect(screen.getByRole('button', { name: 'Đội 1' })).toBeEnabled()
     expect(screen.getByRole('button', { name: 'Hòa' })).toBeEnabled()
     expect(screen.getByRole('button', { name: 'Đội 2' })).toBeEnabled()
-    const copy = screen.getByRole('button', { name: 'Theo Alice' })
+    const copy = screen.getByRole('button', { name: 'Copy' })
     expect(copy).toBeDisabled()
     expect(copy).toHaveAttribute('aria-pressed', 'true')
   })

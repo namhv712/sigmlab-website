@@ -99,10 +99,10 @@ export default function PickButtons({
             type="button"
             disabled
             aria-pressed="true"
-            title={`Copy theo ${match.copyingFrom ?? 'người đang follow'}`}
+            title="Đang copy"
             className="wc-pick-selected relative min-w-0 cursor-default overflow-hidden rounded-xl border px-2 py-2.5 text-sm font-bold transition-all"
           >
-            <span className="block truncate">Theo {match.copyingFrom ?? 'follow'}</span>
+            Copy
           </button>
         )}
       </div>

@@ -16,6 +16,7 @@ import {
   setFollow,
   clearFollow,
   resyncFromTarget,
+  restoreAfterUnfollow,
   propagateToFollowers,
   allFollows,
 } from './db.js'
@@ -313,13 +314,15 @@ export default async function routes(fastify) {
     return { ok: true, following: target.name, filled }
   })
 
-  // POST /unfollow  (Bearer) — stop copying. Already-materialized picks stay
-  // (sticky); only future auto-fill/propagation stops.
+  // POST /unfollow  (Bearer) — stop copying and restore any future picks that
+  // copy mode temporarily replaced. Manual overrides made while copying remain.
   fastify.post('/unfollow', async (req, reply) => {
     const user = authUser(req)
     if (!user) return reply.code(401).send({ error: 'unauthorized' })
+    const now = Math.floor(Date.now() / 1000)
+    const restored = restoreAfterUnfollow(user.id, now)
     clearFollow(user.id)
-    return { ok: true }
+    return { ok: true, restored }
   })
 
   // POST /admin/result {matchId, score1, score2}  (x-admin-passcode header)
