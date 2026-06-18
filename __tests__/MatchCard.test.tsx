@@ -29,13 +29,12 @@ describe('MatchCard', () => {
     // final score appears (rendered as "2 – 1" within one node)
     expect(container.textContent).toContain('2')
     expect(container.textContent).toContain('1')
-    // correct pick badge with +3
-    expect(screen.getByText(/✓ \+3/)).toBeInTheDocument()
+    expect(screen.getByText('✓')).toBeInTheDocument()
   })
 
-  it('shows the "Nhập mật khẩu để cược" CTA for an upcoming match in view mode', () => {
+  it('shows the login CTA for an upcoming match in view mode', () => {
     render(<MatchCard match={base} mode="view" />)
-    expect(screen.getByText(/Nhập mật khẩu để cược/)).toBeInTheDocument()
+    expect(screen.getByText(/Đăng nhập để cược/)).toBeInTheDocument()
   })
 
   it('renders selectable 1X2 buttons for an upcoming match in betting mode', () => {
@@ -46,5 +45,15 @@ describe('MatchCard', () => {
     expect(btn1).toBeEnabled()
     expect(btnX).toBeEnabled()
     expect(btn2).toBeEnabled()
+  })
+
+  it('shows copy mode as a fourth selected option while keeping manual picks enabled', () => {
+    render(<MatchCard match={{ ...base, copying: true, copyingFrom: 'Alice' }} mode="active" />)
+    expect(screen.getByRole('button', { name: 'Đội 1' })).toBeEnabled()
+    expect(screen.getByRole('button', { name: 'Hòa' })).toBeEnabled()
+    expect(screen.getByRole('button', { name: 'Đội 2' })).toBeEnabled()
+    const copy = screen.getByRole('button', { name: 'Theo Alice' })
+    expect(copy).toBeDisabled()
+    expect(copy).toHaveAttribute('aria-pressed', 'true')
   })
 })

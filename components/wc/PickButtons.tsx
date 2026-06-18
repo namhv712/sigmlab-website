@@ -3,7 +3,8 @@
 import type { Match, Pick } from '@/lib/wcTypes'
 import { result } from '@/lib/wcResult'
 
-// Three 1X2 buttons: Đội 1 / Hòa / Đội 2.
+// 1X2 buttons: Đội 1 / Hòa / Đội 2. A copying upcoming match adds a fourth
+// selected option showing the active follow target.
 // Modes:
 //  - active   : selectable, fires onPick (betting mode, upcoming match)
 //  - view     : disabled, shows login CTA
@@ -23,6 +24,7 @@ export default function PickButtons({
   const finished = match.status === 'finished'
   const locked = match.status !== 'upcoming'
   const pick = match.myPick ?? null
+  const showCopyOption = !locked && match.copying
   const actual =
     finished && match.score1 != null && match.score2 != null
       ? result(match.score1, match.score2)
@@ -54,7 +56,7 @@ export default function PickButtons({
 
   return (
     <>
-      <div className="mt-4 grid grid-cols-3 gap-2.5">
+      <div className={`mt-4 grid gap-2.5 ${showCopyOption ? 'grid-cols-2 sm:grid-cols-4' : 'grid-cols-3'}`}>
         {options.map(opt => {
           const selected = pick === opt.code
           const isActual = actual === opt.code
@@ -92,13 +94,18 @@ export default function PickButtons({
             </button>
           )
         })}
+        {showCopyOption && (
+          <button
+            type="button"
+            disabled
+            aria-pressed="true"
+            title={`Copy theo ${match.copyingFrom ?? 'người đang follow'}`}
+            className="wc-pick-selected relative min-w-0 cursor-default overflow-hidden rounded-xl border px-2 py-2.5 text-sm font-bold transition-all"
+          >
+            <span className="block truncate">Theo {match.copyingFrom ?? 'follow'}</span>
+          </button>
+        )}
       </div>
-
-      {!locked && match.copying && (
-        <p className="mt-2 text-center text-[11px] font-semibold text-wc-gold/80">
-          📋 Đang copy theo {match.copyingFrom} · bấm để tự chọn
-        </p>
-      )}
 
       {missed && (
         <p className="mt-2 text-center text-[11px] font-semibold text-red-300/80">
