@@ -36,7 +36,7 @@ const Fastify = (await import('fastify')).default
 const { default: routes } = await import('./routes.js')
 const { ingest } = await import('./ingest.js')
 const { updateResults } = await import('./results.js')
-const { default: db } = await import('./db.js')
+const { default: db, resyncAllFollows } = await import('./db.js')
 
 const fastify = Fastify({ logger: true })
 await fastify.register(routes)
@@ -46,7 +46,10 @@ const start = async () => {
   // Pull finished results right after, so a restart is immediately up to date —
   // the server cron then keeps them current via POST /admin/refresh.
   ingest(db)
-    .then(() => updateResults())
+    .then(() => {
+      resyncAllFollows(Math.floor(Date.now() / 1000))
+      return updateResults()
+    })
     .catch((e) => fastify.log.error(e))
   setInterval(() => ingest(db).catch((e) => fastify.log.error(e)), 3600_000)
 

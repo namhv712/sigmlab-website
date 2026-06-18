@@ -201,7 +201,7 @@ export function picksByMatch() {
 // One active follow per user (follower_id is the primary key). Following a new
 // person replaces the old target.
 const stGetFollow = db.prepare(
-  `SELECT f.target_id AS targetId, u.name AS targetName
+  `SELECT f.target_id AS targetId, u.name AS targetName, f.created_at AS createdAt
    FROM follows f JOIN users u ON u.id = f.target_id WHERE f.follower_id = ?`
 )
 export const getFollow = (followerId) => stGetFollow.get(followerId) ?? null
@@ -234,7 +234,13 @@ const stAllFollows = db.prepare(
 )
 export const allFollows = () => stAllFollows.all()
 
-const stPickRow = db.prepare(`SELECT pick, copied_from FROM picks WHERE user_id=? AND match_id=?`)
+const stFollowRows = db.prepare(
+  `SELECT follower_id AS followerId, target_id AS targetId, created_at AS createdAt
+   FROM follows
+   ORDER BY created_at ASC, follower_id ASC`
+)
+
+const stPickRow = db.prepare(`SELECT pick, copied_from, updated_at FROM picks WHERE user_id=? AND match_id=?`)
 const stMatchKickoff = db.prepare(`SELECT kickoff_utc FROM matches WHERE id=?`)
 // Every still-open match (kickoff ahead of `nowSec`) — used to fully re-sync a
 // follower against a target (covers both adopting and dropping picks).
@@ -269,14 +275,35 @@ export function propagateToFollowers(targetId, matchId, pick, nowSec) {
 // re-root end to end: with A→B→C, if B switches to D, A re-roots onto D too.
 // `seen` guards against follow cycles (A↔B). Returns how many of the follower's
 // own matches changed (the "filled" count surfaced to the API caller).
-export function resyncFromTarget(followerId, targetId, nowSec, seen = new Set()) {
+//
+// manualMode:
+// - preserve: manual rows are one-match overrides and are never touched.
+// - replace:  a fresh "copy X" click resets every still-open match to copy mode.
+// - repair:   used on deploy/startup for existing followers; manual rows newer
+//             than their follow action are preserved as intentional overrides.
+export function resyncFromTarget(
+  followerId,
+  targetId,
+  nowSec,
+  seen = new Set(),
+  { manualMode = 'preserve', followCreatedAt = null } = {},
+) {
   if (seen.has(followerId)) return 0 // cycle guard
   seen.add(followerId)
 
   let changed = 0
   for (const { id: matchId } of stUpcomingMatchIds.all(nowSec)) {
     const existing = stPickRow.get(followerId, matchId)
-    if (existing && existing.copied_from == null) continue // manual override wins
+    if (existing && existing.copied_from == null) {
+      if (manualMode === 'preserve') continue // manual override wins
+      if (
+        manualMode === 'repair' &&
+        followCreatedAt != null &&
+        existing.updated_at > followCreatedAt
+      ) {
+        continue
+      }
+    }
     const tp = stPickRow.get(targetId, matchId)
     if (tp) {
       if (!existing || existing.pick !== tp.pick || existing.copied_from !== targetId) {
@@ -291,6 +318,20 @@ export function resyncFromTarget(followerId, targetId, nowSec, seen = new Set())
 
   for (const fId of followersOf(followerId)) {
     resyncFromTarget(fId, followerId, nowSec, seen)
+  }
+  return changed
+}
+
+// One-shot/current-state repair for users who already had an active follow
+// before the "copy all future selections" semantics shipped. It resets old
+// pre-follow manual rows into copy mode, while preserving newer manual overrides.
+export function resyncAllFollows(nowSec) {
+  let changed = 0
+  for (const f of stFollowRows.all()) {
+    changed += resyncFromTarget(f.followerId, f.targetId, nowSec, new Set(), {
+      manualMode: 'repair',
+      followCreatedAt: f.createdAt,
+    })
   }
   return changed
 }

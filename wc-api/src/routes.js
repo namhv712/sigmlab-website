@@ -141,9 +141,13 @@ export default async function routes(fastify) {
     const ms = allMatches()
     const name = req.query && req.query.name
     let pickRows = {}
+    let activeFollow = null
     if (name) {
       const u = getUserByName(String(name))
-      if (u) pickRows = userPickRows(u.id)
+      if (u) {
+        pickRows = userPickRows(u.id)
+        activeFollow = getFollow(u.id)
+      }
     }
     // Everyone's picks per match — attached ONLY to finished matches so a
     // pending match never leaks who bet what before it's locked.
@@ -158,7 +162,10 @@ export default async function routes(fastify) {
         if (name) {
           const row = pickRows[m.id] ?? null
           if (!row) {
-            mine = { myPick: null, copying: false }
+            mine =
+              activeFollow && status === 'upcoming'
+                ? { myPick: null, copying: true, copyingFrom: activeFollow.targetName }
+                : { myPick: null, copying: false }
           } else if (row.copiedFrom != null && status === 'upcoming') {
             mine = { myPick: null, copying: true, copyingFrom: getUserName(row.copiedFrom) }
           } else {
@@ -298,9 +305,11 @@ export default async function routes(fastify) {
     if (target.id === user.id) return reply.code(400).send({ error: 'cannot_follow_self' })
     setFollow(user.id, target.id)
     const now = Math.floor(Date.now() / 1000)
-    // Live re-sync: adopt the target's current picks and re-root any chain of
-    // followers below us onto the new target.
-    const filled = resyncFromTarget(user.id, target.id, now)
+    // Fresh copy action: every still-open match now defaults to this target.
+    // Later manual taps remain one-match overrides.
+    const filled = resyncFromTarget(user.id, target.id, now, new Set(), {
+      manualMode: 'replace',
+    })
     return { ok: true, following: target.name, filled }
   })
 

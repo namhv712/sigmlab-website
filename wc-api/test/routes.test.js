@@ -162,6 +162,49 @@ test('follow mirrors target future picks; blind on upcoming, revealed on finish'
   assert.equal(up.copyingFrom, 'CB-Alice')
 })
 
+test('follow resets all future selections to copy mode; later manual tap overrides one match', async () => {
+  const nowSec = Math.floor(Date.now() / 1000)
+  db.upsertMatch({
+    id: 'cb-reset-picked', stage: 'group', group: 'B', kickoff_utc: nowSec + 86400,
+    team1: 'Portugal', team2: 'Korea Republic', ground: 'Z',
+  })
+  db.upsertMatch({
+    id: 'cb-reset-empty', stage: 'group', group: 'B', kickoff_utc: nowSec + 90000,
+    team1: 'USA', team2: 'Wales', ground: 'Z',
+  })
+  const targetTok = await reg('CB-ResetTarget', '11.0.5.1')
+  const followerTok = await reg('CB-ResetFollower', '11.0.5.2')
+
+  await post('/picks', { matchId: 'cb-reset-picked', pick: '2' }, { ip: '11.0.5.1', headers: auth(targetTok) })
+  await post('/picks', { matchId: 'cb-reset-picked', pick: '1' }, { ip: '11.0.5.2', headers: auth(followerTok) })
+  await post('/picks', { matchId: 'cb-reset-empty', pick: 'X' }, { ip: '11.0.5.2', headers: auth(followerTok) })
+
+  const fol = await post('/follow', { targetName: 'CB-ResetTarget' }, { ip: '11.0.5.2', headers: auth(followerTok) })
+  assert.equal(fol.statusCode, 200)
+
+  let rows = db.userPickRows(db.getUserByName('CB-ResetFollower').id)
+  assert.equal(rows['cb-reset-picked'].pick, '2', 'copy action replaces old future manual pick')
+  assert.ok(rows['cb-reset-picked'].copiedFrom != null)
+  assert.equal(rows['cb-reset-empty'], undefined, 'old future manual pick is cleared when target has no pick')
+
+  const sched = await app.inject({ method: 'GET', url: '/schedule?name=CB-ResetFollower' })
+  const matches = J(sched).matches
+  const copiedPicked = matches.find((m) => m.id === 'cb-reset-picked')
+  const copiedEmpty = matches.find((m) => m.id === 'cb-reset-empty')
+  assert.equal(copiedPicked.myPick, null)
+  assert.equal(copiedPicked.copying, true)
+  assert.equal(copiedPicked.copyingFrom, 'CB-ResetTarget')
+  assert.equal(copiedEmpty.myPick, null)
+  assert.equal(copiedEmpty.copying, true)
+  assert.equal(copiedEmpty.copyingFrom, 'CB-ResetTarget')
+
+  await post('/picks', { matchId: 'cb-reset-empty', pick: '1' }, { ip: '11.0.5.2', headers: auth(followerTok) })
+  await post('/picks', { matchId: 'cb-reset-empty', pick: 'X' }, { ip: '11.0.5.1', headers: auth(targetTok) })
+  rows = db.userPickRows(db.getUserByName('CB-ResetFollower').id)
+  assert.equal(rows['cb-reset-empty'].pick, '1', 'manual override after copy stays local to that match')
+  assert.equal(rows['cb-reset-empty'].copiedFrom, null)
+})
+
 test('follow propagates later target changes; manual override wins and is sticky', async () => {
   const nowSec = Math.floor(Date.now() / 1000)
   db.upsertMatch({
@@ -191,6 +234,36 @@ test('follow propagates later target changes; manual override wins and is sticky
   await post('/picks', { matchId: 'cb-up2', pick: '1' }, { ip: '11.0.1.1', headers: auth(cTok) })
   d = db.userPickRows(db.getUserByName('CB-Dora').id)
   assert.equal(d['cb-up2'].pick, 'X')
+})
+
+test('existing active follows are repaired for future matches', async () => {
+  const nowSec = Math.floor(Date.now() / 1000)
+  db.upsertMatch({
+    id: 'cb-repair-picked', stage: 'group', group: 'F', kickoff_utc: nowSec + 86400,
+    team1: 'Netherlands', team2: 'Qatar', ground: 'Z',
+  })
+  db.upsertMatch({
+    id: 'cb-repair-empty', stage: 'group', group: 'F', kickoff_utc: nowSec + 90000,
+    team1: 'Ecuador', team2: 'Senegal', ground: 'Z',
+  })
+  const target = db.getOrCreateUser('CB-RepairTarget')
+  const follower = db.getOrCreateUser('CB-RepairFollower')
+  db.upsertPick(target.id, 'cb-repair-picked', '2')
+  db.upsertPick(follower.id, 'cb-repair-picked', '1')
+  db.upsertPick(follower.id, 'cb-repair-empty', 'X')
+  db.setFollow(follower.id, target.id)
+
+  const changed = db.resyncAllFollows(nowSec)
+  assert.ok(changed >= 2)
+  const rows = db.userPickRows(follower.id)
+  assert.equal(rows['cb-repair-picked'].pick, '2')
+  assert.ok(rows['cb-repair-picked'].copiedFrom != null)
+  assert.equal(rows['cb-repair-empty'], undefined)
+
+  const sched = await app.inject({ method: 'GET', url: '/schedule?name=CB-RepairFollower' })
+  const empty = J(sched).matches.find((m) => m.id === 'cb-repair-empty')
+  assert.equal(empty.copying, true)
+  assert.equal(empty.copyingFrom, 'CB-RepairTarget')
 })
 
 test('follow validation: self-follow → 400, unknown target → 404', async () => {

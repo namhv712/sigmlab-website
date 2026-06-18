@@ -116,14 +116,18 @@ export default function WcPage() {
   const commitPick = useCallback(async () => {
     if (!confirm) return
     const { match, pick } = confirm
-    const prev = match.myPick ?? null
+    const prev = match
     setSavingId(match.id)
-    setMatches(ms => ms.map(m => (m.id === match.id ? { ...m, myPick: pick } : m)))
+    setMatches(ms =>
+      ms.map(m =>
+        m.id === match.id ? { ...m, myPick: pick, copying: false, copyingFrom: null } : m,
+      ),
+    )
     try {
       await savePick(match.id, pick)
       setConfirm(null)
     } catch (err) {
-      setMatches(ms => ms.map(m => (m.id === match.id ? { ...m, myPick: prev } : m)))
+      setMatches(ms => ms.map(m => (m.id === match.id ? prev : m)))
       setError(err instanceof Error ? err.message : 'Lưu cược thất bại')
       setConfirm(null)
     } finally {
@@ -137,7 +141,7 @@ export default function WcPage() {
       if (filter === 'live' && m.status !== 'live') return false
       if (filter === 'upcoming' && m.status !== 'upcoming') return false
       if (filter === 'finished' && m.status !== 'finished') return false
-      if (filter === 'mine' && !m.myPick) return false
+      if (filter === 'mine' && !m.myPick && !m.copying) return false
       return true
     })
   }, [matches, day, filter])
