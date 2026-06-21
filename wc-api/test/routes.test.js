@@ -90,6 +90,45 @@ test('admin reset-password rejects bad admin passcode and unknown user', async (
   assert.equal(J(unknownUser).error, 'unknown_user')
 })
 
+test('change-password requires auth and current password, then updates future logins', async () => {
+  const ip = '10.0.0.6'
+  const reg = await post('/register', { name: 'Frank', password: 'oldpass' }, { ip })
+  assert.equal(reg.statusCode, 200)
+  const token = J(reg).token
+
+  const noAuth = await post('/change-password', { currentPassword: 'oldpass', newPassword: 'newpass' }, { ip })
+  assert.equal(noAuth.statusCode, 401)
+  assert.equal(J(noAuth).error, 'unauthorized')
+
+  const wrongCurrent = await post(
+    '/change-password',
+    { currentPassword: 'wrongpass', newPassword: 'newpass' },
+    { ip, headers: auth(token) },
+  )
+  assert.equal(wrongCurrent.statusCode, 401)
+  assert.equal(J(wrongCurrent).error, 'bad_current_password')
+
+  const shortNew = await post(
+    '/change-password',
+    { currentPassword: 'oldpass', newPassword: 'x' },
+    { ip, headers: auth(token) },
+  )
+  assert.equal(shortNew.statusCode, 400)
+  assert.equal(J(shortNew).error, 'bad_request')
+
+  const ok = await post(
+    '/change-password',
+    { currentPassword: 'oldpass', newPassword: 'newpass' },
+    { ip, headers: auth(token) },
+  )
+  assert.equal(ok.statusCode, 200)
+
+  const oldLogin = await post('/login', { name: 'Frank', password: 'oldpass' }, { ip })
+  assert.equal(oldLogin.statusCode, 401)
+  const newLogin = await post('/login', { name: 'Frank', password: 'newpass' }, { ip })
+  assert.equal(newLogin.statusCode, 200)
+})
+
 test('/schedule reveals everyone’s picks for finished matches but not upcoming ones', async () => {
   const nowSec = Math.floor(Date.now() / 1000)
   // A finished match (kicked off 3h ago, has a score) and an upcoming one.

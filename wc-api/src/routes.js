@@ -106,6 +106,8 @@ export default async function routes(fastify) {
   const viewLimiter = makeRateLimiter({ capacity: 5, refillPerSec: 0.1 })
   // admin password reset: throttle brute force against the shared admin passcode
   const adminLimiter = makeRateLimiter({ capacity: 5, refillPerSec: 0.1 })
+  // self-service password changes: throttle current-password guesses
+  const passwordLimiter = makeRateLimiter({ capacity: 5, refillPerSec: 0.1 })
   // 30 writes burst, refill 1 per 2s
   const pickLimiter = makeRateLimiter({ capacity: 30, refillPerSec: 0.5 })
   // follow/unfollow: same shape as the pick limiter (a follow can fan out picks)
@@ -196,11 +198,13 @@ export default async function routes(fastify) {
   fastify.get('/leaderboard', async () => ({ rows: leaderboard() }))
 
   // Validate a {name, password} body. Returns a cleaned name or null.
+  function validPassword(password) {
+    return typeof password === 'string' && password.length >= MIN_PW && password.length <= MAX_PW
+  }
+
   function cleanCredentials(name, password) {
     if (typeof name !== 'string' || !name.trim()) return null
-    if (typeof password !== 'string' || password.length < MIN_PW || password.length > MAX_PW) {
-      return null
-    }
+    if (!validPassword(password)) return null
     return name.trim().slice(0, MAX_NAME)
   }
 
@@ -243,6 +247,28 @@ export default async function routes(fastify) {
     }
     const exp = Math.floor(Date.now() / 1000) + TOKEN_TTL
     return { token: signToken(user.name, secret, exp) }
+  })
+
+  // POST /change-password {currentPassword, newPassword}  (Bearer)
+  // Lets a logged-in member rotate their own betting password.
+  fastify.post('/change-password', async (req, reply) => {
+    const user = authUser(req)
+    if (!user) return reply.code(401).send({ error: 'unauthorized' })
+    if (!passwordLimiter.take(req.ip)) {
+      return reply.code(429).send({ error: 'rate_limited' })
+    }
+
+    const { currentPassword, newPassword } = req.body || {}
+    if (typeof currentPassword !== 'string' || !validPassword(newPassword)) {
+      return reply.code(400).send({ error: 'bad_request' })
+    }
+    if (!user.pass_hash || !verifyPassword(currentPassword, user.pass_hash, user.pass_salt)) {
+      return reply.code(401).send({ error: 'bad_current_password' })
+    }
+
+    const { hash, salt } = hashPassword(newPassword)
+    setUserPassword(user.name, hash, salt)
+    return { ok: true }
   })
 
   // GET /mypicks  (Bearer)

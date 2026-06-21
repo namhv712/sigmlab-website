@@ -19,15 +19,18 @@ import MoneySummary from '@/components/wc/MoneySummary'
 import ConfirmPick from '@/components/wc/ConfirmPick'
 import CopyControl from '@/components/wc/CopyControl'
 import CopyRelations from '@/components/wc/CopyRelations'
+import ChangePasswordDialog from '@/components/wc/ChangePasswordDialog'
 
 export default function WcPage() {
   const [matches, setMatches] = useState<Match[]>([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
+  const [notice, setNotice] = useState<string | null>(null)
 
   const [name, setNameState] = useState<string | null>(null)
   const [betting, setBetting] = useState(false)
   const [gateOpen, setGateOpen] = useState(false)
+  const [passwordOpen, setPasswordOpen] = useState(false)
   const [savingId, setSavingId] = useState<string | null>(null)
 
   // Pending pick awaiting confirmation in the dialog.
@@ -94,6 +97,7 @@ export default function WcPage() {
       setBetting(true)
       setNameState(loggedName)
       setGateOpen(false)
+      setNotice(null)
       load()
       checkDinoGrowth(loggedName)
     },
@@ -104,6 +108,8 @@ export default function WcPage() {
     logout()
     setBetting(false)
     setNameState(null)
+    setPasswordOpen(false)
+    setNotice(null)
     load()
   }, [load])
 
@@ -175,6 +181,15 @@ export default function WcPage() {
                 />
               )}
               <button
+                onClick={() => {
+                  setNotice(null)
+                  setPasswordOpen(true)
+                }}
+                className="rounded-full border border-wc-gold/40 px-3 py-1.5 text-xs font-semibold text-wc-gold hover:bg-wc-gold/10"
+              >
+                Đổi mật khẩu
+              </button>
+              <button
                 onClick={onLogout}
                 className="rounded-full border border-white/15 px-3 py-1.5 text-xs font-semibold text-white/60 hover:text-white"
               >
@@ -206,6 +221,12 @@ export default function WcPage() {
       {error && (
         <p className="mt-4 rounded-lg border border-red-500/30 bg-red-600/10 px-3 py-2 text-center text-xs text-red-300">
           {error}
+        </p>
+      )}
+
+      {notice && (
+        <p className="mt-4 rounded-lg border border-emerald-500/30 bg-emerald-600/10 px-3 py-2 text-center text-xs text-emerald-300">
+          {notice}
         </p>
       )}
 
@@ -255,6 +276,16 @@ export default function WcPage() {
 
       {gateOpen && (
         <LoginGate onClose={() => setGateOpen(false)} onSuccess={onLoginSuccess} />
+      )}
+
+      {passwordOpen && (
+        <ChangePasswordDialog
+          onClose={() => setPasswordOpen(false)}
+          onSuccess={() => {
+            setPasswordOpen(false)
+            setNotice('Đã đổi mật khẩu.')
+          }}
+        />
       )}
 
       {celebration && (

@@ -3,6 +3,7 @@ import {
   BASE,
   getSchedule,
   login,
+  changePassword,
   savePick,
   getToken,
   getName,
@@ -56,7 +57,7 @@ describe('wcApi', () => {
 
     const [, init] = fetchMock.mock.calls[0]
     expect(init.method).toBe('POST')
-    expect(JSON.parse(init.body)).toEqual({ name: 'Nam', passcode: 'secret' })
+    expect(JSON.parse(init.body)).toEqual({ name: 'Nam', password: 'secret' })
   })
 
   it('login throws on HTTP 401', async () => {
@@ -64,6 +65,31 @@ describe('wcApi', () => {
     vi.stubGlobal('fetch', fetchMock)
     await expect(login('Nam', 'bad')).rejects.toThrow()
     expect(getToken()).toBeNull()
+  })
+
+  it('changePassword sends bearer auth and current/new passwords', async () => {
+    localStorage.setItem('wc_token', 'tok-abc')
+    const fetchMock = vi.fn().mockResolvedValue(jsonRes({ ok: true }))
+    vi.stubGlobal('fetch', fetchMock)
+
+    await changePassword('oldpass', 'newpass')
+
+    const [url, init] = fetchMock.mock.calls[0]
+    expect(url).toBe(`${BASE}/change-password`)
+    expect(init.method).toBe('POST')
+    expect(init.headers.Authorization).toBe('Bearer tok-abc')
+    expect(JSON.parse(init.body)).toEqual({
+      currentPassword: 'oldpass',
+      newPassword: 'newpass',
+    })
+  })
+
+  it('changePassword throws stable errors from the API', async () => {
+    localStorage.setItem('wc_token', 'tok-abc')
+    const fetchMock = vi.fn().mockResolvedValue(jsonRes({ error: 'bad_current_password' }, 401))
+    vi.stubGlobal('fetch', fetchMock)
+
+    await expect(changePassword('wrong', 'newpass')).rejects.toThrow('bad_current_password')
   })
 
   it('savePick sends an Authorization Bearer header', async () => {

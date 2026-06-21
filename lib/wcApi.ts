@@ -59,6 +59,16 @@ function authHeaders(): Record<string, string> {
   return token ? { Authorization: `Bearer ${token}` } : {}
 }
 
+async function errorCode(res: Response, fallback: string): Promise<string> {
+  try {
+    const data = await res.json()
+    if (data && typeof data.error === 'string') return data.error
+  } catch {
+    /* ignore malformed error payloads */
+  }
+  return fallback
+}
+
 export async function getSchedule(name?: string): Promise<Match[]> {
   const qs = name ? `?name=${encodeURIComponent(name)}` : ''
   const res = await fetch(`${BASE}/schedule${qs}`)
@@ -106,6 +116,17 @@ export async function login(name: string, password: string): Promise<string> {
   const data = await res.json()
   setSession(data.token, name)
   return data.token as string
+}
+
+// Change the logged-in member's own password. Throws stable codes from the API:
+// 'bad_current_password' (401), 'bad_request' (400), 'rate_limited' (429).
+export async function changePassword(currentPassword: string, newPassword: string): Promise<void> {
+  const res = await fetch(`${BASE}/change-password`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', ...authHeaders() },
+    body: JSON.stringify({ currentPassword, newPassword }),
+  })
+  if (!res.ok) throw new Error(await errorCode(res, `change-password failed: ${res.status}`))
 }
 
 export async function getMyPicks(): Promise<Record<string, Pick>> {
