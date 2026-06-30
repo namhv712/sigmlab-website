@@ -42,16 +42,18 @@ function StatusBadge({ status }: { status: Match['status'] }) {
 
 export default function MatchCard({
   match,
+  timeZone,
   mode,
   onPick,
   pending,
 }: {
   match: Match
+  timeZone: string
   mode: 'active' | 'view'
   onPick?: (pick: Pick) => void
   pending?: boolean
 }) {
-  const { time, date, weekday } = matchLabel(match.kickoff)
+  const { time, date, weekday } = matchLabel(match.kickoff, timeZone)
   const finished = match.status === 'finished'
   const live = match.status === 'live'
   const hasScore = match.score1 != null && match.score2 != null

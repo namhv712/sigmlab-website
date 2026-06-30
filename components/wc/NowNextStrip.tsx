@@ -6,13 +6,19 @@ import { flagFor } from './Flag'
 import CountdownTimer from './CountdownTimer'
 
 // "Đang diễn ra" (live matches) + "Trận kế tiếp" (next upcoming with countdown).
-export default function NowNextStrip({ matches }: { matches: Match[] }) {
+export default function NowNextStrip({
+  matches,
+  timeZone,
+}: {
+  matches: Match[]
+  timeZone: string
+}) {
   const live = matches.filter(m => m.status === 'live')
   const now = Date.now() / 1000
   const next = matches
     .filter(m => m.status === 'upcoming' && m.kickoff > now)
     .sort((a, b) => a.kickoff - b.kickoff)[0]
-  const nextLabel = next ? matchLabel(next.kickoff) : null
+  const nextLabel = next ? matchLabel(next.kickoff, timeZone) : null
 
   if (live.length === 0 && !next) return null
 

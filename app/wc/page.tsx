@@ -3,7 +3,7 @@
 import { useCallback, useEffect, useMemo, useState } from 'react'
 import Link from 'next/link'
 import type { Match, Pick } from '@/lib/wcTypes'
-import { matchDayKey } from '@/lib/wcTime'
+import { detectBrowserTimeZone, isValidTimeZone, matchDayKey } from '@/lib/wcTime'
 import { getSchedule, getToken, getName, logout, getLeaderboard, getDinoSeen, setDinoSeen } from '@/lib/wcApi'
 import { savePick } from '@/lib/wcApi'
 import { dinoTallyFromRow, dinoCelebration, type DinoCelebration as DinoCelebrationData } from '@/lib/wcDinos'
@@ -18,19 +18,35 @@ import WcBanner from '@/components/wc/WcBanner'
 import MoneySummary from '@/components/wc/MoneySummary'
 import ConfirmPick from '@/components/wc/ConfirmPick'
 import ChangePasswordDialog from '@/components/wc/ChangePasswordDialog'
+import TimezoneSelect from '@/components/wc/TimezoneSelect'
 
-function initialDayFor(matches: Match[]): string | null {
+const TIME_ZONE_KEY = 'wc_time_zone'
+
+function savedTimeZone(): string | null {
+  if (typeof localStorage === 'undefined') return null
+  const value = localStorage.getItem(TIME_ZONE_KEY)
+  if (isValidTimeZone(value)) return value
+  if (value) localStorage.removeItem(TIME_ZONE_KEY)
+  return null
+}
+
+function persistTimeZone(timeZone: string) {
+  if (typeof localStorage === 'undefined') return
+  localStorage.setItem(TIME_ZONE_KEY, timeZone)
+}
+
+function initialDayFor(matches: Match[], timeZone: string): string | null {
   if (matches.length === 0) return null
-  const days = Array.from(new Set(matches.map((m) => matchDayKey(m.kickoff))))
-  const today = matchDayKey(Math.floor(Date.now() / 1000))
+  const days = Array.from(new Set(matches.map((m) => matchDayKey(m.kickoff, timeZone))))
+  const today = matchDayKey(Math.floor(Date.now() / 1000), timeZone)
   if (days.includes(today)) return today
 
   const now = Math.floor(Date.now() / 1000)
   const next = matches.find((m) => m.kickoff >= now)
-  if (next) return matchDayKey(next.kickoff)
+  if (next) return matchDayKey(next.kickoff, timeZone)
 
   const last = matches[matches.length - 1]
-  return last ? matchDayKey(last.kickoff) : null
+  return last ? matchDayKey(last.kickoff, timeZone) : null
 }
 
 export default function WcPage() {
@@ -44,6 +60,9 @@ export default function WcPage() {
   const [gateOpen, setGateOpen] = useState(false)
   const [passwordOpen, setPasswordOpen] = useState(false)
   const [savingId, setSavingId] = useState<string | null>(null)
+  const [timeZone, setTimeZone] = useState('UTC')
+  const [detectedTimeZone, setDetectedTimeZone] = useState('UTC')
+  const [timeZoneReady, setTimeZoneReady] = useState(false)
 
   // Pending pick awaiting confirmation in the dialog.
   const [confirm, setConfirm] = useState<{ match: Match; pick: Pick } | null>(null)
@@ -56,6 +75,14 @@ export default function WcPage() {
   const [celebration, setCelebration] = useState<DinoCelebrationData | null>(null)
 
   const mode = betting ? 'active' : 'view'
+
+  useEffect(() => {
+    const detected = detectBrowserTimeZone()
+    const initial = savedTimeZone() ?? detected
+    setDetectedTimeZone(detected)
+    setTimeZone(initial)
+    setTimeZoneReady(true)
+  }, [])
 
   const load = useCallback(async () => {
     try {
@@ -103,10 +130,21 @@ export default function WcPage() {
   }, [load, checkDinoGrowth])
 
   useEffect(() => {
-    if (dayInitialized || matches.length === 0) return
-    setDay(initialDayFor(matches))
+    if (dayInitialized || !timeZoneReady || matches.length === 0) return
+    setDay(initialDayFor(matches, timeZone))
     setDayInitialized(true)
-  }, [dayInitialized, matches])
+  }, [dayInitialized, matches, timeZone, timeZoneReady])
+
+  const onTimeZoneChange = useCallback(
+    (nextTimeZone: string) => {
+      if (!isValidTimeZone(nextTimeZone)) return
+      setTimeZone(nextTimeZone)
+      persistTimeZone(nextTimeZone)
+      setDay(matches.length > 0 ? initialDayFor(matches, nextTimeZone) : null)
+      setDayInitialized(matches.length > 0)
+    },
+    [matches],
+  )
 
   const onLoginSuccess = useCallback(
     (loggedName: string) => {
@@ -159,14 +197,14 @@ export default function WcPage() {
 
   const visible = useMemo(() => {
     return matches.filter(m => {
-      if (day && matchDayKey(m.kickoff) !== day) return false
+      if (day && matchDayKey(m.kickoff, timeZone) !== day) return false
       if (filter === 'live' && m.status !== 'live') return false
       if (filter === 'upcoming' && m.status !== 'upcoming') return false
       if (filter === 'finished' && m.status !== 'finished') return false
       if (filter === 'mine' && !m.myPick && !m.copying) return false
       return true
     })
-  }, [matches, day, filter])
+  }, [matches, day, filter, timeZone])
 
   return (
     <div className="mx-auto max-w-3xl px-4 py-6 sm:px-6 sm:py-8">
@@ -179,7 +217,8 @@ export default function WcPage() {
           <span className="wc-gradient-text">World Cup 2026</span>
         </h1>
         <p className="mt-2 text-sm text-white/60 sm:text-base">
-          Sảnh dự đoán của phòng lab SigM · 🇨🇦 🇲🇽 🇺🇸 · giờ theo trình duyệt của bạn
+          Sảnh dự đoán của phòng lab SigM · 🇨🇦 🇲🇽 🇺🇸 · giờ{' '}
+          {timeZoneReady ? timeZone : 'đang phát hiện...'}
         </p>
         <div className="mt-4 flex flex-wrap items-center justify-center gap-2">
           {betting ? (
@@ -223,6 +262,13 @@ export default function WcPage() {
             🏅 Bảng xếp hạng
           </Link>
         </div>
+        {timeZoneReady && (
+          <TimezoneSelect
+            value={timeZone}
+            detectedTimeZone={detectedTimeZone}
+            onChange={onTimeZoneChange}
+          />
+        )}
       </header>
 
       {error && (
@@ -240,11 +286,11 @@ export default function WcPage() {
       <div className="mt-6 space-y-5">
         {betting && name && <MoneySummary matches={matches} name={name} />}
 
-        <NowNextStrip matches={matches} />
+        <NowNextStrip matches={matches} timeZone={timeZone} />
 
         <RulesPanel />
 
-        <DateStrip matches={matches} selected={day} onSelect={setDay} />
+        <DateStrip matches={matches} selected={day} timeZone={timeZone} onSelect={setDay} />
 
         <FilterChips value={filter} onChange={setFilter} showMine={betting} />
 
@@ -260,6 +306,7 @@ export default function WcPage() {
               <MatchCard
                 key={m.id}
                 match={m}
+                timeZone={timeZone}
                 mode={mode}
                 pending={savingId === m.id}
                 onPick={pick => requestPick(m, pick)}

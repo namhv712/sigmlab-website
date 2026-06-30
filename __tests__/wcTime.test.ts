@@ -1,27 +1,27 @@
 import { describe, it, expect } from 'vitest'
-import { matchLabel, countdown, matchDayKey } from '@/lib/wcTime'
-
-const WEEKDAYS = ['CN', 'Th 2', 'Th 3', 'Th 4', 'Th 5', 'Th 6', 'Th 7']
-const pad = (n: number) => String(n).padStart(2, '0')
+import { countdown, isValidTimeZone, matchDayKey, matchLabel, supportedTimeZones } from '@/lib/wcTime'
 
 describe('matchLabel', () => {
-  it('formats kickoffs in the local browser timezone', () => {
+  it('formats kickoffs in the selected timezone', () => {
     const e = Date.UTC(2026, 5, 11, 19, 0, 0) / 1000
-    const d = new Date(e * 1000)
-    const l = matchLabel(e)
+    const l = matchLabel(e, 'Asia/Ho_Chi_Minh')
 
-    expect(l.time).toBe(`${pad(d.getHours())}:${pad(d.getMinutes())}`)
-    expect(l.date).toBe(`${pad(d.getDate())}/${pad(d.getMonth() + 1)}`)
-    expect(l.weekday).toBe(WEEKDAYS[d.getDay()])
+    expect(l.time).toBe('02:00')
+    expect(l.date).toBe('12/06')
+    expect(l.weekday).toBe('Th 6')
   })
 
-  it('groups by local browser day key', () => {
+  it('groups by selected timezone day key', () => {
     const e = Date.UTC(2026, 5, 11, 19, 0, 0) / 1000
-    const d = new Date(e * 1000)
 
-    expect(matchDayKey(e)).toBe(
-      `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`,
-    )
+    expect(matchDayKey(e, 'America/New_York')).toBe('2026-06-11')
+    expect(matchDayKey(e, 'Asia/Ho_Chi_Minh')).toBe('2026-06-12')
+  })
+
+  it('validates and lists selectable IANA timezones', () => {
+    expect(isValidTimeZone('Asia/Ho_Chi_Minh')).toBe(true)
+    expect(isValidTimeZone('Not/A_Zone')).toBe(false)
+    expect(supportedTimeZones()).toContain('Asia/Ho_Chi_Minh')
   })
 })
 

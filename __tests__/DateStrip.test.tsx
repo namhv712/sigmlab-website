@@ -39,14 +39,15 @@ describe('DateStrip', () => {
     }
   })
 
-  it('labels the browser-local selected day as today and centers that chip', () => {
-    const browserNow = new Date(2026, 5, 30, 12, 0, 0)
+  it('labels the selected-timezone day as today and centers that chip', () => {
+    const timeZone = 'UTC'
+    const browserNow = new Date(Date.UTC(2026, 5, 30, 12, 0, 0))
     vi.useFakeTimers()
     vi.setSystemTime(browserNow)
 
-    const todayKickoff = new Date(2026, 5, 30, 20, 0, 0).getTime() / 1000
-    const tomorrowKickoff = new Date(2026, 6, 1, 9, 0, 0).getTime() / 1000
-    const selected = matchDayKey(todayKickoff)
+    const todayKickoff = Date.UTC(2026, 5, 30, 20, 0, 0) / 1000
+    const tomorrowKickoff = Date.UTC(2026, 6, 1, 9, 0, 0) / 1000
+    const selected = matchDayKey(todayKickoff, timeZone)
     const scrollIntoView = vi.fn()
     Object.defineProperty(HTMLButtonElement.prototype, 'scrollIntoView', {
       configurable: true,
@@ -57,6 +58,7 @@ describe('DateStrip', () => {
       <DateStrip
         matches={[match('m1', todayKickoff), match('m2', tomorrowKickoff)]}
         selected={selected}
+        timeZone={timeZone}
         onSelect={() => undefined}
       />,
     )

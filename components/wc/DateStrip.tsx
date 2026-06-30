@@ -8,22 +8,24 @@ import { matchDayKey, matchLabel } from '@/lib/wcTime'
 export default function DateStrip({
   matches,
   selected,
+  timeZone,
   onSelect,
 }: {
   matches: Match[]
   selected: string | null
+  timeZone: string
   onSelect: (day: string | null) => void
 }) {
   const selectedRef = useRef<HTMLButtonElement | null>(null)
 
-  // Distinct browser-local days, ascending, with a representative epoch for labelling.
+  // Distinct selected-timezone days, ascending, with a representative epoch for labelling.
   const dayMap = new Map<string, number>()
   for (const m of matches) {
-    const key = matchDayKey(m.kickoff)
+    const key = matchDayKey(m.kickoff, timeZone)
     if (!dayMap.has(key) || m.kickoff < dayMap.get(key)!) dayMap.set(key, m.kickoff)
   }
   const days = Array.from(dayMap.entries()).sort((a, b) => a[1] - b[1])
-  const todayKey = matchDayKey(Math.floor(Date.now() / 1000))
+  const todayKey = matchDayKey(Math.floor(Date.now() / 1000), timeZone)
 
   useEffect(() => {
     if (!selected || days.length === 0) return
@@ -32,7 +34,7 @@ export default function DateStrip({
       block: 'nearest',
       inline: 'center',
     })
-  }, [selected, days.length])
+  }, [selected, days.length, timeZone])
 
   if (days.length === 0) return null
 
@@ -50,7 +52,7 @@ export default function DateStrip({
         Tất cả
       </button>
       {days.map(([key, epoch]) => {
-        const { weekday, date } = matchLabel(epoch)
+        const { weekday, date } = matchLabel(epoch, timeZone)
         const active = selected === key
         const label = key === todayKey ? 'Hôm nay' : weekday
         return (

@@ -3,6 +3,8 @@ import { render, screen } from '@testing-library/react'
 import MatchCard from '@/components/wc/MatchCard'
 import type { Match } from '@/lib/wcTypes'
 
+const timeZone = 'UTC'
+
 const base: Match = {
   id: 'm1',
   stage: 'group',
@@ -25,7 +27,7 @@ describe('MatchCard', () => {
       score2: 1,
       myPick: '1',
     }
-    const { container } = render(<MatchCard match={m} mode="active" />)
+    const { container } = render(<MatchCard match={m} timeZone={timeZone} mode="active" />)
     // final score appears (rendered as "2 – 1" within one node)
     expect(container.textContent).toContain('2')
     expect(container.textContent).toContain('1')
@@ -33,12 +35,12 @@ describe('MatchCard', () => {
   })
 
   it('shows the login CTA for an upcoming match in view mode', () => {
-    render(<MatchCard match={base} mode="view" />)
+    render(<MatchCard match={base} timeZone={timeZone} mode="view" />)
     expect(screen.getByText(/Đăng nhập để cược/)).toBeInTheDocument()
   })
 
   it('renders selectable two-choice buttons for an upcoming match in betting mode', () => {
-    render(<MatchCard match={base} mode="active" />)
+    render(<MatchCard match={base} timeZone={timeZone} mode="active" />)
     const btn1 = screen.getByRole('button', { name: 'Đội 1' })
     const btn2 = screen.getByRole('button', { name: 'Đội 2' })
     expect(btn1).toBeEnabled()
@@ -47,7 +49,13 @@ describe('MatchCard', () => {
   })
 
   it('does not render copy mode for upcoming matches', () => {
-    render(<MatchCard match={{ ...base, copying: true, copyingFrom: 'Alice' }} mode="active" />)
+    render(
+      <MatchCard
+        match={{ ...base, copying: true, copyingFrom: 'Alice' }}
+        timeZone={timeZone}
+        mode="active"
+      />,
+    )
     expect(screen.getByRole('button', { name: 'Đội 1' })).toBeEnabled()
     expect(screen.getByRole('button', { name: 'Đội 2' })).toBeEnabled()
     expect(screen.queryByRole('button', { name: 'Copy' })).not.toBeInTheDocument()
