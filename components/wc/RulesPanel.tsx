@@ -27,7 +27,7 @@ export default function RulesPanel() {
           <li>🔒 Cược bị <span className="font-semibold text-white">khóa đúng lúc trận đấu bắt đầu</span> (bóng lăn) — sau đó không sửa được.</li>
           <li>🖐️ Khi chọn một phương án sẽ có <span className="font-semibold text-white">hộp xác nhận</span> trước khi lưu.</li>
           <li>⏰ Đăng ký muộn: tất cả các trận đã diễn ra trước đó <span className="font-semibold text-white">tính là &ldquo;không chọn&rdquo;</span> (1 T-Rex mỗi trận).</li>
-          <li>🕖 Tất cả thời gian hiển thị theo <span className="font-semibold text-white">giờ Việt Nam (GMT+7)</span>.</li>
+          <li>🕖 Tất cả thời gian hiển thị theo <span className="font-semibold text-white">múi giờ của trình duyệt/thiết bị bạn đang dùng</span>.</li>
           <li>🏟️ Với các trận mới ở vòng loại trực tiếp, nếu hòa sau thời gian chính thức/hiệp phụ thì tính theo đội thắng luân lưu.</li>
           <li>🏆 Bảng xếp hạng theo <span className="font-semibold text-wc-gold">đàn khủng long</span>: ai nuôi nhiều thì tên hiển thị to và trang trọng hơn.</li>
         </ul>

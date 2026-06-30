@@ -3,7 +3,7 @@
 import { useCallback, useEffect, useMemo, useState } from 'react'
 import Link from 'next/link'
 import type { Match, Pick } from '@/lib/wcTypes'
-import { vnDayKey } from '@/lib/wcTime'
+import { matchDayKey } from '@/lib/wcTime'
 import { getSchedule, getToken, getName, logout, getLeaderboard, getDinoSeen, setDinoSeen } from '@/lib/wcApi'
 import { savePick } from '@/lib/wcApi'
 import { dinoTallyFromRow, dinoCelebration, type DinoCelebration as DinoCelebrationData } from '@/lib/wcDinos'
@@ -21,16 +21,16 @@ import ChangePasswordDialog from '@/components/wc/ChangePasswordDialog'
 
 function initialDayFor(matches: Match[]): string | null {
   if (matches.length === 0) return null
-  const days = Array.from(new Set(matches.map((m) => vnDayKey(m.kickoff))))
-  const today = vnDayKey(Math.floor(Date.now() / 1000))
+  const days = Array.from(new Set(matches.map((m) => matchDayKey(m.kickoff))))
+  const today = matchDayKey(Math.floor(Date.now() / 1000))
   if (days.includes(today)) return today
 
   const now = Math.floor(Date.now() / 1000)
   const next = matches.find((m) => m.kickoff >= now)
-  if (next) return vnDayKey(next.kickoff)
+  if (next) return matchDayKey(next.kickoff)
 
   const last = matches[matches.length - 1]
-  return last ? vnDayKey(last.kickoff) : null
+  return last ? matchDayKey(last.kickoff) : null
 }
 
 export default function WcPage() {
@@ -159,7 +159,7 @@ export default function WcPage() {
 
   const visible = useMemo(() => {
     return matches.filter(m => {
-      if (day && vnDayKey(m.kickoff) !== day) return false
+      if (day && matchDayKey(m.kickoff) !== day) return false
       if (filter === 'live' && m.status !== 'live') return false
       if (filter === 'upcoming' && m.status !== 'upcoming') return false
       if (filter === 'finished' && m.status !== 'finished') return false
@@ -179,7 +179,7 @@ export default function WcPage() {
           <span className="wc-gradient-text">World Cup 2026</span>
         </h1>
         <p className="mt-2 text-sm text-white/60 sm:text-base">
-          Sảnh dự đoán của phòng lab SigM · 🇨🇦 🇲🇽 🇺🇸 · giờ Việt Nam (GMT+7)
+          Sảnh dự đoán của phòng lab SigM · 🇨🇦 🇲🇽 🇺🇸 · giờ theo trình duyệt của bạn
         </p>
         <div className="mt-4 flex flex-wrap items-center justify-center gap-2">
           {betting ? (

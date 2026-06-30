@@ -1,19 +1,27 @@
 import { describe, it, expect } from 'vitest'
-import { vnLabel, countdown, vnDayKey } from '@/lib/wcTime'
+import { matchLabel, countdown, matchDayKey } from '@/lib/wcTime'
 
-describe('vnLabel (GMT+7, no DST)', () => {
-  it('formats the opener with date + Vietnamese weekday', () => {
-    // 2026-06-11 19:00 UTC == 2026-06-12 02:00 GMT+7 (Friday → "Th 6")
+const WEEKDAYS = ['CN', 'Th 2', 'Th 3', 'Th 4', 'Th 5', 'Th 6', 'Th 7']
+const pad = (n: number) => String(n).padStart(2, '0')
+
+describe('matchLabel', () => {
+  it('formats kickoffs in the local browser timezone', () => {
     const e = Date.UTC(2026, 5, 11, 19, 0, 0) / 1000
-    const l = vnLabel(e)
-    expect(l.time).toBe('02:00')
-    expect(l.date).toBe('12/06')
-    expect(l.weekday).toBe('Th 6')
+    const d = new Date(e * 1000)
+    const l = matchLabel(e)
+
+    expect(l.time).toBe(`${pad(d.getHours())}:${pad(d.getMinutes())}`)
+    expect(l.date).toBe(`${pad(d.getDate())}/${pad(d.getMonth() + 1)}`)
+    expect(l.weekday).toBe(WEEKDAYS[d.getDay()])
   })
 
-  it('groups by GMT+7 day key', () => {
+  it('groups by local browser day key', () => {
     const e = Date.UTC(2026, 5, 11, 19, 0, 0) / 1000
-    expect(vnDayKey(e)).toBe('2026-06-12')
+    const d = new Date(e * 1000)
+
+    expect(matchDayKey(e)).toBe(
+      `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`,
+    )
   })
 })
 

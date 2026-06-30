@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from 'react'
 import type { Match } from '@/lib/wcTypes'
-import { vnDayKey, vnLabel } from '@/lib/wcTime'
+import { matchDayKey, matchLabel } from '@/lib/wcTime'
 
 // Horizontal day selector. `selected === null` means "all days".
 export default function DateStrip({
@@ -16,14 +16,14 @@ export default function DateStrip({
 }) {
   const selectedRef = useRef<HTMLButtonElement | null>(null)
 
-  // Distinct GMT+7 days, ascending, with a representative epoch for labelling.
+  // Distinct browser-local days, ascending, with a representative epoch for labelling.
   const dayMap = new Map<string, number>()
   for (const m of matches) {
-    const key = vnDayKey(m.kickoff)
+    const key = matchDayKey(m.kickoff)
     if (!dayMap.has(key) || m.kickoff < dayMap.get(key)!) dayMap.set(key, m.kickoff)
   }
   const days = Array.from(dayMap.entries()).sort((a, b) => a[1] - b[1])
-  const todayKey = vnDayKey(Math.floor(Date.now() / 1000))
+  const todayKey = matchDayKey(Math.floor(Date.now() / 1000))
 
   useEffect(() => {
     if (!selected || days.length === 0) return
@@ -50,7 +50,7 @@ export default function DateStrip({
         Tất cả
       </button>
       {days.map(([key, epoch]) => {
-        const { weekday, date } = vnLabel(epoch)
+        const { weekday, date } = matchLabel(epoch)
         const active = selected === key
         const label = key === todayKey ? 'Hôm nay' : weekday
         return (

@@ -1,7 +1,7 @@
 'use client'
 
 import type { Match, Pick } from '@/lib/wcTypes'
-import { vnLabel } from '@/lib/wcTime'
+import { matchLabel } from '@/lib/wcTime'
 import Flag from './Flag'
 import CountdownTimer from './CountdownTimer'
 import PickButtons from './PickButtons'
@@ -51,7 +51,7 @@ export default function MatchCard({
   onPick?: (pick: Pick) => void
   pending?: boolean
 }) {
-  const { time, date, weekday } = vnLabel(match.kickoff)
+  const { time, date, weekday } = matchLabel(match.kickoff)
   const finished = match.status === 'finished'
   const live = match.status === 'live'
   const hasScore = match.score1 != null && match.score2 != null

@@ -1,7 +1,7 @@
 'use client'
 
 import type { Match } from '@/lib/wcTypes'
-import { vnLabel } from '@/lib/wcTime'
+import { matchLabel } from '@/lib/wcTime'
 import { flagFor } from './Flag'
 import CountdownTimer from './CountdownTimer'
 
@@ -12,6 +12,7 @@ export default function NowNextStrip({ matches }: { matches: Match[] }) {
   const next = matches
     .filter(m => m.status === 'upcoming' && m.kickoff > now)
     .sort((a, b) => a.kickoff - b.kickoff)[0]
+  const nextLabel = next ? matchLabel(next.kickoff) : null
 
   if (live.length === 0 && !next) return null
 
@@ -52,8 +53,8 @@ export default function NowNextStrip({ matches }: { matches: Match[] }) {
           </div>
           <div className="mt-1 flex items-center justify-between text-[11px] text-white/60">
             <span>
-              {vnLabel(next.kickoff).weekday} {vnLabel(next.kickoff).date} •{' '}
-              <span className="font-mono text-wc-gold">{vnLabel(next.kickoff).time}</span>
+              {nextLabel?.weekday} {nextLabel?.date} •{' '}
+              <span className="font-mono text-wc-gold">{nextLabel?.time}</span>
             </span>
             <span>
               Còn <CountdownTimer target={next.kickoff} className="font-semibold text-wc-gold" />

@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react'
 import { countdown } from '@/lib/wcTime'
 
-// Ticks every second client-side, showing a live GMT+7-agnostic countdown
+// Ticks every second client-side, showing a live timezone-agnostic countdown
 // to the given kickoff (epoch seconds).
 export default function CountdownTimer({
   target,
