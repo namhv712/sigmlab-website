@@ -1,5 +1,6 @@
 'use client'
 
+import { useEffect, useRef } from 'react'
 import type { Match } from '@/lib/wcTypes'
 import { vnDayKey, vnLabel } from '@/lib/wcTime'
 
@@ -13,6 +14,8 @@ export default function DateStrip({
   selected: string | null
   onSelect: (day: string | null) => void
 }) {
+  const selectedRef = useRef<HTMLButtonElement | null>(null)
+
   // Distinct GMT+7 days, ascending, with a representative epoch for labelling.
   const dayMap = new Map<string, number>()
   for (const m of matches) {
@@ -20,6 +23,16 @@ export default function DateStrip({
     if (!dayMap.has(key) || m.kickoff < dayMap.get(key)!) dayMap.set(key, m.kickoff)
   }
   const days = Array.from(dayMap.entries()).sort((a, b) => a[1] - b[1])
+  const todayKey = vnDayKey(Math.floor(Date.now() / 1000))
+
+  useEffect(() => {
+    if (!selected || days.length === 0) return
+    selectedRef.current?.scrollIntoView({
+      behavior: 'smooth',
+      block: 'nearest',
+      inline: 'center',
+    })
+  }, [selected, days.length])
 
   if (days.length === 0) return null
 
@@ -39,9 +52,11 @@ export default function DateStrip({
       {days.map(([key, epoch]) => {
         const { weekday, date } = vnLabel(epoch)
         const active = selected === key
+        const label = key === todayKey ? 'Hôm nay' : weekday
         return (
           <button
             key={key}
+            ref={active ? selectedRef : undefined}
             type="button"
             onClick={() => onSelect(key)}
             className={`flex flex-shrink-0 flex-col items-center rounded-xl border px-3 py-1.5 transition-colors ${
@@ -50,7 +65,7 @@ export default function DateStrip({
                 : 'border-white/15 text-white/70 hover:border-wc-gold/60'
             }`}
           >
-            <span className="text-[10px] font-semibold uppercase opacity-80">{weekday}</span>
+            <span className="text-[10px] font-semibold uppercase opacity-80">{label}</span>
             <span className="text-xs font-bold">{date}</span>
           </button>
         )
