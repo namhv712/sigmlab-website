@@ -37,23 +37,19 @@ describe('MatchCard', () => {
     expect(screen.getByText(/Đăng nhập để cược/)).toBeInTheDocument()
   })
 
-  it('renders selectable 1X2 buttons for an upcoming match in betting mode', () => {
+  it('renders selectable two-choice buttons for an upcoming match in betting mode', () => {
     render(<MatchCard match={base} mode="active" />)
     const btn1 = screen.getByRole('button', { name: 'Đội 1' })
-    const btnX = screen.getByRole('button', { name: 'Hòa' })
     const btn2 = screen.getByRole('button', { name: 'Đội 2' })
     expect(btn1).toBeEnabled()
-    expect(btnX).toBeEnabled()
     expect(btn2).toBeEnabled()
+    expect(screen.queryByRole('button', { name: 'Hòa' })).not.toBeInTheDocument()
   })
 
-  it('shows copy mode as a fourth selected option while keeping manual picks enabled', () => {
+  it('does not render copy mode for upcoming matches', () => {
     render(<MatchCard match={{ ...base, copying: true, copyingFrom: 'Alice' }} mode="active" />)
     expect(screen.getByRole('button', { name: 'Đội 1' })).toBeEnabled()
-    expect(screen.getByRole('button', { name: 'Hòa' })).toBeEnabled()
     expect(screen.getByRole('button', { name: 'Đội 2' })).toBeEnabled()
-    const copy = screen.getByRole('button', { name: 'Copy' })
-    expect(copy).toBeDisabled()
-    expect(copy).toHaveAttribute('aria-pressed', 'true')
+    expect(screen.queryByRole('button', { name: 'Copy' })).not.toBeInTheDocument()
   })
 })

@@ -55,6 +55,7 @@ export default function MatchCard({
   const finished = match.status === 'finished'
   const live = match.status === 'live'
   const hasScore = match.score1 != null && match.score2 != null
+  const hasPenalties = match.penalty1 != null && match.penalty2 != null
   const stageLabel =
     STAGE_LABELS[match.stage] || (match.group ? `Bảng ${match.group}` : match.stage)
 
@@ -96,9 +97,16 @@ export default function MatchCard({
 
         <div className="flex-shrink-0 px-2 text-center">
           {hasScore ? (
-            <span className="wc-gradient-text font-mono text-2xl font-extrabold sm:text-3xl">
-              {match.score1} <span className="opacity-50">–</span> {match.score2}
-            </span>
+            <>
+              <span className="wc-gradient-text font-mono text-2xl font-extrabold sm:text-3xl">
+                {match.score1} <span className="opacity-50">–</span> {match.score2}
+              </span>
+              {hasPenalties && (
+                <div className="mt-0.5 font-mono text-[10px] font-bold text-white/45">
+                  pen {match.penalty1}–{match.penalty2}
+                </div>
+              )}
+            </>
           ) : (
             <span className="text-sm font-bold text-white/40">vs</span>
           )}

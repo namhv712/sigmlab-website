@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import type { Match, Pick } from '@/lib/wcTypes'
-import { result } from '@/lib/wcResult'
+import { resultForMatch } from '@/lib/wcResult'
 
 // "Ai chọn gì" — for a FINISHED match, reveal which members picked 1 / X / 2.
 // The winning column is highlighted; everyone else clearly lost that pick.
@@ -21,7 +21,7 @@ export default function MatchPicksBreakdown({ match }: { match: Match }) {
     )
   }
 
-  const actual = result(match.score1, match.score2)
+  const actual = resultForMatch(match)
   const columns: { code: Pick; label: string }[] = [
     { code: '1', label: match.team1 },
     { code: 'X', label: 'Hòa' },

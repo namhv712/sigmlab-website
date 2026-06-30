@@ -25,24 +25,33 @@ export function deriveStage(round, group) {
   return 'group'
 }
 
-// Extract score1/score2 from a raw openfootball match. Handles BOTH shapes:
-//   top-level numeric score1/score2, OR a score object { ft: [a, b] }.
-// Returns { score1, score2 } with null when not yet played.
+// Extract final and penalty scores from a raw openfootball match. Handles BOTH
+// shapes: top-level numeric score1/score2, OR score { ft: [a,b], p: [a,b] }.
+// Returns null scores when not yet played.
 export function extractScore(raw) {
+  let score1 = null
+  let score2 = null
   if (typeof raw.score1 === 'number' && typeof raw.score2 === 'number') {
-    return { score1: raw.score1, score2: raw.score2 }
+    score1 = raw.score1
+    score2 = raw.score2
   }
   const ft = raw.score && raw.score.ft
   if (Array.isArray(ft) && ft.length >= 2 && typeof ft[0] === 'number' && typeof ft[1] === 'number') {
-    return { score1: ft[0], score2: ft[1] }
+    score1 = ft[0]
+    score2 = ft[1]
   }
-  return { score1: null, score2: null }
+  const p = raw.score && raw.score.p
+  const penalty1 =
+    Array.isArray(p) && p.length >= 2 && typeof p[0] === 'number' ? p[0] : null
+  const penalty2 =
+    Array.isArray(p) && p.length >= 2 && typeof p[1] === 'number' ? p[1] : null
+  return { score1, score2, penalty1, penalty2 }
 }
 
 // Map one raw openfootball match (+ its array index) into our match row shape.
 export function mapMatch(raw, index) {
   const group = raw.group || null
-  const { score1, score2 } = extractScore(raw)
+  const { score1, score2, penalty1, penalty2 } = extractScore(raw)
   return {
     id: `of-${index}`,
     stage: deriveStage(raw.round, group),
@@ -54,6 +63,8 @@ export function mapMatch(raw, index) {
     ground: raw.ground || null,
     score1,
     score2,
+    penalty1,
+    penalty2,
   }
 }
 

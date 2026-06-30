@@ -10,7 +10,7 @@
 import { allMatches, setScore } from './db.js'
 
 // Feed shape: { games: [{ home_team_name_en, away_team_name_en, home_score,
-// away_score, finished: "TRUE"|"FALSE", matchday, group, ... }] }.
+// away_score, home_penalty_score, away_penalty_score, finished, ... }] }.
 export const RESULTS_URL = process.env.WC_RESULTS_URL || 'https://worldcup26.ir/get/games'
 
 // Kept for backward-compat and the unit tests that import it. The live feed uses
@@ -59,8 +59,8 @@ const parseScore = (v) => {
 }
 
 // Fetch finished results from the live feed.
-// Returns [{ home, away, hs, as }] for FINISHED matches with valid integer
-// scores, with team names canonicalized to our DB spelling.
+// Returns FINISHED matches with valid integer scores, canonicalized to our DB
+// spelling. Penalty scores are optional and used only for tied two-choice games.
 export async function fetchResults(fetchImpl = fetch) {
   const out = []
   let j
@@ -76,14 +76,21 @@ export async function fetchResults(fetchImpl = fetch) {
     const hs = parseScore(g.home_score)
     const as = parseScore(g.away_score)
     if (hs == null || as == null) continue
-    out.push({ home: canon(g.home_team_name_en), away: canon(g.away_team_name_en), hs, as })
+    out.push({
+      home: canon(g.home_team_name_en),
+      away: canon(g.away_team_name_en),
+      hs,
+      as,
+      hp: parseScore(g.home_penalty_score),
+      ap: parseScore(g.away_penalty_score),
+    })
   }
   return out
 }
 
 // Apply fetched results onto our match rows by team pair (orientation-aware:
-// the home score goes to whichever of team1/team2 is the home side).
-// `setScoreFn(id, s1, s2)` performs the write and returns truthy on change.
+// the home score/penalty goes to whichever of team1/team2 is the home side).
+// `setScoreFn(id, s1, s2, p1, p2)` performs the write and returns truthy.
 // Returns the number of rows actually updated.
 export function applyResults(results, matches, setScoreFn) {
   const byPair = new Map()
@@ -95,8 +102,12 @@ export function applyResults(results, matches, setScoreFn) {
     const t1IsHome = normTeam(m.team1) === normTeam(r.home)
     const s1 = t1IsHome ? r.hs : r.as
     const s2 = t1IsHome ? r.as : r.hs
-    if (m.score1 === s1 && m.score2 === s2) continue // already up to date
-    if (setScoreFn(m.id, s1, s2)) updated += 1
+    const p1 = (t1IsHome ? r.hp : r.ap) ?? null
+    const p2 = (t1IsHome ? r.ap : r.hp) ?? null
+    if (m.score1 === s1 && m.score2 === s2 && (m.penalty1 ?? null) === p1 && (m.penalty2 ?? null) === p2) {
+      continue // already up to date
+    }
+    if (setScoreFn(m.id, s1, s2, p1, p2)) updated += 1
   }
   return updated
 }

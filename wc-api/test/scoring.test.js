@@ -1,6 +1,6 @@
 import { test } from 'node:test'
 import assert from 'node:assert'
-import { result, moneyFor, FINE_WRONG, FINE_MISS } from '../src/scoring.js'
+import { result, resultForMatch, moneyFor, FINE_WRONG, FINE_MISS, TWO_CHOICE_RULE_START } from '../src/scoring.js'
 
 test('result', () => {
   assert.equal(result(2, 1), '1')
@@ -29,6 +29,43 @@ test('money: null-safe before the match has a score', () => {
   assert.equal(moneyFor('1', null, 1), 0)
   assert.equal(moneyFor('1', 1, null), 0)
   assert.equal(moneyFor(null, null, null), 0)
+})
+
+test('resultForMatch preserves old-rule draw results before the cutoff', () => {
+  assert.equal(
+    resultForMatch({ kickoff_utc: TWO_CHOICE_RULE_START - 1, score1: 1, score2: 1 }),
+    'X',
+  )
+})
+
+test('resultForMatch uses penalty shootout winner for new tied matches', () => {
+  assert.equal(
+    resultForMatch({
+      kickoff_utc: TWO_CHOICE_RULE_START,
+      score1: 1,
+      score2: 1,
+      penalty1: 3,
+      penalty2: 4,
+    }),
+    '2',
+  )
+  assert.equal(
+    resultForMatch({
+      kickoff_utc: TWO_CHOICE_RULE_START,
+      score1: 0,
+      score2: 0,
+      penalty1: 5,
+      penalty2: 4,
+    }),
+    '1',
+  )
+})
+
+test('resultForMatch waits for penalties on new tied matches', () => {
+  assert.equal(
+    resultForMatch({ kickoff_utc: TWO_CHOICE_RULE_START, score1: 1, score2: 1 }),
+    null,
+  )
 })
 
 test('fines have the expected magnitudes', () => {

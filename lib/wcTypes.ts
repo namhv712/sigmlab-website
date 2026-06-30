@@ -21,6 +21,8 @@ export interface Match {
   ground: string
   score1: number | null
   score2: number | null
+  penalty1?: number | null
+  penalty2?: number | null
   status: MatchStatus
   myPick?: Pick | null
   copying?: boolean // caller is copying this match from someone they follow

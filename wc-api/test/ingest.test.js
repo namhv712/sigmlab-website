@@ -53,7 +53,22 @@ test('mapMatch: knockout stage derivation', { skip: !sqliteAvailable && 'node:sq
 })
 
 test('extractScore: both shapes', { skip: !sqliteAvailable && 'node:sqlite unavailable' }, () => {
-  assert.deepEqual(mod.extractScore({ score1: 2, score2: 1 }), { score1: 2, score2: 1 })
-  assert.deepEqual(mod.extractScore({ score: { ft: [3, 0] } }), { score1: 3, score2: 0 })
-  assert.deepEqual(mod.extractScore({}), { score1: null, score2: null })
+  assert.deepEqual(mod.extractScore({ score1: 2, score2: 1 }), {
+    score1: 2,
+    score2: 1,
+    penalty1: null,
+    penalty2: null,
+  })
+  assert.deepEqual(mod.extractScore({ score: { ft: [3, 0], p: [4, 2] } }), {
+    score1: 3,
+    score2: 0,
+    penalty1: 4,
+    penalty2: 2,
+  })
+  assert.deepEqual(mod.extractScore({}), {
+    score1: null,
+    score2: null,
+    penalty1: null,
+    penalty2: null,
+  })
 })

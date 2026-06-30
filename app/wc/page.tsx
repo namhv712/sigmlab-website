@@ -17,9 +17,21 @@ import RulesPanel from '@/components/wc/RulesPanel'
 import WcBanner from '@/components/wc/WcBanner'
 import MoneySummary from '@/components/wc/MoneySummary'
 import ConfirmPick from '@/components/wc/ConfirmPick'
-import CopyControl from '@/components/wc/CopyControl'
-import CopyRelations from '@/components/wc/CopyRelations'
 import ChangePasswordDialog from '@/components/wc/ChangePasswordDialog'
+
+function initialDayFor(matches: Match[]): string | null {
+  if (matches.length === 0) return null
+  const days = Array.from(new Set(matches.map((m) => vnDayKey(m.kickoff))))
+  const today = vnDayKey(Math.floor(Date.now() / 1000))
+  if (days.includes(today)) return today
+
+  const now = Math.floor(Date.now() / 1000)
+  const next = matches.find((m) => m.kickoff >= now)
+  if (next) return vnDayKey(next.kickoff)
+
+  const last = matches[matches.length - 1]
+  return last ? vnDayKey(last.kickoff) : null
+}
 
 export default function WcPage() {
   const [matches, setMatches] = useState<Match[]>([])
@@ -38,9 +50,7 @@ export default function WcPage() {
 
   const [filter, setFilter] = useState<WcFilter>('all')
   const [day, setDay] = useState<string | null>(null)
-
-  // Bumped whenever a follow changes so the public copy board refreshes at once.
-  const [copyTick, setCopyTick] = useState(0)
+  const [dayInitialized, setDayInitialized] = useState(false)
 
   // Login celebration: shown when the member's dino herd has grown since last seen.
   const [celebration, setCelebration] = useState<DinoCelebrationData | null>(null)
@@ -91,6 +101,12 @@ export default function WcPage() {
     const id = setInterval(load, 60_000)
     return () => clearInterval(id)
   }, [load, checkDinoGrowth])
+
+  useEffect(() => {
+    if (dayInitialized || matches.length === 0) return
+    setDay(initialDayFor(matches))
+    setDayInitialized(true)
+  }, [dayInitialized, matches])
 
   const onLoginSuccess = useCallback(
     (loggedName: string) => {
@@ -171,15 +187,6 @@ export default function WcPage() {
               <span className="rounded-full bg-emerald-500/15 px-3 py-1.5 text-xs font-semibold text-emerald-300">
                 Chế độ cược · {name}
               </span>
-              {name && (
-                <CopyControl
-                  name={name}
-                  onChanged={() => {
-                    load()
-                    setCopyTick((t) => t + 1)
-                  }}
-                />
-              )}
               <button
                 onClick={() => {
                   setNotice(null)
@@ -234,8 +241,6 @@ export default function WcPage() {
         {betting && name && <MoneySummary matches={matches} name={name} />}
 
         <NowNextStrip matches={matches} />
-
-        <CopyRelations version={copyTick} />
 
         <RulesPanel />
 

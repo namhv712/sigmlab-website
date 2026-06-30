@@ -1,5 +1,5 @@
 import { DatabaseSync } from 'node:sqlite'
-import { result, FINE_WRONG, FINE_MISS } from './scoring.js'
+import { resultForMatch, FINE_WRONG, FINE_MISS } from './scoring.js'
 
 const db = new DatabaseSync(process.env.WC_DB || './wc.db')
 
@@ -15,6 +15,8 @@ db.exec(`
     ground TEXT,
     score1 INTEGER,
     score2 INTEGER,
+    penalty1 INTEGER,
+    penalty2 INTEGER,
     updated_at INTEGER
   );
   CREATE TABLE IF NOT EXISTS users (
@@ -59,11 +61,16 @@ if (!userCols.includes('pass_salt')) db.exec(`ALTER TABLE users ADD COLUMN pass_
 const pickCols = db.prepare(`PRAGMA table_info(picks)`).all().map((c) => c.name)
 if (!pickCols.includes('copied_from')) db.exec(`ALTER TABLE picks ADD COLUMN copied_from INTEGER`)
 
+// Migrate DBs created before penalty shootout support.
+const matchCols = db.prepare(`PRAGMA table_info(matches)`).all().map((c) => c.name)
+if (!matchCols.includes('penalty1')) db.exec(`ALTER TABLE matches ADD COLUMN penalty1 INTEGER`)
+if (!matchCols.includes('penalty2')) db.exec(`ALTER TABLE matches ADD COLUMN penalty2 INTEGER`)
+
 const now = () => Math.floor(Date.now() / 1000)
 
 const stUpsertMatch = db.prepare(`
-  INSERT INTO matches (id, stage, round, "group", kickoff_utc, team1, team2, ground, score1, score2, updated_at)
-  VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+  INSERT INTO matches (id, stage, round, "group", kickoff_utc, team1, team2, ground, score1, score2, penalty1, penalty2, updated_at)
+  VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
   ON CONFLICT(id) DO UPDATE SET
     stage=excluded.stage,
     round=excluded.round,
@@ -74,6 +81,8 @@ const stUpsertMatch = db.prepare(`
     ground=excluded.ground,
     score1=COALESCE(excluded.score1, matches.score1),
     score2=COALESCE(excluded.score2, matches.score2),
+    penalty1=COALESCE(excluded.penalty1, matches.penalty1),
+    penalty2=COALESCE(excluded.penalty2, matches.penalty2),
     updated_at=excluded.updated_at
 `)
 
@@ -89,21 +98,30 @@ export function upsertMatch(m) {
     m.ground ?? null,
     m.score1 ?? null,
     m.score2 ?? null,
+    m.penalty1 ?? null,
+    m.penalty2 ?? null,
     now()
   )
 }
 
 const stAllMatches = db.prepare(
-  `SELECT id, stage, round, "group" AS "group", kickoff_utc, team1, team2, ground, score1, score2, updated_at
+  `SELECT id, stage, round, "group" AS "group", kickoff_utc, team1, team2, ground, score1, score2, penalty1, penalty2, updated_at
    FROM matches ORDER BY kickoff_utc ASC, id ASC`
 )
 export const allMatches = () => stAllMatches.all()
 
 const stSetScore = db.prepare(
-  `UPDATE matches SET score1=?, score2=?, updated_at=? WHERE id=?`
+  `UPDATE matches SET score1=?, score2=?, penalty1=?, penalty2=?, updated_at=? WHERE id=?`
 )
-export function setScore(id, s1, s2) {
-  const res = stSetScore.run(s1 == null ? null : s1, s2 == null ? null : s2, now(), id)
+export function setScore(id, s1, s2, p1 = null, p2 = null) {
+  const res = stSetScore.run(
+    s1 == null ? null : s1,
+    s2 == null ? null : s2,
+    p1 == null ? null : p1,
+    p2 == null ? null : p2,
+    now(),
+    id,
+  )
   return res.changes > 0
 }
 
@@ -241,6 +259,23 @@ const stAllFollows = db.prepare(
    ORDER BY tu.name COLLATE NOCASE, fu.name COLLATE NOCASE`
 )
 export const allFollows = () => stAllFollows.all()
+
+const stDeleteFutureCopiedPicks = db.prepare(`
+  DELETE FROM picks
+  WHERE copied_from IS NOT NULL
+    AND match_id IN (SELECT id FROM matches WHERE kickoff_utc > ?)
+`)
+const stClearAllFollows = db.prepare(`DELETE FROM follows`)
+const stClearAllRestorePicks = db.prepare(`DELETE FROM follow_restore_picks`)
+
+// Copy mode is disabled. Clear active follow relationships and remove only
+// still-open copied selections; locked/finished copied rows remain historical.
+export function disableCopyMode(nowSec = now()) {
+  const deletedCopiedPicks = stDeleteFutureCopiedPicks.run(nowSec).changes
+  const deletedFollows = stClearAllFollows.run().changes
+  const deletedRestorePicks = stClearAllRestorePicks.run().changes
+  return { deletedCopiedPicks, deletedFollows, deletedRestorePicks }
+}
 
 const stFollowRows = db.prepare(
   `SELECT follower_id AS followerId, target_id AS targetId, created_at AS createdAt
@@ -418,7 +453,8 @@ export function resyncAllFollows(nowSec) {
 // Order: vnd asc (MOST owed on top — it's a penalty "shame board"), then
 // fewer-correct, then earlier signup.
 const stFinishedMatches = db.prepare(
-  `SELECT id, score1, score2 FROM matches WHERE score1 IS NOT NULL AND score2 IS NOT NULL`
+  `SELECT id, kickoff_utc, score1, score2, penalty1, penalty2
+   FROM matches WHERE score1 IS NOT NULL AND score2 IS NOT NULL`
 )
 const stAllPicks = db.prepare(`SELECT user_id, match_id, pick FROM picks`)
 const stAllUsers = db.prepare(`SELECT id, name, created_at FROM users`)
@@ -435,19 +471,23 @@ export function leaderboard() {
   const rows = stAllUsers.all().map((u) => {
     const mine = picksByUser.get(u.id)
     let vnd = 0, correct = 0, wrong = 0, missed = 0
+    let counted = 0
     for (const m of finished) {
+      const outcome = resultForMatch(m)
+      if (!outcome) continue
+      counted += 1
       const pick = (mine && mine.get(m.id)) ?? null
       if (pick == null) {
         missed += 1
         vnd -= FINE_MISS
-      } else if (pick === result(m.score1, m.score2)) {
+      } else if (pick === outcome) {
         correct += 1
       } else {
         wrong += 1
         vnd -= FINE_WRONG
       }
     }
-    return { name: u.name, vnd, correct, wrong, missed, finished: finished.length, created_at: u.created_at }
+    return { name: u.name, vnd, correct, wrong, missed, finished: counted, created_at: u.created_at }
   })
 
   return rows

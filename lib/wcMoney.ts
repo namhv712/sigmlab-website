@@ -3,7 +3,7 @@
 // match (no pick) is fined more. Totals are always ≤ 0 — money you owe.
 
 import type { Match, Pick } from './wcTypes'
-import { result } from './wcResult'
+import { result, resultForMatch } from './wcResult'
 
 export const FINE_WRONG = 30_000 // đoán sai
 export const FINE_MISS = 100_000 // không chọn (bỏ trống)
@@ -36,12 +36,14 @@ export function tally(matches: Match[]): Tally {
   let finished = 0
   for (const m of matches) {
     if (m.status !== 'finished' || m.score1 == null || m.score2 == null) continue
+    const outcome = resultForMatch(m)
+    if (!outcome) continue
     finished += 1
     const pick = m.myPick ?? null
     if (pick == null) {
       missed += 1
       vnd -= FINE_MISS
-    } else if (pick === result(m.score1, m.score2)) {
+    } else if (pick === outcome) {
       correct += 1
     } else {
       wrong += 1

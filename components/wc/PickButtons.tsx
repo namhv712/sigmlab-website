@@ -1,10 +1,10 @@
 'use client'
 
 import type { Match, Pick } from '@/lib/wcTypes'
-import { result } from '@/lib/wcResult'
+import { resultForMatch } from '@/lib/wcResult'
 
-// 1X2 buttons: Đội 1 / Hòa / Đội 2. A copying upcoming match adds a fourth
-// selected option showing the active follow target.
+// Two-choice buttons: Đội 1 / Đội 2. Historical finished rows can still contain
+// Draw picks from before the rule change; they are shown only in breakdowns.
 // Modes:
 //  - active   : selectable, fires onPick (betting mode, upcoming match)
 //  - view     : disabled, shows login CTA
@@ -24,11 +24,7 @@ export default function PickButtons({
   const finished = match.status === 'finished'
   const locked = match.status !== 'upcoming'
   const pick = match.myPick ?? null
-  const showCopyOption = !locked && match.copying
-  const actual =
-    finished && match.score1 != null && match.score2 != null
-      ? result(match.score1, match.score2)
-      : null
+  const actual = finished ? resultForMatch(match) : null
 
   // View mode on an upcoming match → CTA to unlock betting.
   if (mode === 'view' && !locked) {
@@ -50,13 +46,12 @@ export default function PickButtons({
 
   const options: { code: Pick; label: string }[] = [
     { code: '1', label: 'Đội 1' },
-    { code: 'X', label: 'Hòa' },
     { code: '2', label: 'Đội 2' },
   ]
 
   return (
     <>
-      <div className={`mt-4 grid gap-2.5 ${showCopyOption ? 'grid-cols-2 sm:grid-cols-4' : 'grid-cols-3'}`}>
+      <div className="mt-4 grid grid-cols-2 gap-2.5">
         {options.map(opt => {
           const selected = pick === opt.code
           const isActual = actual === opt.code
@@ -94,17 +89,6 @@ export default function PickButtons({
             </button>
           )
         })}
-        {showCopyOption && (
-          <button
-            type="button"
-            disabled
-            aria-pressed="true"
-            title="Đang copy"
-            className="wc-pick-selected relative min-w-0 cursor-default overflow-hidden rounded-xl border px-2 py-2.5 text-sm font-bold transition-all"
-          >
-            Copy
-          </button>
-        )}
       </div>
 
       {missed && (
